@@ -2,15 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
+import ctaImg from '../assets/pdf_images/img_p6_24.jpeg';
+
 const CallToAction = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative w-full py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full py-20 lg:py-24 overflow-hidden" id="contact">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop"
+          src={ctaImg}
           alt="Luxury Resort pool"
           className="w-full h-full object-cover"
         />

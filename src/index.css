@@ -28,7 +28,7 @@ html[lang="vi"] {
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: var(--color-gold) var(--color-gray-bg);
+  scrollbar-color: #6b5c43 #1a1a1a;
 }
 
 /* Custom Scrollbar Styling (Webkit/Blink) */
@@ -37,14 +37,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-gray-bg);
+  background: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gold);
+  background: #6b5c43;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold-hover);
+  background: var(--color-gold);
 }

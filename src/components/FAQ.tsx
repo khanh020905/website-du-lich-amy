@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+import faqImg from '../assets/pdf_images/img_p2_4.jpeg';
+
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const { t } = useTranslation();
@@ -41,7 +43,7 @@ const FAQ = () => {
 
             <div className="relative w-full h-80 rounded-sm overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop" 
+                src={faqImg} 
                 alt="FAQ Hotel Room" 
                 className="w-full h-full object-cover brightness-75"
               />

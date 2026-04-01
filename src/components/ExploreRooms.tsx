@@ -3,30 +3,35 @@ import { motion } from 'framer-motion';
 import { Maximize, Bed, Users } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+import img1 from '../assets/pdf_images/img_p4_15.jpeg';
+import img2 from '../assets/pdf_images/img_p4_13.jpeg';
+import img3 from '../assets/pdf_images/img_p4_14.jpeg';
+import img4 from '../assets/pdf_images/img_p5_17.jpeg';
+
 const suitesImg = [
   {
-    image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070&auto=format&fit=crop',
-    price: 180,
-    bedCount: 3,
-    guestCount: 6
+    image: img1,
+    price: 1800000,
+    bedCount: 2,
+    guestCount: 3
   },
   {
-    image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2070&auto=format&fit=crop',
-    price: 140,
+    image: img2,
+    price: 2200000,
     bedCount: 1,
     guestCount: 2
   },
   {
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop',
-    price: 240,
-    bedCount: 2,
-    guestCount: 4
+    image: img3,
+    price: 2500000,
+    bedCount: 1,
+    guestCount: 2
   },
   {
-    image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop',
-    price: 280,
+    image: img4,
+    price: 3500000,
     bedCount: 2,
-    guestCount: 5
+    guestCount: 4
   }
 ];
 

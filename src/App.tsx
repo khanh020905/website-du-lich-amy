@@ -9,6 +9,8 @@ import RoomsCollection from './components/RoomsCollection';
 import ExploreRooms from './components/ExploreRooms';
 import VideoSection from './components/VideoSection';
 import Accommodations from './components/Accommodations';
+import Testimonials from './components/Testimonials';
+import SideTimeline from './components/SideTimeline';
 import FAQ from './components/FAQ';
 import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
@@ -31,12 +33,14 @@ const Layout = () => {
   return (
     <div className="font-sans antialiased text-gray-800 bg-white">
       <Navbar />
+      <SideTimeline />
       <Hero />
       <Introduction />
       <RoomsCollection />
       <ExploreRooms />
       <VideoSection />
       <Accommodations />
+      <Testimonials />
       <FAQ />
       <CallToAction />
       <Footer />

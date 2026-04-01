@@ -2,13 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 
+import videoImg from '../assets/pdf_images/img_p2_7.jpeg';
+
 const VideoSection = () => {
   return (
     <section className="relative h-[600px] w-full flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop")' }}
+        style={{ backgroundImage: `url(${videoImg})` }}
       ></div>
       
       {/* Overlay */}

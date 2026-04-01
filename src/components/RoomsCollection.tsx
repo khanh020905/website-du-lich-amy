@@ -1,33 +1,56 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Maximize, Bed, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+import img1 from '../assets/pdf_images/img_p3_9.jpeg';
+import img2 from '../assets/pdf_images/img_p3_10.jpeg';
+import img3 from '../assets/pdf_images/img_p3_11.jpeg';
+
 const roomsImgs = [
   {
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop',
-    price: 120,
+    image: img1,
+    price: 1500000,
     guestCount: 2,
     bedCount: 1,
   },
   {
-    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop',
-    price: 320,
-    guestCount: 4,
+    image: img2,
+    price: 1800000,
+    guestCount: 2,
     bedCount: 2,
   },
   {
-    image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop',
-    price: 180,
-    guestCount: 3,
+    image: img3,
+    price: 1800000,
+    guestCount: 2,
     bedCount: 1,
   }
 ];
 
 const RoomsCollection = () => {
   const { t } = useTranslation();
+  const [itemsOrder, setItemsOrder] = useState([0, 1, 2]);
   
   const roomItems = t('rooms.items', { returnObjects: true }) as Array<{ title: string, size: string }>;
+
+  const handleNext = () => {
+    setItemsOrder(prev => {
+      const arr = [...prev];
+      const first = arr.shift()!;
+      arr.push(first);
+      return arr;
+    });
+  };
+
+  const handlePrev = () => {
+    setItemsOrder(prev => {
+      const arr = [...prev];
+      const last = arr.pop()!;
+      arr.unshift(last);
+      return arr;
+    });
+  };
 
   return (
     <section className="pt-8 pb-24 bg-white" id="rooms">
@@ -55,65 +78,83 @@ const RoomsCollection = () => {
 
         <div className="relative">
           {/* Navigation Arrows */}
-          <button className="absolute left-[-20px] top-[40%] transform -translate-y-1/2 z-10 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.1)] text-gray-800 hover:text-[var(--color-gold)] hover:-translate-x-1 transition-all">
+          <button 
+            onClick={handlePrev}
+            className="absolute left-[-20px] top-[35%] transform -translate-y-1/2 z-10 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.1)] text-gray-800 hover:text-[var(--color-gold)] hover:-translate-x-1 transition-all"
+          >
             <ChevronLeft size={20} className="stroke-[2px]" />
           </button>
-          <button className="absolute right-[-20px] top-[40%] transform -translate-y-1/2 z-10 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.1)] text-gray-800 hover:text-[var(--color-gold)] hover:translate-x-1 transition-all">
+          <button 
+            onClick={handleNext}
+            className="absolute right-[-20px] top-[35%] transform -translate-y-1/2 z-10 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.1)] text-gray-800 hover:text-[var(--color-gold)] hover:translate-x-1 transition-all"
+          >
             <ChevronRight size={20} className="stroke-[2px]" />
           </button>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {roomsImgs.map((room, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group cursor-pointer"
-              >
-                <div className="relative overflow-hidden mb-6 rounded-2xl">
-                  <div className="aspect-[4/3] bg-gray-200 overflow-hidden">
-                    <img
-                      src={room.image}
-                      alt={roomItems[index]?.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="absolute bottom-4 right-4 bg-white px-4 py-2 text-sm font-serif shadow-lg">
-                    <span className="text-[var(--color-gold)] font-bold">${room.price}</span> {t('rooms.perNight')}
-                  </div>
-                </div>
+            <AnimatePresence mode="popLayout">
+              {itemsOrder.map((idx) => {
+                const room = roomsImgs[idx];
+                const item = roomItems[idx];
+                return (
+                  <motion.div
+                    layout
+                    key={idx}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.5, type: "spring", stiffness: 200, damping: 20 }}
+                    className="group cursor-pointer"
+                  >
+                    <div className="relative overflow-hidden mb-6 rounded-2xl">
+                      <div className="aspect-[4/3] bg-gray-200 overflow-hidden">
+                        <img
+                          src={room.image}
+                          alt={item?.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                      </div>
+                      <div className="absolute bottom-4 right-4 bg-white px-4 py-2 text-sm font-serif shadow-lg">
+                        <span className="text-[var(--color-gold)] font-bold">${room.price}</span> {t('rooms.perNight')}
+                      </div>
+                    </div>
 
-                <div className="pl-2">
-                  <h3 className="text-2xl font-serif font-semibold text-[#111] mb-4 group-hover:text-[var(--color-gold)] transition-colors">
-                    {roomItems[index]?.title}
-                  </h3>
-                  <div className="flex items-center gap-6 text-sm text-gray-500">
-                    <div className="flex items-center gap-2">
-                      <Maximize size={16} className="text-gray-400 stroke-[1.5px]" />
-                      <span className="font-medium">{roomItems[index]?.size}</span>
+                    <div className="pl-2">
+                      <h3 className="text-2xl font-serif font-semibold text-[#111] mb-4 group-hover:text-[var(--color-gold)] transition-colors">
+                        {item?.title}
+                      </h3>
+                      <div className="flex items-center gap-6 text-sm text-gray-500">
+                        <div className="flex items-center gap-2">
+                          <Maximize size={16} className="text-gray-400 stroke-[1.5px]" />
+                          <span className="font-medium">{item?.size}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Bed size={16} className="text-gray-400 stroke-[1.5px]" />
+                          <span className="font-medium">{room.bedCount} {t('rooms.bed')}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Users size={16} className="text-gray-400 stroke-[1.5px]" />
+                          <span className="font-medium">{room.guestCount} {t('rooms.guests')}</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Bed size={16} className="text-gray-400 stroke-[1.5px]" />
-                      <span className="font-medium">{room.bedCount} {t('rooms.bed')}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users size={16} className="text-gray-400 stroke-[1.5px]" />
-                      <span className="font-medium">{room.guestCount} {t('rooms.guests')}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                  </motion.div>
+                );
+              })}
+            </AnimatePresence>
           </div>
           
-          <div className="flex justify-center mt-12">
-            <div className="flex gap-2">
-               <div className="w-2 h-2 rounded-full bg-[var(--color-gold)]"></div>
-               <div className="w-2 h-2 rounded-full bg-gray-300"></div>
-               <div className="w-2 h-2 rounded-full bg-gray-300"></div>
-            </div>
+          <div className="flex justify-center mt-12 gap-2">
+            {itemsOrder.map((idx, pos) => (
+              <button 
+                key={idx}
+                onClick={() => {
+                   if (pos === 2) handleNext();
+                   if (pos === 0) handlePrev();
+                }}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${pos === 1 ? 'bg-[var(--color-gold)] scale-125' : 'bg-gray-300'}`}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navAnchors = ['home', 'about', 'rooms', 'news', 'pages', 'contact'];
+  const navAnchors = ['culinary', 'meeting', 'spa', 'offer', 'gallery'];
   const translatedLinks = t('nav.links', { returnObjects: true }) as string[];
 
   const switchLanguage = (lng: string) => {
@@ -39,19 +39,19 @@ const Navbar = () => {
         scrolled || isMobileMenuOpen ? 'bg-[#111] bg-opacity-95 py-4 shadow-lg backdrop-blur-sm' : 'bg-transparent py-6'
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center relative">
+      <div className="container mx-auto px-4 lg:px-6 xl:px-12 flex justify-between items-center relative w-full">
         {/* Logo */}
-        <div className="text-white font-serif text-2xl tracking-widest font-bold uppercase pointer-events-auto cursor-pointer">
+        <div className="text-white font-serif text-xl lg:text-2xl tracking-[0.1em] xl:tracking-widest font-bold uppercase pointer-events-auto cursor-pointer whitespace-nowrap shrink-0">
           AMY TOURIST
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center space-x-6 lg:space-x-10">
+        <div className="hidden lg:flex items-center justify-center space-x-4 xl:space-x-8 flex-1 px-4">
           {navAnchors.map((anchor, index) => (
             <a
               key={anchor}
               href={`#${anchor}`}
-              className="text-white text-sm font-semibold tracking-widest hover:text-[var(--color-gold)] transition-colors duration-300 uppercase"
+              className="text-white text-[11px] lg:text-xs xl:text-sm font-semibold tracking-[0.1em] xl:tracking-widest hover:text-[var(--color-gold)] transition-colors duration-300 uppercase whitespace-nowrap"
             >
               {translatedLinks[index]}
             </a>
@@ -59,9 +59,9 @@ const Navbar = () => {
         </div>
 
         {/* Right Section: I18n & Button (Desktop) */}
-        <div className="hidden lg:flex items-center space-x-6">
+        <div className="hidden lg:flex items-center space-x-4 xl:space-x-6 shrink-0">
           {/* Language Switcher */}
-          <div className="flex items-center space-x-2 text-sm font-bold tracking-widest uppercase">
+          <div className="flex items-center space-x-1.5 xl:space-x-2 text-xs xl:text-sm font-bold tracking-widest uppercase">
             <button 
               onClick={() => switchLanguage('vi')}
               className={`transition-colors py-1 ${locale === 'vi' ? 'text-[var(--color-gold)]' : 'text-gray-400 hover:text-white'}`}
@@ -77,7 +77,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          <button className="border border-white/50 text-white px-7 py-2.5 text-sm font-semibold tracking-widest hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300 uppercase">
+          <button className="border border-white/50 text-white px-4 xl:px-7 py-2 xl:py-2.5 text-[11px] lg:text-xs xl:text-sm font-semibold tracking-widest hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300 uppercase whitespace-nowrap">
             {t('nav.bookNow')}
           </button>
         </div>

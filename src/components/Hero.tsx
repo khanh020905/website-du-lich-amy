@@ -3,18 +3,20 @@ import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+import heroImg from '../assets/pdf_images/img_p2_5.jpeg';
+
 const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative h-screen min-h-[600px] w-full flex items-center justify-center">
+    <section id="home" className="relative h-screen min-h-[600px] w-full flex items-center justify-center">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=3000&auto=format&fit=crop")' }}
+        style={{ backgroundImage: `url(${heroImg})` }}
       ></div>
       {/* Dark Overlay */}
-      <div className="absolute inset-0 z-10 bg-black/50"></div>
+      <div className="absolute inset-0 z-10 bg-black/65"></div>
 
       {/* Content */}
       <div className="relative z-20 text-center px-4 w-full mx-auto flex flex-col items-center mt-10">
@@ -26,9 +28,9 @@ const Hero = () => {
             className="flex items-center gap-2 mb-6"
           >
             {[...Array(5)].map((_, i) => (
-              <Star key={i} size={20} fill="var(--color-gold)" color="var(--color-gold)" className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" />
+              <Star key={i} size={20} fill={i < 4 ? "var(--color-gold)" : "none"} color="var(--color-gold)" className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" />
             ))}
-            <span className="text-white text-base font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] ml-1">(5.0)</span>
+            <span className="text-white text-base font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] ml-1">(4.0)</span>
           </motion.div>
 
           <motion.div 
