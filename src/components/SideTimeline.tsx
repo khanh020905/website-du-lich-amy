@@ -43,9 +43,9 @@ const SideTimeline = () => {
   };
 
   return (
-    <div className="fixed right-4 lg:right-6 top-1/3 -translate-y-1/2 z-[60] hidden xl:flex flex-col py-8 pb-10">
+    <div className="fixed right-10 lg:right-12 xl:right-16 top-1/3 -translate-y-1/2 z-[60] hidden lg:flex flex-col py-8 pb-10">
       {/* Vertical Line placed absolutely to align with dots */}
-      <div className="absolute right-[5px] top-12 bottom-12 w-[1px] bg-white/30"></div>
+      <div className="absolute right-[5px] top-12 bottom-12 w-[1px] bg-black/20 dark:bg-white/30"></div>
 
       <div className="flex flex-col space-y-8 relative">
         {sections.map((section, index) => {
