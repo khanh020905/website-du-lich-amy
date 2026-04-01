@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { X, ZoomIn, View, Box } from 'lucide-react';
 import galleryData from '../data/galleryData.json';
 import DomeGallery from './DomeGallery';
+import ScrollAnimation from './ScrollAnimation';
 
 const Gallery = () => {
   const { t } = useTranslation();
@@ -87,12 +88,10 @@ const Gallery = () => {
         <motion.div layout className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           <AnimatePresence>
             {filteredImages.map((item, idx) => (
-              <motion.div
+              <ScrollAnimation
                 layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+                direction="up"
+                viewport={{ amount: 0.1, once: true }}
                 key={item.image + idx}
                 className="relative overflow-hidden group cursor-pointer break-inside-avoid rounded-sm shadow-sm"
                 onClick={() => setSelectedImg(item)}
@@ -111,7 +110,7 @@ const Gallery = () => {
                     {item.title}
                   </h4>
                 </div>
-              </motion.div>
+              </ScrollAnimation>
             ))}
           </AnimatePresence>
         </motion.div>
