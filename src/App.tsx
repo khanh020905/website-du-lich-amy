@@ -14,6 +14,7 @@ import SideTimeline from './components/SideTimeline';
 import FAQ from './components/FAQ';
 import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
+import Gallery from './components/Gallery';
 
 const Layout = () => {
   const { locale } = useParams();
@@ -48,11 +49,37 @@ const Layout = () => {
   );
 };
 
+const GalleryPage = () => {
+  const { locale } = useParams();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (locale && (locale === 'vi' || locale === 'en')) {
+      i18n.changeLanguage(locale);
+      document.documentElement.lang = locale;
+    }
+    window.scrollTo(0, 0);
+  }, [locale, i18n]);
+
+  if (!locale || (locale !== 'vi' && locale !== 'en')) {
+    return <Navigate to="/vi/gallery" replace />;
+  }
+
+  return (
+    <div className="font-sans antialiased text-gray-800 bg-white">
+      <Navbar />
+      <Gallery />
+      <Footer />
+    </div>
+  );
+};
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/vi" replace />} />
       <Route path="/:locale" element={<Layout />} />
+      <Route path="/:locale/gallery" element={<GalleryPage />} />
       <Route path="*" element={<Navigate to="/vi" replace />} />
     </Routes>
   );

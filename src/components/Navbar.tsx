@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useNavigate, useLocation, useParams } from 'react-router-dom';
+import { useNavigate, useLocation, useParams, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -41,20 +41,24 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 lg:px-6 xl:px-12 flex justify-between items-center relative w-full">
         {/* Logo */}
-        <div className="text-white font-serif text-xl lg:text-2xl tracking-[0.1em] xl:tracking-widest font-bold uppercase pointer-events-auto cursor-pointer whitespace-nowrap shrink-0">
-          AMY TOURIST
+        <div className="pointer-events-auto cursor-pointer shrink-0">
+          <img 
+            src="/tpn-logo.png" 
+            alt="Tan Phuong Nam Logo" 
+            className="h-16 lg:h-24 w-auto object-contain" 
+          />
         </div>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center justify-center space-x-4 xl:space-x-8 flex-1 px-4">
           {navAnchors.map((anchor, index) => (
-            <a
+            <Link
               key={anchor}
-              href={`#${anchor}`}
+              to={anchor === 'gallery' ? `/${locale}/gallery` : `/${locale}#${anchor}`}
               className="text-white text-[11px] lg:text-xs xl:text-sm font-semibold tracking-[0.1em] xl:tracking-widest hover:text-[var(--color-gold)] transition-colors duration-300 uppercase whitespace-nowrap"
             >
               {translatedLinks[index]}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -104,14 +108,14 @@ const Navbar = () => {
           >
             <div className="flex flex-col px-6 py-6 space-y-5">
               {navAnchors.map((anchor, index) => (
-                <a
+                <Link
                   key={anchor}
-                  href={`#${anchor}`}
+                  to={anchor === 'gallery' ? `/${locale}/gallery` : `/${locale}#${anchor}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-white text-sm font-semibold tracking-widest hover:text-[var(--color-gold)] transition-colors duration-300 uppercase block"
                 >
                   {translatedLinks[index]}
-                </a>
+                </Link>
               ))}
               
               <div className="pt-5 mt-2 border-t border-white/10 flex flex-col space-y-6">
