@@ -86,12 +86,12 @@ const Gallery = () => {
 
         {/* Masonry Grid */}
         <motion.div layout className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-          <AnimatePresence>
+          <AnimatePresence mode="popLayout">
             {filteredImages.map((item, idx) => (
               <ScrollAnimation
-                layout
                 direction="up"
-                viewport={{ amount: 0.1, once: true }}
+                viewport={{ amount: 0.05, once: true, margin: "0px 0px 50px 0px" }}
+                exit={{ opacity: 0, scale: 0.9 }}
                 key={item.image + idx}
                 className="relative overflow-hidden group cursor-pointer break-inside-avoid rounded-sm shadow-sm"
                 onClick={() => setSelectedImg(item)}
