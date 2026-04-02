@@ -2,7 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation, useParams, Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+
+const LANGUAGES = [
+  { code: 'vi', short: 'VI', full: 'Tiếng Việt' },
+  { code: 'en', short: 'EN', full: 'English' },
+  { code: 'ko', short: 'KO', full: '한국어' },
+  { code: 'zh', short: 'ZH', full: '中文' }
+];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,8 +31,9 @@ const Navbar = () => {
   const translatedLinks = t('nav.links', { returnObjects: true }) as string[];
 
   const switchLanguage = (lng: string) => {
-    if (locale !== lng) {
-      navigate(`/${lng}${location.hash}`);
+    if (locale !== lng && locale) {
+      const newPathname = location.pathname.replace(`/${locale}`, `/${lng}`);
+      navigate(`${newPathname}${location.hash}`);
     }
     setIsMobileMenuOpen(false);
   };
@@ -70,21 +78,30 @@ const Navbar = () => {
 
         {/* Right Section: I18n & Button (Desktop) */}
         <div className="hidden lg:flex items-center space-x-4 xl:space-x-6 shrink-0">
-          {/* Language Switcher */}
-          <div className="flex items-center space-x-1.5 xl:space-x-2 text-xs xl:text-sm font-bold tracking-widest uppercase">
-            <button 
-              onClick={() => switchLanguage('vi')}
-              className={`transition-colors py-1 ${locale === 'vi' ? 'text-[var(--color-gold)]' : 'text-gray-400 hover:text-white'}`}
-            >
-              VI
+          {/* Language Switcher Dropdown */}
+          <div className="relative group">
+            <button className="flex items-center space-x-1 text-[var(--color-gold)] text-xs xl:text-sm font-bold tracking-widest uppercase focus:outline-none py-2">
+              <span>{locale?.toUpperCase() || 'VI'}</span>
+              <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
             </button>
-            <span className="text-white/30">/</span>
-            <button 
-              onClick={() => switchLanguage('en')}
-              className={`transition-colors py-1 ${locale === 'en' ? 'text-[var(--color-gold)]' : 'text-gray-400 hover:text-white'}`}
-            >
-              EN
-            </button>
+            
+            <div className="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <div className="bg-[#111]/95 backdrop-blur-md shadow-xl border border-white/10 rounded flex flex-col py-1 min-w-[150px]">
+                {LANGUAGES.map((lang) => (
+                  <button 
+                    key={lang.code}
+                    onClick={() => switchLanguage(lang.code)}
+                    className={`relative w-full text-left px-4 py-2.5 text-xs font-bold tracking-widest uppercase transition-colors group/item shrink-0 ${locale === lang.code ? 'text-[var(--color-gold)] bg-white/5' : 'text-gray-400 hover:text-white hover:bg-white/10'}`}
+                  >
+                    <span className="relative z-10 inline-block transition-transform duration-300 group-hover/item:translate-x-1">{lang.short}</span>
+                    {/* Animated Full Name */}
+                    <span className="absolute left-10 top-1/2 -translate-y-1/2 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 pointer-events-none text-white whitespace-nowrap capitalize text-[11px] font-medium tracking-normal">
+                      - {lang.full}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
           <button className="border border-white/50 text-white px-4 xl:px-7 py-2 xl:py-2.5 text-[11px] lg:text-xs xl:text-sm font-semibold tracking-widest hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300 uppercase whitespace-nowrap">
@@ -125,21 +142,20 @@ const Navbar = () => {
               ))}
               
               <div className="pt-5 mt-2 border-t border-white/10 flex flex-col space-y-6">
-                <div className="flex items-center space-x-2 text-sm font-bold tracking-widest uppercase">
-                  <span className="text-gray-500 mr-2 text-xs">Language:</span>
-                  <button 
-                    onClick={() => switchLanguage('vi')}
-                    className={`transition-colors py-1 ${locale === 'vi' ? 'text-[var(--color-gold)]' : 'text-gray-400 hover:text-white'}`}
-                  >
-                    VI
-                  </button>
-                  <span className="text-white/30">/</span>
-                  <button 
-                    onClick={() => switchLanguage('en')}
-                    className={`transition-colors py-1 ${locale === 'en' ? 'text-[var(--color-gold)]' : 'text-gray-400 hover:text-white'}`}
-                  >
-                    EN
-                  </button>
+                <div className="flex flex-col space-y-3 mt-2">
+                  <span className="text-gray-500 text-xs font-bold tracking-widest uppercase">Language</span>
+                  <div className="grid grid-cols-2 gap-2">
+                    {LANGUAGES.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => switchLanguage(lang.code)}
+                        className={`flex items-center justify-center gap-2 px-3 py-2 rounded border transition-all ${locale === lang.code ? 'border-[var(--color-gold)] text-[var(--color-gold)] bg-[var(--color-gold)]/10' : 'border-white/10 text-gray-400 hover:text-white bg-white/5'}`}
+                      >
+                         <span className="font-bold tracking-widest uppercase text-xs">{lang.short}</span>
+                         <span className="text-[10px] opacity-70 tracking-normal capitalize">({lang.full})</span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
                 
                 <button 

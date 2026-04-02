@@ -12,6 +12,10 @@ const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [selectedImg, setSelectedImg] = useState<{image: string; category: string; title: string} | null>(null);
 
+  const translateCategory = (cat: string) => {
+    return t(`gallery.filters.${cat}`, { defaultValue: cat });
+  };
+
   // Extract unique categories
   const categories = ['All', ...Array.from(new Set(galleryData.map(item => item.category)))];
 
@@ -22,24 +26,32 @@ const Gallery = () => {
   return (
     <section className="bg-gray-50/50 min-h-screen" id="gallery">
       {/* Dark Cinematic Header for Navbar compatibility */}
-      <div className="relative pt-40 pb-20 bg-[#111] flex flex-col items-center justify-center px-4">
+      <div className="relative pt-40 pb-20 flex flex-col items-center justify-center px-4 overflow-hidden shadow-2xl">
+        {/* Background Image & Overlay */}
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transform scale-105"
+          style={{ backgroundImage: 'url("/gallery/MẶT NGOÀI KHÁCH SẠN/tn3.jpg")' }}
+        ></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#111]/90 via-[#111]/80 to-[#111]"></div>
+        <div className="absolute inset-0 z-0 bg-black/40 backdrop-blur-[4px]"></div>
+
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-xs uppercase tracking-[0.3em] font-bold text-[var(--color-gold)] mb-6"
+          className="relative z-10 text-xs uppercase tracking-[0.3em] font-bold text-[var(--color-gold)] mb-6"
         >
-          Khám phá / Explore
+          {t('gallery.explore')}
         </motion.h3>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-6xl font-serif text-white font-semibold tracking-wide"
+          className="relative z-10 text-4xl md:text-6xl font-serif text-white font-semibold tracking-wide shadow-black drop-shadow-xl"
         >
-          Thư Viện Ảnh
+          {t('gallery.title')}
         </motion.h2>
       </div>
 
@@ -78,7 +90,7 @@ const Gallery = () => {
                     : 'border-gray-200 text-gray-500 hover:border-[var(--color-gold)] hover:text-[var(--color-gold)]'
                   }`}
               >
-                {category}
+                {translateCategory(category)}
               </button>
             ))}
           </div>
@@ -107,7 +119,7 @@ const Gallery = () => {
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center backdrop-blur-[2px]">
                   <ZoomIn className="text-[var(--color-gold)] mb-4 transform scale-50 group-hover:scale-100 transition-transform duration-500" size={36} strokeWidth={1} />
                   <h4 className="text-white font-serif text-xl sm:text-3xl tracking-wider text-center px-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    {item.title}
+                    {translateCategory(item.title)}
                   </h4>
                 </div>
               </ScrollAnimation>
@@ -156,7 +168,7 @@ const Gallery = () => {
                   transition={{ delay: 0.2, duration: 0.5 }}
                   className="mt-8 text-center"
                 >
-                  <h3 className="text-[var(--color-gold)] font-serif text-2xl md:text-3xl tracking-[0.2em] uppercase">{selectedImg.title}</h3>
+                  <h3 className="text-[var(--color-gold)] font-serif text-2xl md:text-3xl tracking-[0.2em] uppercase">{translateCategory(selectedImg.title)}</h3>
                 </motion.div>
               </div>
             </motion.div>
@@ -183,7 +195,7 @@ const Gallery = () => {
             </button>
             <div className="w-full h-full relative">
               <DomeGallery
-                images={filteredImages.map(img => ({ src: img.image, alt: img.title }))}
+                images={filteredImages.map(img => ({ src: img.image, alt: translateCategory(img.title) }))}
                 fit={0.8}
                 minRadius={600}
                 maxVerticalRotationDeg={0}

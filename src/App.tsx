@@ -21,13 +21,13 @@ const Layout = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    if (locale && (locale === 'vi' || locale === 'en')) {
+    if (locale && ['vi', 'en', 'ko', 'zh'].includes(locale)) {
       i18n.changeLanguage(locale);
       document.documentElement.lang = locale;
     }
   }, [locale, i18n]);
 
-  if (!locale || (locale !== 'vi' && locale !== 'en')) {
+  if (!locale || !['vi', 'en', 'ko', 'zh'].includes(locale)) {
     return <Navigate to="/vi" replace />;
   }
 
@@ -54,14 +54,14 @@ const GalleryPage = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    if (locale && (locale === 'vi' || locale === 'en')) {
+    if (locale && ['vi', 'en', 'ko', 'zh'].includes(locale)) {
       i18n.changeLanguage(locale);
       document.documentElement.lang = locale;
     }
     window.scrollTo(0, 0);
   }, [locale, i18n]);
 
-  if (!locale || (locale !== 'vi' && locale !== 'en')) {
+  if (!locale || !['vi', 'en', 'ko', 'zh'].includes(locale)) {
     return <Navigate to="/vi/gallery" replace />;
   }
 

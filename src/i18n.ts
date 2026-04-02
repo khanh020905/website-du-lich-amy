@@ -112,6 +112,17 @@ const resources = {
         trustedBy: 'TRUSTED BY GLOBAL HOSPITALITY LEADERS',
         copyright: '© 2026 TAN PHUONG NAM GALAXY HOTEL.<br />ALL RIGHTS RESERVED.',
         links: ['PLATFORM', 'LEGAL', 'PRIVACY', 'CONTACT']
+      },
+      gallery: {
+        explore: 'EXPLORE',
+        title: 'Photo Gallery',
+        filters: {
+          'All': 'All',
+          'DỊCH VỤ': 'Services',
+          'MẶT NGOÀI KHÁCH SẠN': 'Hotel Exterior',
+          'NHÀ HÀNG': 'Restaurant',
+          'SẢNH LỄ TÂN': 'Reception Lobby'
+        }
       }
     }
   },
@@ -225,6 +236,265 @@ const resources = {
         trustedBy: 'ĐỐI TÁC CỦA CÁC THƯƠNG HIỆU HÀNG ĐẦU',
         copyright: '© 2026 KHÁCH SẠN TÂN PHƯƠNG NAM GALAXY.<br />TẤT CẢ QUYỀN ĐƯỢC BẢO LƯU.',
         links: ['NỀN TẢNG', 'PHÁP LÝ', 'BẢO MẬT', 'LIÊN HỆ']
+      },
+      gallery: {
+        explore: 'KHÁM PHÁ',
+        title: 'Thư Viện Ảnh',
+        filters: {
+          'All': 'Tất Cả',
+          'DỊCH VỤ': 'Dịch Vụ',
+          'MẶT NGOÀI KHÁCH SẠN': 'Mặt Ngoài Khách Sạn',
+          'NHÀ HÀNG': 'Nhà Hàng',
+          'SẢNH LỄ TÂN': 'Sảnh Lễ Tân'
+        }
+      }
+    }
+  },
+  ko: {
+    translation: {
+      nav: {
+        links: ['요리', '회의', '스파 & 웰니스', '프로모션', '갤러리'],
+        bookNow: '예약하기',
+      },
+      timelineNav: {
+        links: ['홈', '소개', '객실', '리뷰', 'FAQ', '연락처']
+      },
+      hero: {
+        subtitle: '최고급 숙박 경험',
+        title: '탄 프엉 남 갤럭시<br />다낭 호텔',
+        cta: '객실 예약',
+      },
+      intro: {
+        aboutUs: '호텔 소개',
+        highlight: "낭만적인 한강변에 자리잡은 4성급 프리미엄 리조트.",
+        desc: "다낭의 중심부에 위치한 저희 호텔은 12층 건물에 86개의 객실을 갖춘 고급스럽고 현대적인 휴식처를 제공합니다. 용다리, 미케 해변, 다낭 국제공항에서 불과 몇 분 거리에 있는 최적의 위치로 레저 및 비즈니스 여행객 모두에게 완벽한 선택입니다. 루프탑 수영장, 스파, 피트니스 룸, 루프탑 바 등 다양한 전용 시설을 즐겨보세요.",
+        knowMore: '더 알아보기',
+        byTheNumber: '숫자로 보는 호텔',
+        stats: [
+          { value: 4, suffix: '', icon: 'star', sign: '', title: '표준', desc: '현대적인 공간과 최고급 서비스를 자랑하는 4성급 기준 호텔입니다.' },
+          { value: 86, suffix: '', sign: '+', title: '프리미엄 객실', desc: '리버뷰 스위트와 펜트하우스를 포함한 다양하고 우아한 객실을 제공합니다.' },
+          { value: 12, suffix: '', sign: '', title: '층수', desc: '낭만적인 한강과 붐비는 다낭 시내의 파노라마 뷰를 제공합니다.' }
+        ],
+        amenities: [
+          { name: '루프탑 수영장' },
+          { name: '레스토랑' },
+          { name: '피트니스 센터' },
+          { name: '스파 & 마사지' }
+        ]
+      },
+      rooms: {
+        label: '럭셔리 객실',
+        title: '아름다운 객실 컬렉션',
+        perNight: '/ 1박',
+        bed: '침대',
+        guests: '투숙객',
+        items: [
+          { title: '슈페리어 킹', size: '25 m2', desc: '킹 침대 1개, 2인, 벽 전망' },
+          { title: '슈페리어 트윈', size: '28 m2', desc: '트윈 침대 2개, 2인, 시티 뷰' },
+          { title: '디럭스 킹', size: '28 m2', desc: '킹 침대 1개, 2인, 시티 뷰' }
+        ]
+      },
+      explore: {
+        label: '객실 및 스위트',
+        title: '객실 및 스위트 둘러보기',
+        from: '시작가',
+        items: [
+          { title: '디럭스 트리플', size: '30 m2', desc: '킹 침대 1개 & 싱글 침대 1개, 3인, 시티 뷰' },
+          { title: '이그제큐티브 리버 뷰', size: '30 m2', desc: '킹 침대 1개, 2인, 한강 뷰' },
+          { title: '프리미어 리버 뷰', size: '35 m2', desc: '킹 침대 1개, 2인, 한강 뷰' },
+          { title: '패밀리 리버 뷰', size: '40 m2', desc: '퀸 침대 2개, 4인, 한강 뷰' }
+        ]
+      },
+      accommodations: {
+        label: '익스클루시브 스위트',
+        title: '저희의 특별한 숙소',
+        items: [
+          { title: 'TPN 펜트하우스', size: '100 m2', desc: '침실 2개, 킹 침대 2개, 거실, 주방, 욕조, 4인' },
+          { title: '프리미어 리버 뷰', size: '35 m2', desc: '킹 침대 1개, 욕조, 2인' },
+          { title: '이그제큐티브 리버 뷰', size: '30 m2', desc: '킹 침대 1개, 욕조, 2인' },
+          { title: '패밀리 리버 뷰', size: '40 m2', desc: '퀸 침대 2개, 4인' }
+        ],
+        desc: "진정한 '환대 서비스'의 보이지 않는 럭셔리 파트너. 한강을 따라 자리 잡은 럭셔리 숙소입니다. 귀하의 기대를 뛰어넘어 문앞까지 최고의 럭셔리 환대를 제공할 것을 보장합니다.",
+        cta: '더 많은 객실 보기'
+      },
+      faq: {
+        label: 'FAQ',
+        title: '지금 알아야 할 모든 것',
+        items: [
+          { q: '호텔은 어디에 위치해 있나요?', a: '저희 호텔은 다낭 바익당 180에 위치해 있습니다. 용다리에서 850m, 한시장에서 190m, 미케 해변에서 가까운 3km 거리에 있습니다.' },
+          { q: '수영장과 체육관 운영 시간은 어떻게 되나요?', a: '루프탑 수영장은 06:00부터 18:00까지, 피트니스 룸은 06:00부터 22:00까지 이용하실 수 있습니다.' },
+          { q: '호텔 내 레스토랑이 있나요?', a: '예, 저희 조식 레스토랑은 06:00부터 22:00까지 200명의 손님을 수용하며 아시아, 서양 요리 및 현지 요리를 제공합니다.' },
+          { q: '어떤 기본 편의 시설이 포함되어 있나요?', a: '객실에는 자동 제어 장치, 고속 Wi-Fi, 에어컨, 미니바, 평면 TV, 금고, 책상, 헤어드라이어 및 주전자가 구비되어 있습니다.' }
+        ]
+      },
+      testimonials: {
+        header: {
+          title: '고객의 한마디',
+          subtitle: "TPN 갤럭시에서의 숙박에 대해 고객들이 어떻게 느끼는지 들어보세요"
+        },
+        label: '리뷰',
+        statsLabel: '리뷰 점수',
+        statsNum: '9.5 / 10',
+        statsText: '최근 리뷰를 종합한 전체 고객 만족도 평가입니다.',
+        reviews: [
+          { title: '훌륭한 서비스', text: '새 호텔, 아름다운 바다 전망, 열정적이고 친절한 직원, 세심한 서비스, 맛있는 음식, 저희 가족은 이곳에 머무는 동안 매우 만족했습니다. 앞으로 다시 오고 싶습니다. 최고오오오오오', author: 'Anna N.' },
+          { title: '', text: 'TPN 갤럭시 덕분에 낭만적인 한강에서 가족들과 잊지 못할 추억을 만들 수 있었습니다.', author: 'Cynthia Morgan' },
+          { title: '', text: "짧은 주말 여행일지라도 완벽한 휴가를 만끽하기 참 쉽습니다.", author: 'Steven Sunny' },
+          { title: '잊을 수 없는 경험', text: 'TPN 갤럭시 호텔은 저에게 비할 데 없는 프리미엄 편의시설과 편안함을 제공했습니다.', author: 'Sarah Jenkins' },
+          { title: '', text: "TPN 갤럭시와 함께 놀라운 순간들을 만들고 역동적인 도시 생활을 즐겨보세요.", author: 'Michael Wong' },
+          { title: '', text: "옥상 수영장과 용다리를 훤히 볼 수 있는 전용 전망은 정말이지 숨이 멎을 지경입니다.", author: 'Emma Watson' }
+        ]
+      },
+      cta: {
+        label: '여정을 시작하세요',
+        title: '오늘<br />객실 예약',
+        desc: '수많은 여행자들이 TPN 갤럭시 호텔을 굳게 믿고 선택합니다. 우아하고 럭셔리한 휴식 경험을 럭셔리 라운지에서 시작하세요 (+84) 236 3 / (+84) 9 또는 info@ 로 문의하세요.',
+        startNow: '시작하기',
+        learnMore: '더 알아보기'
+      },
+      footer: {
+        title: '럭셔리 경험의<br />새로운 기준',
+        desc: '탄 프엉 남 갤럭시 다낭 호텔은 고객의 만족을 위해 세심하게 맞춤 설계된 현대적인 최상급 숙소의 믿을 수 있는 이름입니다.',
+        bookNow: '예약하기',
+        pricing: '객실 보기',
+        trustedBy: '글로벌 호스피탈리티 리더들의 파트너',
+        copyright: '© 2026 탄 프엉 남 갤럭시 호텔.<br />모든 권리 보유.',
+        links: ['플랫폼', '법적 고지', '개인정보 보호', '연락처']
+      },
+      gallery: {
+        explore: '탐험하기',
+        title: '포토 갤러리',
+        filters: {
+          'All': '모두',
+          'DỊCH VỤ': '서비스',
+          'MẶT NGOÀI KHÁCH SẠN': '호텔 외관',
+          'NHÀ HÀNG': '레스토랑',
+          'SẢNH LỄ TÂN': '접수/로비'
+        }
+      }
+    }
+  },
+  zh: {
+    translation: {
+      nav: {
+        links: ['美食', '会议', '水疗与养生', '优惠', '画廊'],
+        bookNow: '立即预订',
+      },
+      timelineNav: {
+        links: ['首页', '关于我们', '客房', '评价', '常见问题', '联系我们']
+      },
+      hero: {
+        subtitle: '尊贵的住宿体验',
+        title: '新南方银河<br />岘港酒店',
+        cta: '预订客房',
+      },
+      intro: {
+        aboutUs: '关于我们',
+        highlight: "坐落在浪漫韩江畔的顶级 4 星级标准度假胜地。",
+        desc: "我们的酒店位于岘港市中心，提供豪华现代的休憩之所，共有 12 层，86 间客房。地理位置优越，距离龙桥、美溪海滩和岘港国际机场仅数分钟路程，是休闲和商务旅客的理想选择。尽情享受我们专属的设施，包括屋顶泳池、水疗与按摩、健身房和星空酒吧。",
+        knowMore: '了解更多',
+        byTheNumber: '数字亮点',
+        stats: [
+          { value: 4, suffix: '', icon: 'star', sign: '', title: '标准', desc: '等同于 4 星级标准的酒店，提供现代空间和尊享服务。' },
+          { value: 86, suffix: '', sign: '+', title: '豪华客房', desc: '提供多种优雅客房，包括江景套房和顶层公寓。' },
+          { value: 12, suffix: '', sign: '', title: '楼层', desc: '尽享浪漫韩江和繁华岘港市的全景。' }
+        ],
+        amenities: [
+          { name: '屋顶泳池' },
+          { name: '餐厅' },
+          { name: '健身中心' },
+          { name: '水疗与按摩' }
+        ]
+      },
+      rooms: {
+        label: '豪华客房',
+        title: '我们精美的客房系列',
+        perNight: '/ 晚',
+        bed: '床型',
+        guests: '宾客',
+        items: [
+          { title: '高级大床房', size: '25 平方米', desc: '1张大床，2人，面墙景观' },
+          { title: '高级双床房', size: '28 平方米', desc: '2张单人床，2人，市景' },
+          { title: '豪华大床房', size: '28 平方米', desc: '1张大床，2人，市景' }
+        ]
+      },
+      explore: {
+        label: '客房与套房',
+        title: '探索客房与套房',
+        from: '起价',
+        items: [
+          { title: '豪华三人房', size: '30 平方米', desc: '1张大床 & 1张单人床，3人，市景' },
+          { title: '行政江景房', size: '30 平方米', desc: '1张大床，2人，韩江景观' },
+          { title: '尊贵江景房', size: '35 平方米', desc: '1张大床，2人，韩江景观' },
+          { title: '家庭江景房', size: '40 平方米', desc: '2张大号双人床，4人，韩江景观' }
+        ]
+      },
+      accommodations: {
+        label: '专属套房',
+        title: '我们的住宿',
+        items: [
+          { title: 'TPN 顶层公寓', size: '100 平方米', desc: '2间卧室，2张大床，客厅，厨房，浴缸，4人' },
+          { title: '尊贵江景房', size: '35 平方米', desc: '1张大床，浴缸，2人' },
+          { title: '行政江景房', size: '30 平方米', desc: '1张大床，浴缸，2人' },
+          { title: '家庭江景房', size: '40 平方米', desc: '2张大号双人床，4人' }
+        ],
+        desc: "真正的'待客之道'背后无可比拟的奢华伙伴。坐落于韩江畔的奢华地产。我们超越您的期待，保证将无与伦比的奢华款待送到您身边。",
+        cta: '发现更多客房'
+      },
+      faq: {
+        label: '常见问题',
+        title: '您现在需要了解的一切',
+        items: [
+          { q: '酒店位置在哪里？', a: '我们位于岘港市白藤街 180 号。距离龙桥仅 850 米，距离汉市场 190 米，距离美溪海滩 3 公里。' },
+          { q: '游泳池和健身房的营业时间是什么时候？', a: '屋顶泳池的开放时间为 06:00 至 18:00，健身房的开放时间为 06:00 至 22:00。' },
+          { q: '酒店内有餐厅吗？', a: '是的，我们的餐厅供应亚洲菜、西餐和当地美食，营业时间为 06:00 至 22:00，可容纳 200 位客人。' },
+          { q: '包含哪些基本设施？', a: '客房配备自动控制单元、高速 Wi-Fi、空调、迷你吧、平板电视、保险箱、办公桌、吹风机和热水壶。' }
+        ]
+      },
+      testimonials: {
+        header: {
+          title: '客人怎么说',
+          subtitle: "让我们听听客人在 TPN 银河入住的感受"
+        },
+        label: '评价',
+        statsLabel: '评分',
+        statsNum: '9.5 / 10',
+        statsText: '基于近期评价的整体客人满意度。',
+        reviews: [
+          { title: '卓越的服务', text: '新酒店，无敌海景，员工热情友好，服务周到，食物美味，我们全家住在这里非常满意。希望将来有机会再来。非非非非常棒', author: 'Anna N.' },
+          { title: '', text: '感谢 TPN 银河，让我在浪漫的韩江边与家人留下了难忘的回忆。', author: 'Cynthia Morgan' },
+          { title: '', text: "即使只有一个短暂的周末旅行，也能轻松享受完美的假期。", author: 'Steven Sunny' },
+          { title: '难忘的经历', text: 'TPN 银河酒店为我提供了丰富的顶级设施和无与伦比的舒适感。', author: 'Sarah Jenkins' },
+          { title: '', text: "与 TPN 银河一起度过令人难以置信的时刻，拥抱充满活力的城市生活。", author: 'Michael Wong' },
+          { title: '', text: "屋顶泳池和龙桥的专属景观绝对令人叹为观止。", author: 'Emma Watson' }
+        ]
+      },
+      cta: {
+        label: '开启您的旅程',
+        title: '今天<br />预订客房',
+        desc: '加入无数信赖 TPN 银河酒店的旅行者行列。请通过 (+84) 236 3 / (+84) 9 或 info@ 联系我们，开始探索豪华休闲体验。',
+        startNow: '现在开始',
+        learnMore: '了解更多'
+      },
+      footer: {
+        title: '尊贵体验的<br />新标准。',
+        desc: '新南方银河岘港酒店是现代顶级住宿的信赖之选，精准为您量身定制，确保您满意。',
+        bookNow: '立即预订',
+        pricing: '查看客房',
+        trustedBy: '全球款待业领袖信赖',
+        copyright: '© 2026 新南方银河酒店。<br />保留所有权利。',
+        links: ['平台', '法律信息', '隐私政策', '联系我们']
+      },
+      gallery: {
+        explore: '探索',
+        title: '画廊',
+        filters: {
+          'All': '全部',
+          'DỊCH VỤ': '服务',
+          'MẶT NGOÀI KHÁCH SẠN': '酒店外观',
+          'NHÀ HÀNG': '餐厅',
+          'SẢNH LỄ TÂN': '接待/大堂'
+        }
       }
     }
   }
