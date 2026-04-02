@@ -41,13 +41,19 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 lg:px-6 xl:px-12 flex justify-between items-center relative w-full">
         {/* Logo */}
-        <div className="pointer-events-auto cursor-pointer shrink-0">
+        <Link 
+          to={`/${locale || 'vi'}`}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="pointer-events-auto cursor-pointer shrink-0"
+        >
           <img 
             src="/tpn-logo.png" 
             alt="Tan Phuong Nam Logo" 
             className="h-16 lg:h-24 w-auto object-contain" 
           />
-        </div>
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center justify-center space-x-4 xl:space-x-8 flex-1 px-4">
