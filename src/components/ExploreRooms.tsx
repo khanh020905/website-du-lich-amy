@@ -3,27 +3,20 @@ import { motion } from 'framer-motion';
 import { Maximize, Bed, Users } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-import img1 from '../assets/pdf_images/img_p4_15.jpeg';
 import img2 from '../assets/pdf_images/img_p4_13.jpeg';
 import img3 from '../assets/pdf_images/img_p4_14.jpeg';
 import img4 from '../assets/pdf_images/img_p5_17.jpeg';
 
 const suitesImg = [
   {
-    image: img1,
-    price: 1800000,
-    bedCount: 1,
-    guestCount: 2
-  },
-  {
     image: img2,
-    price: 2200000,
+    price: 4200000,
     bedCount: 1,
     guestCount: 2
   },
   {
     image: img3,
-    price: 4500000,
+    price: 12000000,
     bedCount: 2,
     guestCount: 4
   }
@@ -66,7 +59,7 @@ const ExploreRooms = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: index * 0.15 }}
-              className={`group cursor-pointer ${index === 2 ? 'md:col-span-2' : ''}`}
+              className="group cursor-pointer"
             >
               <div className="relative overflow-hidden mb-6 rounded-2xl">
                 <div className={`bg-gray-200 overflow-hidden ${index === 2 ? 'aspect-[16/10] md:aspect-[21/9]' : 'aspect-[16/11]'}`}>

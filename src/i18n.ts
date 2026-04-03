@@ -170,7 +170,8 @@ const resources = {
           { title: 'Superior Twin', size: '28 m2', desc: '2 giường đơn 1m2, 2 khách, hướng phố.' },
           { title: 'Deluxe King', size: '28 m2', desc: '1 giường đôi 1m8, 2 khách, hướng phố.' },
           { title: 'Deluxe Triple', size: '30 m2', desc: '1 giường 1m6 & 1 giường 1m2, 3 khách, hướng phố.' },
-          { title: 'Family River View', size: '40 m2', desc: '2 giường 1m6, 4 khách, hướng sông Hàn.' }
+          { title: 'Family River View', size: '40 m2', desc: '2 giường 1m6, 4 khách, hướng sông Hàn.' },
+          { title: 'Executive River View', size: '30 m2', desc: '1 giường đôi 1m8, 2 khách, hướng sông Hàn.' }
         ]
       },
       explore: {
@@ -178,7 +179,6 @@ const resources = {
         title: 'Khám Phá Hạng Suites',
         from: 'Từ',
         items: [
-          { title: 'Executive River View', size: '30 m2', desc: '1 giường đôi 1m8, 2 khách, hướng sông Hàn.' },
           { title: 'Premier River View', size: '35 m2', desc: '1 giường đôi 1m8, 2 khách, có bồn tắm, hướng sông Hàn.' },
           { title: 'TPN Penthouse', size: '100 m2', desc: '2 phòng ngủ, 2 giường 1m8, phòng khách, bếp, bồn tắm, 4 khách.' }
         ]
