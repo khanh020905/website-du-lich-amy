@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -14,6 +15,9 @@ import FAQ from './components/FAQ';
 import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
+
+import RoomDetail from './components/RoomDetail';
+import ServiceDetail from './components/ServiceDetail';
 
 const Layout = () => {
   const { locale } = useParams();
@@ -70,12 +74,123 @@ const GalleryPage = () => {
   );
 };
 
+const RoomDetailPage = () => {
+  const { locale } = useParams();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (locale && ['vi', 'en', 'ko', 'zh'].includes(locale)) {
+      i18n.changeLanguage(locale);
+      document.documentElement.lang = locale;
+    }
+    window.scrollTo(0, 0);
+  }, [locale, i18n]);
+
+  if (!locale || !['vi', 'en', 'ko', 'zh'].includes(locale)) {
+    return <Navigate to="/vi" replace />;
+  }
+
+  return (
+    <div className="font-sans antialiased text-gray-800 bg-white">
+      <Navbar />
+      <RoomDetail />
+      <Footer />
+    </div>
+  );
+};
+
+const ServiceDetailPage = () => {
+  const { locale } = useParams();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (locale && ['vi', 'en', 'ko', 'zh'].includes(locale)) {
+      i18n.changeLanguage(locale);
+      document.documentElement.lang = locale;
+    }
+    window.scrollTo(0, 0);
+  }, [locale, i18n]);
+
+  if (!locale || !['vi', 'en', 'ko', 'zh'].includes(locale)) {
+    return <Navigate to="/vi" replace />;
+  }
+
+  return (
+    <div className="font-sans antialiased text-gray-800 bg-white">
+      <Navbar />
+      <ServiceDetail />
+      <Footer />
+    </div>
+  );
+};
+
+const RoomsPage = () => {
+  const { locale } = useParams();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    if (locale && ['vi', 'en', 'ko', 'zh'].includes(locale)) {
+      i18n.changeLanguage(locale);
+      document.documentElement.lang = locale;
+    }
+    window.scrollTo(0, 0);
+  }, [locale, i18n]);
+
+  if (!locale || !['vi', 'en', 'ko', 'zh'].includes(locale)) {
+    return <Navigate to="/vi" replace />;
+  }
+
+  return (
+    <div className="font-sans antialiased text-gray-800 bg-[#111]">
+      <Navbar />
+
+      {/* Dark Cinematic Header specifically for Rooms standalone container */}
+      <div className="relative pt-40 pb-20 flex flex-col items-center justify-center px-4 overflow-hidden shadow-2xl">
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transform scale-105"
+          style={{ backgroundImage: 'url("/assets/tn1.jpg")' }}
+        ></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#111]/90 via-[#111]/80 to-[#111]"></div>
+        <div className="absolute inset-0 z-0 bg-black/40 backdrop-blur-[4px]"></div>
+
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative z-10 text-xs uppercase tracking-[0.3em] font-bold text-[var(--color-gold)] mb-6"
+        >
+          {t('rooms.label')}
+        </motion.h3>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="relative z-10 text-4xl md:text-6xl font-serif text-white font-semibold tracking-wide shadow-black drop-shadow-xl"
+        >
+          {t('rooms.title')}
+        </motion.h2>
+      </div>
+
+      <div className="bg-white pb-16">
+        <RoomsCollection hideTitle={true} />
+        <ExploreRooms />
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/vi" replace />} />
       <Route path="/:locale" element={<Layout />} />
       <Route path="/:locale/gallery" element={<GalleryPage />} />
+      <Route path="/:locale/rooms" element={<RoomsPage />} />
+      <Route path="/:locale/room/:roomId" element={<RoomDetailPage />} />
+      <Route path="/:locale/service/:serviceId" element={<ServiceDetailPage />} />
       <Route path="*" element={<Navigate to="/vi" replace />} />
     </Routes>
   );

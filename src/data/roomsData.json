@@ -1,0 +1,222 @@
+[
+  {
+    "id": "superior-king",
+    "price": 1200000,
+    "bedCount": 1,
+    "guestCount": 2,
+    "galleries": [
+      "/gallery/SUPERIOR KING/sup 1 nen.jpg"
+    ],
+    "cover": "/gallery/SUPERIOR KING/sup 1 nen.jpg",
+    "amenities": ["Wall View", "Free Wi-Fi", "Air Conditioning", "Minibar"],
+    "reviews": {
+      "vi": [
+        { "name": "Nguyên A.", "score": 9.5, "text": "Phòng rất ấm cúng và sạch sẽ." },
+        { "name": "Bích Thủy", "score": 9.0, "text": "Nhân viên thân thiện, phòng cách âm tốt." }
+      ],
+      "en": [
+        { "name": "John Doe", "score": 9.5, "text": "Very cozy and clean room." },
+        { "name": "Alice T.", "score": 9.0, "text": "Friendly staff, excellent soundproofing." }
+      ],
+      "ko": [
+        { "name": "김민지", "score": 9.5, "text": "매우 아늑하고 깨끗한 방입니다." },
+        { "name": "이준호", "score": 9.0, "text": "친절한 직원, 훌륭한 방음." }
+      ],
+      "zh": [
+        { "name": "张伟", "score": 9.5, "text": "非常温馨干净的房间。" },
+        { "name": "王芳", "score": 9.0, "text": "员工很友好，隔音效果很好。" }
+      ]
+    }
+  },
+  {
+    "id": "superior-twin",
+    "price": 1400000,
+    "bedCount": 2,
+    "guestCount": 2,
+    "galleries": [
+      "/gallery/SUPERIOR TWIN/TWIN 1.jpg",
+      "/gallery/SUPERIOR TWIN/TWIN 2.jpg"
+    ],
+    "cover": "/gallery/SUPERIOR TWIN/TWIN 1.jpg",
+    "amenities": ["City View", "Free Wi-Fi", "Air Conditioning", "Minibar"],
+    "reviews": {
+      "vi": [
+        { "name": "Hải Nam", "score": 9.0, "text": "Không gian thoải mái, đầy đủ tiện nghi." }
+      ],
+      "en": [
+        { "name": "Michael S.", "score": 9.0, "text": "Comfortable space with full amenities." }
+      ],
+      "ko": [
+        { "name": "박서준", "score": 9.0, "text": "모든 편의시설이 갖춰진 편안한 공간." }
+      ],
+      "zh": [
+        { "name": "李强", "score": 9.0, "text": "设施齐全，空间舒适。" }
+      ]
+    }
+  },
+  {
+    "id": "deluxe-king",
+    "price": 1800000,
+    "bedCount": 1,
+    "guestCount": 2,
+    "galleries": [
+      "/gallery/DELUXE KING/DELUXE 1.jpg",
+      "/gallery/DELUXE KING/DELUXE 2 nen.jpg",
+      "/gallery/DELUXE KING/DELUXE 2.jpg"
+    ],
+    "cover": "/gallery/DELUXE KING/DELUXE 1.jpg",
+    "amenities": ["City View", "Free Wi-Fi", "Bathtub", "Minibar"],
+    "reviews": {
+      "vi": [
+        { "name": "Thu Phương", "score": 9.8, "text": "Phòng đẹp, view nhìn ra trung tâm thành phố rực rỡ." }
+      ],
+      "en": [
+        { "name": "Sarah K.", "score": 9.8, "text": "Beautiful room, amazing view of the city center." }
+      ],
+      "ko": [
+        { "name": "최유진", "score": 9.8, "text": "아름다운 방, 도심 뷰가 환상적입니다." }
+      ],
+      "zh": [
+        { "name": "陈敏", "score": 9.8, "text": "美丽的房间，可以欣赏市中心的迷人景色。" }
+      ]
+    }
+  },
+  {
+    "id": "deluxe-triple",
+    "price": 2200000,
+    "bedCount": 2,
+    "guestCount": 3,
+    "galleries": [
+      "/gallery/DELUXE TRIPLE/tripl 3.jpg",
+      "/gallery/DELUXE TRIPLE/TRIPLE 1.jpg",
+      "/gallery/DELUXE TRIPLE/TRIPLE 2.jpg"
+    ],
+    "cover": "/gallery/DELUXE TRIPLE/TRIPLE 1.jpg",
+    "amenities": ["City View", "Extra Bed", "Free Wi-Fi", "Bathtub"],
+    "reviews": {
+      "vi": [
+        { "name": "Quốc Khánh", "score": 9.5, "text": "Hoàn hảo cho gia đình nhỏ. Bé nhà mình rất thích." }
+      ],
+      "en": [
+        { "name": "David W.", "score": 9.5, "text": "Perfect for a small family. My child loved it." }
+      ],
+      "ko": [
+        { "name": "정우성", "score": 9.5, "text": "소규모 가족에게 완벽합니다. 제 아이가 정말 좋아했어요." }
+      ],
+      "zh": [
+        { "name": "刘洋", "score": 9.5, "text": "非常适合小家庭。我的孩子非常喜欢。" }
+      ]
+    }
+  },
+  {
+    "id": "family-river-view",
+    "price": 2800000,
+    "bedCount": 2,
+    "guestCount": 4,
+    "galleries": [
+      "/gallery/FAMILY RIVER VIEW/FAM 1.jpg",
+      "/gallery/FAMILY RIVER VIEW/FAM 2.jpg",
+      "/gallery/FAMILY RIVER VIEW/FAM 3.jpg",
+      "/gallery/FAMILY RIVER VIEW/fam 4.jpg"
+    ],
+    "cover": "/gallery/FAMILY RIVER VIEW/FAM 1.jpg",
+    "amenities": ["Han River View", "Family Size", "Free Wi-Fi", "Bathtub"],
+    "reviews": {
+      "vi": [
+        { "name": "Hương Ly", "score": 9.9, "text": "Rộng rãi và thoáng mát. View hướng ra Sông Hàn cực kỳ lãng mạn." }
+      ],
+      "en": [
+        { "name": "Emma R.", "score": 9.9, "text": "Spacious and airy. The view overlooking the Han River is extremely romantic." }
+      ],
+      "ko": [
+        { "name": "강태현", "score": 9.9, "text": "넓고 쾌적합니다. 한강 뷰가 정말 로맨틱합니다." }
+      ],
+      "zh": [
+        { "name": "周健", "score": 9.9, "text": "宽敞明亮。俯瞰韩江的景色极其浪漫。" }
+      ]
+    }
+  },
+  {
+    "id": "executive-river-view",
+    "price": 3500000,
+    "bedCount": 1,
+    "guestCount": 2,
+    "galleries": [
+      "/gallery/EXECUTIVE RIVER VIEW/EXE 1.jpg",
+      "/gallery/EXECUTIVE RIVER VIEW/EXE 2.jpg"
+    ],
+    "cover": "/gallery/EXECUTIVE RIVER VIEW/EXE 1.jpg",
+    "amenities": ["Han River View", "Premium Amenities", "Free Wi-Fi", "Bathtub"],
+    "reviews": {
+      "vi": [
+        { "name": "Tuấn Anh", "score": 10, "text": "Dịch vụ đẳng cấp. Rất thích hợp cho chuyến công tác." }
+      ],
+      "en": [
+        { "name": "Robert B.", "score": 10, "text": "World-class service. Highly suitable for business trips." }
+      ],
+      "ko": [
+        { "name": "윤아", "score": 10, "text": "세계적 수준의 서비스. 비즈니스 여행에 매우 적합합니다." }
+      ],
+      "zh": [
+        { "name": "吴浩", "score": 10, "text": "世界级的服务。非常适合商务出差。" }
+      ]
+    }
+  },
+  {
+    "id": "premier-river-view",
+    "price": 4200000,
+    "bedCount": 1,
+    "guestCount": 2,
+    "galleries": [
+      "/gallery/PREMIER RIVER VIEW/PRE 1.jpg",
+      "/gallery/PREMIER RIVER VIEW/PRE 2.jpg",
+      "/gallery/PREMIER RIVER VIEW/PRE 3.jpg"
+    ],
+    "cover": "/gallery/PREMIER RIVER VIEW/PRE 1.jpg",
+    "amenities": ["Han River View", "Premium Lounge Access", "Free Wi-Fi", "Bathtub"],
+    "reviews": {
+      "vi": [
+        { "name": "Mai Lê", "score": 10, "text": "Trải nghiệm sang trọng tuyệt đối. Mình sẽ quay lại." }
+      ],
+      "en": [
+        { "name": "Sophie M.", "score": 10, "text": "Absolute luxury experience. I will definitely be back." }
+      ],
+      "ko": [
+        { "name": "지민", "score": 10, "text": "완벽한 럭셔리 경험. 꼭 다시 방문하고 싶습니다." }
+      ],
+      "zh": [
+        { "name": "林丹", "score": 10, "text": "绝对的奢华体验。我一定会再来的。" }
+      ]
+    }
+  },
+  {
+    "id": "tpn-penthouse",
+    "price": 12000000,
+    "bedCount": 2,
+    "guestCount": 4,
+    "galleries": [
+      "/gallery/TPN PENTHOUSE/TPN 1.jpg",
+      "/gallery/TPN PENTHOUSE/TPN 2.jpg",
+      "/gallery/TPN PENTHOUSE/TPN 3.jpg",
+      "/gallery/TPN PENTHOUSE/TPN 4.jpg",
+      "/gallery/TPN PENTHOUSE/TPN 5.jpg",
+      "/gallery/TPN PENTHOUSE/TPN 6.jpg"
+    ],
+    "cover": "/gallery/TPN PENTHOUSE/TPN 1.jpg",
+    "amenities": ["Han River Panoramic", "Private Butler", "Living Room", "Full Kitchen", "Luxury Bathtub"],
+    "reviews": {
+      "vi": [
+        { "name": "Hoàng Vinh", "score": 10, "text": "Đỉnh cao nghỉ dưỡng. Penthouse thiết kế quá tuyệt vời." }
+      ],
+      "en": [
+        { "name": "James L.", "score": 10, "text": "The pinnacle of relaxation. The Penthouse design is absolutely glorious." }
+      ],
+      "ko": [
+        { "name": "현빈", "score": 10, "text": "휴식의 정점. 펜트하우스 디자인은 정말 환상적입니다." }
+      ],
+      "zh": [
+        { "name": "马云", "score": 10, "text": "放松的巅峰。顶层公寓的设计简直美轮美奂。" }
+      ]
+    }
+  }
+]

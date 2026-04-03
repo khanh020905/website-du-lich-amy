@@ -1,10 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { MapPin, Phone, Mail, MessageCircle, Navigation } from 'lucide-react';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+
+// Create a custom marker icon to avoid the broken shadow issue in React + Leaflet default setups
+const customIcon = new L.DivIcon({
+  className: 'custom-map-marker',
+  html: `<div style="background-color: #D4AF37; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>`,
+  iconSize: [24, 24],
+  iconAnchor: [12, 12],
+  popupAnchor: [0, -12],
+});
+
+// Interceptor hook to dynamically control zooming
+const MapScrollEnabler = () => {
+  const map = useMap();
+
+  useEffect(() => {
+    map.scrollWheelZoom.disable();
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Control' || e.metaKey) map.scrollWheelZoom.enable();
+    };
+    const handleKeyUp = (e: KeyboardEvent) => {
+      if (e.key === 'Control' || e.metaKey) map.scrollWheelZoom.disable();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keyup', handleKeyUp);
+    };
+  }, [map]);
+
+  return null;
+};
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const footerLinks = t('footer.links', { returnObjects: true }) as string[];
+  
+  // Coordinates for 180 Bạch Đằng
+  const hotelPosition: [number, number] = [16.0716, 108.2238];
+
+  // Map Message State
+  const [showMapMessage, setShowMapMessage] = useState(false);
+  const mapMsgTimeout = useRef<number | null>(null);
+
+  const isVi = i18n.language ? i18n.language.startsWith('vi') : true;
 
   return (
     <footer className="bg-[#0A0A0A] relative overflow-hidden text-white pt-24">
@@ -33,12 +80,20 @@ const Footer = () => {
                 <span className="text-sm md:text-base font-semibold">0236 3 668 886</span>
               </div>
               
-              <div className="flex items-center gap-4 mt-6">
+              <div className="flex flex-wrap items-center gap-3 mt-6">
                 <button className="flex items-center gap-2 bg-[var(--color-gold)] text-[#0A0A0A] px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide hover:bg-[var(--color-gold-hover)] transition-colors">
                   <MessageCircle size={16} /> CHAT BOX
                 </button>
                 <button className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide hover:bg-white/10 transition-colors">
                   <MapPin size={16} /> GOOGLE MAP
+                </button>
+                <button className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide hover:bg-white/10 transition-colors">
+                  <MessageCircle size={16} /> ZALO
+                </button>
+                <button className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide hover:bg-white/10 transition-colors">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg> FACEBOOK
                 </button>
               </div>
             </div>
@@ -79,7 +134,57 @@ const Footer = () => {
                 <span className="text-sm font-bold text-[var(--color-gold)]">2 km</span>
               </div>
             </div>
+
+            {/* Satellite Map Integration */}
+            <div 
+              className="mt-4 overflow-hidden rounded-xl h-[300px] w-full shadow-2xl relative z-10 border border-white/10"
+              onWheel={(e) => {
+                // If they don't hold ctrl or meta, gently prompt them
+                if (!e.ctrlKey && !e.metaKey) {
+                  setShowMapMessage(true);
+                  if (mapMsgTimeout.current) window.clearTimeout(mapMsgTimeout.current);
+                  mapMsgTimeout.current = window.setTimeout(() => setShowMapMessage(false), 2000);
+                }
+              }}
+            >
+              
+              {/* Interaction Blocker/Prompt */}
+              <div 
+                className={`absolute inset-0 bg-[#0A0A0A]/60 flex items-center justify-center p-4 text-center pointer-events-none transition-opacity duration-300 z-[999] ${showMapMessage ? 'opacity-100' : 'opacity-0'}`}
+              >
+                <div className="text-white font-sans text-sm md:text-lg tracking-wide bg-black/40 px-6 py-3 rounded-full backdrop-blur-sm border border-white/10">
+                  {isVi ? 'Dùng Ctrl + Cuộn chuột để phóng to bản đồ' : 'Use Ctrl + Scroll to zoom the map'}
+                </div>
+              </div>
+
+              <MapContainer 
+                center={hotelPosition} 
+                zoom={14} 
+                scrollWheelZoom={false} 
+                attributionControl={false}
+                className="h-full w-full"
+                // Adding a z-index lower than absolute dropdowns to ensure stability
+                style={{ zIndex: 0 }}
+              >
+                <MapScrollEnabler />
+                
+                {/* Google Maps Hybrid (Satellite with Street Details) */}
+                <TileLayer
+                  url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+                />
+                <Marker position={hotelPosition} icon={customIcon}>
+                  <Popup>
+                    <div className="text-center font-sans">
+                      <div className="font-bold text-[#D4AF37] text-sm">TPN Galaxy</div>
+                      <div className="text-xs text-gray-600 mt-1">180 Bạch Đằng</div>
+                    </div>
+                  </Popup>
+                </Marker>
+              </MapContainer>
+            </div>
+            
           </div>
+
           
         </div>
         

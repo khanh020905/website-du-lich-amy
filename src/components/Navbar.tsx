@@ -27,7 +27,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navAnchors = ['culinary', 'rooms', 'service', 'offer', 'gallery'];
+  const navAnchors = ['rooms', 'culinary', 'service', 'offer', 'gallery'];
   const translatedLinks = t('nav.links', { returnObjects: true }) as string[];
 
   const switchLanguage = (lng: string) => {
@@ -65,15 +65,42 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center justify-center space-x-4 xl:space-x-8 flex-1 px-4">
-          {navAnchors.map((anchor, index) => (
-            <Link
-              key={anchor}
-              to={anchor === 'gallery' ? `/${locale}/gallery` : `/${locale}#${anchor}`}
-              className="text-white text-[11px] lg:text-xs xl:text-sm font-semibold tracking-[0.1em] xl:tracking-widest hover:text-[var(--color-gold)] transition-colors duration-300 uppercase whitespace-nowrap"
-            >
-              {translatedLinks[index]}
-            </Link>
-          ))}
+          {navAnchors.map((anchor, index) => {
+            const isGallery = anchor === 'gallery';
+            const isRooms = anchor === 'rooms';
+            
+            let targetPath = `/${locale}`;
+            let targetHash = `#${anchor}`;
+            
+            if (isGallery) {
+              targetPath = `/${locale}/gallery`;
+              targetHash = '';
+            } else if (isRooms) {
+              targetPath = `/${locale}/rooms`;
+              targetHash = '';
+            }
+            
+            return (
+              <Link
+                key={anchor}
+                to={`${targetPath}${targetHash}`}
+                onClick={(e) => {
+                  if (!isGallery && !isRooms && location.pathname === targetPath) {
+                    const el = document.getElementById(anchor);
+                    if (el) {
+                      e.preventDefault();
+                      el.scrollIntoView({ behavior: 'smooth' });
+                      // Update URL without jump
+                      window.history.pushState({}, '', `${targetPath}#${anchor}`);
+                    }
+                  }
+                }}
+                className="text-white text-[11px] lg:text-xs xl:text-sm font-semibold tracking-[0.1em] xl:tracking-widest hover:text-[var(--color-gold)] transition-colors duration-300 uppercase whitespace-nowrap"
+              >
+                {translatedLinks[index]}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Right Section: I18n & Button (Desktop) */}
@@ -130,16 +157,42 @@ const Navbar = () => {
             className="lg:hidden absolute top-full left-0 right-0 bg-[#111] bg-opacity-95 backdrop-blur-md shadow-xl border-t border-white/10 overflow-hidden"
           >
             <div className="flex flex-col px-6 py-6 space-y-5">
-              {navAnchors.map((anchor, index) => (
-                <Link
-                  key={anchor}
-                  to={anchor === 'gallery' ? `/${locale}/gallery` : `/${locale}#${anchor}`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-white text-sm font-semibold tracking-widest hover:text-[var(--color-gold)] transition-colors duration-300 uppercase block"
-                >
-                  {translatedLinks[index]}
-                </Link>
-              ))}
+              {navAnchors.map((anchor, index) => {
+                const isGallery = anchor === 'gallery';
+                const isRooms = anchor === 'rooms';
+                
+                let targetPath = `/${locale}`;
+                let targetHash = `#${anchor}`;
+                
+                if (isGallery) {
+                  targetPath = `/${locale}/gallery`;
+                  targetHash = '';
+                } else if (isRooms) {
+                  targetPath = `/${locale}/rooms`;
+                  targetHash = '';
+                }
+
+                return (
+                  <Link
+                    key={anchor}
+                    to={`${targetPath}${targetHash}`}
+                    onClick={(e) => {
+                      setIsMobileMenuOpen(false);
+                      if (!isGallery && !isRooms && location.pathname === targetPath) {
+                        const el = document.getElementById(anchor);
+                        if (el) {
+                          e.preventDefault();
+                          el.scrollIntoView({ behavior: 'smooth' });
+                          window.history.pushState({}, '', `${targetPath}#${anchor}`);
+                        }
+                      }
+                    }}
+                    className="text-white text-sm font-semibold tracking-widest hover:text-[var(--color-gold)] transition-colors duration-300 uppercase block"
+                  >
+                    {translatedLinks[index]}
+                  </Link>
+                );
+              })}
               
               <div className="pt-5 mt-2 border-t border-white/10 flex flex-col space-y-6">
                 <div className="flex flex-col space-y-3 mt-2">

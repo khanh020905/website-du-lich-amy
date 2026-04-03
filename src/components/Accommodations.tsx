@@ -1,138 +1,139 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Maximize, Bed, Users } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Link, useParams } from 'react-router-dom';
 
-import img1 from '../assets/pdf_images/img_p2_5.jpeg';
-import img2 from '../assets/pdf_images/img_p6_21.jpeg';
-import img3 from '../assets/pdf_images/img_p6_20.jpeg';
-import img4 from '../assets/pdf_images/img_p6_22.jpeg';
-import img5 from '../assets/pdf_images/img_p5_18.jpeg';
+import img1 from '../assets/reception.jpg';
+import img2 from '../assets/restaurent.jpg';
+import img3 from '../assets/spa.jpg';
+import img4 from '../assets/bartender-bar.jpg';
 
 const accommodationsImages = [
   { image: img1 },
   { image: img2 },
   { image: img3 },
-  { image: img4 },
-  { image: img5 }
+  { image: img4 }
 ];
 
 const Accommodations = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const { t } = useTranslation();
+  const { locale } = useParams();
 
   const accItems = t('accommodations.items', { returnObjects: true }) as Array<{ title: string, size: string, desc: string }>;
+  
+  // Real-world dummy hours mapped for each service sequentially (Lobby, Restaurant, Spa, Skybar)
+  const openingHoursMap = [
+    { vi: "Thời gian mở cửa: 24/7", en: "Opening Hours: 24/7", ko: "영업 시간: 연중무휴", zh: "营业时间：24/7" },
+    { vi: "Thời gian mở cửa: 06:00 đến 22:00", en: "Opening Hours: 06:00 to 22:00", ko: "영업 시간: 06:00 - 22:00", zh: "营业时间：06:00 至 22:00" },
+    { vi: "Thời gian mở cửa: 09:00 đến 21:00", en: "Opening Hours: 09:00 to 21:00", ko: "영업 시간: 09:00 - 21:00", zh: "营业时间：09:00 至 21:00" },
+    { vi: "Thời gian mở cửa: 16:00 đến 00:00", en: "Opening Hours: 16:00 to 00:00", ko: "영업 시간: 16:00 - 00:00", zh: "营业时间：16:00 至 00:00" },
+  ];
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % accommodationsImages.length);
-  };
+  const currentItem = accItems[activeIndex];
+  const currentLang = (locale || 'vi') as 'vi' | 'en' | 'ko' | 'zh';
+  const hours = openingHoursMap[activeIndex][currentLang] || openingHoursMap[activeIndex].vi;
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + accommodationsImages.length) % accommodationsImages.length);
+  const btnTextMap = {
+    vi: "Xem chi tiết",
+    en: "View Details",
+    ko: "세부 사항",
+    zh: "查看详情"
   };
-
-  const getOffset = (index: number) => {
-    let offset = index - currentIndex;
-    const len = accommodationsImages.length;
-    if (offset < -Math.floor(len / 2)) {
-      offset += len;
-    } else if (offset > Math.floor(len / 2)) {
-      offset -= len;
-    }
-    return offset;
-  };
+  const btnText = btnTextMap[currentLang] || btnTextMap.vi;
 
   return (
-    <section className="pt-24 pb-12 bg-white overflow-hidden">
-      <div className="text-center mb-16 px-6">
-        <motion.h3
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-xs uppercase tracking-[0.2em] font-bold text-[var(--color-gold)] mb-4"
-        >
-          {t('accommodations.label')}
-        </motion.h3>
+    <section className="pt-24 pb-12 bg-white scroll-mt-20" id="services">
+      {/* Header */}
+      <div className="text-center mb-10 px-4 md:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-5xl font-serif text-[#111] font-semibold"
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-serif text-[#111] mb-4"
         >
           {t('accommodations.title')}
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          className="text-sm md:text-base text-gray-500 max-w-3xl mx-auto leading-relaxed mt-4"
+        >
+          {t('accommodations.desc')}
+        </motion.p>
       </div>
 
-      {/* Carousel Container */}
-      <div className="relative w-full max-w-[1920px] mx-auto flex justify-center items-center h-[500px]">
-        {accommodationsImages.map((room, i) => {
-          const offset = getOffset(i);
-          const isCenter = offset === 0;
-          const isLeft = offset === -1;
-          const isRight = offset === 1;
-
-          return (
+      <div className="max-w-[1000px] mx-auto px-4 md:px-0">
+        {/* Main Feature Container */}
+        <div className="relative w-full h-[350px] md:h-[500px] overflow-hidden">
+          <AnimatePresence mode="wait">
             <motion.div
-              key={i}
-              className="absolute w-[85%] md:w-[60%] lg:w-[50%] h-[350px] md:h-[450px] shadow-2xl rounded-xl overflow-hidden cursor-pointer"
-              animate={{
-                x: isCenter ? "0%" : isLeft ? "-60%" : isRight ? "60%" : offset < 0 ? "-100%" : "100%",
-                scale: isCenter ? 1 : 0.85,
-                opacity: isCenter ? 1 : isLeft || isRight ? 0.4 : 0,
-                zIndex: isCenter ? 20 : isLeft || isRight ? 10 : 0,
-                filter: isCenter ? 'grayscale(0%) blur(0px)' : 'grayscale(100%) blur(2px)'
-              }}
-              transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-              onClick={() => {
-                if (isLeft) prevSlide();
-                if (isRight) nextSlide();
-              }}
-              style={{ pointerEvents: Math.abs(offset) > 1 ? "none" : "auto" }}
+              key={activeIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="absolute inset-0"
             >
               <img 
-                src={room.image} 
-                alt={accItems[i]?.title} 
+                src={accommodationsImages[activeIndex].image}
+                alt={currentItem?.title}
                 className="w-full h-full object-cover"
               />
-              {/* Overlay Content */}
-              <motion.div 
-                animate={{ opacity: isCenter ? 1 : 0 }}
-                transition={{ duration: 0.3 }}
-                className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end items-center pb-12 pointer-events-none"
-              >
-                <h3 className="text-white font-serif text-3xl mb-4 font-semibold text-center">{accItems[i]?.title}</h3>
-                <p className="text-gray-200 text-center font-medium max-w-md px-6 leading-relaxed">
-                  {accItems[i]?.desc}
-                </p>
-              </motion.div>
             </motion.div>
-          );
-        })}
-      </div>
+          </AnimatePresence>
 
-      {/* Pagination Indicators */}
-      <div className="flex justify-center mt-8 gap-3">
-        {accommodationsImages.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            className={`h-1.5 transition-all duration-300 rounded-full ${
-              currentIndex === idx ? 'w-10 bg-[var(--color-gold)]' : 'w-6 bg-gray-200 hover:bg-gray-300'
-            }`}
-            aria-label={`Go to slide ${idx + 1}`}
-          />
-        ))}
-      </div>
+          {/* Floating Info Box on the left */}
+          <div className="absolute top-[10%] left-0 md:top-1/2 md:-translate-y-1/2 md:left-8 lg:left-12 bg-white p-6 md:p-10 max-w-[90%] md:max-w-[420px] shadow-xl z-20 mx-4 md:mx-0 border-[3px] border-[#D4AF37]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`content-${activeIndex}`}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h3 className="text-2xl md:text-3xl font-serif text-[#D4AF37] mb-3 md:mb-5 font-normal tracking-wide">
+                  {currentItem?.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-4 md:mb-6 text-sm text-justify">
+                  {currentItem?.desc}
+                </p>
+                <p className="text-[#D4AF37] text-sm font-medium mb-6 md:mb-8 font-serif">
+                  {hours}
+                </p>
+                <div className="flex justify-center md:justify-start">
+                  <Link to={`/${currentLang}/service/${activeIndex}`}>
+                    <button className="border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 px-8 py-2 text-xs uppercase tracking-wider font-medium w-full md:w-auto">
+                      {btnText}
+                    </button>
+                  </Link>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
 
-      <div className="text-center mt-12 max-w-2xl mx-auto px-6">
-        <p className="text-sm font-medium text-gray-600 mb-8 leading-loose tracking-wide">
-          {t('accommodations.desc')}
-        </p>
-        <button className="bg-[var(--color-gold)] hover:bg-[var(--color-gold-hover)] text-white px-10 py-4 text-xs tracking-widest font-medium transition-colors duration-300 shadow-md uppercase">
-          {t('accommodations.cta')}
-        </button>
+        {/* Thumbnail Strip */}
+        <div className="flex justify-center items-center flex-wrap gap-2 md:gap-4 mt-2 md:mt-4">
+          {accommodationsImages.map((img, idx) => (
+            <div 
+              key={idx}
+              onClick={() => setActiveIndex(idx)}
+              className={`relative cursor-pointer w-[22%] sm:w-40 md:w-[220px] h-16 sm:h-24 md:h-[110px] overflow-hidden group shadow-sm transition-all duration-300 ${activeIndex === idx ? 'ring-2 ring-[#D4AF37] ring-offset-2' : ''}`}
+            >
+              <img 
+                src={img.image} 
+                alt={`Thumbnail ${idx}`} 
+                className={`w-full h-full object-cover transition-transform duration-700 ${activeIndex === idx ? 'scale-110' : 'group-hover:scale-105'}`}
+              />
+              <div className={`absolute inset-0 bg-black transition-opacity duration-300 ${activeIndex === idx ? 'opacity-0' : 'opacity-40 group-hover:opacity-20'}`}></div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

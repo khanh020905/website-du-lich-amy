@@ -5,7 +5,7 @@ const resources = {
   en: {
     translation: {
       nav: {
-        links: ['Culinary', 'Room & Suite', 'Service', 'Offer', 'Gallery'],
+        links: ['Rooms & Suites', 'Culinary', 'Service', 'Offer', 'Gallery'],
         bookNow: 'BOOK NOW',
       },
       timelineNav: {
@@ -62,11 +62,10 @@ const resources = {
         label: 'HOTEL SERVICES',
         title: 'Services and Amenities',
         items: [
-          { title: 'The South Restaurant', size: '', desc: 'Asian and Western culinary quintessence' },
-          { title: 'Stellar Skybar', size: '', desc: 'Vibrant nightlife with panoramic city views' },
-          { title: 'Swimming Pool', size: '', desc: 'Relaxing oasis on the rooftop of Da Nang' },
-          { title: 'Spa & Massage', size: '', desc: 'Rejuvenate your body and mind' },
-          { title: 'Lobby', size: '', desc: 'Luxurious welcoming space' }
+          { title: 'Reception Lobby', size: '', desc: 'A sophisticated welcoming space providing our guests a majestic first impression.' },
+          { title: 'The South Restaurant', size: '', desc: 'Embark on a culinary journey where Asian and Western delicacies orchestrate perfectly.' },
+          { title: 'Spa & Wellness', size: '', desc: 'Indulge in a tranquil sanctuary crafted to rejuvenate your body, mind, and soul.' },
+          { title: 'Stellar Skybar', size: '', desc: 'Sip on handcrafted signature cocktails while witnessing the breathtaking panoramic city view.' }
         ],
         desc: "The unseen luxury partners of true 'hospitality service'. Unmatched luxury properties along the Han River. We go beyond your expectations guaranteeing to bring unmatched luxury hospitality right to your footsteps.",
         cta: 'DISCOVER MORE SERVICES'
@@ -91,7 +90,7 @@ const resources = {
         statsNum: '9.5 / 10',
         statsText: 'Overall guest satisfaction rating based on recent reviews.',
         reviews: [
-          { title: 'Excellent Service', text: 'New hotel, beautiful sea view, enthusiastic and friendly staff, attentive service, delicious food, our family was very satisfied staying here. Hope to return to the hotel in the future. Gooddddddddddddddd', author: 'Anna N.' },
+          { title: 'Excellent Service', text: 'New hotel, beautiful Han River view, enthusiastic and friendly staff, attentive service, delicious food, our family was very satisfied staying here. Hope to return to the hotel in the future. Gooddddddddddddddd', author: 'Anna N.' },
           { title: '', text: 'Thanks to TPN Galaxy, I was able to create lifelong memories with my family by the romantic Han River.', author: 'Cynthia Morgan' },
           { title: '', text: "It's easy to enjoy a perfect vacation even if you only have a short weekend trip.", author: 'Steven Sunny' },
           { title: 'Unforgettable Experience', text: 'TPN Galaxy Hotel provided me with a wealth of premium amenities and unparalleled comfort.', author: 'Sarah Jenkins' },
@@ -131,7 +130,7 @@ const resources = {
   vi: {
     translation: {
       nav: {
-        links: ['Ẩm Thực', 'Phòng & Suite', 'Dịch Vụ', 'Ưu Đãi', 'Thư Viện Ảnh'],
+        links: ['Hạng Phòng', 'Ẩm Thực', 'Dịch Vụ', 'Ưu Đãi', 'Thư Viện Ảnh'],
         bookNow: 'ĐẶT PHÒNG',
       },
       timelineNav: {
@@ -145,7 +144,7 @@ const resources = {
       intro: {
         aboutUs: 'VỀ CHÚNG TÔI',
         highlight: "Khu nghỉ dưỡng sang trọng tiêu chuẩn 4 sao tọa lạc bên bờ sông Hàn thơ mộng.",
-        desc: "Tọa lạc tại trung tâm Đà Nẵng, khách sạn cung cấp 86 phòng nghỉ đẳng cấp trên 12 tầng với không gian hiện đại và nội thất sang trọng. Chỉ cách Cầu Rồng, Biển Mỹ Khê và Sân bay Quốc tế Đà Nẵng vài phút di chuyển, Tân Phương Nam Galaxy là lựa chọn hoàn hảo cho cả du khách và doanh nhân. Tận hưởng các tiện ích chung như Hồ bơi tầng thượng, Nhà hàng, Gym, và Spa.",
+        desc: "Tọa lạc trên cung đường Bạch Đằng đẹp bậc nhất thành phố Đà Nẵng, nơi ôm trọn vẻ đẹp của dòng sông Hàn huyền thoại. Tân Phương Nam Galaxy Hotel sở hữu 86 phòng nghỉ và Penhouse được thiết kế sang trọng và tinh tế. Hứa hẹn mang đến trải nghiệm lưu trú đẳng cấp và trọn vẹn cho mọi du khách",
         knowMore: 'TÌM HIỂU THÊM',
         byTheNumber: 'NHỮNG CON SỐ',
         stats: [
@@ -175,8 +174,8 @@ const resources = {
         ]
       },
       explore: {
-        label: 'PHÒNG & SUITE',
-        title: 'Khám Phá Phòng & Suite',
+        label: 'HẠNG SUITE',
+        title: 'Khám Phá Hạng Suites',
         from: 'Từ',
         items: [
           { title: 'Executive River View', size: '30 m2', desc: '1 giường đôi 1m8, 2 khách, hướng sông Hàn.' },
@@ -188,11 +187,10 @@ const resources = {
         label: 'TIỆN ÍCH',
         title: 'Dịch vụ và tiện nghi Khách sạn',
         items: [
-          { title: 'The South Restaurant', size: '', desc: 'Tinh hoa ẩm thực Á Âu' },
-          { title: 'Stellar Skybar', size: '', desc: 'Sôi động nhịp sống về đêm' },
-          { title: 'Swimming Pool', size: '', desc: 'Hồ bơi vô cực ngắm nhìn toàn cảnh ĐN' },
-          { title: 'Spa & Massage', size: '', desc: 'Nơi tái tạo năng lượng cho cơ thể và tâm trí' },
-          { title: 'Lobby', size: '', desc: 'Không gian đón khách sang trọng bậc nhất' }
+          { title: 'Sảnh Lễ Tân', size: '', desc: 'Không gian đón khách lộng lẫy mang lại trải nghiệm mãn nhãn ngay từ giây phút đầu tiên.' },
+          { title: 'Nhà Hàng The South', size: '', desc: 'Hành trình tinh hoa ẩm thực đỉnh cao với sự giao thoa hoàn hảo giữa phong vị Á - Âu.' },
+          { title: 'Spa & Massage', size: '', desc: 'Nơi chốn bình yên tĩnh lặng để tái tạo năng lượng thể chất lẫn tinh thần qua liệu pháp chuyên sâu.' },
+          { title: 'Stellar Skybar', size: '', desc: 'Thưởng thức cocktail thủ công thượng hạng và ngắm nhìn toàn cảnh thành phố rực rỡ từ trên cao.' }
         ],
         desc: "Khách sạn Tân Phương Nam cung cấp những dịch vụ đỉnh cao chuẩn mực. Từ không gian ẩm thực sang trọng đến khu nghỉ dưỡng và giải trí đầy phong cách.",
         cta: 'KHÁM PHÁ THÊM DỊCH VỤ'
@@ -217,7 +215,7 @@ const resources = {
         statsNum: '9.5 / 10',
         statsText: 'Sự hài lòng của khách hàng dựa trên các đánh giá gần đây.',
         reviews: [
-          { title: 'Dịch vụ xuất sắc', text: 'Khách sạn mới, view biển đẹp, nhân viên nhiệt tình thân thiện, phục vụ chu đáo, thức ăn ngon, gia đình mình ở tại đây rất hài lòng. Hi vọng có thể quay lại khách sạn trong tương lai. Gooddddddddddddddd', author: 'Anna N.' },
+          { title: 'Dịch vụ xuất sắc', text: 'Khách sạn mới, view sông Hàn đẹp, nhân viên nhiệt tình thân thiện, phục vụ chu đáo, thức ăn ngon, gia đình mình ở tại đây rất hài lòng. Hi vọng có thể quay lại khách sạn trong tương lai. Gooddddddddddddddd', author: 'Anna N.' },
           { title: '', text: 'Nhờ có TPN Galaxy, tôi đã có thể tạo ra những kỷ niệm đáng nhớ cùng gia đình bên dòng sông Hàn thơ mộng.', author: 'Cynthia Morgan' },
           { title: '', text: 'Rất dễ dàng để tận hưởng một kỳ nghỉ trọn vẹn ngay cả khi bạn chỉ có một chuyến đi ngắn ngày cuối tuần.', author: 'Steven Sunny' },
           { title: 'Trải nghiệm khó quên', text: 'Khách sạn TPN Galaxy thực sự mang đến những tiện ích cao cấp và sự thoải mái không thể nào sánh được.', author: 'Sarah Jenkins' },
@@ -257,7 +255,7 @@ const resources = {
   ko: {
     translation: {
       nav: {
-        links: ['요리', '객실 및 스위트', '서비스', '프로모션', '갤러리'],
+        links: ['객실 및 스위트', '요리', '서비스', '프로모션', '갤러리'],
         bookNow: '예약하기',
       },
       timelineNav: {
@@ -314,11 +312,10 @@ const resources = {
         label: '호텔 서비스',
         title: '서비스 및 편의 시설',
         items: [
-          { title: 'The South Restaurant', size: '', desc: '아시아 및 서양 요리의 진수' },
-          { title: 'Stellar Skybar', size: '', desc: '파노라마 시티 뷰를 갖춘 활기찬 나이트라이프' },
-          { title: 'Swimming Pool', size: '', desc: '루프탑 휴식 오아시스' },
-          { title: 'Spa & Massage', size: '', desc: '몸과 마음의 에너지 재충전' },
-          { title: 'Lobby', size: '', desc: '가장 럭셔리한 환영 공간' }
+          { title: '리셉션 로비', size: '', desc: '정교한 디자인으로 장엄한 첫인상을 선사하는 세련된 환영 공간입니다.' },
+          { title: '더 사우스 레스토랑', size: '', desc: '아시아 및 서양의 진미가 완벽하게 어우러지는 무한한 미식 여행을 떠나보세요.' },
+          { title: '스파 및 웰니스', size: '', desc: '몸과 마음, 영혼을 활성화하기 위해 세심하게 제작된 테라피를 즐겨보세요.' },
+          { title: '스텔라 스카이바', size: '', desc: '수제 칵테일을 음미하며 숨막히는 파노라마 도시 전경을 감상하세요.' }
         ],
         desc: "탄 프엉 남 호텔은 표준 이상의 최고급 서비스를 제공합니다. 우아한 요리 공간부터 스타일리시한 리조트 및 엔터테인먼트 공간까지.",
         cta: '더 많은 서비스 둘러보기'
@@ -343,7 +340,7 @@ const resources = {
         statsNum: '9.5 / 10',
         statsText: '최근 리뷰를 종합한 전체 고객 만족도 평가입니다.',
         reviews: [
-          { title: '훌륭한 서비스', text: '새 호텔, 아름다운 바다 전망, 열정적이고 친절한 직원, 세심한 서비스, 맛있는 음식, 저희 가족은 이곳에 머무는 동안 매우 만족했습니다. 앞으로 다시 오고 싶습니다. 최고오오오오오', author: 'Anna N.' },
+          { title: '훌륭한 서비스', text: '새 호텔, 아름다운 한강 전망, 열정적이고 친절한 직원, 세심한 서비스, 맛있는 음식, 저희 가족은 이곳에 머무는 동안 매우 만족했습니다. 앞으로 다시 오고 싶습니다. 최고오오오오오', author: 'Anna N.' },
           { title: '', text: 'TPN 갤럭시 덕분에 낭만적인 한강에서 가족들과 잊지 못할 추억을 만들 수 있었습니다.', author: 'Cynthia Morgan' },
           { title: '', text: "짧은 주말 여행일지라도 완벽한 휴가를 만끽하기 참 쉽습니다.", author: 'Steven Sunny' },
           { title: '잊을 수 없는 경험', text: 'TPN 갤럭시 호텔은 저에게 비할 데 없는 프리미엄 편의시설과 편안함을 제공했습니다.', author: 'Sarah Jenkins' },
@@ -383,7 +380,7 @@ const resources = {
   zh: {
     translation: {
       nav: {
-        links: ['美食', '客房和套房', '服务', '优惠', '画廊'],
+        links: ['客房和套房', '美食', '服务', '优惠', '画廊'],
         bookNow: '立即预订',
       },
       timelineNav: {
@@ -440,11 +437,10 @@ const resources = {
         label: '酒店服务',
         title: '服务和设施',
         items: [
-          { title: 'The South Restaurant', size: '', desc: '亚洲和西式烹饪精粹' },
-          { title: 'Stellar Skybar', size: '', desc: '充满活力的夜生活，俯瞰城市全景' },
-          { title: 'Swimming Pool', size: '', desc: '岘港屋顶上的休闲绿洲' },
-          { title: 'Spa & Massage', size: '', desc: '让您的身心焕发活力' },
-          { title: 'Lobby', size: '', desc: '最豪华的接待空间' }
+          { title: '接待大堂', size: '', desc: '精致的迎宾空间，为宾客提供庄严而奢华的第一印象。' },
+          { title: 'The South 餐厅', size: '', desc: '踏上美妙的美食之旅，这里完美融合了亚洲和西方的各色美味。' },
+          { title: '水疗与康体', size: '', desc: '沉浸在宁静的避世圣地，这里旨在让您的身心全新焕发青春活力。' },
+          { title: 'Stellar 空中酒吧', size: '', desc: '品尝现调招牌鸡尾酒，同时坐拥令人惊叹的繁华城市全景。' }
         ],
         desc: "新南方酒店提供比标准更高级的服务。从优雅的美食空间到时尚的度假和娱乐区。",
         cta: '发现更多服务'
@@ -469,7 +465,7 @@ const resources = {
         statsNum: '9.5 / 10',
         statsText: '基于近期评价的整体客人满意度。',
         reviews: [
-          { title: '卓越的服务', text: '新酒店，无敌海景，员工热情友好，服务周到，食物美味，我们全家住在这里非常满意。希望将来有机会再来。非非非非常棒', author: 'Anna N.' },
+          { title: '卓越的服务', text: '新酒店，绝佳韩江景，员工热情友好，服务周到，食物美味，我们全家住在这里非常满意。希望将来有机会再来。非非非非常棒', author: 'Anna N.' },
           { title: '', text: '感谢 TPN 银河，让我在浪漫的韩江边与家人留下了难忘的回忆。', author: 'Cynthia Morgan' },
           { title: '', text: "即使只有一个短暂的周末旅行，也能轻松享受完美的假期。", author: 'Steven Sunny' },
           { title: '难忘的经历', text: 'TPN 银河酒店为我提供了丰富的顶级设施和无与伦比的舒适感。', author: 'Sarah Jenkins' },
