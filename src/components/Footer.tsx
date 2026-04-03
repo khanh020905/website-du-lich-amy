@@ -54,182 +54,177 @@ const Footer = () => {
   const isVi = i18n.language ? i18n.language.startsWith('vi') : true;
 
   return (
-    <footer className="bg-[#0A0A0A] relative overflow-hidden text-white pt-24">
+    <footer className="bg-[#1A1A1A] relative text-gray-300 pt-12 pb-0 font-sans">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 pb-24 text-left">
-          
-          {/* Cột 1: Thông tin liên hệ */}
-          <div className="flex flex-col gap-6">
-            <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-gold)] mb-4 uppercase">
-              TÂN PHƯƠNG NAM GALAXY HOTEL
-            </h2>
-            <div className="flex flex-col gap-4 text-gray-300">
-              <div className="flex items-start gap-3">
-                <MapPin className="text-[var(--color-gold)] shrink-0 mt-1" size={20} />
-                <span className="text-sm md:text-base leading-relaxed">
-                  180 Bạch Đằng, Q. Hải Châu, Sơn Trà, Đà Nẵng
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="text-[var(--color-gold)] shrink-0" size={20} />
-                <span className="text-sm md:text-base">info@tanphuongnamgalaxy.com.vn</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="text-[var(--color-gold)] shrink-0" size={20} />
-                <span className="text-sm md:text-base font-semibold">0236 3 668 886</span>
-              </div>
-              
-              <div className="flex flex-wrap items-center gap-3 mt-6">
-                <button className="flex items-center gap-2 bg-[var(--color-gold)] text-[#0A0A0A] px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide hover:bg-[var(--color-gold-hover)] transition-colors">
-                  <MessageCircle size={16} /> CHAT BOX
-                </button>
-                <button className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide hover:bg-white/10 transition-colors">
-                  <MapPin size={16} /> GOOGLE MAP
-                </button>
-                <button className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide hover:bg-white/10 transition-colors">
-                  <MessageCircle size={16} /> ZALO
-                </button>
-                <button className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide hover:bg-white/10 transition-colors">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                  </svg> FACEBOOK
-                </button>
-              </div>
-            </div>
+        {/* Top Navbar */}
+        <div className="border-b border-[#333333] pb-8 mb-10">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium tracking-wide text-[#EAEAEA]">
+             {/* Using the nav translation items as our top bar */}
+             <a href="#" className="hover:text-[var(--color-gold)] transition-colors">Trang chủ</a>
+             <a href="#about" className="hover:text-[var(--color-gold)] transition-colors">Giới thiệu</a>
+             <a href="#rooms" className="hover:text-[var(--color-gold)] transition-colors">Hạng Phòng</a>
+             <a href="#suites" className="hover:text-[var(--color-gold)] transition-colors">Suites</a>
+             <a href="#services" className="hover:text-[var(--color-gold)] transition-colors">Dịch vụ & Tiện ích</a>
+             <a href="#testimonials" className="hover:text-[var(--color-gold)] transition-colors">Khách hàng Đánh giá</a>
+             <a href="#gallery" className="hover:text-[var(--color-gold)] transition-colors">Thư viện Ảnh</a>
           </div>
-
-          {/* Cột 2: Tiện ích & Khoảng cách */}
-          <div className="flex flex-col gap-6 md:pl-16">
-            <h3 className="text-lg md:text-xl font-serif font-semibold text-white mb-4 uppercase tracking-widest border-b border-white/10 pb-4">
-              Vị trí đắc địa
-            </h3>
-            <div className="flex flex-col gap-5 text-gray-300">
-              <div className="flex items-center justify-between border-b border-white/5 pb-4">
-                <div className="flex items-center gap-3">
-                  <Navigation className="text-[var(--color-gold)]" size={18} />
-                  <span className="text-sm md:text-base font-medium">Cầu Sông Hàn</span>
-                </div>
-                <span className="text-sm font-bold text-[var(--color-gold)]">200m</span>
-              </div>
-              <div className="flex items-center justify-between border-b border-white/5 pb-4">
-                <div className="flex items-center gap-3">
-                  <Navigation className="text-[var(--color-gold)]" size={18} />
-                  <span className="text-sm md:text-base font-medium">Chợ Hàn</span>
-                </div>
-                <span className="text-sm font-bold text-[var(--color-gold)]">50m</span>
-              </div>
-              <div className="flex items-center justify-between border-b border-white/5 pb-4">
-                <div className="flex items-center gap-3">
-                  <Navigation className="text-[var(--color-gold)]" size={18} />
-                  <span className="text-sm md:text-base font-medium">Cầu Rồng</span>
-                </div>
-                <span className="text-sm font-bold text-[var(--color-gold)]">300m</span>
-              </div>
-              <div className="flex items-center justify-between border-white/5 pb-4">
-                <div className="flex items-center gap-3">
-                  <Navigation className="text-[var(--color-gold)]" size={18} />
-                  <span className="text-sm md:text-base font-medium">Biển Mỹ Khê</span>
-                </div>
-                <span className="text-sm font-bold text-[var(--color-gold)]">2 km</span>
-              </div>
-            </div>
-
-            {/* Satellite Map Integration */}
-            <div 
-              className="mt-4 overflow-hidden rounded-xl h-[300px] w-full shadow-2xl relative z-10 border border-white/10"
-              onWheel={(e) => {
-                // If they don't hold ctrl or meta, gently prompt them
-                if (!e.ctrlKey && !e.metaKey) {
-                  setShowMapMessage(true);
-                  if (mapMsgTimeout.current) window.clearTimeout(mapMsgTimeout.current);
-                  mapMsgTimeout.current = window.setTimeout(() => setShowMapMessage(false), 2000);
-                }
-              }}
-            >
-              
-              {/* Interaction Blocker/Prompt */}
-              <div 
-                className={`absolute inset-0 bg-[#0A0A0A]/60 flex items-center justify-center p-4 text-center pointer-events-none transition-opacity duration-300 z-[999] ${showMapMessage ? 'opacity-100' : 'opacity-0'}`}
-              >
-                <div className="text-white font-sans text-sm md:text-lg tracking-wide bg-black/40 px-6 py-3 rounded-full backdrop-blur-sm border border-white/10">
-                  {isVi ? 'Dùng Ctrl + Cuộn chuột để phóng to bản đồ' : 'Use Ctrl + Scroll to zoom the map'}
-                </div>
-              </div>
-
-              <MapContainer 
-                center={hotelPosition} 
-                zoom={14} 
-                scrollWheelZoom={false} 
-                attributionControl={false}
-                className="h-full w-full"
-                // Adding a z-index lower than absolute dropdowns to ensure stability
-                style={{ zIndex: 0 }}
-              >
-                <MapScrollEnabler />
-                
-                {/* Google Maps Hybrid (Satellite with Street Details) */}
-                <TileLayer
-                  url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
-                />
-                <Marker position={hotelPosition} icon={customIcon}>
-                  <Popup>
-                    <div className="text-center font-sans">
-                      <div className="font-bold text-[#D4AF37] text-sm">TPN Galaxy</div>
-                      <div className="text-xs text-gray-600 mt-1">180 Bạch Đằng</div>
-                    </div>
-                  </Popup>
-                </Marker>
-              </MapContainer>
-            </div>
-            
-          </div>
-
-          
         </div>
-        
-      </div>
 
-      {/* Huge Watermark Text */}
-      <div className="absolute bottom-0 left-0 w-full flex justify-center pointer-events-none select-none z-0">
-        <span className="text-[25vw] leading-none font-serif font-bold text-white/[0.03] tracking-tighter whitespace-nowrap">
-          tanphuongnam
-        </span>
-      </div>
-
-      <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-10 pb-12 flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-4">
+        {/* 3 Columns Layout (LAMY HOUSE style) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           
-          {/* Copyright */}
+          {/* Cột 1: Logo & Giới thiệu */}
+          <div className="flex flex-col">
+            <div className="flex items-center gap-3 mb-6">
+              {/* Fake geometric logo inspired by the reference */}
+              <div className="text-[var(--color-gold)]">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                   <path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z" />
+                   <path d="M12 10.5l-3.5 5h7l-3.5-5z" />
+                </svg>
+              </div>
+              <h2 className="text-lg md:text-xl lg:text-2xl font-black text-white tracking-widest uppercase">
+                TÂN PHƯƠNG NAM<span className="text-[var(--color-gold)] font-serif italic font-normal ml-1.5 md:ml-2">Galaxy</span>
+              </h2>
+            </div>
+            <p className="text-sm leading-relaxed text-[#B0B0B0] mb-8">
+              Hoạt động trong lĩnh vực lưu trú và dịch vụ du lịch cao cấp, TPN Galaxy đặt mục tiêu trở thành nhà cung cấp các trải nghiệm nghỉ dưỡng 4 sao hàng đầu tại trung tâm Đà Nẵng.
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+               {/* Fixed badget imitating the red Bộ Công Thương badge */}
+               <div className="bg-red-600 rounded text-white text-[10px] font-bold px-3 py-1 flex items-center shadow-lg">
+                 <span className="mr-1 inline-block bg-white rounded-full w-3 h-3 text-red-600 text-[8px] flex items-center justify-center">✔</span> ĐÃ THÔNG BÁO BỘ CÔNG THƯƠNG
+               </div>
+               {/* Facebook & Zalo badges */}
+               <div className="bg-[#1877F2] text-white p-1.5 rounded flex items-center justify-center w-8 h-8 cursor-pointer hover:bg-white hover:text-[#1877F2] transition-colors">
+                 <span className="text-lg font-bold font-serif -mt-1 leading-none">f</span>
+               </div>
+               <div className="bg-[#0068FF] text-white p-1.5 px-3 rounded flex items-center justify-center h-8 cursor-pointer hover:bg-white hover:text-[#0068FF] transition-colors">
+                 <span className="text-xs font-bold">Zalo</span>
+               </div>
+               {i18n.language !== 'vi' && (
+                 <div className="bg-green-500 text-white p-1.5 px-3 rounded flex items-center justify-center h-8 cursor-pointer hover:bg-white hover:text-green-500 transition-colors">
+                   <span className="text-xs font-bold">Line</span>
+                 </div>
+               )}
+            </div>
+          </div>
+
+          {/* Cột 2: Thông tin công ty */}
+          <div className="flex flex-col pt-1 md:pl-8">
+            <h3 className="text-base font-bold text-white mb-6">Công ty cổ phần Khách sạn TPN Galaxy</h3>
+            <div className="flex flex-col gap-5 text-sm text-[#B0B0B0]">
+               <div className="flex items-start gap-4">
+                 <MapPin className="text-[var(--color-gold)] shrink-0 mt-0.5" size={18} />
+                 <span>180 Bạch Đằng, phường Hải Châu, quận Hải Châu, Đà Nẵng, Vietnam</span>
+               </div>
+               <div className="flex items-center gap-4">
+                 <Phone className="text-[var(--color-gold)] shrink-0" size={18} />
+                 <span className="text-[var(--color-gold)] font-bold">0236 3 668 886 <span className="text-[#B0B0B0] font-normal mx-1">-</span> 0236 3 668 886</span>
+               </div>
+               <div className="flex items-center gap-4">
+                 <Mail className="text-[var(--color-gold)] shrink-0" size={18} />
+                 <span>info@tanphuongnamgalaxy.com.vn</span>
+               </div>
+            </div>
+          </div>
+
+          {/* Cột 3: Vị trí đắc địa */}
+          <div className="flex flex-col pt-1 pr-14 md:pr-20 lg:pr-24">
+            <h3 className="text-base font-bold text-white mb-6 uppercase">Vị trí đắc địa</h3>
+            <div className="flex flex-col gap-5 text-sm text-[#B0B0B0]">
+              
+              <div className="flex items-center justify-between border-b border-[#333333] pb-4">
+                <div className="flex items-center gap-3">
+                  <Navigation className="text-[var(--color-gold)] shrink-0" size={16} />
+                  <span className="font-medium">Cầu Sông Hàn</span>
+                </div>
+                <span className="font-bold text-[var(--color-gold)]">200m</span>
+              </div>
+              
+              <div className="flex items-center justify-between border-b border-[#333333] pb-4">
+                <div className="flex items-center gap-3">
+                  <Navigation className="text-[var(--color-gold)] shrink-0" size={16} />
+                  <span className="font-medium">Chợ Hàn</span>
+                </div>
+                <span className="font-bold text-[var(--color-gold)]">50m</span>
+              </div>
+              
+              <div className="flex items-center justify-between border-b border-[#333333] pb-4">
+                <div className="flex items-center gap-3">
+                  <Navigation className="text-[var(--color-gold)] shrink-0" size={16} />
+                  <span className="font-medium">Cầu Rồng</span>
+                </div>
+                <span className="font-bold text-[var(--color-gold)]">300m</span>
+              </div>
+              
+              <div className="flex items-center justify-between border-b border-[#333333] pb-4">
+                <div className="flex items-center gap-3">
+                  <Navigation className="text-[var(--color-gold)] shrink-0" size={16} />
+                  <span className="font-medium">Biển Mỹ Khê</span>
+                </div>
+                <span className="font-bold text-[var(--color-gold)]">2 km</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        {/* MAP SECTION DEDICATED (Option 2) */}
+        <div 
+          className="mt-4 overflow-hidden rounded-xl h-[200px] w-full shadow-2xl relative z-10 border border-[#333333] mb-8"
+          onWheel={(e) => {
+            // If they don't hold ctrl or meta, gently prompt them
+            if (!e.ctrlKey && !e.metaKey) {
+              setShowMapMessage(true);
+              if (mapMsgTimeout.current) window.clearTimeout(mapMsgTimeout.current);
+              mapMsgTimeout.current = window.setTimeout(() => setShowMapMessage(false), 2000);
+            }
+          }}
+        >
+          {/* Interaction Blocker/Prompt */}
           <div 
-            className="text-[10px] font-bold text-gray-500 tracking-widest leading-loose text-center lg:text-left uppercase"
-            dangerouslySetInnerHTML={{ __html: t('footer.copyright').replace('2026', new Date().getFullYear().toString()) }}
-          />
-
-          {/* Center links */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-             {footerLinks && footerLinks.map((link, idx) => (
-                <a key={idx} href="#" className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors">
-                  {link}
-                </a>
-             ))}
+            className={`absolute inset-0 bg-[#0A0A0A]/60 flex items-center justify-center p-4 text-center pointer-events-none transition-opacity duration-300 z-[999] ${showMapMessage ? 'opacity-100' : 'opacity-0'}`}
+          >
+            <div className="text-white font-sans text-sm md:text-lg tracking-wide bg-black/40 px-6 py-3 rounded-full backdrop-blur-sm border border-white/10">
+              {isVi ? 'Dùng Ctrl + Cuộn chuột để phóng to bản đồ' : 'Use Ctrl + Scroll to zoom the map'}
+            </div>
           </div>
 
-          {/* Socials */}
-          <div className="flex justify-center gap-8">
-             <a href="#" className="group flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors">
-               <div className="bg-gray-400 rounded-sm transition-colors flex items-center justify-center leading-none px-1 py-0.5">
-                 <span className="font-sans text-[10px] font-extrabold text-[#0A0A0A] lowercase">in</span>
-               </div> 
-               LINKEDIN
-             </a>
-             <a href="#" className="flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors">
-               <span className="text-sm pb-1 font-sans">𝕏</span> TWITTER
-             </a>
-          </div>
-
+          <MapContainer 
+            center={hotelPosition} 
+            zoom={14} 
+            scrollWheelZoom={false} 
+            attributionControl={false}
+            className="h-full w-full"
+            // Adding a z-index lower than absolute dropdowns to ensure stability
+            style={{ zIndex: 0 }}
+          >
+            <MapScrollEnabler />
+            
+            {/* Google Maps Hybrid (Satellite with Street Details) */}
+            <TileLayer
+              url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+            />
+            <Marker position={hotelPosition} icon={customIcon}>
+              <Popup>
+                <div className="text-center font-sans">
+                  <div className="font-bold text-[#D4AF37] text-sm">TPN Galaxy</div>
+                  <div className="text-xs text-gray-600 mt-1">180 Bạch Đằng</div>
+                </div>
+              </Popup>
+            </Marker>
+          </MapContainer>
         </div>
+      </div>
+      
+      {/* Bottom Copy Right bar */}
+      <div className="bg-[#111111] py-5 border-t border-[#333333]/50">
+         <div className="container mx-auto px-6 lg:px-12 max-w-7xl flex flex-col justify-center items-center md:items-start text-xs text-[#808080]">
+            <p>© Bản quyền thuộc về <span className="font-bold text-[var(--color-gold)]">Duo Tech Company</span> | Cung cấp bởi Duo Tech</p>
+         </div>
       </div>
     </footer>
   );
