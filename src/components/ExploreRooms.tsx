@@ -12,8 +12,8 @@ const suitesImg = [
   {
     image: img1,
     price: 1800000,
-    bedCount: 2,
-    guestCount: 3
+    bedCount: 1,
+    guestCount: 2
   },
   {
     image: img2,
@@ -23,13 +23,7 @@ const suitesImg = [
   },
   {
     image: img3,
-    price: 2500000,
-    bedCount: 1,
-    guestCount: 2
-  },
-  {
-    image: img4,
-    price: 3500000,
+    price: 4500000,
     bedCount: 2,
     guestCount: 4
   }
@@ -72,10 +66,10 @@ const ExploreRooms = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: index * 0.15 }}
-              className="group cursor-pointer"
+              className={`group cursor-pointer ${index === 2 ? 'md:col-span-2' : ''}`}
             >
               <div className="relative overflow-hidden mb-6 rounded-2xl">
-                <div className="aspect-[16/11] bg-gray-200 overflow-hidden">
+                <div className={`bg-gray-200 overflow-hidden ${index === 2 ? 'aspect-[16/10] md:aspect-[21/9]' : 'aspect-[16/11]'}`}>
                   <img
                     src={suite.image}
                     alt={exploreItems[index]?.title}

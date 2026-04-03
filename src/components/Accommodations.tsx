@@ -3,23 +3,25 @@ import { motion } from 'framer-motion';
 import { Maximize, Bed, Users } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-import img1 from '../assets/pdf_images/img_p5_18.jpeg';
-import img2 from '../assets/pdf_images/img_p4_14.jpeg';
-import img3 from '../assets/pdf_images/img_p4_13.jpeg';
-import img4 from '../assets/pdf_images/img_p5_17.jpeg';
+import img1 from '../assets/pdf_images/img_p2_5.jpeg';
+import img2 from '../assets/pdf_images/img_p6_21.jpeg';
+import img3 from '../assets/pdf_images/img_p6_20.jpeg';
+import img4 from '../assets/pdf_images/img_p6_22.jpeg';
+import img5 from '../assets/pdf_images/img_p5_18.jpeg';
 
 const accommodationsImages = [
-  { image: img1, bedCount: 2, guestCount: 4 },
-  { image: img2, bedCount: 1, guestCount: 2 },
-  { image: img3, bedCount: 1, guestCount: 2 },
-  { image: img4, bedCount: 2, guestCount: 4 }
+  { image: img1 },
+  { image: img2 },
+  { image: img3 },
+  { image: img4 },
+  { image: img5 }
 ];
 
 const Accommodations = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { t } = useTranslation();
 
-  const accItems = t('accommodations.items', { returnObjects: true }) as Array<{ title: string, size: string }>;
+  const accItems = t('accommodations.items', { returnObjects: true }) as Array<{ title: string, size: string, desc: string }>;
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % accommodationsImages.length);
@@ -101,20 +103,9 @@ const Accommodations = () => {
                 className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end items-center pb-12 pointer-events-none"
               >
                 <h3 className="text-white font-serif text-3xl mb-4 font-semibold text-center">{accItems[i]?.title}</h3>
-                <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-white text-sm">
-                  <div className="flex items-center gap-2">
-                    <Maximize size={16} className="text-gray-300 stroke-[1.5px]" />
-                    <span className="font-light">{accItems[i]?.size}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Bed size={16} className="text-gray-300 stroke-[1.5px]" />
-                    <span className="font-light">{room.bedCount} {t('rooms.bed')}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Users size={16} className="text-gray-300 stroke-[1.5px]" />
-                    <span className="font-light">{room.guestCount} {t('rooms.guests')}</span>
-                  </div>
-                </div>
+                <p className="text-gray-200 text-center font-medium max-w-md px-6 leading-relaxed">
+                  {accItems[i]?.desc}
+                </p>
               </motion.div>
             </motion.div>
           );

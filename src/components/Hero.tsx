@@ -27,8 +27,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex items-center gap-2 mb-6"
           >
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={20} fill={i < 4 ? "var(--color-gold)" : "none"} color="var(--color-gold)" className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" />
+            {[...Array(4)].map((_, i) => (
+              <Star key={i} size={20} fill="var(--color-gold)" color="var(--color-gold)" className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" />
             ))}
             <span className="text-white text-base font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] ml-1">(4.0)</span>
           </motion.div>

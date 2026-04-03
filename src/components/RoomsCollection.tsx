@@ -25,12 +25,24 @@ const roomsImgs = [
     price: 1800000,
     guestCount: 2,
     bedCount: 1,
+  },
+  {
+    image: img1,
+    price: 2500000,
+    guestCount: 3,
+    bedCount: 2,
+  },
+  {
+    image: img2,
+    price: 3500000,
+    guestCount: 4,
+    bedCount: 2,
   }
 ];
 
 const RoomsCollection = () => {
   const { t } = useTranslation();
-  const [itemsOrder, setItemsOrder] = useState([0, 1, 2]);
+  const [itemsOrder, setItemsOrder] = useState([0, 1, 2, 3, 4]);
   
   const roomItems = t('rooms.items', { returnObjects: true }) as Array<{ title: string, size: string }>;
 
@@ -93,7 +105,7 @@ const RoomsCollection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimatePresence mode="popLayout">
-              {itemsOrder.map((idx) => {
+              {itemsOrder.slice(0, 3).map((idx) => {
                 const room = roomsImgs[idx];
                 const item = roomItems[idx];
                 return (
@@ -145,14 +157,10 @@ const RoomsCollection = () => {
           </div>
           
           <div className="flex justify-center mt-12 gap-2">
-            {itemsOrder.map((idx, pos) => (
+            {roomsImgs.map((_, idx) => (
               <button 
                 key={idx}
-                onClick={() => {
-                   if (pos === 2) handleNext();
-                   if (pos === 0) handlePrev();
-                }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${pos === 1 ? 'bg-[var(--color-gold)] scale-125' : 'bg-gray-300'}`}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${itemsOrder[1] === idx ? 'bg-[var(--color-gold)] scale-125' : 'bg-gray-300'}`}
               />
             ))}
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { MapPin, Phone, Mail, MessageCircle, Navigation } from 'lucide-react';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -9,38 +10,77 @@ const Footer = () => {
     <footer className="bg-[#0A0A0A] relative overflow-hidden text-white pt-24">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         
-        {/* Main CTA Section (Inspired by the provided layout) */}
-        <div className="flex flex-col items-center justify-center pt-4 pb-24 text-center">
-          <h2 
-            className="text-4xl md:text-6xl font-serif font-bold tracking-normal italic mb-6 max-w-3xl leading-tight text-white"
-            dangerouslySetInnerHTML={{ __html: t('footer.title') }}
-          />
-          <p className="text-sm md:text-base text-gray-400 max-w-2xl text-center mb-10 font-sans leading-relaxed">
-            {t('footer.desc')}
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 pb-24 text-left">
           
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-[var(--color-gold)] text-[#0A0A0A] px-8 py-3.5 rounded-2xl text-sm font-bold tracking-wide hover:bg-[var(--color-gold-hover)] transition-colors shadow-lg">
-              {t('footer.bookNow')}
-            </button>
-            <button className="bg-white/5 border border-white/10 text-white px-8 py-3.5 rounded-2xl text-sm font-bold tracking-wide hover:bg-white/10 transition-colors">
-              {t('footer.pricing')}
-            </button>
+          {/* Cột 1: Thông tin liên hệ */}
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-gold)] mb-4 uppercase">
+              TÂN PHƯƠNG NAM GALAXY HOTEL
+            </h2>
+            <div className="flex flex-col gap-4 text-gray-300">
+              <div className="flex items-start gap-3">
+                <MapPin className="text-[var(--color-gold)] shrink-0 mt-1" size={20} />
+                <span className="text-sm md:text-base leading-relaxed">
+                  180 Bạch Đằng, Q. Hải Châu, Sơn Trà, Đà Nẵng
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="text-[var(--color-gold)] shrink-0" size={20} />
+                <span className="text-sm md:text-base">info@tanphuongnamgalaxy.com.vn</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="text-[var(--color-gold)] shrink-0" size={20} />
+                <span className="text-sm md:text-base font-semibold">0236 3 668 886</span>
+              </div>
+              
+              <div className="flex items-center gap-4 mt-6">
+                <button className="flex items-center gap-2 bg-[var(--color-gold)] text-[#0A0A0A] px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide hover:bg-[var(--color-gold-hover)] transition-colors">
+                  <MessageCircle size={16} /> CHAT BOX
+                </button>
+                <button className="flex items-center gap-2 bg-white/5 border border-white/10 text-white px-5 py-2.5 rounded-lg text-xs font-bold tracking-wide hover:bg-white/10 transition-colors">
+                  <MapPin size={16} /> GOOGLE MAP
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Trusted By Section */}
-        <div className="flex flex-col items-center justify-center pt-8 pb-12">
-          <h5 className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-gray-500 uppercase mb-8">
-            {t('footer.trustedBy')}
-          </h5>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50">
-            <span className="text-sm md:text-base font-serif font-bold tracking-widest text-[var(--color-gold)]">MICHELIN</span>
-            <span className="text-sm md:text-base font-serif font-bold tracking-widest text-white">FORBES</span>
-            <span className="text-sm md:text-base font-serif font-bold tracking-widest text-[var(--color-gold)]">CONDE NAST</span>
-            <span className="text-sm md:text-base font-serif font-bold tracking-widest text-white">TRIPADVISOR</span>
-            <span className="text-sm md:text-base font-serif font-bold tracking-widest text-[var(--color-gold)]">LUXURY</span>
+          {/* Cột 2: Tiện ích & Khoảng cách */}
+          <div className="flex flex-col gap-6 md:pl-16">
+            <h3 className="text-lg md:text-xl font-serif font-semibold text-white mb-4 uppercase tracking-widest border-b border-white/10 pb-4">
+              Vị trí đắc địa
+            </h3>
+            <div className="flex flex-col gap-5 text-gray-300">
+              <div className="flex items-center justify-between border-b border-white/5 pb-4">
+                <div className="flex items-center gap-3">
+                  <Navigation className="text-[var(--color-gold)]" size={18} />
+                  <span className="text-sm md:text-base font-medium">Cầu Sông Hàn</span>
+                </div>
+                <span className="text-sm font-bold text-[var(--color-gold)]">200m</span>
+              </div>
+              <div className="flex items-center justify-between border-b border-white/5 pb-4">
+                <div className="flex items-center gap-3">
+                  <Navigation className="text-[var(--color-gold)]" size={18} />
+                  <span className="text-sm md:text-base font-medium">Chợ Hàn</span>
+                </div>
+                <span className="text-sm font-bold text-[var(--color-gold)]">50m</span>
+              </div>
+              <div className="flex items-center justify-between border-b border-white/5 pb-4">
+                <div className="flex items-center gap-3">
+                  <Navigation className="text-[var(--color-gold)]" size={18} />
+                  <span className="text-sm md:text-base font-medium">Cầu Rồng</span>
+                </div>
+                <span className="text-sm font-bold text-[var(--color-gold)]">300m</span>
+              </div>
+              <div className="flex items-center justify-between border-white/5 pb-4">
+                <div className="flex items-center gap-3">
+                  <Navigation className="text-[var(--color-gold)]" size={18} />
+                  <span className="text-sm md:text-base font-medium">Biển Mỹ Khê</span>
+                </div>
+                <span className="text-sm font-bold text-[var(--color-gold)]">2 km</span>
+              </div>
+            </div>
           </div>
+          
         </div>
         
       </div>
@@ -48,7 +88,7 @@ const Footer = () => {
       {/* Huge Watermark Text */}
       <div className="absolute bottom-0 left-0 w-full flex justify-center pointer-events-none select-none z-0">
         <span className="text-[25vw] leading-none font-serif font-bold text-white/[0.03] tracking-tighter whitespace-nowrap">
-          amytourist
+          tanphuongnam
         </span>
       </div>
 

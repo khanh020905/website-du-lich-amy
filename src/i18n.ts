@@ -5,11 +5,11 @@ const resources = {
   en: {
     translation: {
       nav: {
-        links: ['Culinary', 'Meeting', 'Spa & wellness', 'Offer', 'Gallery'],
+        links: ['Culinary', 'Room & Suite', 'Service', 'Offer', 'Gallery'],
         bookNow: 'BOOK NOW',
       },
       timelineNav: {
-        links: ['Home', 'About', 'Rooms', 'Reviews', 'FAQ', 'Contact']
+        links: ['Home', 'About', 'Rooms', 'Reviews']
       },
       hero: {
         subtitle: 'A PREMIUM STAY EXPERIENCE',
@@ -19,7 +19,7 @@ const resources = {
       intro: {
         aboutUs: 'ABOUT US',
         highlight: "A premium 4-star standard retreat nestled along the romantic Han River.",
-        desc: "Located in the heart of Da Nang, our hotel offers a luxurious and modern retreat with 86 rooms and 12 floors. With a prime location just minutes away from Dragon Bridge, My Khe Beach, and Da Nang International Airport, it’s a perfect choice for both leisure and business travelers. Enjoy our exclusive facilities including a Rooftop Pool, Spa & Massage, Fitness Room, and Rooftop Bar.",
+        desc: "Located on the most beautiful Bach Dang street in Da Nang city, embracing the beauty of the legendary Han River. Tan Phuong Nam Galaxy Hotel has 86 luxurious and elegantly designed rooms and Penthouses. Promising to bring a classy and complete stay experience for all visitors.",
         knowMore: 'KNOW MORE',
         byTheNumber: 'BY THE NUMBER',
         stats: [
@@ -43,7 +43,9 @@ const resources = {
         items: [
           { title: 'Superior King', size: '25 SqM', desc: '1 King Bed, 2 Pax, Wall View' },
           { title: 'Superior Twin', size: '28 SqM', desc: '2 Twin Beds, 2 Pax, City View' },
-          { title: 'Deluxe King', size: '28 SqM', desc: '1 King Bed, 2 Pax, City View' }
+          { title: 'Deluxe King', size: '28 SqM', desc: '1 King Bed, 2 Pax, City View' },
+          { title: 'Deluxe Triple', size: '30 SqM', desc: '1 King & 1 Single Bed, 3 Pax, City View' },
+          { title: 'Family River View', size: '40 SqM', desc: '2 Queen Beds, 4 Pax, Han River View' }
         ]
       },
       explore: {
@@ -51,23 +53,23 @@ const resources = {
         title: 'Explore Rooms and Suites',
         from: 'From',
         items: [
-          { title: 'Deluxe Triple', size: '30 SqM', desc: '1 King & 1 Single Bed, 3 Pax, City View' },
           { title: 'Executive River View', size: '30 SqM', desc: '1 King Bed, 2 Pax, Han River View' },
           { title: 'Premier River View', size: '35 SqM', desc: '1 King Bed, 2 Pax, Han River View' },
-          { title: 'Family River View', size: '40 SqM', desc: '2 Queen Beds, 4 Pax, Han River View' }
+          { title: 'TPN Penthouse', size: '100 SqM', desc: '2 Bedrooms, 2 King Beds, Living Room, Kitchen, Bathtub, 4 Pax' }
         ]
       },
       accommodations: {
-        label: 'EXCLUSIVE SUITES',
-        title: 'Our Accommodations',
+        label: 'HOTEL SERVICES',
+        title: 'Services and Amenities',
         items: [
-          { title: 'TPN Penthouse', size: '100 SqM', desc: '2 Bedrooms, 2 King Beds, Living Room, Kitchen, Bathtub, 4 Pax' },
-          { title: 'Premier River View', size: '35 SqM', desc: '1 King Bed, Bathtub, 2 Pax' },
-          { title: 'Executive River View', size: '30 SqM', desc: '1 King Bed, Bathtub, 2 Pax' },
-          { title: 'Family River View', size: '40 SqM', desc: '2 Queen Beds, 4 Pax' }
+          { title: 'The South Restaurant', size: '', desc: 'Asian and Western culinary quintessence' },
+          { title: 'Stellar Skybar', size: '', desc: 'Vibrant nightlife with panoramic city views' },
+          { title: 'Swimming Pool', size: '', desc: 'Relaxing oasis on the rooftop of Da Nang' },
+          { title: 'Spa & Massage', size: '', desc: 'Rejuvenate your body and mind' },
+          { title: 'Lobby', size: '', desc: 'Luxurious welcoming space' }
         ],
         desc: "The unseen luxury partners of true 'hospitality service'. Unmatched luxury properties along the Han River. We go beyond your expectations guaranteeing to bring unmatched luxury hospitality right to your footsteps.",
-        cta: 'DISCOVER MORE ROOMS'
+        cta: 'DISCOVER MORE SERVICES'
       },
       faq: {
         label: 'FAQ',
@@ -129,11 +131,11 @@ const resources = {
   vi: {
     translation: {
       nav: {
-        links: ['Ẩm Thực', 'Hội nghị', 'Spa & giải trí', 'Ưu đãi', 'Hình Ảnh'],
+        links: ['Ẩm Thực', 'Phòng & Suite', 'Dịch Vụ', 'Ưu Đãi', 'Thư Viện Ảnh'],
         bookNow: 'ĐẶT PHÒNG',
       },
       timelineNav: {
-        links: ['TRANG CHỦ', 'GIỚI THIỆU', 'PHÒNG', 'ĐÁNH GIÁ', 'HỎI ĐÁP', 'LIÊN HỆ']
+        links: ['TRANG CHỦ', 'GIỚI THIỆU', 'PHÒNG', 'ĐÁNH GIÁ']
       },
       hero: {
         subtitle: 'TRẢI NGHIỆM NGHỈ DƯỠNG ĐẲNG CẤP',
@@ -167,7 +169,9 @@ const resources = {
         items: [
           { title: 'Superior King', size: '25 m2', desc: '1 giường đôi 1m8, 2 khách, hướng tường.' },
           { title: 'Superior Twin', size: '28 m2', desc: '2 giường đơn 1m2, 2 khách, hướng phố.' },
-          { title: 'Deluxe King', size: '28 m2', desc: '1 giường đôi 1m8, 2 khách, hướng phố.' }
+          { title: 'Deluxe King', size: '28 m2', desc: '1 giường đôi 1m8, 2 khách, hướng phố.' },
+          { title: 'Deluxe Triple', size: '30 m2', desc: '1 giường 1m6 & 1 giường 1m2, 3 khách, hướng phố.' },
+          { title: 'Family River View', size: '40 m2', desc: '2 giường 1m6, 4 khách, hướng sông Hàn.' }
         ]
       },
       explore: {
@@ -175,23 +179,23 @@ const resources = {
         title: 'Khám Phá Phòng & Suite',
         from: 'Từ',
         items: [
-          { title: 'Deluxe Triple', size: '30 m2', desc: '1 giường 1m6 & 1 giường 1m2, 3 khách, hướng phố.' },
           { title: 'Executive River View', size: '30 m2', desc: '1 giường đôi 1m8, 2 khách, hướng sông Hàn.' },
           { title: 'Premier River View', size: '35 m2', desc: '1 giường đôi 1m8, 2 khách, có bồn tắm, hướng sông Hàn.' },
-          { title: 'Family River View', size: '40 m2', desc: '2 giường 1m6, 4 khách, hướng sông Hàn.' }
+          { title: 'TPN Penthouse', size: '100 m2', desc: '2 phòng ngủ, 2 giường 1m8, phòng khách, bếp, bồn tắm, 4 khách.' }
         ]
       },
       accommodations: {
-        label: 'CÁC LOẠI PHÒNG',
-        title: 'Chỗ Ở Của Chúng Tôi',
+        label: 'TIỆN ÍCH',
+        title: 'Dịch vụ và tiện nghi Khách sạn',
         items: [
-          { title: 'TPN Penthouse', size: '100 m2', desc: '2 phòng ngủ, 2 giường 1m8, phòng khách, bếp, bồn tắm, 4 khách.' },
-          { title: 'Premier River View', size: '35 m2', desc: '1 giường đôi 1m8, 2 khách, hướng sông Hàn.' },
-          { title: 'Executive River View', size: '30 m2', desc: '1 giường đôi 1m8, 2 khách, hướng sông Hàn.' },
-          { title: 'Family River View', size: '40 m2', desc: '2 giường 1m6, 4 khách, hướng sông.' }
+          { title: 'The South Restaurant', size: '', desc: 'Tinh hoa ẩm thực Á Âu' },
+          { title: 'Stellar Skybar', size: '', desc: 'Sôi động nhịp sống về đêm' },
+          { title: 'Swimming Pool', size: '', desc: 'Hồ bơi vô cực ngắm nhìn toàn cảnh ĐN' },
+          { title: 'Spa & Massage', size: '', desc: 'Nơi tái tạo năng lượng cho cơ thể và tâm trí' },
+          { title: 'Lobby', size: '', desc: 'Không gian đón khách sang trọng bậc nhất' }
         ],
-        desc: "Đối tác xa xỉ cho dịch vụ 'hiếu khách' đích thực. Vị trí lý tưởng bên bờ sông Hàn thơ mộng. Chúng tôi đảm bảo mang đến cho quý khách trải nghiệm lưu trú không gì sánh kịp.",
-        cta: 'KHÁM PHÁ THÊM PHÒNG'
+        desc: "Khách sạn Tân Phương Nam cung cấp những dịch vụ đỉnh cao chuẩn mực. Từ không gian ẩm thực sang trọng đến khu nghỉ dưỡng và giải trí đầy phong cách.",
+        cta: 'KHÁM PHÁ THÊM DỊCH VỤ'
       },
       faq: {
         label: 'Câu hỏi thường gặp',
@@ -253,11 +257,11 @@ const resources = {
   ko: {
     translation: {
       nav: {
-        links: ['요리', '회의', '스파 & 웰니스', '프로모션', '갤러리'],
+        links: ['요리', '객실 및 스위트', '서비스', '프로모션', '갤러리'],
         bookNow: '예약하기',
       },
       timelineNav: {
-        links: ['홈', '소개', '객실', '리뷰', 'FAQ', '연락처']
+        links: ['홈', '소개', '객실', '리뷰']
       },
       hero: {
         subtitle: '최고급 숙박 경험',
@@ -267,7 +271,7 @@ const resources = {
       intro: {
         aboutUs: '호텔 소개',
         highlight: "낭만적인 한강변에 자리잡은 4성급 프리미엄 리조트.",
-        desc: "다낭의 중심부에 위치한 저희 호텔은 12층 건물에 86개의 객실을 갖춘 고급스럽고 현대적인 휴식처를 제공합니다. 용다리, 미케 해변, 다낭 국제공항에서 불과 몇 분 거리에 있는 최적의 위치로 레저 및 비즈니스 여행객 모두에게 완벽한 선택입니다. 루프탑 수영장, 스파, 피트니스 룸, 루프탑 바 등 다양한 전용 시설을 즐겨보세요.",
+        desc: "다낭시에서 가장 아름다운 박당 거리(Bach Dang street)에 위치하여 전설적인 한강의 아름다움을 품고 있습니다. 떤 프엉 남 갤럭시 호텔은 고급스럽고 우아하게 디자인된 86개의 객실과 펜트하우스를 보유하고 있습니다. 모든 방문객에게 격조 높고 완벽한 숙박 경험을 선사할 것을 약속드립니다.",
         knowMore: '더 알아보기',
         byTheNumber: '숫자로 보는 호텔',
         stats: [
@@ -291,7 +295,9 @@ const resources = {
         items: [
           { title: '슈페리어 킹', size: '25 m2', desc: '킹 침대 1개, 2인, 벽 전망' },
           { title: '슈페리어 트윈', size: '28 m2', desc: '트윈 침대 2개, 2인, 시티 뷰' },
-          { title: '디럭스 킹', size: '28 m2', desc: '킹 침대 1개, 2인, 시티 뷰' }
+          { title: '디럭스 킹', size: '28 m2', desc: '킹 침대 1개, 2인, 시티 뷰' },
+          { title: '디럭스 트리플', size: '30 m2', desc: '킹 침대 1개 & 싱글 침대 1개, 3인, 시티 뷰' },
+          { title: '패밀리 리버 뷰', size: '40 m2', desc: '퀸 침대 2개, 4인, 한강 뷰' }
         ]
       },
       explore: {
@@ -299,23 +305,23 @@ const resources = {
         title: '객실 및 스위트 둘러보기',
         from: '시작가',
         items: [
-          { title: '디럭스 트리플', size: '30 m2', desc: '킹 침대 1개 & 싱글 침대 1개, 3인, 시티 뷰' },
           { title: '이그제큐티브 리버 뷰', size: '30 m2', desc: '킹 침대 1개, 2인, 한강 뷰' },
           { title: '프리미어 리버 뷰', size: '35 m2', desc: '킹 침대 1개, 2인, 한강 뷰' },
-          { title: '패밀리 리버 뷰', size: '40 m2', desc: '퀸 침대 2개, 4인, 한강 뷰' }
+          { title: 'TPN 펜트하우스', size: '100 m2', desc: '침실 2개, 킹 침대 2개, 거실, 주방, 욕조, 4인' }
         ]
       },
       accommodations: {
-        label: '익스클루시브 스위트',
-        title: '저희의 특별한 숙소',
+        label: '호텔 서비스',
+        title: '서비스 및 편의 시설',
         items: [
-          { title: 'TPN 펜트하우스', size: '100 m2', desc: '침실 2개, 킹 침대 2개, 거실, 주방, 욕조, 4인' },
-          { title: '프리미어 리버 뷰', size: '35 m2', desc: '킹 침대 1개, 욕조, 2인' },
-          { title: '이그제큐티브 리버 뷰', size: '30 m2', desc: '킹 침대 1개, 욕조, 2인' },
-          { title: '패밀리 리버 뷰', size: '40 m2', desc: '퀸 침대 2개, 4인' }
+          { title: 'The South Restaurant', size: '', desc: '아시아 및 서양 요리의 진수' },
+          { title: 'Stellar Skybar', size: '', desc: '파노라마 시티 뷰를 갖춘 활기찬 나이트라이프' },
+          { title: 'Swimming Pool', size: '', desc: '루프탑 휴식 오아시스' },
+          { title: 'Spa & Massage', size: '', desc: '몸과 마음의 에너지 재충전' },
+          { title: 'Lobby', size: '', desc: '가장 럭셔리한 환영 공간' }
         ],
-        desc: "진정한 '환대 서비스'의 보이지 않는 럭셔리 파트너. 한강을 따라 자리 잡은 럭셔리 숙소입니다. 귀하의 기대를 뛰어넘어 문앞까지 최고의 럭셔리 환대를 제공할 것을 보장합니다.",
-        cta: '더 많은 객실 보기'
+        desc: "탄 프엉 남 호텔은 표준 이상의 최고급 서비스를 제공합니다. 우아한 요리 공간부터 스타일리시한 리조트 및 엔터테인먼트 공간까지.",
+        cta: '더 많은 서비스 둘러보기'
       },
       faq: {
         label: 'FAQ',
@@ -377,11 +383,11 @@ const resources = {
   zh: {
     translation: {
       nav: {
-        links: ['美食', '会议', '水疗与养生', '优惠', '画廊'],
+        links: ['美食', '客房和套房', '服务', '优惠', '画廊'],
         bookNow: '立即预订',
       },
       timelineNav: {
-        links: ['首页', '关于我们', '客房', '评价', '常见问题', '联系我们']
+        links: ['首页', '关于我们', '客房', '评价']
       },
       hero: {
         subtitle: '尊贵的住宿体验',
@@ -391,7 +397,7 @@ const resources = {
       intro: {
         aboutUs: '关于我们',
         highlight: "坐落在浪漫韩江畔的顶级 4 星级标准度假胜地。",
-        desc: "我们的酒店位于岘港市中心，提供豪华现代的休憩之所，共有 12 层，86 间客房。地理位置优越，距离龙桥、美溪海滩和岘港国际机场仅数分钟路程，是休闲和商务旅客的理想选择。尽情享受我们专属的设施，包括屋顶泳池、水疗与按摩、健身房和星空酒吧。",
+        desc: "位于岘港市最美丽的白藤街（Bach Dang street），拥抱传奇韩江之美。新南方银河酒店拥有 86 间豪华典雅的客房和顶层公寓。承诺为所有游客带来高尚、完美的住宿体验。",
         knowMore: '了解更多',
         byTheNumber: '数字亮点',
         stats: [
@@ -415,7 +421,9 @@ const resources = {
         items: [
           { title: '高级大床房', size: '25 平方米', desc: '1张大床，2人，面墙景观' },
           { title: '高级双床房', size: '28 平方米', desc: '2张单人床，2人，市景' },
-          { title: '豪华大床房', size: '28 平方米', desc: '1张大床，2人，市景' }
+          { title: '豪华大床房', size: '28 平方米', desc: '1张大床，2人，市景' },
+          { title: '豪华三人房', size: '30 平方米', desc: '1张大床 & 1张单人床，3人，市景' },
+          { title: '家庭江景房', size: '40 平方米', desc: '2张大号双人床，4人，韩江景观' }
         ]
       },
       explore: {
@@ -423,23 +431,23 @@ const resources = {
         title: '探索客房与套房',
         from: '起价',
         items: [
-          { title: '豪华三人房', size: '30 平方米', desc: '1张大床 & 1张单人床，3人，市景' },
           { title: '行政江景房', size: '30 平方米', desc: '1张大床，2人，韩江景观' },
           { title: '尊贵江景房', size: '35 平方米', desc: '1张大床，2人，韩江景观' },
-          { title: '家庭江景房', size: '40 平方米', desc: '2张大号双人床，4人，韩江景观' }
+          { title: 'TPN 顶层公寓', size: '100 平方米', desc: '2间卧室，2张大床，客厅，厨房，浴缸，4人' }
         ]
       },
       accommodations: {
-        label: '专属套房',
-        title: '我们的住宿',
+        label: '酒店服务',
+        title: '服务和设施',
         items: [
-          { title: 'TPN 顶层公寓', size: '100 平方米', desc: '2间卧室，2张大床，客厅，厨房，浴缸，4人' },
-          { title: '尊贵江景房', size: '35 平方米', desc: '1张大床，浴缸，2人' },
-          { title: '行政江景房', size: '30 平方米', desc: '1张大床，浴缸，2人' },
-          { title: '家庭江景房', size: '40 平方米', desc: '2张大号双人床，4人' }
+          { title: 'The South Restaurant', size: '', desc: '亚洲和西式烹饪精粹' },
+          { title: 'Stellar Skybar', size: '', desc: '充满活力的夜生活，俯瞰城市全景' },
+          { title: 'Swimming Pool', size: '', desc: '岘港屋顶上的休闲绿洲' },
+          { title: 'Spa & Massage', size: '', desc: '让您的身心焕发活力' },
+          { title: 'Lobby', size: '', desc: '最豪华的接待空间' }
         ],
-        desc: "真正的'待客之道'背后无可比拟的奢华伙伴。坐落于韩江畔的奢华地产。我们超越您的期待，保证将无与伦比的奢华款待送到您身边。",
-        cta: '发现更多客房'
+        desc: "新南方酒店提供比标准更高级的服务。从优雅的美食空间到时尚的度假和娱乐区。",
+        cta: '发现更多服务'
       },
       faq: {
         label: '常见问题',

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const sections = ['home', 'about', 'rooms', 'testimonials', 'faq', 'contact'];
+const sections = ['home', 'about', 'rooms', 'testimonials'];
 
 const SideTimeline = () => {
   const { t } = useTranslation();

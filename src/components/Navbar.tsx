@@ -27,7 +27,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navAnchors = ['culinary', 'meeting', 'spa', 'offer', 'gallery'];
+  const navAnchors = ['culinary', 'rooms', 'service', 'offer', 'gallery'];
   const translatedLinks = t('nav.links', { returnObjects: true }) as string[];
 
   const switchLanguage = (lng: string) => {

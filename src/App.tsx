@@ -7,7 +7,6 @@ import Hero from './components/Hero';
 import Introduction from './components/Introduction';
 import RoomsCollection from './components/RoomsCollection';
 import ExploreRooms from './components/ExploreRooms';
-import VideoSection from './components/VideoSection';
 import Accommodations from './components/Accommodations';
 import Testimonials from './components/Testimonials';
 import SideTimeline from './components/SideTimeline';
@@ -39,11 +38,8 @@ const Layout = () => {
       <Introduction />
       <RoomsCollection />
       <ExploreRooms />
-      <VideoSection />
       <Accommodations />
       <Testimonials />
-      <FAQ />
-      <CallToAction />
       <Footer />
     </div>
   );
