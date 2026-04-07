@@ -3,6 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Send, X, Loader2, MessageSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+// Vite requires importing assets so they are properly hashed and included in production builds
+import logoImg from '../assets/logo-1.jpg';
+import spaImg from '../assets/spa.jpg';
+import restImg from '../assets/restaurent.jpg';
+import barImg from '../assets/bartender-bar.jpg';
+
 const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY || "";
 
 const SYSTEM_PROMPT = `
@@ -13,18 +19,18 @@ Dưới đây là thông tin chi tiết về khách sạn mà bạn PHẢI tham 
 PHÒNG NGỦ
 Khách sạn Tân Phương Nam mang phong cách kiến trúc hiện đại...
 
-Superior Twin room (ảnh: /gallery/SUPERIOR TWIN/TWIN 1.jpg): Phòng Superior với diện tích 25m2 mang đến không gian ấm cúng. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
-Superior King room (ảnh: /gallery/SUPERIOR KING/sup 1 nen.jpg): Không gian nhỏ gọn nhưng vô cùng ấm cúng. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
-Deluxe King room (ảnh: /gallery/DELUXE KING/DELUXE 1.jpg): Không gian mở kết hợp ánh sáng tự nhiên. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
-Deluxe Triple room (ảnh: /gallery/DELUXE TRIPLE/TRIPLE 1.jpg): 1 giường lớn & 1 giường nhỏ cho cả gia đình.
-Executive River View (ảnh: /gallery/EXECUTIVE RIVER VIEW/EXE 1.jpg): 1 Giường 1m8, view sông Hàn tuyệt đẹp. Tiện nghi (thêm buffet sáng, bồn tắm nằm).
-Premier river view (ảnh: /gallery/PREMIER RIVER VIEW/PRE 1.jpg): Phòng cực rộng có ban công view toàn cảnh Sông Hàn. Tiện nghi (thêm buffet sáng, bồn tắm nằm, sofa bed).
-TPT Penhouse (ảnh: /gallery/TPN PENTHOUSE/TPN 1.jpg): Căn hộ 100m2 tuyệt đỉnh trên tầng cao nhất. Tiện nghi (buffet sáng, bồn tắm nằm, bếp, phòng khách).
+Superior Twin room ![Superior Twin](/gallery/SUPERIOR%20TWIN/TWIN%201.jpg): Phòng Superior với diện tích 25m2 mang đến không gian ấm cúng. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
+Superior King room ![Superior King](/gallery/SUPERIOR%20KING/sup%201%20nen.jpg): Không gian nhỏ gọn nhưng vô cùng ấm cúng. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
+Deluxe King room ![Deluxe King](/gallery/DELUXE%20KING/DELUXE%201.jpg): Không gian mở kết hợp ánh sáng tự nhiên. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
+Deluxe Triple room ![Deluxe Triple](/gallery/DELUXE%20TRIPLE/TRIPLE%201.jpg): 1 giường lớn & 1 giường nhỏ cho cả gia đình.
+Executive River View ![Executive River View](/gallery/EXECUTIVE%20RIVER%20VIEW/EXE%201.jpg): 1 Giường 1m8, view sông Hàn tuyệt đẹp. Tiện nghi (thêm buffet sáng, bồn tắm nằm).
+Premier river view ![Premier River View](/gallery/PREMIER%20RIVER%20VIEW/PRE%201.jpg): Phòng cực rộng có ban công view toàn cảnh Sông Hàn. Tiện nghi (thêm buffet sáng, bồn tắm nằm, sofa bed).
+TPT Penhouse ![TPT Penhouse](/gallery/TPN%20PENTHOUSE/TPN%201.jpg): Căn hộ 100m2 tuyệt đỉnh trên tầng cao nhất. Tiện nghi (buffet sáng, bồn tắm nằm, bếp, phòng khách).
 
 DỊCH VỤ KHÁC:
-Spa (ảnh: /src/assets/spa.jpg): Tầng 1, massage, chăm sóc da...
-The South restaurant (ảnh: /src/assets/restaurent.jpg): Tầng 3, 200 khách, buffet sáng 6:00-10:00...
-Stellar Sky bar (ảnh: /src/assets/bartender-bar.jpg): Tầng 12, ngắm toàn cảnh thành phố...
+Spa ![Spa](${spaImg}): Tầng 1, massage, chăm sóc da...
+The South restaurant ![The South restaurant](${restImg}): Tầng 3, 200 khách, buffet sáng 6:00-10:00...
+Stellar Sky bar ![Stellar Sky bar](${barImg}): Tầng 12, ngắm toàn cảnh thành phố...
 
 KHÔNG BAO GIỜ bịa ra đường dẫn ảnh. Chỉ dùng các đường dẫn đã được cung cấp ở trên.
 `;
@@ -145,7 +151,18 @@ const Chatbot: React.FC = () => {
           />
         );
       }
-      return <span key={index}>{part}</span>;
+      
+      const boldParts = part.split(/(\*\*.*?\*\*)/g);
+      return (
+        <span key={index}>
+          {boldParts.map((bPart, bIndex) => {
+            if (bPart.startsWith('**') && bPart.endsWith('**')) {
+              return <strong key={bIndex} className="font-bold text-[#d4af37]">{bPart.slice(2, -2)}</strong>;
+            }
+            return <span key={bIndex}>{bPart}</span>;
+          })}
+        </span>
+      );
     });
   };
 
@@ -160,7 +177,7 @@ const Chatbot: React.FC = () => {
         transition={{ duration: 0.3 }}
       >
         <img 
-          src="/src/assets/logo-1.jpg" 
+          src={logoImg} 
           alt="Chat" 
           className="w-full h-full object-cover"
         />
@@ -183,7 +200,7 @@ const Chatbot: React.FC = () => {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full overflow-hidden border border-[#d4af37]/50 bg-black flex items-center justify-center">
                   <img 
-                    src="/src/assets/logo-1.jpg" 
+                    src={logoImg} 
                     alt="Logo" 
                     className="w-full h-full object-cover"
                   />
