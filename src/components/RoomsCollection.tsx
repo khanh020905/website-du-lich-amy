@@ -52,6 +52,15 @@ const RoomsCollection = ({ hideTitle = false }: { hideTitle?: boolean }) => {
             >
               {t('rooms.title')}
             </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mt-6 text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed"
+            >
+              {t('rooms.desc')}
+            </motion.p>
           </div>
         )}
 

@@ -40,6 +40,7 @@ const resources = {
         perNight: '/ Night',
         bed: 'Bed',
         guests: 'Guests',
+        desc: 'Tan Phuong Nam Hotel features modern architectural style. The room system is equipped with premium furniture. The open space and airy view help visitors fully enjoy the beauty of the city. This will be an ideal stop for those seeking comfort and a distinct hospitality experience.',
         items: [
           { title: 'Superior King', size: '25 SqM', desc: '1 King Bed, 2 Pax, Wall View' },
           { title: 'Superior Twin', size: '28 SqM', desc: '2 Twin Beds, 2 Pax, City View' },
@@ -57,6 +58,24 @@ const resources = {
           { title: 'Premier River View', size: '35 SqM', desc: '1 King Bed, 2 Pax, Han River View' },
           { title: 'TPN Penthouse', size: '100 SqM', desc: '2 Bedrooms, 2 King Beds, Living Room, Kitchen, Bathtub, 4 Pax' }
         ]
+      },
+      roomDetail: {
+        size: 'Size',
+        beds: 'Beds',
+        guests: 'Guests',
+        bathrooms: 'Bathrooms',
+        overview: 'Room Overview',
+        overviewDesc: 'Step into an oasis of comfort and prestige. Our perfectly curated space perfectly blends modern luxury with elegant aesthetics, ensuring a profound hospitality experience tailored entirely to your desires. Welcome to Tan Phuong Nam Galaxy, where dreams meet reality.',
+        amenities: 'Amenities',
+        highlights: 'Privileges & Views',
+        gallery: 'Room Gallery',
+        needAssistance: 'Need Assistance?',
+        assistanceDesc: 'Our reservations team is available 24/7 to help you tailor your perfect stay.',
+        contactUs: 'Contact Us',
+        smartTv: 'Smart TV',
+        minibar: 'Minibar',
+        wifi: 'High-Speed WiFi',
+        upTo: 'Up to'
       },
       accommodations: {
         label: 'HOTEL SERVICES',
@@ -124,6 +143,46 @@ const resources = {
           'NHÀ HÀNG': 'Restaurant',
           'SẢNH LỄ TÂN': 'Reception Lobby'
         }
+      },
+      culinary: {
+        label: 'FINE DINING',
+        title: 'The South Restaurant',
+        description: 'Located on the 7th floor, The South Restaurant features a minimalist and elegant design, bringing a modern and classy feeling to diners. It is undoubtedly an unmissable destination for those who want to experience a luxurious dining space in Da Nang. With a romantic and cozy atmosphere, you can enjoy the exquisite flavors of our culinary offerings while immersing yourself in the shimmering city lights and the sparkling Han River.',
+        exploreMenu: 'Explore Our Menu',
+        mainMenu: 'Main Course Menu',
+        beverageMenu: 'Beverage & Wine List',
+        bookTable: 'Book A Table',
+        comingSoon: 'Coming Soon',
+        comingSoonDesc: 'We are currently crafting a luxurious new menu experience. Please check back later or contact our reception for dining options.',
+        close: 'Close'
+      },
+      offer: {
+        label: 'SPECIAL OFFERS',
+        title: 'Promotion & Packages',
+        description: 'Discover curated experiences and exclusive offers designed to make your stay unforgettable at TPN Galaxy.',
+        bookNow: 'Book Now',
+        learnMore: 'Learn More',
+        viewTerms: 'Terms & Conditions',
+        items: [
+          {
+            id: 'stay-play',
+            validity: 'Valid through Dec 31, 2026',
+            title: 'Stay & Play Golf Package',
+            description: 'Experience an ultimate golf getaway. Includes a 2-night stay in our signature suite and one round of 18-hole golf per person at the exclusive Montgomerie Links.'
+          },
+          {
+            id: 'romantic-getaway',
+            validity: 'Valid through Feb 28, 2026',
+            title: 'Romantic Getaway',
+            description: 'Celebrate love with a 60-minute couple spa treatment, daily breakfast in bed, and a private candlelit dinner at The South Restaurant overlooking the river.'
+          },
+          {
+            id: 'family-retreat',
+            validity: 'Valid through Aug 31, 2026',
+            title: 'Family Summer Retreat',
+            description: 'Create lasting memories with complimentary extra beds for children, daily access to the Kids Club, and a fun family cooking class.'
+          }
+        ]
       }
     }
   },
@@ -165,13 +224,14 @@ const resources = {
         perNight: '/ Đêm',
         bed: 'Giường',
         guests: 'Khách',
+        desc: 'Khách sạn Tân Phương Nam mang phong cách kiến trúc hiện đại. Hệ thống phòng nghỉ được trang bị nội thất cao cấp. Không gian mở cùng tầm nhìn thoáng đãng giúp du khách tận hưởng trọn vẹn vẻ đẹp của thành phố. Đây sẽ là điểm dừng chân lý tưởng cho những ai tìm kiếm sự thoải mái và trải nghiệm nghỉ dưỡng khác biệt.',
         items: [
-          { title: 'Superior King', size: '25 m2', desc: '1 giường đôi 1m8, 2 khách, hướng tường.' },
-          { title: 'Superior Twin', size: '28 m2', desc: '2 giường đơn 1m2, 2 khách, hướng phố.' },
-          { title: 'Deluxe King', size: '28 m2', desc: '1 giường đôi 1m8, 2 khách, hướng phố.' },
-          { title: 'Deluxe Triple', size: '30 m2', desc: '1 giường 1m6 & 1 giường 1m2, 3 khách, hướng phố.' },
-          { title: 'Family River View', size: '40 m2', desc: '2 giường 1m6, 4 khách, hướng sông Hàn.' },
-          { title: 'Executive River View', size: '30 m2', desc: '1 giường đôi 1m8, 2 khách, hướng sông Hàn.' }
+          { title: 'Superior King', size: '25 m2', desc: 'Superior King room được thiết kế với không gian nhỏ gọn nhưng vô cùng ấm cúng, mang lại cảm giác thư giãn. Giường King êm ái sẽ là lựa chọn lý tưởng cho du khách thích sự yên tĩnh.', highlights: ['Thêm buffet sáng', 'Bồn tắm đứng'] },
+          { title: 'Superior Twin', size: '25 m2', desc: 'Phòng Superior Twin với diện tích 25m2 mang đến không gian ấm cúng. Đây là lựa chọn lý tưởng cho những ai muốn tận hưởng sự tiện nghi và vẻ đẹp đặc trưng của thành phố Đà Nẵng.', highlights: ['Ngắm nhìn thành phố sôi động về đêm', 'Thêm buffet sáng', 'Bồn tắm đứng'] },
+          { title: 'Deluxe King', size: '28 m2', desc: 'Deluxe King room được thiết kế với không gian mở kết hợp với ánh sáng tự nhiên tạo cảm giác nhẹ nhàng và yên bình. Giường King size êm ái tạo giấc ngủ thoải mái cho du khách.', highlights: ['Ngắm nhìn khung cảnh thành phố', 'Thêm buffet sáng', 'Bồn tắm đứng'] },
+          { title: 'Deluxe Triple', size: '30 m2', desc: 'Deluxe Triple room được thiết kế với 1 giường lớn & 1 giường nhỏ mang đến không gian nghỉ ngơi thoải mái cho cả gia đình.', highlights: ['Hướng phố', 'Thêm buffet sáng', 'Bồn tắm đứng'] },
+          { title: 'Family River View', size: '40 m2', desc: 'Với diện tích 40m2 thoáng rộng, mang đến không gian ấm cúng cho cả gia đình nghỉ ngơi.', highlights: ['Hướng nhìn ra dòng sông Hàn thơ mộng', 'Thêm buffet sáng', 'Bồn tắm nằm'] },
+          { title: 'Executive River View', size: '30 m2', desc: 'Chạm vào vẻ đẹp sông Hàn. Thức dậy cùng ánh nắng nhẹ trên sông Hàn, tận hưởng không gian yên bình trong căn phòng Executive River View với giường 1m8 êm ái. Mỗi khoảnh khắc tại đây – từ bình minh dịu dàng đến ánh đèn đêm phản chiếu trên mặt nước – đều mang lại cảm giác thư giãn và tinh tế, dành riêng cho bạn.', highlights: ['View Sông Hàn tuyệt đẹp', 'Thêm buffet sáng', 'Bồn tắm nằm thư giãn'] }
         ]
       },
       explore: {
@@ -179,9 +239,27 @@ const resources = {
         title: 'Khám Phá Hạng Suites',
         from: 'Từ',
         items: [
-          { title: 'Premier River View', size: '35 m2', desc: '1 giường đôi 1m8, 2 khách, có bồn tắm, hướng sông Hàn.' },
-          { title: 'TPN Penthouse', size: '100 m2', desc: '2 phòng ngủ, 2 giường 1m8, phòng khách, bếp, bồn tắm, 4 khách.' }
+          { title: 'Premier River View', size: '35 m2', desc: 'Premier River View mang đến diện tích phòng rộng rãi và ban công thoải mái.', highlights: ['Ngắm toàn cảnh thành phố về đêm bên dòng sông Hàn', 'Thêm buffet sáng', 'Bồn tắm nằm', 'Sofa bed'] },
+          { title: 'TPN Penthouse', size: '100 m2', desc: 'TPN Penthouse rộng 100m2, riêng tư nằm trên tầng cao nhất của khách sạn. Quý khách sẽ có cảm giác như đang ở trong chính ngôi nhà của mình.', highlights: ['View trực diện Sông Hàn', '2 phòng ngủ lớn, 1 phòng khách sang trọng, 1 căn bếp ấm cúng', 'Thêm buffet sáng', 'Bồn tắm nằm', 'Kitchen room', 'Living room'] }
         ]
+      },
+      roomDetail: {
+        size: 'Diện tích',
+        beds: 'Giường',
+        guests: 'Khách',
+        bathrooms: 'Phòng tắm',
+        overview: 'Tổng Quan Phòng',
+        overviewDesc: 'Bước vào ốc đảo của sự thoải mái và uy tín. Không gian được chúng tôi tuyển chọn hoàn hảo kết hợp giữa sự sang trọng hiện đại với thẩm mỹ thanh lịch, đảm bảo trải nghiệm lưu trú sâu sắc hoàn toàn phù hợp với mong muốn của bạn. Chào mừng đến với Tân Phương Nam Galaxy, nơi những giấc mơ trở thành hiện thực.',
+        amenities: 'Tiện Nghi',
+        highlights: 'Đặc Quyền & Tầm Nhìn',
+        gallery: 'Thư Viện Ảnh',
+        needAssistance: 'Cần Hỗ Trợ?',
+        assistanceDesc: 'Đội ngũ đặt phòng của chúng tôi sẵn sàng 24/7 để giúp bạn thiết kế một kỳ nghỉ hoàn hảo.',
+        contactUs: 'Liên Hệ',
+        smartTv: 'Smart TV',
+        minibar: 'Minibar',
+        wifi: 'WiFi Tốc Độ Cao',
+        upTo: 'Tối đa'
       },
       accommodations: {
         label: 'TIỆN ÍCH',
@@ -249,6 +327,46 @@ const resources = {
           'NHÀ HÀNG': 'Nhà Hàng',
           'SẢNH LỄ TÂN': 'Sảnh Lễ Tân'
         }
+      },
+      culinary: {
+        label: 'ẨM THỰC ĐỈNH CAO',
+        title: 'Nhà hàng The South',
+        description: 'Nằm tại tầng 7 của khách sạn, nhà hàng The South được thiết kế tối giản và tinh tế, mang đến cảm giác hiện đại và đẳng cấp cho các thực khách dùng bữa tại nơi đây. Nơi đây chắc chắn là điểm đến không thể bỏ lỡ dành cho những thực khách muốn trải nghiệm không gian nhà hàng sang trọng ở Đà Nẵng. Với không gian lãng mạn và ấm cúng, từ đây bạn có thể thưởng thức phong vị đầy tinh tế của ẩm thực, đắm chìm trong ánh đèn lung linh của thành phố về đêm cùng dòng sông Hàn lấp lánh.',
+        exploreMenu: 'Khám phá thực đơn',
+        mainMenu: 'Thực đơn chính',
+        beverageMenu: 'Danh sách đồ uống và rượu',
+        bookTable: 'ĐẶT BÀN NGAY',
+        comingSoon: 'Sắp Ra Mắt',
+        comingSoonDesc: 'Chúng tôi đang chuẩn bị một trải nghiệm thực đơn hoàn toàn mới mang đẳng cấp 5 sao. Vui lòng quay lại sau hoặc liên hệ lễ tân để được hỗ trợ.',
+        close: 'Đóng'
+      },
+      offer: {
+        label: 'ƯU ĐÃI ĐẶC BIỆT',
+        title: 'Gói Ưu Đãi & Khuyến Mãi',
+        description: 'Khám phá các trải nghiệm được tuyển chọn và những ưu đãi độc quyền để làm cho kỳ nghỉ của bạn tại TPN Galaxy thật khó quên.',
+        bookNow: 'Đặt Ngay',
+        learnMore: 'Tìm Hiểu Thêm',
+        viewTerms: 'Điều Khoản & Điều Kiện',
+        items: [
+          {
+            id: 'stay-play',
+            validity: 'Áp dụng đến 31/12/2026',
+            title: 'Gói Trải Nghiệm Golf Đẳng Cấp',
+            description: 'Tận hưởng kỳ nghỉ trọn vẹn với 2 đêm lưu trú tại hạng phòng suite cao cấp, kèm 1 vòng chơi golf 18 lỗ cho mỗi khách tại sân Montgomerie Links độc quyền.'
+          },
+          {
+            id: 'romantic-getaway',
+            validity: 'Áp dụng đến 28/02/2026',
+            title: 'Kỳ Nghỉ Lãng Mạn',
+            description: 'Tôn vinh tình yêu với liệu trình spa 60 phút dành cho cặp đôi, bữa sáng tại giường mỗi ngày và tiệc tối lãng mạn dưới ánh nến tại nhà hàng The South.'
+          },
+          {
+            id: 'family-retreat',
+            validity: 'Áp dụng đến 31/08/2026',
+            title: 'Mùa Hè Gắn Kết Gia Đình',
+            description: 'Lưu giữ kỷ niệm cùng các dịch vụ miễn phí như giường phụ cho trẻ em, vé tham gia câu lạc bộ trẻ em hàng ngày và lớp học nấu ăn gia đình thú vị.'
+          }
+        ]
       }
     }
   },
@@ -290,6 +408,7 @@ const resources = {
         perNight: '/ 1박',
         bed: '침대',
         guests: '투숙객',
+        desc: '탄 프엉 남 호텔은 현대적인 건축 양식을 자랑합니다. 객실 시스템은 최고급 가구를 갖추고 있습니다. 탁 트인 개방형 공간과 아름다운 전망은 관광객이 도시의 아름다움을 만끽할 수 있게 해줍니다. 이곳은 편안함과 특별한 휴식을 찾는 분들에게 이상적인 장소가 될 것입니다.',
         items: [
           { title: '슈페리어 킹', size: '25 m2', desc: '킹 침대 1개, 2인, 벽 전망' },
           { title: '슈페리어 트윈', size: '28 m2', desc: '트윈 침대 2개, 2인, 시티 뷰' },
@@ -307,6 +426,24 @@ const resources = {
           { title: '프리미어 리버 뷰', size: '35 m2', desc: '킹 침대 1개, 2인, 한강 뷰' },
           { title: 'TPN 펜트하우스', size: '100 m2', desc: '침실 2개, 킹 침대 2개, 거실, 주방, 욕조, 4인' }
         ]
+      },
+      roomDetail: {
+        size: '크기',
+        beds: '침대',
+        guests: '투숙객',
+        bathrooms: '욕실',
+        overview: '객실 개요',
+        overviewDesc: '편안함과 품격이 있는 오아시스로 들어가 보십시오. 완벽하게 큐레이팅된 저희 공간은 현대적인 럭셔리와 우아한 미학을 완벽하게 조화시켜 고객의 요구에 완벽하게 맞춘 깊은 경험을 보장합니다. 꿈이 현실이 되는 탄 프엉 남 갤럭시에 오신 것을 환영합니다.',
+        amenities: '어메니티',
+        highlights: '특권 및 뷰',
+        gallery: '객실 갤러리',
+        needAssistance: '도움이 필요하신가요?',
+        assistanceDesc: '저희 예약 팀은 완벽한 숙박을 도와드리기 위해 연중무휴 24시간 대기하고 있습니다.',
+        contactUs: '문의하기',
+        smartTv: '스마트 TV',
+        minibar: '미니바',
+        wifi: '초고속 와이파이',
+        upTo: '최대'
       },
       accommodations: {
         label: '호텔 서비스',
@@ -374,6 +511,46 @@ const resources = {
           'NHÀ HÀNG': '레스토랑',
           'SẢNH LỄ TÂN': '접수/로비'
         }
+      },
+      culinary: {
+        label: '파인 다이닝',
+        title: '더 사우스 레스토랑',
+        description: '호텔 7층에 위치한 더 사우스 레스토랑은 미니멀하고 우아한 디자인으로 식사하는 고객에게 현대적이고 고급스러운 느낌을 선사합니다. 다낭에서 고급스러운 식사 공간을 경험하고자 하는 분들에게 놓칠 수 없는 곳입니다. 로맨틱하고 아늑한 분위기 속에서 반짝이는 도시의 불빛과 아름다운 한강에 흠뻑 빠져들어 절묘한 음식의 맛을 즐길 수 있습니다.',
+        exploreMenu: '메뉴 둘러보기',
+        mainMenu: '메인 코스 메뉴',
+        beverageMenu: '음료 및 와인 리스트',
+        bookTable: '테이블 예약',
+        comingSoon: '출시 예정',
+        comingSoonDesc: '우리는 현재 고급스럽고 새로운 메뉴 경험을 제작하고 있습니다. 나중에 다시 확인하시거나 리셉션에 문의해 주십시오.',
+        close: '닫기'
+      },
+      offer: {
+        label: '특별 혜택',
+        title: '프로모션 및 패키지',
+        description: 'TPN Galaxy에서 잊지 못할 숙박을 위해 엄선된 경험과 특별 혜택을 찾아보세요.',
+        bookNow: '지금 예약',
+        learnMore: '더 알아보기',
+        viewTerms: '이용 약관',
+        items: [
+          {
+            id: 'stay-play',
+            validity: '2026년 12월 31일까지 유효',
+            title: '골프 패키지',
+            description: '궁극의 골프 여행을 경험해 보세요. 시그니처 스위트룸 2박과 Montgomerie Links에서의 1인당 18홀 골프 1라운드가 포함되어 있습니다.'
+          },
+          {
+            id: 'romantic-getaway',
+            validity: '2026년 2월 28일까지 유효',
+            title: '로맨틱 겟어웨이',
+            description: '커플 스파 60분, 매일 제공되는 조식, 더 사우스 레스토랑에서의 낭만적인 불빛 아래 프라이빗 디너 파티로 사랑을 기념하세요.'
+          },
+          {
+            id: 'family-retreat',
+            validity: '2026년 8월 31일까지 유효',
+            title: '가족 여름 휴가',
+            description: '어린이용 추가 침대 무료 제공, 매일 키즈 클럽 이용, 즐거운 가족 요리 교실 등을 통해 오래 기억될 추억을 만들어 보세요.'
+          }
+        ]
       }
     }
   },
@@ -415,6 +592,7 @@ const resources = {
         perNight: '/ 晚',
         bed: '床型',
         guests: '宾客',
+        desc: '新南方酒店采用现代建筑风格。客房系统配备高级家具。开阔的空间和一览无余的景观帮助游客充分享受这座城市的美丽。对于那些寻求舒适和独特休闲体验的人来说，这将是一个理想的停留地。',
         items: [
           { title: '高级大床房', size: '25 平方米', desc: '1张大床，2人，面墙景观' },
           { title: '高级双床房', size: '28 平方米', desc: '2张单人床，2人，市景' },
@@ -432,6 +610,24 @@ const resources = {
           { title: '尊贵江景房', size: '35 平方米', desc: '1张大床，2人，韩江景观' },
           { title: 'TPN 顶层公寓', size: '100 平方米', desc: '2间卧室，2张大床，客厅，厨房，浴缸，4人' }
         ]
+      },
+      roomDetail: {
+        size: '面积',
+        beds: '床型',
+        guests: '宾客',
+        bathrooms: '浴室',
+        overview: '客房概述',
+        overviewDesc: '步入这片兼具舒适与尊贵的绿洲。我们精心打造的空间完美融合了现代奢华与优雅美学，确保为您带来完全满足您愿望的深刻体验。欢迎来到新南方银河，这里是梦想成真的地方。',
+        amenities: '设施',
+        highlights: '特权与景观',
+        gallery: '客房画廊',
+        needAssistance: '需要帮助？',
+        assistanceDesc: '我们的预订团队 24/7 全天候为您服务，帮助您定制完美的住宿。',
+        contactUs: '联系我们',
+        smartTv: '智能电视',
+        minibar: '迷你吧',
+        wifi: '高速 WiFi',
+        upTo: '最多'
       },
       accommodations: {
         label: '酒店服务',
@@ -499,6 +695,46 @@ const resources = {
           'NHÀ HÀNG': '餐厅',
           'SẢNH LỄ TÂN': '接待/大堂'
         }
+      },
+      culinary: {
+        label: '高级餐饮',
+        title: 'The South 餐厅',
+        description: 'The South 餐厅位于酒店 7 楼，采用极简优雅的设计，为就餐者带来现代而尊贵的感觉。对于想在岘港体验豪华就餐空间的人来说，这里绝对是不容错过的目的地。在浪漫温馨的氛围中，您可以尽情享受美食的绝妙风味，同时沉浸在城市闪烁的灯光和波光粼粼的韩江之中。',
+        exploreMenu: '探索我们的菜单',
+        mainMenu: '主菜菜单',
+        beverageMenu: '饮料和酒水单',
+        bookTable: '预订餐桌',
+        comingSoon: '即将推出',
+        comingSoonDesc: '我们目前正在精心打造全新的奢华菜单体验。请稍后查看或联系我们的前台。',
+        close: '关闭'
+      },
+      offer: {
+        label: '特别优惠',
+        title: '促销与套餐',
+        description: '探索为使您在 TPN Galaxy 拥有难忘住宿体验而精心设计的专属选项和优惠。',
+        bookNow: '立即预订',
+        learnMore: '了解更多',
+        viewTerms: '条款和条件',
+        items: [
+          {
+            id: 'stay-play',
+            validity: '有效期至 2026 年 12 月 31 日',
+            title: '高尔夫尊享套餐',
+            description: '体验一场极致的高尔夫假期。包括我们在特色套房的两晚住宿，以及每位客人在独家 Montgomerie Links 的一轮 18 洞高尔夫。'
+          },
+          {
+            id: 'romantic-getaway',
+            validity: '有效期至 2026 年 2 月 28 日',
+            title: '浪漫假期',
+            description: '庆祝爱情，专享 60 分钟双人水疗护理、每日床上早餐，并在位于河畔的 The South 餐厅享用私人烛光晚餐。'
+          },
+          {
+            id: 'family-retreat',
+            validity: '有效期至 2026 年 8 月 31 日',
+            title: '家庭夏日静修',
+            description: '通过免费为儿童提供加床、每日进入儿童俱乐部以及有趣的家庭烹饪课程，为您和家人留下美好回忆。'
+          }
+        ]
       }
     }
   }

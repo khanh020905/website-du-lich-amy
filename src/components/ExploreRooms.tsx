@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Maximize, Bed, Users } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link, useParams } from 'react-router-dom';
 
 import img2 from '../assets/pdf_images/img_p4_13.jpeg';
 import img3 from '../assets/pdf_images/img_p4_14.jpeg';
@@ -9,12 +10,14 @@ import img4 from '../assets/pdf_images/img_p5_17.jpeg';
 
 const suitesImg = [
   {
+    id: 'premier-river-view',
     image: img2,
     price: 4200000,
     bedCount: 1,
     guestCount: 2
   },
   {
+    id: 'tpn-penthouse',
     image: img3,
     price: 12000000,
     bedCount: 2,
@@ -24,6 +27,7 @@ const suitesImg = [
 
 const ExploreRooms = () => {
   const { t } = useTranslation();
+  const { locale } = useParams();
   
   const exploreItems = t('explore.items', { returnObjects: true }) as Array<{ title: string, size: string }>;
 
@@ -61,41 +65,43 @@ const ExploreRooms = () => {
               transition={{ duration: 0.7, delay: index * 0.15 }}
               className="group cursor-pointer"
             >
-              <div className="relative overflow-hidden mb-6 rounded-2xl">
-                <div className={`bg-gray-200 overflow-hidden ${index === 2 ? 'aspect-[16/10] md:aspect-[21/9]' : 'aspect-[16/11]'}`}>
-                  <img
-                    src={suite.image}
-                    alt={exploreItems[index]?.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+              <Link to={`/${locale || 'vi'}/room/${suite.id}`} className="block w-full h-full">
+                <div className="relative overflow-hidden mb-6 rounded-2xl">
+                  <div className={`bg-gray-200 overflow-hidden ${index === 2 ? 'aspect-[16/10] md:aspect-[21/9]' : 'aspect-[16/11]'}`}>
+                    <img
+                      src={suite.image}
+                      alt={exploreItems[index]?.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  {/* Price Ribbon */}
+                  <div className="absolute bottom-6 right-6 bg-white px-5 py-3 flex items-center shadow-lg transform group-hover:-translate-y-2 transition-transform duration-500">
+                    <span className="text-gray-500 text-xs tracking-wider mr-2 uppercase">{t('explore.from')}</span>
+                    <span className="text-[var(--color-gold)] font-serif font-bold text-lg">${suite.price}</span>
+                  </div>
                 </div>
-                {/* Price Ribbon */}
-                <div className="absolute bottom-6 right-6 bg-white px-5 py-3 flex items-center shadow-lg transform group-hover:-translate-y-2 transition-transform duration-500">
-                  <span className="text-gray-500 text-xs tracking-wider mr-2 uppercase">{t('explore.from')}</span>
-                  <span className="text-[var(--color-gold)] font-serif font-bold text-lg">${suite.price}</span>
-                </div>
-              </div>
 
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-200 pb-6 pl-2 pr-2 hover:border-[var(--color-gold)] transition-colors duration-500 border-opacity-50">
-                <h3 className="text-2xl font-serif font-semibold text-[#111] group-hover:text-[var(--color-gold)] transition-colors">
-                  {exploreItems[index]?.title}
-                </h3>
-                
-                <div className="flex items-center gap-4 text-sm text-gray-500">
-                  <div className="flex items-center gap-1.5">
-                    <Maximize size={15} className="text-gray-400 stroke-[1.5px]" />
-                    <span className="text-xs font-medium">{exploreItems[index]?.size}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <Bed size={15} className="text-gray-400 stroke-[1.5px]" />
-                    <span className="text-xs font-medium">{suite.bedCount} {t('rooms.bed')}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <Users size={15} className="text-gray-400 stroke-[1.5px]" />
-                    <span className="text-xs font-medium">{suite.guestCount} {t('rooms.guests')}</span>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-200 pb-6 pl-2 pr-2 hover:border-[var(--color-gold)] transition-colors duration-500 border-opacity-50">
+                  <h3 className="text-2xl font-serif font-semibold text-[#111] group-hover:text-[var(--color-gold)] transition-colors">
+                    {exploreItems[index]?.title}
+                  </h3>
+                  
+                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-1.5">
+                      <Maximize size={15} className="text-gray-400 stroke-[1.5px]" />
+                      <span className="text-xs font-medium">{exploreItems[index]?.size}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Bed size={15} className="text-gray-400 stroke-[1.5px]" />
+                      <span className="text-xs font-medium">{suite.bedCount} {t('rooms.bed')}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Users size={15} className="text-gray-400 stroke-[1.5px]" />
+                      <span className="text-xs font-medium">{suite.guestCount} {t('rooms.guests')}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>

@@ -86,28 +86,33 @@ const Accommodations = () => {
             </motion.div>
           </AnimatePresence>
 
-          {/* Floating Info Box on the left */}
-          <div className="absolute top-[10%] left-0 md:top-1/2 md:-translate-y-1/2 md:left-8 lg:left-12 bg-white p-6 md:p-10 max-w-[90%] md:max-w-[420px] shadow-xl z-20 mx-4 md:mx-0 border-[3px] border-[#D4AF37]">
+          {/* Frosted Glass Bar anchored to the bottom edge */}
+          <div className="absolute bottom-0 left-0 w-full bg-black/40 backdrop-blur-md px-4 py-3 md:px-10 md:py-6 z-20 border-t border-white/10 flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`content-${activeIndex}`}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 15 }}
                 transition={{ duration: 0.5 }}
+                className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-2 md:gap-10 text-center md:text-left"
               >
-                <h3 className="text-2xl md:text-3xl font-serif text-[#D4AF37] mb-3 md:mb-5 font-normal tracking-wide">
-                  {currentItem?.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-4 md:mb-6 text-sm text-justify">
-                  {currentItem?.desc}
-                </p>
-                <p className="text-[#D4AF37] text-sm font-medium mb-6 md:mb-8 font-serif">
-                  {hours}
-                </p>
-                <div className="flex justify-center md:justify-start">
-                  <Link to={`/${currentLang}/service/${activeIndex}`}>
-                    <button className="border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300 px-8 py-2 text-xs uppercase tracking-wider font-medium w-full md:w-auto">
+                <div className="md:flex-[2]">
+                  <h3 className="text-xl md:text-3xl font-serif text-[var(--color-gold)] mb-1 md:mb-2 font-medium tracking-wide drop-shadow-md">
+                    {currentItem?.title}
+                  </h3>
+                  <p className="text-gray-100 leading-snug md:leading-relaxed text-xs md:text-sm md:pr-6 font-light drop-shadow-sm line-clamp-2 md:line-clamp-none">
+                    {currentItem?.desc}
+                  </p>
+                </div>
+                
+                <div className="md:flex-1 flex flex-col items-center md:items-end w-full md:w-auto mt-1 md:mt-0">
+                  <p className="text-white/90 text-xs md:text-sm font-medium mb-2 md:mb-4 font-serif flex items-center gap-2 drop-shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)] hidden md:block"></span>
+                    {hours}
+                  </p>
+                  <Link to={`/${currentLang}/service/${activeIndex}`} className="w-full md:w-auto">
+                    <button className="w-full md:w-auto border border-white/30 text-white bg-white/10 hover:bg-white hover:text-[#111] transition-all duration-300 px-4 py-2 md:px-8 md:py-2.5 text-[10px] md:text-xs uppercase tracking-wider font-bold whitespace-nowrap backdrop-blur-sm rounded-sm">
                       {btnText}
                     </button>
                   </Link>

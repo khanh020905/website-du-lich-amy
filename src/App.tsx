@@ -18,6 +18,8 @@ import Gallery from './components/Gallery';
 
 import RoomDetail from './components/RoomDetail';
 import ServiceDetail from './components/ServiceDetail';
+import Culinary from './components/Culinary';
+import Offers from './components/Offers';
 
 const Layout = () => {
   const { locale } = useParams();
@@ -171,12 +173,71 @@ const RoomsPage = () => {
         >
           {t('rooms.title')}
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative z-10 mt-6 text-gray-300/90 max-w-3xl text-center text-lg leading-relaxed drop-shadow-md"
+        >
+          {t('rooms.desc')}
+        </motion.p>
       </div>
 
       <div className="bg-white pb-16">
         <RoomsCollection hideTitle={true} />
         <ExploreRooms />
       </div>
+      <Footer />
+    </div>
+  );
+};
+
+const CulinaryPage = () => {
+  const { locale } = useParams();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (locale && ['vi', 'en', 'ko', 'zh'].includes(locale)) {
+      i18n.changeLanguage(locale);
+      document.documentElement.lang = locale;
+    }
+    window.scrollTo(0, 0);
+  }, [locale, i18n]);
+
+  if (!locale || !['vi', 'en', 'ko', 'zh'].includes(locale)) {
+    return <Navigate to="/vi" replace />;
+  }
+
+  return (
+    <div className="font-sans antialiased text-gray-800 bg-[#111]">
+      <Navbar />
+      <Culinary />
+      <Footer />
+    </div>
+  );
+};
+
+const OffersPage = () => {
+  const { locale } = useParams();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (locale && ['vi', 'en', 'ko', 'zh'].includes(locale)) {
+      i18n.changeLanguage(locale);
+      document.documentElement.lang = locale;
+    }
+    window.scrollTo(0, 0);
+  }, [locale, i18n]);
+
+  if (!locale || !['vi', 'en', 'ko', 'zh'].includes(locale)) {
+    return <Navigate to="/vi" replace />;
+  }
+
+  return (
+    <div className="font-sans antialiased text-gray-800 bg-white">
+      <Navbar />
+      <Offers />
       <Footer />
     </div>
   );
@@ -189,6 +250,8 @@ function App() {
       <Route path="/:locale" element={<Layout />} />
       <Route path="/:locale/gallery" element={<GalleryPage />} />
       <Route path="/:locale/rooms" element={<RoomsPage />} />
+      <Route path="/:locale/culinary" element={<CulinaryPage />} />
+      <Route path="/:locale/offer" element={<OffersPage />} />
       <Route path="/:locale/room/:roomId" element={<RoomDetailPage />} />
       <Route path="/:locale/service/:serviceId" element={<ServiceDetailPage />} />
       <Route path="*" element={<Navigate to="/vi" replace />} />

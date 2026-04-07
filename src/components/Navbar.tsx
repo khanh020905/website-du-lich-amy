@@ -68,6 +68,8 @@ const Navbar = () => {
           {navAnchors.map((anchor, index) => {
             const isGallery = anchor === 'gallery';
             const isRooms = anchor === 'rooms';
+            const isCulinary = anchor === 'culinary';
+            const isOffer = anchor === 'offer';
             
             let targetPath = `/${locale}`;
             let targetHash = `#${anchor}`;
@@ -78,6 +80,12 @@ const Navbar = () => {
             } else if (isRooms) {
               targetPath = `/${locale}/rooms`;
               targetHash = '';
+            } else if (isCulinary) {
+              targetPath = `/${locale}/culinary`;
+              targetHash = '';
+            } else if (isOffer) {
+              targetPath = `/${locale}/offer`;
+              targetHash = '';
             }
             
             return (
@@ -85,7 +93,7 @@ const Navbar = () => {
                 key={anchor}
                 to={`${targetPath}${targetHash}`}
                 onClick={(e) => {
-                  if (!isGallery && !isRooms && location.pathname === targetPath) {
+                  if (!isGallery && !isRooms && !isCulinary && !isOffer && location.pathname === targetPath) {
                     const el = document.getElementById(anchor);
                     if (el) {
                       e.preventDefault();
@@ -160,6 +168,8 @@ const Navbar = () => {
               {navAnchors.map((anchor, index) => {
                 const isGallery = anchor === 'gallery';
                 const isRooms = anchor === 'rooms';
+                const isCulinary = anchor === 'culinary';
+                const isOffer = anchor === 'offer';
                 
                 let targetPath = `/${locale}`;
                 let targetHash = `#${anchor}`;
@@ -170,6 +180,12 @@ const Navbar = () => {
                 } else if (isRooms) {
                   targetPath = `/${locale}/rooms`;
                   targetHash = '';
+                } else if (isCulinary) {
+                  targetPath = `/${locale}/culinary`;
+                  targetHash = '';
+                } else if (isOffer) {
+                  targetPath = `/${locale}/offer`;
+                  targetHash = '';
                 }
 
                 return (
@@ -178,7 +194,7 @@ const Navbar = () => {
                     to={`${targetPath}${targetHash}`}
                     onClick={(e) => {
                       setIsMobileMenuOpen(false);
-                      if (!isGallery && !isRooms && location.pathname === targetPath) {
+                      if (!isGallery && !isRooms && !isCulinary && !isOffer && location.pathname === targetPath) {
                         const el = document.getElementById(anchor);
                         if (el) {
                           e.preventDefault();

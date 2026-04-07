@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Maximize, Bed, Users, Bath, Star, ArrowLeft, Check, Coffee, Wifi, Monitor } from 'lucide-react';
+import { Maximize, Bed, Users, Bath, Star, ArrowLeft, Check, Coffee, Wifi, Monitor, X } from 'lucide-react';
 import roomsData from '../data/roomsData.json';
 
 const RoomDetail = () => {
   const { locale, roomId } = useParams();
   const { t } = useTranslation();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,17 +22,14 @@ const RoomDetail = () => {
 
   const roomData = roomsData[roomIndex];
   
-  const roomItems = t('rooms.items', { returnObjects: true }) as Array<{ title: string, size: string, desc: string }>;
-  const exploreItems = t('explore.items', { returnObjects: true }) as Array<{ title: string, size: string, desc: string }>;
+  const roomItems = t('rooms.items', { returnObjects: true }) as Array<{ title: string, size: string, desc: string, highlights?: string[] }>;
+  const exploreItems = t('explore.items', { returnObjects: true }) as Array<{ title: string, size: string, desc: string, highlights?: string[] }>;
   const allLocalizedItems = [...roomItems, ...exploreItems];
   
   const localizedInfo = allLocalizedItems[roomIndex];
   // Determine if it's a penthouse/superior to assign bathroom count gracefully (just simulate for now based on capacity)
   const bathroomCount = roomData.guestCount > 2 ? 2 : 1;
 
-  // Retrieve localized reviews (fallback to English if not found, though we have all 4)
-  const langKey = (locale || 'vi') as keyof typeof roomData.reviews;
-  const reviews = roomData.reviews[langKey] || roomData.reviews['en'];
 
   const handleBookNow = () => {
     alert("Booking Engine Integration Coming Soon!");
@@ -79,7 +77,7 @@ const RoomDetail = () => {
               <Maximize className="text-[var(--color-gold)]" size={20} />
             </div>
             <div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">Size</p>
+              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">{t('roomDetail.size')}</p>
               <p className="text-sm md:text-base font-medium">{localizedInfo?.size}</p>
             </div>
           </div>
@@ -89,7 +87,7 @@ const RoomDetail = () => {
               <Bed className="text-[var(--color-gold)]" size={20} />
             </div>
             <div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">Beds</p>
+              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">{t('roomDetail.beds')}</p>
               <p className="text-sm md:text-base font-medium">{roomData.bedCount}</p>
             </div>
           </div>
@@ -99,8 +97,8 @@ const RoomDetail = () => {
               <Users className="text-[var(--color-gold)]" size={20} />
             </div>
             <div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">Guests</p>
-              <p className="text-sm md:text-base font-medium">Up to {roomData.guestCount}</p>
+              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">{t('roomDetail.guests')}</p>
+              <p className="text-sm md:text-base font-medium">{t('roomDetail.upTo')} {roomData.guestCount}</p>
             </div>
           </div>
 
@@ -109,7 +107,7 @@ const RoomDetail = () => {
               <Bath className="text-[var(--color-gold)]" size={20} />
             </div>
             <div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">Bathrooms</p>
+              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">{t('roomDetail.bathrooms')}</p>
               <p className="text-sm md:text-base font-medium">{bathroomCount}</p>
             </div>
           </div>
@@ -132,17 +130,17 @@ const RoomDetail = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-16">
           <div className="lg:col-span-2 space-y-12">
             <section>
-              <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">Room Overview</h3>
+              <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.overview')}</h3>
               <p className="text-gray-600 leading-relaxed text-lg mb-6">
                 {localizedInfo?.desc}
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Step into an oasis of comfort and prestige. Our perfectly curated space perfectly blends modern luxury with elegant aesthetics, ensuring a profound hospitality experience tailored entirely to your desires. Welcome to Tan Phuong Nam Galaxy, where dreams meet reality.
+                {t('roomDetail.overviewDesc')}
               </p>
             </section>
 
             <section>
-              <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">Amenities</h3>
+              <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.amenities')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {roomData.amenities.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
@@ -153,25 +151,44 @@ const RoomDetail = () => {
                 {/* Simulated standard amenities */}
                 <div className="flex items-center gap-3">
                   <Monitor size={16} className="text-[var(--color-gold)]" />
-                  <span className="text-gray-700 font-medium text-sm">Smart TV</span>
+                  <span className="text-gray-700 font-medium text-sm">{t('roomDetail.smartTv')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Coffee size={16} className="text-[var(--color-gold)]" />
-                  <span className="text-gray-700 font-medium text-sm">Minibar</span>
+                  <span className="text-gray-700 font-medium text-sm">{t('roomDetail.minibar')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Wifi size={16} className="text-[var(--color-gold)]" />
-                  <span className="text-gray-700 font-medium text-sm">High-Speed WiFi</span>
+                  <span className="text-gray-700 font-medium text-sm">{t('roomDetail.wifi')}</span>
                 </div>
               </div>
             </section>
 
+            {/* Highlights Section */}
+            {localizedInfo?.highlights && (
+              <section>
+                <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.highlights')}</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {localizedInfo.highlights.map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <Star size={16} className="text-[var(--color-gold)] mt-0.5 shrink-0" fill="currentColor" />
+                      <span className="text-gray-700 font-medium text-sm leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
             {/* Gallery Mini Grid */}
             <section>
-              <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">Room Gallery</h3>
+              <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.gallery')}</h3>
               <div className="grid grid-cols-2 gap-4">
                 {roomData.galleries.map((img, idx) => (
-                  <div key={idx} className={`rounded-sm overflow-hidden bg-gray-100 ${idx === 0 ? 'col-span-2 aspect-[21/9]' : 'aspect-video'}`}>
+                  <div 
+                    key={idx} 
+                    className={`rounded-sm overflow-hidden bg-gray-100 cursor-pointer ${idx === 0 ? 'col-span-2 aspect-[21/9]' : 'aspect-video'}`}
+                    onClick={() => setSelectedImage(img)}
+                  >
                     <img src={img} alt={`Gallery ${idx}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                   </div>
                 ))}
@@ -179,38 +196,50 @@ const RoomDetail = () => {
             </section>
           </div>
 
-          {/* Sidebar / Reviews */}
+          {/* Sidebar / Options */}
           <div className="space-y-8">
-            <div className="bg-gray-50 border border-gray-100 p-8 rounded-sm">
-              <h4 className="font-serif text-xl font-semibold mb-6 text-[#111]">Guest Reviews</h4>
-              <div className="space-y-8">
-                {reviews.map((rev, idx) => (
-                  <div key={idx} className="border-b border-gray-200 pb-6 last:border-0 last:pb-0">
-                    <div className="flex items-center justify-between mb-3">
-                      <h5 className="font-semibold text-gray-800">{rev.name}</h5>
-                      <div className="flex items-center gap-1 bg-[#111] text-[var(--color-gold)] px-2 py-1 rounded-sm">
-                        <span className="text-xs font-bold leading-none">{rev.score}</span>
-                        <Star size={10} fill="currentColor" />
-                      </div>
-                    </div>
-                    <p className="text-gray-600 text-sm italic leading-relaxed">"{rev.text}"</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             <div className="bg-[#111] text-white p-8 rounded-sm">
-              <h4 className="font-serif text-xl font-semibold mb-3">Need Assistance?</h4>
+              <h4 className="font-serif text-xl font-semibold mb-3">{t('roomDetail.needAssistance')}</h4>
               <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                Our reservations team is available 24/7 to help you tailor your perfect stay.
+                {t('roomDetail.assistanceDesc')}
               </p>
               <a href="tel:+842363" className="block text-center border border-white/20 hover:border-[var(--color-gold)] hover:bg-[var(--color-gold)] py-3 px-4 text-sm uppercase tracking-widest font-semibold transition-all">
-                Contact Us
+                {t('roomDetail.contactUs')}
               </a>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Image Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 md:p-12"
+            onClick={() => setSelectedImage(null)}
+          >
+            <button
+              className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors z-10 bg-black/20 p-2 rounded-full"
+              onClick={() => setSelectedImage(null)}
+            >
+              <X size={28} />
+            </button>
+            <motion.img
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              src={selectedImage}
+              alt="Zoomed Gallery"
+              className="max-w-full max-h-full object-contain rounded-md shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
