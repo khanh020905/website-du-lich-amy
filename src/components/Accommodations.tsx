@@ -126,12 +126,15 @@ const Accommodations: React.FC<AccommodationsProps> = ({ hideHeader = false }) =
         </div>
 
         {/* Thumbnail Strip */}
-        <div className="flex justify-center items-center flex-wrap gap-2 md:gap-4 mt-2 md:mt-4">
+        <div 
+          className="flex overflow-x-auto gap-3 md:gap-4 mt-4 md:mt-6 pb-4 snap-x scrollbar-hide"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
           {accommodationsImages.map((img, idx) => (
             <div 
               key={idx}
               onClick={() => setActiveIndex(idx)}
-              className={`relative cursor-pointer w-[22%] sm:w-40 md:w-[220px] h-16 sm:h-24 md:h-[110px] overflow-hidden group shadow-sm transition-all duration-300 ${activeIndex === idx ? 'ring-2 ring-[#D4AF37] ring-offset-2' : ''}`}
+              className={`relative shrink-0 cursor-pointer w-[140px] sm:w-[180px] md:w-[220px] h-[80px] sm:h-[100px] md:h-[120px] overflow-hidden group shadow-sm transition-all duration-300 snap-start rounded-sm ${activeIndex === idx ? 'ring-2 ring-[#D4AF37] ring-offset-2' : ''}`}
             >
               <img 
                 src={img.image} 

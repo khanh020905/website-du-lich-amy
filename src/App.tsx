@@ -310,20 +310,25 @@ const ServicesPage = () => {
   );
 };
 
+import Chatbot from './components/Chatbot';
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/vi" replace />} />
-      <Route path="/:locale" element={<Layout />} />
-      <Route path="/:locale/gallery" element={<GalleryPage />} />
-      <Route path="/:locale/rooms" element={<RoomsPage />} />
-      <Route path="/:locale/culinary" element={<CulinaryPage />} />
-      <Route path="/:locale/offer" element={<OffersPage />} />
-      <Route path="/:locale/services" element={<ServicesPage />} />
-      <Route path="/:locale/room/:roomId" element={<RoomDetailPage />} />
-      <Route path="/:locale/service/:serviceId" element={<ServiceDetailPage />} />
-      <Route path="*" element={<Navigate to="/vi" replace />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Navigate to="/vi" replace />} />
+        <Route path="/:locale" element={<Layout />} />
+        <Route path="/:locale/gallery" element={<GalleryPage />} />
+        <Route path="/:locale/rooms" element={<RoomsPage />} />
+        <Route path="/:locale/culinary" element={<CulinaryPage />} />
+        <Route path="/:locale/offer" element={<OffersPage />} />
+        <Route path="/:locale/services" element={<ServicesPage />} />
+        <Route path="/:locale/room/:roomId" element={<RoomDetailPage />} />
+        <Route path="/:locale/service/:serviceId" element={<ServiceDetailPage />} />
+        <Route path="*" element={<Navigate to="/vi" replace />} />
+      </Routes>
+      <Chatbot />
+    </>
   );
 }
 
