@@ -9,6 +9,7 @@ import Introduction from './components/Introduction';
 import RoomsCollection from './components/RoomsCollection';
 import ExploreRooms from './components/ExploreRooms';
 import Accommodations from './components/Accommodations';
+import ServicesOverview from './components/ServicesOverview';
 import Testimonials from './components/Testimonials';
 import SideTimeline from './components/SideTimeline';
 import FAQ from './components/FAQ';
@@ -243,6 +244,72 @@ const OffersPage = () => {
   );
 };
 
+const ServicesPage = () => {
+  const { locale } = useParams();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    if (locale && ['vi', 'en', 'ko', 'zh'].includes(locale)) {
+      i18n.changeLanguage(locale);
+      document.documentElement.lang = locale;
+    }
+    window.scrollTo(0, 0);
+  }, [locale, i18n]);
+
+  if (!locale || !['vi', 'en', 'ko', 'zh'].includes(locale)) {
+    return <Navigate to="/vi/services" replace />;
+  }
+
+  return (
+    <div className="font-sans antialiased text-gray-800 bg-[#111]">
+      <Navbar />
+      
+      {/* Dark Cinematic Header specifically for Services standalone container */}
+      <div className="relative pt-40 pb-20 flex flex-col items-center justify-center px-4 overflow-hidden shadow-2xl">
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transform scale-105"
+          style={{ backgroundImage: 'url("/assets/spa.jpg")' }}
+        ></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#111]/90 via-[#111]/80 to-[#111]"></div>
+        <div className="absolute inset-0 z-0 bg-black/40 backdrop-blur-[4px]"></div>
+
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative z-10 text-xs uppercase tracking-[0.3em] font-bold text-[var(--color-gold)] mb-6 text-center"
+        >
+          {t('accommodations.label')}
+        </motion.h3>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="relative z-10 text-4xl md:text-6xl font-serif text-white font-semibold tracking-wide shadow-black drop-shadow-xl text-center"
+        >
+          {t('accommodations.title')}
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative z-10 mt-6 text-gray-300/90 max-w-3xl text-center text-lg leading-relaxed drop-shadow-md"
+        >
+          {t('accommodations.desc')}
+        </motion.p>
+      </div>
+
+      <div className="bg-[#111] pb-16 pt-8">
+        <ServicesOverview />
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
 function App() {
   return (
     <Routes>
@@ -252,6 +319,7 @@ function App() {
       <Route path="/:locale/rooms" element={<RoomsPage />} />
       <Route path="/:locale/culinary" element={<CulinaryPage />} />
       <Route path="/:locale/offer" element={<OffersPage />} />
+      <Route path="/:locale/services" element={<ServicesPage />} />
       <Route path="/:locale/room/:roomId" element={<RoomDetailPage />} />
       <Route path="/:locale/service/:serviceId" element={<ServiceDetailPage />} />
       <Route path="*" element={<Navigate to="/vi" replace />} />

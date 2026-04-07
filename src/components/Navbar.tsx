@@ -27,7 +27,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navAnchors = ['rooms', 'culinary', 'service', 'offer', 'gallery'];
+  const navAnchors = ['rooms', 'culinary', 'services', 'offer', 'gallery'];
   const translatedLinks = t('nav.links', { returnObjects: true }) as string[];
 
   const switchLanguage = (lng: string) => {
@@ -70,6 +70,7 @@ const Navbar = () => {
             const isRooms = anchor === 'rooms';
             const isCulinary = anchor === 'culinary';
             const isOffer = anchor === 'offer';
+            const isServices = anchor === 'services';
             
             let targetPath = `/${locale}`;
             let targetHash = `#${anchor}`;
@@ -86,6 +87,9 @@ const Navbar = () => {
             } else if (isOffer) {
               targetPath = `/${locale}/offer`;
               targetHash = '';
+            } else if (isServices) {
+              targetPath = `/${locale}/services`;
+              targetHash = '';
             }
             
             return (
@@ -93,7 +97,7 @@ const Navbar = () => {
                 key={anchor}
                 to={`${targetPath}${targetHash}`}
                 onClick={(e) => {
-                  if (!isGallery && !isRooms && !isCulinary && !isOffer && location.pathname === targetPath) {
+                  if (!isGallery && !isRooms && !isCulinary && !isOffer && !isServices && location.pathname === targetPath) {
                     const el = document.getElementById(anchor);
                     if (el) {
                       e.preventDefault();
@@ -170,6 +174,7 @@ const Navbar = () => {
                 const isRooms = anchor === 'rooms';
                 const isCulinary = anchor === 'culinary';
                 const isOffer = anchor === 'offer';
+                const isServices = anchor === 'services';
                 
                 let targetPath = `/${locale}`;
                 let targetHash = `#${anchor}`;
@@ -186,6 +191,9 @@ const Navbar = () => {
                 } else if (isOffer) {
                   targetPath = `/${locale}/offer`;
                   targetHash = '';
+                } else if (isServices) {
+                  targetPath = `/${locale}/services`;
+                  targetHash = '';
                 }
 
                 return (
@@ -194,7 +202,7 @@ const Navbar = () => {
                     to={`${targetPath}${targetHash}`}
                     onClick={(e) => {
                       setIsMobileMenuOpen(false);
-                      if (!isGallery && !isRooms && !isCulinary && !isOffer && location.pathname === targetPath) {
+                      if (!isGallery && !isRooms && !isCulinary && !isOffer && !isServices && location.pathname === targetPath) {
                         const el = document.getElementById(anchor);
                         if (el) {
                           e.preventDefault();

@@ -7,32 +7,33 @@ import img1 from '../assets/reception.jpg';
 import img2 from '../assets/restaurent.jpg';
 import img3 from '../assets/spa.jpg';
 import img4 from '../assets/bartender-bar.jpg';
+import img5 from '../assets/gym_mock.png';
+import img6 from '../assets/pool_mock.png';
+import img7 from '../assets/conference_mock.png';
 
 const accommodationsImages = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 }
+  { image: img1 }, // 0: Reception
+  { image: img2 }, // 1: Restaurant
+  { image: img3 }, // 2: Spa
+  { image: img4 }, // 3: Skybar
+  { image: img5 }, // 4: Gym Mock
+  { image: img6 }, // 5: Pool Mock
+  { image: img7 }  // 6: Conference Mock
 ];
 
-const Accommodations = () => {
+interface AccommodationsProps {
+  hideHeader?: boolean;
+}
+
+const Accommodations: React.FC<AccommodationsProps> = ({ hideHeader = false }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { t } = useTranslation();
   const { locale } = useParams();
 
-  const accItems = t('accommodations.items', { returnObjects: true }) as Array<{ title: string, size: string, desc: string }>;
-  
-  // Real-world dummy hours mapped for each service sequentially (Lobby, Restaurant, Spa, Skybar)
-  const openingHoursMap = [
-    { vi: "Thời gian mở cửa: 24/7", en: "Opening Hours: 24/7", ko: "영업 시간: 연중무휴", zh: "营业时间：24/7" },
-    { vi: "Thời gian mở cửa: 06:00 đến 22:00", en: "Opening Hours: 06:00 to 22:00", ko: "영업 시간: 06:00 - 22:00", zh: "营业时间：06:00 至 22:00" },
-    { vi: "Thời gian mở cửa: 09:00 đến 21:00", en: "Opening Hours: 09:00 to 21:00", ko: "영업 시간: 09:00 - 21:00", zh: "营业时间：09:00 至 21:00" },
-    { vi: "Thời gian mở cửa: 16:00 đến 00:00", en: "Opening Hours: 16:00 to 00:00", ko: "영업 시간: 16:00 - 00:00", zh: "营业时间：16:00 至 00:00" },
-  ];
-
+  const accItems = t('accommodations.items', { returnObjects: true }) as Array<any>;
   const currentItem = accItems[activeIndex];
   const currentLang = (locale || 'vi') as 'vi' | 'en' | 'ko' | 'zh';
-  const hours = openingHoursMap[activeIndex][currentLang] || openingHoursMap[activeIndex].vi;
+  const hours = currentItem?.hours || "24/7";
 
   const btnTextMap = {
     vi: "Xem chi tiết",
@@ -43,28 +44,30 @@ const Accommodations = () => {
   const btnText = btnTextMap[currentLang] || btnTextMap.vi;
 
   return (
-    <section className="pt-24 pb-12 bg-white scroll-mt-20" id="services">
+    <section className={`pb-12 scroll-mt-20 ${hideHeader ? 'bg-transparent pt-12' : 'bg-white pt-24'}`} id="services">
       {/* Header */}
-      <div className="text-center mb-10 px-4 md:px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-serif text-[#111] mb-4"
-        >
-          {t('accommodations.title')}
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1, duration: 0.6 }}
-          className="text-sm md:text-base text-gray-500 max-w-3xl mx-auto leading-relaxed mt-4"
-        >
-          {t('accommodations.desc')}
-        </motion.p>
-      </div>
+      {!hideHeader && (
+        <div className="text-center mb-10 px-4 md:px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-serif text-[#111] mb-4"
+          >
+            {t('accommodations.title')}
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            className="text-sm md:text-base text-gray-500 max-w-3xl mx-auto leading-relaxed mt-4"
+          >
+            {t('accommodations.desc')}
+          </motion.p>
+        </div>
+      )}
 
       <div className="max-w-[1000px] mx-auto px-4 md:px-0">
         {/* Main Feature Container */}

@@ -81,10 +81,13 @@ const resources = {
         label: 'HOTEL SERVICES',
         title: 'Services and Amenities',
         items: [
-          { title: 'Reception Lobby', size: '', desc: 'A sophisticated welcoming space providing our guests a majestic first impression.' },
-          { title: 'The South Restaurant', size: '', desc: 'Embark on a culinary journey where Asian and Western delicacies orchestrate perfectly.' },
-          { title: 'Spa & Wellness', size: '', desc: 'Indulge in a tranquil sanctuary crafted to rejuvenate your body, mind, and soul.' },
-          { title: 'Stellar Skybar', size: '', desc: 'Sip on handcrafted signature cocktails while witnessing the breathtaking panoramic city view.' }
+          { title: 'Reception Lobby', size: '', desc: 'A sophisticated welcoming space providing our guests a majestic first impression. The spacious area is designed with a prime waiting lounge offering complimentary tea and coffee.', hours: '24/7', locationText: '1st Floor', capacityText: '', schedules: [], features: ["24/7 Guest Support","Express Check-in","Currency Exchange","Tour Information"] },
+          { title: 'The South Restaurant', size: '', desc: 'Located on the 3rd floor of the hotel, The South Restaurant features elegant design and views overlooking the Han River, allowing you to start your day with an energizing morning meal.', hours: '06:00 to 22:00', locationText: '3rd Floor', capacityText: '200 guests', schedules: ["Breakfast buffet: 06:00 - 10:00","Lunch and Dinner: 11:00 - 22:00"], features: [] },
+          { title: 'Spa & Wellness', size: '', desc: 'Situated on the 1st floor of Tan Phuong Nam Galaxy, the Spa is harmoniously designed with varied color tones, creating a sophisticated and relaxing sanctuary.', hours: '09:00 to 21:00', locationText: '1st Floor', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
+          { title: 'Stellar Skybar', size: '', desc: 'Positioned on the 12th floor, Sky Bar Stellar is the ideal destination to indulge in an elevated relaxing space with panoramic views of the Han River and Da Nang city.', hours: '10:00 to 22:00', locationText: '12th Floor', capacityText: '', schedules: [], features: ["Signature Cocktails","Acoustic Music","Panoramic View","VIP Lounge"] },
+          { title: 'Gym & Fitness Center', size: '', desc: 'Our Fitness Center is equipped with cutting-edge machinery, catering to all your workout demands from cardio to intensive strength training.', hours: '06:00 to 22:00', locationText: '2nd Floor', capacityText: '50 guests', schedules: [], features: ["Modern Treadmills","Free Weights Area","Personal Trainers","Complimentary Water & Towels"] },
+          { title: 'Rooftop Infinity Pool', size: '', desc: 'Immerse yourself in the cool, refreshing water at the rooftop infinity swimming pool, where you can unwind while taking in the magnificent sunset.', hours: '06:00 to 18:00', locationText: 'Rooftop Floor', capacityText: '', schedules: [], features: ["Lounging Sunbeds","Poolside Beverage Service","Safe Kids Area","Complimentary Fresh Towels"] },
+          { title: 'Conference Room', size: '', desc: 'An ideal venue for organizing corporate events, thematic seminars, or professional and lavish banquets.', hours: 'Upon booking', locationText: '4th Floor', capacityText: 'Up to 300 guests', schedules: [], features: ["200-inch LED Screen","Surround Sound System","Teabreak Pastries & Tea","Ultra High-Speed Wi-Fi"] }
         ],
         desc: "The unseen luxury partners of true 'hospitality service'. Unmatched luxury properties along the Han River. We go beyond your expectations guaranteeing to bring unmatched luxury hospitality right to your footsteps.",
         cta: 'DISCOVER MORE SERVICES'
@@ -265,10 +268,13 @@ const resources = {
         label: 'TIỆN ÍCH',
         title: 'Dịch vụ và tiện nghi Khách sạn',
         items: [
-          { title: 'Sảnh Lễ Tân', size: '', desc: 'Không gian đón khách lộng lẫy mang lại trải nghiệm mãn nhãn ngay từ giây phút đầu tiên.' },
-          { title: 'Nhà Hàng The South', size: '', desc: 'Hành trình tinh hoa ẩm thực đỉnh cao với sự giao thoa hoàn hảo giữa phong vị Á - Âu.' },
-          { title: 'Spa & Massage', size: '', desc: 'Nơi chốn bình yên tĩnh lặng để tái tạo năng lượng thể chất lẫn tinh thần qua liệu pháp chuyên sâu.' },
-          { title: 'Stellar Skybar', size: '', desc: 'Thưởng thức cocktail thủ công thượng hạng và ngắm nhìn toàn cảnh thành phố rực rỡ từ trên cao.' }
+          { title: 'Sảnh Lễ Tân', size: '', desc: 'Không gian đón khách lộng lẫy mang lại trải nghiệm mãn nhãn ngay từ giây phút đầu tiên. Khu vực được thiết kế rộng rãi với khu vực chờ sang trọng, phục vụ trà và cà phê miễn phí.', hours: '24/7', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Hỗ trợ khách hàng 24/7","Check-in/Check-out nhanh chóng","Dịch vụ thu đổi ngoại tệ","Thông tin du lịch"] },
+          { title: 'Nhà Hàng The South', size: '', desc: 'Nhà hàng The South tọa lạc tại tầng 3 của khách sạn, với thiết kế sang trọng và tầm nhìn hướng ra Sông Hàn để quý khách có thể bắt đầu ngày mới với một bữa sáng tràn đầy năng lượng.', hours: '06:00 đến 22:00', locationText: 'Tầng 3', capacityText: '200 khách', schedules: ["Breakfast buffet: 06:00 - 10:00","Lunch and Dinner: 11:00 - 22:00"], features: [] },
+          { title: 'Spa & Massage', size: '', desc: 'Nằm tại tầng 1 của Khách sạn Tân Phương Nam Galaxy, Spa được thiết kế với sự kết hợp hài hòa của nhiều gam màu khác nhau, tạo nên một không gian vừa tinh tế vừa thư giãn. Không gian yên bình, tách biệt khỏi nhịp sống ồn ào.', hours: '09:00 đến 21:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
+          { title: 'Stellar Skybar', size: '', desc: 'Tọa lạc tại tầng 12, Sky Bar Stellar là điểm đến lý tưởng để tận hưởng không gian thư giãn trên cao với tầm nhìn toàn cảnh sông Hàn và thành phố Đà Nẵng.', hours: '10:00 đến 22:00', locationText: 'Tầng 12', capacityText: '', schedules: [], features: ["Signature Cocktails","Acoustic Music","Panoramic View","VIP Lounge"] },
+          { title: 'Phòng Gym & Fitness', size: '', desc: 'Phòng Gym được trang bị hệ thống máy móc hiện đại, đáp ứng mọi nhu cầu tập luyện của quý khách từ cardio đến rèn luyện thể lực chuyên sâu.', hours: '06:00 đến 22:00', locationText: 'Tầng 2', capacityText: '50 khách', schedules: [], features: ["Máy chạy bộ hiện đại","Khu vực tạ tự do","Huấn luyện viên cá nhân","Nước & khăn miễn phí"] },
+          { title: 'Hồ Bơi Vô Cực Rooftop', size: '', desc: 'Hòa mình vào làn nước mát lạnh tại Hồ bơi vô cực trên tầng thượng, nơi quý khách có thể vừa thư giãn vừa ngắm trọn vẹn cảnh sắc hoàng hôn tuyệt đẹp trên sông Hàn.', hours: '06:00 đến 18:00', locationText: 'Tầng thượng (Rooftop)', capacityText: '', schedules: [], features: ["Khu vực ghế tắm","Phục vụ đồ uống tại hồ","Khu vực trẻ em an toàn","Khăn tắm miễn phí"] },
+          { title: 'Phòng Hội Nghị & Sự Kiện', size: '', desc: 'Nơi lý tưởng để tổ chức các sự kiện doanh nghiệp, hội thảo chuyên đề hay những buổi tiệc xa hoa chuyên nghiệp.', hours: 'Theo yêu cầu (Booking)', locationText: 'Tầng 4', capacityText: 'Lên đến 300 khách', schedules: [], features: ["Màn hình LED 200 inch","Hệ thống âm thanh đa chiều","Teabreak giữa giờ","Wi-Fi tốc độ cực cao"] }
         ],
         desc: "Khách sạn Tân Phương Nam cung cấp những dịch vụ đỉnh cao chuẩn mực. Từ không gian ẩm thực sang trọng đến khu nghỉ dưỡng và giải trí đầy phong cách.",
         cta: 'KHÁM PHÁ THÊM DỊCH VỤ'
@@ -449,10 +455,13 @@ const resources = {
         label: '호텔 서비스',
         title: '서비스 및 편의 시설',
         items: [
-          { title: '리셉션 로비', size: '', desc: '정교한 디자인으로 장엄한 첫인상을 선사하는 세련된 환영 공간입니다.' },
-          { title: '더 사우스 레스토랑', size: '', desc: '아시아 및 서양의 진미가 완벽하게 어우러지는 무한한 미식 여행을 떠나보세요.' },
-          { title: '스파 및 웰니스', size: '', desc: '몸과 마음, 영혼을 활성화하기 위해 세심하게 제작된 테라피를 즐겨보세요.' },
-          { title: '스텔라 스카이바', size: '', desc: '수제 칵테일을 음미하며 숨막히는 파노라마 도시 전경을 감상하세요.' }
+          { title: '리셉션 로비', size: '', desc: '정교한 디자인으로 장엄한 첫인상을 선사하는 세련된 환영 공간입니다.', hours: '24/7', locationText: '1층', capacityText: '', schedules: [], features: ["24/7 고객 지원","빠른 체크인/체크아웃","환전 서비스","투어 정보"] },
+          { title: '더 사우스 레스토랑', size: '', desc: '호텔 3층에 위치한 레스토랑으로 우아한 디자인과 한강 전망을 자랑합니다.', hours: '06:00 - 22:00', locationText: '3층', capacityText: '200명', schedules: ["조식 뷔페: 06:00 - 10:00","점심 및 저녁: 11:00 - 22:00"], features: [] },
+          { title: '스파 및 웰니스', size: '', desc: '다양한 톤이 조화롭게 디자인되어 세련되고 편안한 휴식 공간을 선사합니다.', hours: '09:00 - 21:00', locationText: '1층', capacityText: '', schedules: [], features: ["바디 마사지","발 마사지","페이셜 스파","바디 스크럽","네일 관리"] },
+          { title: '스텔라 스카이바', size: '', desc: '수제 칵테일을 음미하며 숨막히는 파노라마 도시 전경을 감상하세요.', hours: '10:00 - 22:00', locationText: '12층', capacityText: '', schedules: [], features: ["시그니처 칵테일","어쿠스틱 음악","파노라마 뷰","VIP 라운지"] },
+          { title: '피트니스 센터', size: '', desc: '최신 장비가 완비된 피트니스 센터에서 운동의 모든 요구를 만족시켜 드립니다.', hours: '06:00 - 22:00', locationText: '2층', capacityText: '50명', schedules: [], features: ["현대식 러닝머신","프리웨이트 구역","개인 트레이너 제공","무료 생수 및 수건"] },
+          { title: '루프탑 수영장', size: '', desc: '전설적인 한강의 아름다운 일몰을 감상하며 옥상 인피니티 풀에서 휴식을 취하세요.', hours: '06:00 - 18:00', locationText: '루프탑 층', capacityText: '', schedules: [], features: ["선베드","풀사이드 음료 서비스","안전한 어린이 구역","무료 수건"] },
+          { title: '컨퍼런스 및 이벤트 룸', size: '', desc: '기업 행사나 세미나를 조직하기 위한 완벽한 장소입니다. 방음 설비가 완비되어 있습니다.', hours: '예약 문의', locationText: '4층', capacityText: '최대 300명', schedules: [], features: ["200인치 LED 스크린","서라운드 사운드 시스템","티 브레이크 제공","초고속 와이파이"] }
         ],
         desc: "탄 프엉 남 호텔은 표준 이상의 최고급 서비스를 제공합니다. 우아한 요리 공간부터 스타일리시한 리조트 및 엔터테인먼트 공간까지.",
         cta: '더 많은 서비스 둘러보기'
@@ -633,10 +642,13 @@ const resources = {
         label: '酒店服务',
         title: '服务和设施',
         items: [
-          { title: '接待大堂', size: '', desc: '精致的迎宾空间，为宾客提供庄严而奢华的第一印象。' },
-          { title: 'The South 餐厅', size: '', desc: '踏上美妙的美食之旅，这里完美融合了亚洲和西方的各色美味。' },
-          { title: '水疗与康体', size: '', desc: '沉浸在宁静的避世圣地，这里旨在让您的身心全新焕发青春活力。' },
-          { title: 'Stellar 空中酒吧', size: '', desc: '品尝现调招牌鸡尾酒，同时坐拥令人惊叹的繁华城市全景。' }
+          { title: '接待大堂', size: '', desc: '精致的迎宾空间，为宾客提供庄严而奢华的第一印象。', hours: '24/7', locationText: '1楼', capacityText: '', schedules: [], features: ["24/7 客户支持","快速办理入住/退房","货币兑换","旅游资讯"] },
+          { title: 'The South 餐厅', size: '', desc: '位于酒店 3 楼，The South 餐厅享有优雅的设计和韩江美景。', hours: '06:00 至 22:00', locationText: '3楼', capacityText: '200人', schedules: ["自助早餐：06:00 - 10:00","午餐和晚餐：11:00 - 22:00"], features: [] },
+          { title: '水疗与康体', size: '', desc: '沉浸在宁静的避世圣地，这里旨在让您的身心全新焕发青春活力。', hours: '09:00 至 21:00', locationText: '1楼', capacityText: '', schedules: [], features: ["全身按摩","足部按摩","面部水疗","身体磨砂","美甲护理"] },
+          { title: 'Stellar 空中酒吧', size: '', desc: '品尝现调招牌鸡尾酒，同时坐拥令人惊叹的繁华城市全景。', hours: '10:00 至 22:00', locationText: '12楼', capacityText: '', schedules: [], features: ["招牌鸡尾酒","原声音乐","全景","VIP休息室"] },
+          { title: '健身中心', size: '', desc: '我们的健身中心配备了尖端器械，满足您所有的锻炼需求。', hours: '06:00 至 22:00', locationText: '2楼', capacityText: '50人', schedules: [], features: ["现代跑步机","自由重量区","私人教练","免费提供水和毛巾"] },
+          { title: '屋顶无边泳池', size: '', desc: '在屋顶无边泳池的凉爽海水中沉浸，欣赏美丽的日落。', hours: '06:00 至 18:00', locationText: '屋顶', capacityText: '', schedules: [], features: ["日光浴躺椅","池畔饮料服务","安全儿童区","免费提供毛巾"] },
+          { title: '会议与活动室', size: '', desc: '举办企业活动、主题研讨会或专业豪华宴会的理想场所。', hours: '需预订', locationText: '4楼', capacityText: '最多300人', schedules: [], features: ["200英寸LED屏幕","环绕声系统","茶歇糕点和茶水","超高速 Wi-Fi"] }
         ],
         desc: "新南方酒店提供比标准更高级的服务。从优雅的美食空间到时尚的度假和娱乐区。",
         cta: '发现更多服务'
