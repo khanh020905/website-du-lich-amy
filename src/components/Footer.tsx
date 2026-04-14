@@ -84,17 +84,18 @@ const Footer = () => {
                    <path d="M12 10.5l-3.5 5h7l-3.5-5z" />
                 </svg>
               </div>
-              <h2 className="text-lg md:text-xl lg:text-2xl font-black text-white tracking-widest uppercase">
-                TÂN PHƯƠNG NAM<span className="text-[var(--color-gold)] font-serif italic font-normal ml-1.5 md:ml-2">Galaxy</span>
+              <h2 className="flex flex-col text-white tracking-widest uppercase">
+                <span className="text-lg md:text-xl lg:text-2xl font-black">TÂN PHƯƠNG NAM</span>
+                <span className="text-[var(--color-gold)] font-serif italic text-sm md:text-base mt-[-2px] tracking-normal font-normal">Galaxy Hotel</span>
               </h2>
             </div>
             <p className="text-sm leading-relaxed text-[#B0B0B0] mb-8">
               Hoạt động trong lĩnh vực lưu trú và dịch vụ du lịch cao cấp, TPN Galaxy đặt mục tiêu trở thành nhà cung cấp các trải nghiệm nghỉ dưỡng 4 sao hàng đầu tại trung tâm Đà Nẵng.
             </p>
             <div className="flex flex-wrap items-center gap-4">
-               {/* Fixed badget imitating the red Bộ Công Thương badge */}
-               <div className="bg-red-600 rounded text-white text-[10px] font-bold px-3 py-1 flex items-center shadow-lg">
-                 <span className="mr-1 inline-block bg-white rounded-full w-3 h-3 text-red-600 text-[8px] flex items-center justify-center">✔</span> ĐÃ THÔNG BÁO BỘ CÔNG THƯƠNG
+               {/* Fixed badget imitating the red Bộ Công Thương badge - now blue */}
+               <div className="bg-blue-600 rounded text-white text-[10px] font-bold px-3 py-1 flex items-center shadow-lg">
+                 <span className="mr-1 inline-block bg-white rounded-full w-3 h-3 text-blue-600 text-[8px] flex items-center justify-center pl-[2.5px] pt-[0.5px]">✔</span> ĐÃ THÔNG BÁO BỘ CÔNG THƯƠNG
                </div>
                {/* Facebook & Zalo badges */}
                <div className="bg-[#1877F2] text-white p-1.5 rounded flex items-center justify-center w-8 h-8 cursor-pointer hover:bg-white hover:text-[#1877F2] transition-colors">
@@ -113,7 +114,7 @@ const Footer = () => {
 
           {/* Cột 2: Thông tin công ty */}
           <div className="flex flex-col pt-1 md:pl-8">
-            <h3 className="text-base font-bold text-white mb-6">Công ty cổ phần Khách sạn TPN Galaxy</h3>
+            <h3 className="text-base font-bold text-white mb-6">Công ty TNHH Đầu tư và Tổng hợp Tân Phương Nam</h3>
             <div className="flex flex-col gap-5 text-sm text-[#B0B0B0]">
                <div className="flex items-start gap-4">
                  <MapPin className="text-[var(--color-gold)] shrink-0 mt-0.5" size={18} />

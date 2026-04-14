@@ -9,8 +9,9 @@ import img2 from '../assets/restaurent.jpg';
 import img3 from '../assets/spa.jpg';
 import img4 from '../assets/bartender-bar.jpg';
 import img5 from '../assets/gym_mock.png';
-import img6 from '../assets/pool_mock.png';
+import img6 from '../assets/pool.jpg';
 import img7 from '../assets/conference_mock.png';
+import img8 from '../assets/coffee_lounge.jpg';
 
 const accommodationsImages = [
   { image: img1 }, // 0: Reception
@@ -19,7 +20,8 @@ const accommodationsImages = [
   { image: img4 }, // 3: Skybar
   { image: img5 }, // 4: Gym Mock
   { image: img6 }, // 5: Pool Mock
-  { image: img7 }  // 6: Conference Mock
+  { image: img7 }, // 6: Conference Mock
+  { image: img8 }  // 7: Coffee Lounge
 ];
 
 const ServicesOverview = () => {
@@ -57,7 +59,7 @@ const ServicesOverview = () => {
               }}
               initial={false}
               animate={{ 
-                flex: isActive ? (window.innerWidth >= 768 ? 6 : 4) : 1,
+                flex: isActive ? (window.innerWidth >= 768 ? 6 : 6) : 1,
               }}
               transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
               className={`relative overflow-hidden cursor-pointer rounded-sm md:rounded-none ${isActive ? 'shadow-2xl z-10' : 'z-0'}`}
@@ -72,59 +74,62 @@ const ServicesOverview = () => {
                 style={{ filter: isActive ? 'none' : 'grayscale(30%)' }}
               />
               
-              {/* Overlay Gradient */}
-              <div className={`absolute inset-0 transition-opacity duration-700 ${isActive ? 'bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100' : 'bg-black/60 opacity-80 hover:opacity-60'}`} />
+              {/* Overlay Gradient: Stronger on bottom to ensure mobile readability */}
+              <div className={`absolute inset-0 transition-opacity duration-700 ${isActive ? 'bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-100' : 'bg-black/60 opacity-80 hover:opacity-60'}`} />
 
               {/* Title Text (Vertical when inactive on desktop) */}
-              <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-8">
-                <AnimatePresence mode="wait">
-                  {!isActive && (
-                    <motion.div
-                      key={`inactive-${index}`}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="hidden md:flex h-full items-end pb-10"
-                    >
-                      <h3 className="text-white text-sm lg:text-lg font-serif font-medium tracking-widest whitespace-nowrap transform -rotate-90 origin-bottom-left absolute bottom-10 left-6">
-                        {item.title}
-                      </h3>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-                
-                {/* Active Content */}
-                <AnimatePresence mode="wait">
-                  {isActive && (
-                    <motion.div
-                      key={`active-${index}`}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
-                      className="flex flex-col gap-3 md:gap-4 w-full md:w-[70%] max-w-xl"
-                    >
-                      <h3 className="text-2xl md:text-5xl font-serif text-[var(--color-gold)] font-medium tracking-wide drop-shadow-md">
+              <AnimatePresence mode="wait">
+                {!isActive && (
+                  <motion.div
+                    key={`inactive-${index}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="hidden md:flex absolute inset-0 items-end pb-10 pointer-events-none"
+                  >
+                    <h3 className="text-white text-sm lg:text-lg font-serif font-medium tracking-widest whitespace-nowrap transform -rotate-90 origin-bottom-left absolute bottom-10 left-6">
+                      {item.title}
+                    </h3>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              
+              {/* Active Content */}
+              <AnimatePresence mode="wait">
+                {isActive && (
+                  <motion.div
+                    key={`active-${index}`}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="absolute bottom-0 left-0 w-full flex flex-col md:flex-row items-start md:items-center justify-between p-4 md:px-8 md:py-6 md:bg-black/30 md:backdrop-blur-[12px] md:border-t md:border-white/10 gap-3 md:gap-8 z-20"
+                  >
+                    <div className="flex-1 md:pr-12 w-full">
+                      <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif text-[var(--color-gold)] font-medium tracking-wide drop-shadow-md mb-2 md:mb-3">
                         {item.title}
                       </h3>
                       
-                      <p className="text-gray-200 text-xs md:text-sm lg:text-base leading-relaxed line-clamp-2 md:line-clamp-3 font-light drop-shadow-sm">
+                      <p className="text-gray-100 text-xs md:text-sm leading-relaxed line-clamp-3 md:line-clamp-2 font-light drop-shadow-sm">
                         {item.desc}
                       </p>
+                    </div>
 
-                      <div className="mt-2 md:mt-4">
-                        <Link to={`/${currentLang}/service/${index}`}>
-                          <button className="flex items-center gap-2 px-5 py-2.5 md:px-8 md:py-3 bg-white/10 hover:bg-[var(--color-gold)] text-white hover:text-[#111] transition-all duration-300 border border-white/30 hover:border-[var(--color-gold)] text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-sm backdrop-blur-md group">
-                            {btnText}
-                            <ArrowRight size={14} className="transform group-hover:translate-x-1 transition-transform" />
-                          </button>
-                        </Link>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                    <div className="flex flex-col items-start md:items-end w-full md:w-auto shrink-0 mt-1 md:mt-0">
+                      <span className="hidden md:flex text-gray-200 font-serif text-sm items-center gap-2 drop-shadow-sm mb-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)]"></span>
+                        {item.hours || '24/7'}
+                      </span>
+                      <Link to={`/${currentLang}/service/${index}`}>
+                        <button className="px-6 py-2.5 md:px-8 md:py-2.5 bg-transparent hover:bg-white/10 text-white transition-all duration-300 border border-white/40 hover:border-white text-[10px] md:text-xs font-bold uppercase tracking-widest rounded-sm backdrop-blur-sm">
+                          {btnText}
+                        </button>
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               {/* Mobile Only: Show collapsed title when inactive */}
               <div className={`md:hidden absolute inset-0 flex items-center justify-center p-4 transition-opacity duration-300 ${isActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>

@@ -168,22 +168,49 @@ const Chatbot: React.FC = () => {
 
   return (
     <>
-      {/* Floating Chat Button */}
-      <motion.button
-        className="fixed bottom-6 right-6 z-[9999] w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-2xl bg-gradient-to-tr from-[#111] to-[#333] border border-[#d4af37]/40 flex items-center justify-center overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[#d4af37]/20"
-        onClick={() => setIsOpen(true)}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: isOpen ? 0 : 1, scale: isOpen ? 0 : 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        <img 
-          src={logoImg} 
-          alt="Chat" 
-          className="w-full h-full object-cover"
-        />
-        {/* Glow effect */}
-        <div className="absolute inset-0 rounded-full border-2 border-[#d4af37]/50 mix-blend-overlay"></div>
-      </motion.button>
+      {/* Floating Chat Button Wrapper */}
+      <div className="fixed bottom-6 right-6 z-[9999] flex items-end pointer-events-none">
+        <AnimatePresence>
+          {!isOpen && (
+            <motion.div
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 10 }}
+              transition={{ delay: 1 }}
+              className="bg-white text-[#111] font-semibold text-xs py-2 px-3 rounded-2xl rounded-br-sm shadow-xl pointer-events-auto cursor-pointer border border-gray-100 flex items-center gap-2 mb-10"
+              onClick={() => setIsOpen(true)}
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              Chat với chúng tôi!
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <motion.button
+          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-2xl bg-gradient-to-tr from-[#111] to-[#333] border border-[#d4af37]/40 flex items-center justify-center relative pointer-events-auto transition-all duration-300 hover:scale-105 hover:shadow-[#d4af37]/20"
+          onClick={() => setIsOpen(true)}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: isOpen ? 0 : 1, scale: isOpen ? 0 : 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="w-full h-full rounded-full overflow-hidden absolute inset-0">
+            <img 
+              src={logoImg} 
+              alt="Chat" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Default icon overlay for extra clearness */}
+          <div className="absolute -bottom-1 -right-1 bg-[#d4af37] text-black w-6 h-6 rounded-full flex items-center justify-center border-2 border-white shadow-md z-10">
+            <MessageSquare size={12} fill="currentColor" />
+          </div>
+          {/* Glow effect */}
+          <div className="absolute inset-0 rounded-full border-2 border-[#d4af37]/50 mix-blend-overlay pointer-events-none z-20"></div>
+        </motion.button>
+      </div>
 
       {/* Chat Window */}
       <AnimatePresence>

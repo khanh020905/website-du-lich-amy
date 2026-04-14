@@ -1,5 +1,105 @@
 [
   {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_1.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_10.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_11.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_12.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_13.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_14.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_15.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_16.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_17.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_18.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_19.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_2.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_20.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_3.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_4.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_5.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_6.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_7.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_8.png",
+    "category": "Buffet"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_9.png",
+    "category": "Buffet"
+  },
+  {
     "title": "DELUXE KING",
     "image": "/gallery/DELUXE KING/DELUXE 1.jpg",
     "category": "DELUXE KING"
@@ -31,6 +131,11 @@
   },
   {
     "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/bartender-bar.jpg",
+    "category": "DỊCH VỤ"
+  },
+  {
+    "title": "DỊCH VỤ",
     "image": "/gallery/DỊCH VỤ/hồ bơi.jpg",
     "category": "DỊCH VỤ"
   },
@@ -41,12 +146,27 @@
   },
   {
     "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/pool.jpg",
+    "category": "DỊCH VỤ"
+  },
+  {
+    "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/pool1.jpg",
+    "category": "DỊCH VỤ"
+  },
+  {
+    "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/pool2.jpg",
+    "category": "DỊCH VỤ"
+  },
+  {
+    "title": "DỊCH VỤ",
     "image": "/gallery/DỊCH VỤ/spa.jpg",
     "category": "DỊCH VỤ"
   },
   {
     "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/bartender-bar.jpg",
+    "image": "/gallery/DỊCH VỤ/SPA2.jpg",
     "category": "DỊCH VỤ"
   },
   {
@@ -80,6 +200,66 @@
     "category": "FAMILY RIVER VIEW"
   },
   {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_1.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_10.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_11.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_12.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_2.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_3.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_4.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_5.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_6.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_7.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_8.png",
+    "category": "Lobby"
+  },
+  {
+    "title": "Lobby",
+    "image": "/gallery/Lobby/lobby_9.png",
+    "category": "Lobby"
+  },
+  {
     "title": "MẶT NGOÀI KHÁCH SẠN",
     "image": "/gallery/MẶT NGOÀI KHÁCH SẠN/tn1.jpg",
     "category": "MẶT NGOÀI KHÁCH SẠN"
@@ -93,6 +273,16 @@
     "title": "MẶT NGOÀI KHÁCH SẠN",
     "image": "/gallery/MẶT NGOÀI KHÁCH SẠN/tn3.jpg",
     "category": "MẶT NGOÀI KHÁCH SẠN"
+  },
+  {
+    "title": "NHÀ HÀNG",
+    "image": "/gallery/NHÀ HÀNG/res1.jpg",
+    "category": "NHÀ HÀNG"
+  },
+  {
+    "title": "NHÀ HÀNG",
+    "image": "/gallery/NHÀ HÀNG/RES2.jpg",
+    "category": "NHÀ HÀNG"
   },
   {
     "title": "NHÀ HÀNG",
@@ -115,6 +305,16 @@
     "category": "PREMIER RIVER VIEW"
   },
   {
+    "title": "SẢNH LỄ TÂN",
+    "image": "/gallery/SẢNH LỄ TÂN/reception.jpg",
+    "category": "SẢNH LỄ TÂN"
+  },
+  {
+    "title": "SẢNH LỄ TÂN",
+    "image": "/gallery/SẢNH LỄ TÂN/z7629521115519_2d94d4c8d1bfbf2af4ed95afb2515904.jpg",
+    "category": "SẢNH LỄ TÂN"
+  },
+  {
     "title": "SUPERIOR KING",
     "image": "/gallery/SUPERIOR KING/sup 1 nen.jpg",
     "category": "SUPERIOR KING"
@@ -128,11 +328,6 @@
     "title": "SUPERIOR TWIN",
     "image": "/gallery/SUPERIOR TWIN/TWIN 2.jpg",
     "category": "SUPERIOR TWIN"
-  },
-  {
-    "title": "SẢNH LỄ TÂN",
-    "image": "/gallery/SẢNH LỄ TÂN/reception.jpg",
-    "category": "SẢNH LỄ TÂN"
   },
   {
     "title": "TPN PENTHOUSE",

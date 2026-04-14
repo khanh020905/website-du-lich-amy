@@ -53,6 +53,17 @@ const ExploreRooms = () => {
           >
             {t('explore.title')}
           </motion.h2>
+          {t('explore.desc', { defaultValue: '' }) && (
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mt-6 text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed"
+            >
+              {t('explore.desc')}
+            </motion.p>
+          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

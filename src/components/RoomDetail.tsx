@@ -127,86 +127,53 @@ const RoomDetail = () => {
         </div>
 
         {/* Content & Details */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-16">
-          <div className="lg:col-span-2 space-y-12">
-            <section>
-              <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.overview')}</h3>
-              <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                {localizedInfo?.desc}
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                {t('roomDetail.overviewDesc')}
-              </p>
-            </section>
+        <div className="max-w-4xl mx-auto mt-16 space-y-12">
+          <section>
+            <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.overview')}</h3>
+            <p className="text-gray-600 leading-relaxed text-lg mb-6">
+              {localizedInfo?.desc}
+            </p>
+          </section>
 
-            <section>
-              <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.amenities')}</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {roomData.amenities.map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <Check size={16} className="text-[var(--color-gold)]" />
-                    <span className="text-gray-700 font-medium text-sm">{item}</span>
-                  </div>
-                ))}
-                {/* Simulated standard amenities */}
-                <div className="flex items-center gap-3">
-                  <Monitor size={16} className="text-[var(--color-gold)]" />
-                  <span className="text-gray-700 font-medium text-sm">{t('roomDetail.smartTv')}</span>
+          <section>
+            <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.amenities')}</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {(t('roomDetail.fixedAmenities', { returnObjects: true }) as string[]).map((item, idx) => (
+                <div key={idx} className="flex items-center gap-3">
+                  <Check size={16} className="text-[var(--color-gold)]" />
+                  <span className="text-gray-700 font-medium text-sm">{item}</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Coffee size={16} className="text-[var(--color-gold)]" />
-                  <span className="text-gray-700 font-medium text-sm">{t('roomDetail.minibar')}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Wifi size={16} className="text-[var(--color-gold)]" />
-                  <span className="text-gray-700 font-medium text-sm">{t('roomDetail.wifi')}</span>
-                </div>
-              </div>
-            </section>
+              ))}
+            </div>
+          </section>
 
-            {/* Highlights Section */}
-            {localizedInfo?.highlights && (
-              <section>
-                <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.highlights')}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {localizedInfo.highlights.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <Star size={16} className="text-[var(--color-gold)] mt-0.5 shrink-0" fill="currentColor" />
-                      <span className="text-gray-700 font-medium text-sm leading-relaxed">{item}</span>
-                    </div>
-                  ))}
+          {/* Gallery Mini Grid */}
+          <section>
+            <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.gallery')}</h3>
+            <div className="grid grid-cols-2 gap-4">
+              {roomData.galleries.map((img, idx) => (
+                <div 
+                  key={idx} 
+                  className={`rounded-sm overflow-hidden bg-gray-100 cursor-pointer ${idx === 0 ? 'col-span-2 aspect-[21/9]' : 'aspect-video'}`}
+                  onClick={() => setSelectedImage(img)}
+                >
+                  <img src={img} alt={`Gallery ${idx}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
-              </section>
-            )}
+              ))}
+            </div>
+          </section>
 
-            {/* Gallery Mini Grid */}
-            <section>
-              <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.gallery')}</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {roomData.galleries.map((img, idx) => (
-                  <div 
-                    key={idx} 
-                    className={`rounded-sm overflow-hidden bg-gray-100 cursor-pointer ${idx === 0 ? 'col-span-2 aspect-[21/9]' : 'aspect-video'}`}
-                    onClick={() => setSelectedImage(img)}
-                  >
-                    <img src={img} alt={`Gallery ${idx}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                  </div>
-                ))}
-              </div>
-            </section>
-          </div>
-
-          {/* Sidebar / Options */}
-          <div className="space-y-8">
-            <div className="bg-[#111] text-white p-8 rounded-sm">
-              <h4 className="font-serif text-xl font-semibold mb-3">{t('roomDetail.needAssistance')}</h4>
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+          {/* Sidebar / Options Moved to Bottom */}
+          <div className="bg-[#111] text-white p-8 rounded-sm text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h4 className="font-serif text-xl font-semibold mb-2">{t('roomDetail.needAssistance')}</h4>
+              <p className="text-gray-400 text-sm leading-relaxed max-w-xl">
                 {t('roomDetail.assistanceDesc')}
               </p>
-              <a href="tel:+842363" className="block text-center border border-white/20 hover:border-[var(--color-gold)] hover:bg-[var(--color-gold)] py-3 px-4 text-sm uppercase tracking-widest font-semibold transition-all">
-                {t('roomDetail.contactUs')}
-              </a>
             </div>
+            <a href="tel:+842363" className="w-full md:w-auto shrink-0 border border-white/20 hover:border-[var(--color-gold)] hover:bg-[var(--color-gold)] py-3 px-8 text-sm uppercase tracking-widest font-semibold transition-all text-center">
+              {t('roomDetail.contactUs')}
+            </a>
           </div>
         </div>
       </div>

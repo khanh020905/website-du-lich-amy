@@ -11,9 +11,8 @@ interface OfferItem {
 }
 
 const offerImages: Record<string, string> = {
-  "stay-play": "/offers/golf.png",
-  "romantic-getaway": "/offers/romantic.png",
-  "family-retreat": "/offers/family.png",
+  "stellar-happy-hour": "/gallery/Buffet/buffet_1.png",
+  "south-restaurant-discount": "/gallery/Buffet/buffet_3.png",
 };
 
 // Component for an individual full-screen offer section
@@ -42,7 +41,7 @@ const OfferSection = ({
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.1, 1, 1.1]);
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
-  const imgSrc = offerImages[offer.id] || offerImages["stay-play"];
+  const imgSrc = offerImages[offer.id] || offerImages["stellar-happy-hour"];
 
   return (
     <div

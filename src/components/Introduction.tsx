@@ -78,21 +78,7 @@ const Introduction = () => {
                 {t('intro.desc')}
               </motion.p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="mt-10 mb-4"
-              >
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#111] border-b-2 border-[#111] pb-1 hover:text-[var(--color-gold)] hover:border-[var(--color-gold)] transition-colors"
-                >
-                  {t('intro.knowMore')}
-                  <ArrowRightCircle size={16} className="bg-white rounded-full" />
-                </a>
-              </motion.div>
+
             </div>
             
             <motion.div

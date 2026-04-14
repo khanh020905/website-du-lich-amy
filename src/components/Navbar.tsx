@@ -14,18 +14,36 @@ const LANGUAGES = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const { locale } = useParams();
 
   useEffect(() => {
+    let lastScrollValue = window.scrollY;
+    
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 50);
+
+      // Auto-hide logic for /gallery route
+      if (location.pathname.includes('/gallery')) {
+        if (currentScrollY > lastScrollValue && currentScrollY > 100) {
+          setIsHidden(true);
+        } else {
+          setIsHidden(false);
+        }
+      } else {
+        setIsHidden(false);
+      }
+      
+      lastScrollValue = currentScrollY;
     };
-    window.addEventListener('scroll', handleScroll);
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const navAnchors = ['rooms', 'culinary', 'services', 'offer', 'gallery'];
   const translatedLinks = t('nav.links', { returnObjects: true }) as string[];
@@ -40,10 +58,10 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      initial={{ y: '-100%' }}
+      animate={{ y: isHidden ? '-100%' : 0 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
         scrolled || isMobileMenuOpen ? 'bg-[#111] bg-opacity-95 py-4 shadow-lg backdrop-blur-sm' : 'bg-transparent py-6'
       }`}
     >

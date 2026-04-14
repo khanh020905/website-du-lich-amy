@@ -66,6 +66,7 @@ const resources = {
         bathrooms: 'Bathrooms',
         overview: 'Room Overview',
         overviewDesc: 'Step into an oasis of comfort and prestige. Our perfectly curated space perfectly blends modern luxury with elegant aesthetics, ensuring a profound hospitality experience tailored entirely to your desires. Welcome to Tan Phuong Nam Galaxy, where dreams meet reality.',
+        fixedAmenities: ['Smart TV', 'Air Conditioning', 'Free Wi-Fi', 'Hair Dryer', 'Safe Box', 'Minibar', 'Buffet Breakfast', 'Standing Bathtub'],
         amenities: 'Amenities',
         highlights: 'Privileges & Views',
         gallery: 'Room Gallery',
@@ -87,7 +88,8 @@ const resources = {
           { title: 'Stellar Skybar', size: '', desc: 'Positioned on the 12th floor, Sky Bar Stellar is the ideal destination to indulge in an elevated relaxing space with panoramic views of the Han River and Da Nang city.', hours: '10:00 to 22:00', locationText: '12th Floor', capacityText: '', schedules: [], features: ["Signature Cocktails","Acoustic Music","Panoramic View","VIP Lounge"] },
           { title: 'Gym & Fitness Center', size: '', desc: 'Our Fitness Center is equipped with cutting-edge machinery, catering to all your workout demands from cardio to intensive strength training.', hours: '06:00 to 22:00', locationText: '2nd Floor', capacityText: '50 guests', schedules: [], features: ["Modern Treadmills","Free Weights Area","Personal Trainers","Complimentary Water & Towels"] },
           { title: 'Rooftop Infinity Pool', size: '', desc: 'Immerse yourself in the cool, refreshing water at the rooftop infinity swimming pool, where you can unwind while taking in the magnificent sunset.', hours: '06:00 to 18:00', locationText: 'Rooftop Floor', capacityText: '', schedules: [], features: ["Lounging Sunbeds","Poolside Beverage Service","Safe Kids Area","Complimentary Fresh Towels"] },
-          { title: 'Conference Room', size: '', desc: 'An ideal venue for organizing corporate events, thematic seminars, or professional and lavish banquets.', hours: 'Upon booking', locationText: '4th Floor', capacityText: 'Up to 300 guests', schedules: [], features: ["200-inch LED Screen","Surround Sound System","Teabreak Pastries & Tea","Ultra High-Speed Wi-Fi"] }
+          { title: 'Conference Room', size: '', desc: 'An ideal venue for organizing corporate events, thematic seminars, or professional and lavish banquets.', hours: 'Upon booking', locationText: '12th Floor', capacityText: 'Up to 100 guests', schedules: [], features: ["200-inch LED Screen","Surround Sound System","Teabreak Pastries & Tea","Ultra High-Speed Wi-Fi"] },
+          { title: 'Coffee Lounge', size: '', desc: 'Located in the 1st floor reception lobby, the Coffee Lounge offers an ideal space for relaxation with an elegant design, serving premium coffees and exquisite afternoon teas.', hours: '07:00 to 22:00', locationText: '1st Floor', capacityText: '', schedules: [], features: ["Specialty coffee", "English afternoon tea", "Fresh daily pastries", "Partner meeting space"] }
         ],
         desc: "The unseen luxury partners of true 'hospitality service'. Unmatched luxury properties along the Han River. We go beyond your expectations guaranteeing to bring unmatched luxury hospitality right to your footsteps.",
         cta: 'DISCOVER MORE SERVICES'
@@ -168,22 +170,16 @@ const resources = {
         viewTerms: 'Terms & Conditions',
         items: [
           {
-            id: 'stay-play',
-            validity: 'Valid through Dec 31, 2026',
-            title: 'Stay & Play Golf Package',
-            description: 'Experience an ultimate golf getaway. Includes a 2-night stay in our signature suite and one round of 18-hole golf per person at the exclusive Montgomerie Links.'
+            id: 'stellar-happy-hour',
+            validity: 'Application time: 17:00 – 19:00 daily',
+            title: 'Stellar Top Bar Happy Hour Promotion',
+            description: 'Buy 1 get 1 free on beer, cocktail and wine by the glass.\nNote: This promotion is not applicable in conjunction with other events.'
           },
           {
-            id: 'romantic-getaway',
-            validity: 'Valid through Feb 28, 2026',
-            title: 'Romantic Getaway',
-            description: 'Celebrate love with a 60-minute couple spa treatment, daily breakfast in bed, and a private candlelit dinner at The South Restaurant overlooking the river.'
-          },
-          {
-            id: 'family-retreat',
-            validity: 'Valid through Aug 31, 2026',
-            title: 'Family Summer Retreat',
-            description: 'Create lasting memories with complimentary extra beds for children, daily access to the Kids Club, and a fun family cooking class.'
+            id: 'south-restaurant-discount',
+            validity: 'Application time: 11:00 – 22:00 daily',
+            title: 'The South Restaurant F&B discount',
+            description: '20% discount on total F&B bill.\nNote: This promotion is not applicable in conjunction with other events.'
           }
         ]
       }
@@ -206,8 +202,8 @@ const resources = {
       intro: {
         aboutUs: 'VỀ CHÚNG TÔI',
         highlight: "Khu nghỉ dưỡng sang trọng tiêu chuẩn 4 sao tọa lạc bên bờ sông Hàn thơ mộng.",
-        desc: "Tọa lạc trên cung đường Bạch Đằng đẹp bậc nhất thành phố Đà Nẵng, nơi ôm trọn vẻ đẹp của dòng sông Hàn huyền thoại. Tân Phương Nam Galaxy Hotel sở hữu 86 phòng nghỉ và Penhouse được thiết kế sang trọng và tinh tế. Hứa hẹn mang đến trải nghiệm lưu trú đẳng cấp và trọn vẹn cho mọi du khách",
-        knowMore: 'TÌM HIỂU THÊM',
+        desc: "Tân Phương Nam Galaxy Hotel sở hữu 86 phòng nghỉ và Penhouse được thiết kế sang trọng và tinh tế. Hứa hẹn mang đến trải nghiệm lưu trú đẳng cấp và trọn vẹn cho mọi du khách.",
+        knowMore: '',
         byTheNumber: 'NHỮNG CON SỐ',
         stats: [
           { value: 4, suffix: '', icon: 'star', sign: '', title: 'Tiêu Chuẩn', desc: 'Khách sạn đạt tiêu chuẩn tương đương 4 sao, mang đến không gian hiện đại và dịch vụ đẳng cấp.' },
@@ -227,7 +223,7 @@ const resources = {
         perNight: '/ Đêm',
         bed: 'Giường',
         guests: 'Khách',
-        desc: 'Khách sạn Tân Phương Nam mang phong cách kiến trúc hiện đại. Hệ thống phòng nghỉ được trang bị nội thất cao cấp. Không gian mở cùng tầm nhìn thoáng đãng giúp du khách tận hưởng trọn vẹn vẻ đẹp của thành phố. Đây sẽ là điểm dừng chân lý tưởng cho những ai tìm kiếm sự thoải mái và trải nghiệm nghỉ dưỡng khác biệt.',
+        desc: 'Khách sạn Tân Phương Nam Galaxy mang phong cách kiến trúc hiện đại. Hệ thống phòng nghỉ được trang bị nội thất cao cấp. Không gian mở cùng tầm nhìn thoáng đãng giúp du khách tận hưởng trọn vẹn vẻ đẹp của thành phố. Đây sẽ là điểm dừng chân lý tưởng cho những ai tìm kiếm sự thoải mái và trải nghiệm nghỉ dưỡng khác biệt.',
         items: [
           { title: 'Superior King', size: '25 m2', desc: 'Superior King room được thiết kế với không gian nhỏ gọn nhưng vô cùng ấm cúng, mang lại cảm giác thư giãn. Giường King êm ái sẽ là lựa chọn lý tưởng cho du khách thích sự yên tĩnh.', highlights: ['Thêm buffet sáng', 'Bồn tắm đứng'] },
           { title: 'Superior Twin', size: '25 m2', desc: 'Phòng Superior Twin với diện tích 25m2 mang đến không gian ấm cúng. Đây là lựa chọn lý tưởng cho những ai muốn tận hưởng sự tiện nghi và vẻ đẹp đặc trưng của thành phố Đà Nẵng.', highlights: ['Ngắm nhìn thành phố sôi động về đêm', 'Thêm buffet sáng', 'Bồn tắm đứng'] },
@@ -239,7 +235,8 @@ const resources = {
       },
       explore: {
         label: 'HẠNG SUITE',
-        title: 'Khám Phá Hạng Suites',
+        title: 'Khám phá hạng Suite',
+        desc: 'Trải nghiệm không gian xa hoa và đẳng cấp bậc nhất tại các phòng Suite của Tân Phương Nam Galaxy. Tận hưởng đặc quyền thượng lưu cùng tầm nhìn tuyệt đẹp ôm trọn dòng sông Hàn thơ mộng.',
         from: 'Từ',
         items: [
           { title: 'Premier River View', size: '35 m2', desc: 'Premier River View mang đến diện tích phòng rộng rãi và ban công thoải mái.', highlights: ['Ngắm toàn cảnh thành phố về đêm bên dòng sông Hàn', 'Thêm buffet sáng', 'Bồn tắm nằm', 'Sofa bed'] },
@@ -252,7 +249,8 @@ const resources = {
         guests: 'Khách',
         bathrooms: 'Phòng tắm',
         overview: 'Tổng Quan Phòng',
-        overviewDesc: 'Bước vào ốc đảo của sự thoải mái và uy tín. Không gian được chúng tôi tuyển chọn hoàn hảo kết hợp giữa sự sang trọng hiện đại với thẩm mỹ thanh lịch, đảm bảo trải nghiệm lưu trú sâu sắc hoàn toàn phù hợp với mong muốn của bạn. Chào mừng đến với Tân Phương Nam Galaxy, nơi những giấc mơ trở thành hiện thực.',
+        overviewDesc: '',
+        fixedAmenities: ['TV thông minh', 'Điều hòa', 'Wifi miễn phí', 'Sấy tóc', 'Két sắt', 'Minibar', 'Ăn sáng buffet', 'Bồn tắm đứng'],
         amenities: 'Tiện Nghi',
         highlights: 'Đặc Quyền & Tầm Nhìn',
         gallery: 'Thư Viện Ảnh',
@@ -269,12 +267,13 @@ const resources = {
         title: 'Dịch vụ và tiện nghi Khách sạn',
         items: [
           { title: 'Sảnh Lễ Tân', size: '', desc: 'Không gian đón khách lộng lẫy mang lại trải nghiệm mãn nhãn ngay từ giây phút đầu tiên. Khu vực được thiết kế rộng rãi với khu vực chờ sang trọng, phục vụ trà và cà phê miễn phí.', hours: '24/7', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Hỗ trợ khách hàng 24/7","Check-in/Check-out nhanh chóng","Dịch vụ thu đổi ngoại tệ","Thông tin du lịch"] },
-          { title: 'Nhà Hàng The South', size: '', desc: 'Nhà hàng The South tọa lạc tại tầng 3 của khách sạn, với thiết kế sang trọng và tầm nhìn hướng ra Sông Hàn để quý khách có thể bắt đầu ngày mới với một bữa sáng tràn đầy năng lượng.', hours: '06:00 đến 22:00', locationText: 'Tầng 3', capacityText: '200 khách', schedules: ["Breakfast buffet: 06:00 - 10:00","Lunch and Dinner: 11:00 - 22:00"], features: [] },
-          { title: 'Spa & Massage', size: '', desc: 'Nằm tại tầng 1 của Khách sạn Tân Phương Nam Galaxy, Spa được thiết kế với sự kết hợp hài hòa của nhiều gam màu khác nhau, tạo nên một không gian vừa tinh tế vừa thư giãn. Không gian yên bình, tách biệt khỏi nhịp sống ồn ào.', hours: '09:00 đến 21:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
+          { title: 'Nhà Hàng The South', size: '', desc: 'Nhà hàng The South tọa lạc tại tầng 2 của khách sạn, với thiết kế sang trọng và tầm nhìn hướng ra Sông Hàn để quý khách có thể bắt đầu ngày mới với một bữa sáng tràn đầy năng lượng.', hours: '06:00 đến 22:00', locationText: 'Tầng 2', capacityText: '200 khách', schedules: ["Breakfast buffet: 06:00 - 10:00","Lunch and Dinner: 11:00 - 22:00"], features: [] },
+          { title: 'Spa & wellness', size: '', desc: 'Nằm tại tầng 1 của Khách sạn Tân Phương Nam Galaxy, Spa được thiết kế với sự kết hợp hài hòa của nhiều gam màu khác nhau, tạo nên một không gian vừa tinh tế vừa thư giãn. Không gian yên bình, tách biệt khỏi nhịp sống ồn ào.', hours: '09:00 đến 21:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
           { title: 'Stellar Skybar', size: '', desc: 'Tọa lạc tại tầng 12, Sky Bar Stellar là điểm đến lý tưởng để tận hưởng không gian thư giãn trên cao với tầm nhìn toàn cảnh sông Hàn và thành phố Đà Nẵng.', hours: '10:00 đến 22:00', locationText: 'Tầng 12', capacityText: '', schedules: [], features: ["Signature Cocktails","Acoustic Music","Panoramic View","VIP Lounge"] },
           { title: 'Phòng Gym & Fitness', size: '', desc: 'Phòng Gym được trang bị hệ thống máy móc hiện đại, đáp ứng mọi nhu cầu tập luyện của quý khách từ cardio đến rèn luyện thể lực chuyên sâu.', hours: '06:00 đến 22:00', locationText: 'Tầng 2', capacityText: '50 khách', schedules: [], features: ["Máy chạy bộ hiện đại","Khu vực tạ tự do","Huấn luyện viên cá nhân","Nước & khăn miễn phí"] },
           { title: 'Hồ Bơi Vô Cực Rooftop', size: '', desc: 'Hòa mình vào làn nước mát lạnh tại Hồ bơi vô cực trên tầng thượng, nơi quý khách có thể vừa thư giãn vừa ngắm trọn vẹn cảnh sắc hoàng hôn tuyệt đẹp trên sông Hàn.', hours: '06:00 đến 18:00', locationText: 'Tầng thượng (Rooftop)', capacityText: '', schedules: [], features: ["Khu vực ghế tắm","Phục vụ đồ uống tại hồ","Khu vực trẻ em an toàn","Khăn tắm miễn phí"] },
-          { title: 'Phòng Hội Nghị & Sự Kiện', size: '', desc: 'Nơi lý tưởng để tổ chức các sự kiện doanh nghiệp, hội thảo chuyên đề hay những buổi tiệc xa hoa chuyên nghiệp.', hours: 'Theo yêu cầu (Booking)', locationText: 'Tầng 4', capacityText: 'Lên đến 300 khách', schedules: [], features: ["Màn hình LED 200 inch","Hệ thống âm thanh đa chiều","Teabreak giữa giờ","Wi-Fi tốc độ cực cao"] }
+          { title: 'Phòng Hội Nghị & Sự Kiện', size: '', desc: 'Nơi lý tưởng để tổ chức các sự kiện doanh nghiệp, hội thảo chuyên đề hay những buổi tiệc xa hoa chuyên nghiệp.', hours: 'Theo yêu cầu (Booking)', locationText: 'Tầng 12', capacityText: '100 khách', schedules: [], features: ["Màn hình LED 200 inch","Hệ thống âm thanh đa chiều","Teabreak giữa giờ","Wi-Fi tốc độ cực cao"] },
+          { title: 'Coffee Lounge', size: '', desc: 'Tọa lạc tại sảnh đón tiếp tầng 1, Coffee Lounge mang đến không gian thư giãn lý tưởng với thiết kế sang trọng, phục vụ các loại cà phê thượng hạng và trà chiều tinh tế.', hours: '07:00 đến 22:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Cà phê đặc sản", "Trà chiều kiểu Anh", "Bánh ngọt tươi mỗi ngày", "Không gian gặp gỡ đối tác"] }
         ],
         desc: "Khách sạn Tân Phương Nam cung cấp những dịch vụ đỉnh cao chuẩn mực. Từ không gian ẩm thực sang trọng đến khu nghỉ dưỡng và giải trí đầy phong cách.",
         cta: 'KHÁM PHÁ THÊM DỊCH VỤ'
@@ -337,7 +336,7 @@ const resources = {
       culinary: {
         label: 'ẨM THỰC ĐỈNH CAO',
         title: 'Nhà hàng The South',
-        description: 'Nằm tại tầng 7 của khách sạn, nhà hàng The South được thiết kế tối giản và tinh tế, mang đến cảm giác hiện đại và đẳng cấp cho các thực khách dùng bữa tại nơi đây. Nơi đây chắc chắn là điểm đến không thể bỏ lỡ dành cho những thực khách muốn trải nghiệm không gian nhà hàng sang trọng ở Đà Nẵng. Với không gian lãng mạn và ấm cúng, từ đây bạn có thể thưởng thức phong vị đầy tinh tế của ẩm thực, đắm chìm trong ánh đèn lung linh của thành phố về đêm cùng dòng sông Hàn lấp lánh.',
+        description: 'Nằm tại tầng 2 của khách sạn, nhà hàng The South được thiết kế tối giản và tinh tế, mang đến cảm giác hiện đại và đẳng cấp cho các thực khách dùng bữa tại nơi đây. Nơi đây chắc chắn là điểm đến không thể bỏ lỡ dành cho những thực khách muốn trải nghiệm không gian nhà hàng sang trọng ở Đà Nẵng. Với không gian lãng mạn và ấm cúng, từ đây bạn có thể thưởng thức phong vị đầy tinh tế của ẩm thực, đắm chìm trong ánh đèn lung linh của thành phố về đêm cùng dòng sông Hàn lấp lánh.',
         exploreMenu: 'Khám phá thực đơn',
         mainMenu: 'Thực đơn chính',
         beverageMenu: 'Danh sách đồ uống và rượu',
@@ -355,22 +354,16 @@ const resources = {
         viewTerms: 'Điều Khoản & Điều Kiện',
         items: [
           {
-            id: 'stay-play',
-            validity: 'Áp dụng đến 31/12/2026',
-            title: 'Gói Trải Nghiệm Golf Đẳng Cấp',
-            description: 'Tận hưởng kỳ nghỉ trọn vẹn với 2 đêm lưu trú tại hạng phòng suite cao cấp, kèm 1 vòng chơi golf 18 lỗ cho mỗi khách tại sân Montgomerie Links độc quyền.'
+            id: 'stellar-happy-hour',
+            validity: 'Thời gian áp dụng: 17:00 – 19:00 hằng ngày',
+            title: 'Chương trình khung giờ vàng – Stellar Top Bar',
+            description: 'Mua 1 tặng 1 đối với bia, cocktail và rượu vang bán ly.\nChương trình này không áp dụng đồng thời với các sự kiện khác.'
           },
           {
-            id: 'romantic-getaway',
-            validity: 'Áp dụng đến 28/02/2026',
-            title: 'Kỳ Nghỉ Lãng Mạn',
-            description: 'Tôn vinh tình yêu với liệu trình spa 60 phút dành cho cặp đôi, bữa sáng tại giường mỗi ngày và tiệc tối lãng mạn dưới ánh nến tại nhà hàng The South.'
-          },
-          {
-            id: 'family-retreat',
-            validity: 'Áp dụng đến 31/08/2026',
-            title: 'Mùa Hè Gắn Kết Gia Đình',
-            description: 'Lưu giữ kỷ niệm cùng các dịch vụ miễn phí như giường phụ cho trẻ em, vé tham gia câu lạc bộ trẻ em hàng ngày và lớp học nấu ăn gia đình thú vị.'
+            id: 'south-restaurant-discount',
+            validity: 'Thời gian áp dụng: 11:00 – 22:00 hằng ngày',
+            title: 'The South Restaurant Giảm giá F&B',
+            description: 'Giảm 20% trên tổng hóa đơn dịch vụ ẩm thực.\nChương trình này không áp dụng đồng thời với các sự kiện khác.'
           }
         ]
       }
@@ -440,6 +433,7 @@ const resources = {
         bathrooms: '욕실',
         overview: '객실 개요',
         overviewDesc: '편안함과 품격이 있는 오아시스로 들어가 보십시오. 완벽하게 큐레이팅된 저희 공간은 현대적인 럭셔리와 우아한 미학을 완벽하게 조화시켜 고객의 요구에 완벽하게 맞춘 깊은 경험을 보장합니다. 꿈이 현실이 되는 탄 프엉 남 갤럭시에 오신 것을 환영합니다.',
+        fixedAmenities: ['스마트 TV', '에어컨', '무료 Wi-Fi', '헤어드라이어', '금고', '미니바', '조식 뷔페', '샤워 부스'],
         amenities: '어메니티',
         highlights: '특권 및 뷰',
         gallery: '객실 갤러리',
@@ -461,7 +455,8 @@ const resources = {
           { title: '스텔라 스카이바', size: '', desc: '수제 칵테일을 음미하며 숨막히는 파노라마 도시 전경을 감상하세요.', hours: '10:00 - 22:00', locationText: '12층', capacityText: '', schedules: [], features: ["시그니처 칵테일","어쿠스틱 음악","파노라마 뷰","VIP 라운지"] },
           { title: '피트니스 센터', size: '', desc: '최신 장비가 완비된 피트니스 센터에서 운동의 모든 요구를 만족시켜 드립니다.', hours: '06:00 - 22:00', locationText: '2층', capacityText: '50명', schedules: [], features: ["현대식 러닝머신","프리웨이트 구역","개인 트레이너 제공","무료 생수 및 수건"] },
           { title: '루프탑 수영장', size: '', desc: '전설적인 한강의 아름다운 일몰을 감상하며 옥상 인피니티 풀에서 휴식을 취하세요.', hours: '06:00 - 18:00', locationText: '루프탑 층', capacityText: '', schedules: [], features: ["선베드","풀사이드 음료 서비스","안전한 어린이 구역","무료 수건"] },
-          { title: '컨퍼런스 및 이벤트 룸', size: '', desc: '기업 행사나 세미나를 조직하기 위한 완벽한 장소입니다. 방음 설비가 완비되어 있습니다.', hours: '예약 문의', locationText: '4층', capacityText: '최대 300명', schedules: [], features: ["200인치 LED 스크린","서라운드 사운드 시스템","티 브레이크 제공","초고속 와이파이"] }
+          { title: '컨퍼런스 및 이벤트 룸', size: '', desc: '기업 행사나 세미나를 조직하기 위한 완벽한 장소입니다. 방음 설비가 완비되어 있습니다.', hours: '예약 문의', locationText: '12층', capacityText: '최대 100명', schedules: [], features: ["200인치 LED 스크린","서라운드 사운드 시스템","티 브레이크 제공","초고속 와이파이"] },
+          { title: '커피 라운지', size: '', desc: '1층 공간에 위치한 커피 라운지는 우아한 디자인으로 휴식을 위한 이상적인 공간을 제공하며, 최고급 커피와 정교한 애프터눈 티를 제공합니다.', hours: '07:00 - 22:00', locationText: '1층', capacityText: '', schedules: [], features: ["스페셜티 커피", "잉글리시 애프터눈 티", "매일 굽는 신선한 페이스트리", "비즈니스 미팅 공간"] }
         ],
         desc: "탄 프엉 남 호텔은 표준 이상의 최고급 서비스를 제공합니다. 우아한 요리 공간부터 스타일리시한 리조트 및 엔터테인먼트 공간까지.",
         cta: '더 많은 서비스 둘러보기'
@@ -542,22 +537,16 @@ const resources = {
         viewTerms: '이용 약관',
         items: [
           {
-            id: 'stay-play',
-            validity: '2026년 12월 31일까지 유효',
-            title: '골프 패키지',
-            description: '궁극의 골프 여행을 경험해 보세요. 시그니처 스위트룸 2박과 Montgomerie Links에서의 1인당 18홀 골프 1라운드가 포함되어 있습니다.'
+            id: 'stellar-happy-hour',
+            validity: '적용 시간: 매일 17:00 - 19:00',
+            title: '스텔라 탑 바 해피 아워',
+            description: '맥주, 칵테일, 글래스 와인 1+1 이벤트.\n참고: 본 프로모션은 다른 이벤트와 중복 적용되지 않습니다.'
           },
           {
-            id: 'romantic-getaway',
-            validity: '2026년 2월 28일까지 유효',
-            title: '로맨틱 겟어웨이',
-            description: '커플 스파 60분, 매일 제공되는 조식, 더 사우스 레스토랑에서의 낭만적인 불빛 아래 프라이빗 디너 파티로 사랑을 기념하세요.'
-          },
-          {
-            id: 'family-retreat',
-            validity: '2026년 8월 31일까지 유효',
-            title: '가족 여름 휴가',
-            description: '어린이용 추가 침대 무료 제공, 매일 키즈 클럽 이용, 즐거운 가족 요리 교실 등을 통해 오래 기억될 추억을 만들어 보세요.'
+            id: 'south-restaurant-discount',
+            validity: '적용 시간: 매일 11:00 - 22:00',
+            title: '더 사우스 레스토랑 F&B 할인',
+            description: 'F&B 총 청구 금액의 20% 할인.\n참고: 본 프로모션은 다른 이벤트와 중복 적용되지 않습니다.'
           }
         ]
       }
@@ -627,6 +616,7 @@ const resources = {
         bathrooms: '浴室',
         overview: '客房概述',
         overviewDesc: '步入这片兼具舒适与尊贵的绿洲。我们精心打造的空间完美融合了现代奢华与优雅美学，确保为您带来完全满足您愿望的深刻体验。欢迎来到新南方银河，这里是梦想成真的地方。',
+        fixedAmenities: ['智能电视', '空调', '免费 Wi-Fi', '吹风机', '保险箱', '迷你吧', '自助早餐', '独立淋浴间'],
         amenities: '设施',
         highlights: '特权与景观',
         gallery: '客房画廊',
@@ -648,7 +638,8 @@ const resources = {
           { title: 'Stellar 空中酒吧', size: '', desc: '品尝现调招牌鸡尾酒，同时坐拥令人惊叹的繁华城市全景。', hours: '10:00 至 22:00', locationText: '12楼', capacityText: '', schedules: [], features: ["招牌鸡尾酒","原声音乐","全景","VIP休息室"] },
           { title: '健身中心', size: '', desc: '我们的健身中心配备了尖端器械，满足您所有的锻炼需求。', hours: '06:00 至 22:00', locationText: '2楼', capacityText: '50人', schedules: [], features: ["现代跑步机","自由重量区","私人教练","免费提供水和毛巾"] },
           { title: '屋顶无边泳池', size: '', desc: '在屋顶无边泳池的凉爽海水中沉浸，欣赏美丽的日落。', hours: '06:00 至 18:00', locationText: '屋顶', capacityText: '', schedules: [], features: ["日光浴躺椅","池畔饮料服务","安全儿童区","免费提供毛巾"] },
-          { title: '会议与活动室', size: '', desc: '举办企业活动、主题研讨会或专业豪华宴会的理想场所。', hours: '需预订', locationText: '4楼', capacityText: '最多300人', schedules: [], features: ["200英寸LED屏幕","环绕声系统","茶歇糕点和茶水","超高速 Wi-Fi"] }
+          { title: '会议与活动室', size: '', desc: '举办企业活动、主题研讨会或专业豪华宴会的理想场所。', hours: '需预订', locationText: '12楼', capacityText: '做多100人', schedules: [], features: ["200英寸LED屏幕","环绕声系统","茶歇糕点和茶水","超高速 Wi-Fi"] },
+          { title: '咖啡厅', size: '', desc: '咖啡厅位于1楼接待大堂，设计优雅，是您放松身心的理想场所。这里供应高级咖啡和精致的下午茶。', hours: '07:00 至 22:00', locationText: '1楼', capacityText: '', schedules: [], features: ["特色咖啡", "英式下午茶", "每日新鲜糕点", "商务会议空间"] }
         ],
         desc: "新南方酒店提供比标准更高级的服务。从优雅的美食空间到时尚的度假和娱乐区。",
         cta: '发现更多服务'
@@ -729,22 +720,16 @@ const resources = {
         viewTerms: '条款和条件',
         items: [
           {
-            id: 'stay-play',
-            validity: '有效期至 2026 年 12 月 31 日',
-            title: '高尔夫尊享套餐',
-            description: '体验一场极致的高尔夫假期。包括我们在特色套房的两晚住宿，以及每位客人在独家 Montgomerie Links 的一轮 18 洞高尔夫。'
+            id: 'stellar-happy-hour',
+            validity: '适用时间：每天 17:00 – 19:00',
+            title: 'Stellar 空中酒吧 欢乐时光',
+            description: '杯装啤酒、鸡尾酒及葡萄酒买一送一。\n注：此优惠不可与其他活动同时使用。'
           },
           {
-            id: 'romantic-getaway',
-            validity: '有效期至 2026 年 2 月 28 日',
-            title: '浪漫假期',
-            description: '庆祝爱情，专享 60 分钟双人水疗护理、每日床上早餐，并在位于河畔的 The South 餐厅享用私人烛光晚餐。'
-          },
-          {
-            id: 'family-retreat',
-            validity: '有效期至 2026 年 8 月 31 日',
-            title: '家庭夏日静修',
-            description: '通过免费为儿童提供加床、每日进入儿童俱乐部以及有趣的家庭烹饪课程，为您和家人留下美好回忆。'
+            id: 'south-restaurant-discount',
+            validity: '适用时间：每天 11:00 – 22:00',
+            title: 'The South 餐厅餐饮折扣',
+            description: '全单餐饮消费享 8 折（20% off）优惠。\n注：此优惠不可与其他活动同时使用。'
           }
         ]
       }

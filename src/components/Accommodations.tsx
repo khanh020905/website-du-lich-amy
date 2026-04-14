@@ -8,8 +8,9 @@ import img2 from '../assets/restaurent.jpg';
 import img3 from '../assets/spa.jpg';
 import img4 from '../assets/bartender-bar.jpg';
 import img5 from '../assets/gym_mock.png';
-import img6 from '../assets/pool_mock.png';
+import img6 from '../assets/pool.jpg';
 import img7 from '../assets/conference_mock.png';
+import img8 from '../assets/coffee_lounge.jpg';
 
 const accommodationsImages = [
   { image: img1 }, // 0: Reception
@@ -18,7 +19,8 @@ const accommodationsImages = [
   { image: img4 }, // 3: Skybar
   { image: img5 }, // 4: Gym Mock
   { image: img6 }, // 5: Pool Mock
-  { image: img7 }  // 6: Conference Mock
+  { image: img7 }, // 6: Conference Mock
+  { image: img8 }  // 7: Coffee Lounge
 ];
 
 interface AccommodationsProps {
