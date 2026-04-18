@@ -81,8 +81,15 @@ const Gallery = () => {
     setActiveCategory(cat);
     const element = document.getElementById(`gallery-section-${cat}`);
     if (element) {
+      // Dùng getBoundingClientRect() + window.scrollY để có toạ độ tuyệt đối so với toàn trang
+      const targetY = element.getBoundingClientRect().top + window.scrollY;
+      const isScrollingDown = targetY > window.scrollY;
+      
+      // Tăng offset lên thêm 50px để chừa một khoảng trắng (breathing room) phía trên tiêu đề, 
+      // tránh bề mặt chữ bị dính sát vào thành đổ bóng của Navbar
+      const offset = isScrollingDown ? 130 : 230; 
       window.scrollTo({
-        top: element.offsetTop - 120, // Adjust offset for fixed headers
+        top: targetY - offset,
         behavior: 'smooth'
       });
     }

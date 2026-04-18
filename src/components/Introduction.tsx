@@ -63,15 +63,6 @@ const Introduction = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="text-xl md:text-[28px] md:leading-[1.4] text-gray-400 font-sans tracking-tight mr-2 inline"
-              >
-                {t('intro.highlight')}
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl md:text-[28px] md:leading-[1.4] text-[#111] font-sans tracking-tight inline"
               >

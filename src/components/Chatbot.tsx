@@ -4,7 +4,7 @@ import { Send, X, Loader2, MessageSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 // Vite requires importing assets so they are properly hashed and included in production builds
-import logoImg from '../assets/logo-1.jpg';
+import logoImg from '../assets/logo-finalll.png';
 import spaImg from '../assets/spa.jpg';
 import restImg from '../assets/restaurent.jpg';
 import barImg from '../assets/bartender-bar.jpg';
@@ -184,7 +184,7 @@ const Chatbot: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
-              Chat với chúng tôi!
+             Chat với chúng tôi!
             </motion.div>
           )}
         </AnimatePresence>
@@ -196,17 +196,14 @@ const Chatbot: React.FC = () => {
           animate={{ opacity: isOpen ? 0 : 1, scale: isOpen ? 0 : 1 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="w-full h-full rounded-full overflow-hidden absolute inset-0">
+          <div className="w-full h-full rounded-full overflow-hidden absolute inset-0 flex items-center justify-center">
             <img 
               src={logoImg} 
               alt="Chat" 
-              className="w-full h-full object-cover"
+              className="h-full w-auto max-w-none object-cover object-left scale-[1.2]"
             />
           </div>
-          {/* Default icon overlay for extra clearness */}
-          <div className="absolute -bottom-1 -right-1 bg-[#d4af37] text-black w-6 h-6 rounded-full flex items-center justify-center border-2 border-white shadow-md z-10">
-            <MessageSquare size={12} fill="currentColor" />
-          </div>
+
           {/* Glow effect */}
           <div className="absolute inset-0 rounded-full border-2 border-[#d4af37]/50 mix-blend-overlay pointer-events-none z-20"></div>
         </motion.button>
@@ -225,11 +222,11 @@ const Chatbot: React.FC = () => {
             {/* Header */}
             <div className="h-16 border-b border-[#d4af37]/20 bg-gradient-to-r from-[#1a1a1a] to-[#222] flex items-center justify-between px-4 shrink-0">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full overflow-hidden border border-[#d4af37]/50 bg-black flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full overflow-hidden border border-[#d4af37]/50 bg-black flex items-center justify-center shrink-0">
                   <img 
                     src={logoImg} 
                     alt="Logo" 
-                    className="w-full h-full object-cover"
+                    className="h-full w-auto max-w-none object-cover object-left scale-[1.2]"
                   />
                 </div>
                 <div>

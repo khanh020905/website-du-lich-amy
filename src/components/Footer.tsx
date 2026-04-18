@@ -4,14 +4,15 @@ import { MapPin, Phone, Mail, MessageCircle, Navigation } from 'lucide-react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import logoUrl from '../assets/logo-finalll.png';
 
-// Create a custom marker icon to avoid the broken shadow issue in React + Leaflet default setups
+// Create a custom marker icon containing the TPN Galaxy logo
 const customIcon = new L.DivIcon({
   className: 'custom-map-marker',
-  html: `<div style="background-color: #D4AF37; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>`,
-  iconSize: [24, 24],
-  iconAnchor: [12, 12],
-  popupAnchor: [0, -12],
+  html: `<div style="background-color: white; border-radius: 50%; border: 2px solid #D4AF37; box-shadow: 0 4px 10px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; width: 50px; height: 50px;"><img src="${logoUrl}" style="width: 42px; height: 42px; object-fit: contain; pointer-events: none; border-radius: 50%;" alt="TPN Galaxy" /></div>`,
+  iconSize: [50, 50],
+  iconAnchor: [25, 25],
+  popupAnchor: [0, -25],
 });
 
 // Interceptor hook to dynamically control zooming
@@ -38,6 +39,28 @@ const MapScrollEnabler = () => {
   }, [map]);
 
   return null;
+};
+
+const LocationMarker = ({ position, icon }: { position: [number, number], icon: any }) => {
+  const map = useMap();
+  return (
+    <Marker 
+      position={position} 
+      icon={icon}
+      eventHandlers={{
+        click: () => {
+          map.flyTo(position, 18, { duration: 1.5 });
+        }
+      }}
+    >
+      <Popup>
+        <div className="text-center font-sans">
+          <div className="font-bold text-[#D4AF37] text-sm">TPN Galaxy</div>
+          <div className="text-xs text-gray-600 mt-1">180 Bạch Đằng</div>
+        </div>
+      </Popup>
+    </Marker>
+  );
 };
 
 const Footer = () => {
@@ -76,17 +99,14 @@ const Footer = () => {
           
           {/* Cột 1: Logo & Giới thiệu */}
           <div className="flex flex-col">
-            <div className="flex items-center gap-3 mb-6">
-              {/* Fake geometric logo inspired by the reference */}
-              <div className="text-[var(--color-gold)]">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                   <path d="M12 2L1 21h22L12 2zm0 3.83L19.17 19H4.83L12 5.83z" />
-                   <path d="M12 10.5l-3.5 5h7l-3.5-5z" />
-                </svg>
+            <div className="flex items-center gap-4 mb-6">
+              {/* Crop out the black text from the original wide image to just show the logo symbol */}
+              <div className="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 overflow-hidden rounded-full shrink-0 flex items-center justify-center">
+                 <img src={logoUrl} alt="Tan Phuong Nam Logo" className="h-full max-w-none w-auto object-cover object-left" />
               </div>
-              <h2 className="flex flex-col text-white tracking-widest uppercase">
-                <span className="text-lg md:text-xl lg:text-2xl font-black">TÂN PHƯƠNG NAM</span>
-                <span className="text-[var(--color-gold)] font-serif italic text-sm md:text-base mt-[-2px] tracking-normal font-normal">Galaxy Hotel</span>
+              <h2 className="flex flex-col justify-center text-white uppercase mt-1 whitespace-nowrap">
+                <span className="text-lg md:text-xl lg:text-2xl font-serif tracking-[0.1em] lg:tracking-widest leading-none font-bold text-center lg:text-left">TAN PHUONG NAM</span>
+                <span className="text-xs md:text-sm lg:text-[15px] font-serif tracking-[0.2em] leading-none mt-1 lg:mt-1.5 text-center lg:text-left">GALAXY HOTEL</span>
               </h2>
             </div>
             <p className="text-sm leading-relaxed text-[#B0B0B0] mb-8">
@@ -95,14 +115,18 @@ const Footer = () => {
             <div className="flex flex-wrap items-center gap-4">
                {/* Fixed badget imitating the red Bộ Công Thương badge - now blue */}
                <div className="bg-blue-600 rounded text-white text-[10px] font-bold px-3 py-1 flex items-center shadow-lg">
-                 <span className="mr-1 inline-block bg-white rounded-full w-3 h-3 text-blue-600 text-[8px] flex items-center justify-center pl-[2.5px] pt-[0.5px]">✔</span> ĐÃ THÔNG BÁO BỘ CÔNG THƯƠNG
+                 <span className="mr-1 inline-block bg-white rounded-full w-3 h-3 text-blue-600 text-[8px] flex items-center justify-center pl-[2.5px] pt-[0px]">✔</span> ĐÃ THÔNG BÁO BỘ CÔNG THƯƠNG
                </div>
                {/* Facebook & Zalo badges */}
-               <div className="bg-[#1877F2] text-white p-1.5 rounded flex items-center justify-center w-8 h-8 cursor-pointer hover:bg-white hover:text-[#1877F2] transition-colors">
-                 <span className="text-lg font-bold font-serif -mt-1 leading-none">f</span>
+               <div className="bg-[#1877F2] text-white rounded flex items-center justify-center w-8 h-8 cursor-pointer hover:bg-white hover:text-[#1877F2] transition-colors">
+                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-[18px] h-[18px]">
+                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                 </svg>
                </div>
-               <div className="bg-[#0068FF] text-white p-1.5 px-3 rounded flex items-center justify-center h-8 cursor-pointer hover:bg-white hover:text-[#0068FF] transition-colors">
-                 <span className="text-xs font-bold">Zalo</span>
+               <div className="bg-[#0068FF] text-white px-3 rounded flex items-center justify-center h-8 cursor-pointer hover:bg-white hover:text-[#0068FF] transition-colors">
+                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 -my-2 mr-0.5">
+                   <path d="M12.49 10.2722v-.4496h1.3467v6.3218h-.7704a.576.576 0 01-.5763-.5729l-.0006.0005a3.273 3.273 0 01-1.9372.6321c-1.8138 0-3.2844-1.4697-3.2844-3.2823 0-1.8125 1.4706-3.2822 3.2844-3.2822a3.273 3.273 0 011.9372.6321l.0006.0005zM6.9188 7.7896v.205c0 .3823-.051.6944-.2995 1.0605l-.03.0343c-.0542.0615-.1815.206-.2421.2843L2.024 14.8h4.8948v.7682a.5764.5764 0 01-.5767.5761H0v-.3622c0-.4436.1102-.6414.2495-.8476L4.8582 9.23H.1922V7.7896h6.7266zm8.5513 8.3548a.4805.4805 0 01-.4803-.4798v-7.875h1.4416v8.3548H15.47zM20.6934 9.6C22.52 9.6 24 11.0807 24 12.9044c0 1.8252-1.4801 3.306-3.3066 3.306-1.8264 0-3.3066-1.4808-3.3066-3.306 0-1.8237 1.4802-3.3044 3.3066-3.3044zm-10.1412 5.253c1.0675 0 1.9324-.8645 1.9324-1.9312 0-1.065-.865-1.9295-1.9324-1.9295s-1.9324.8644-1.9324 1.9295c0 1.0667.865 1.9312 1.9324 1.9312zm10.1412-.0033c1.0737 0 1.945-.8707 1.945-1.9453 0-1.073-.8713-1.9436-1.945-1.9436-1.0753 0-1.945.8706-1.945 1.9436 0 1.0746.8697 1.9453 1.945 1.9453z"/>
+                 </svg>
                </div>
                {i18n.language !== 'vi' && (
                  <div className="bg-green-500 text-white p-1.5 px-3 rounded flex items-center justify-center h-8 cursor-pointer hover:bg-white hover:text-green-500 transition-colors">
@@ -209,14 +233,7 @@ const Footer = () => {
             <TileLayer
               url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
             />
-            <Marker position={hotelPosition} icon={customIcon}>
-              <Popup>
-                <div className="text-center font-sans">
-                  <div className="font-bold text-[#D4AF37] text-sm">TPN Galaxy</div>
-                  <div className="text-xs text-gray-600 mt-1">180 Bạch Đằng</div>
-                </div>
-              </Popup>
-            </Marker>
+            <LocationMarker position={hotelPosition} icon={customIcon} />
           </MapContainer>
         </div>
       </div>

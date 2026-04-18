@@ -40,7 +40,7 @@ const resources = {
         perNight: '/ Night',
         bed: 'Bed',
         guests: 'Guests',
-        desc: 'Tan Phuong Nam Hotel features modern architectural style. The room system is equipped with premium furniture. The open space and airy view help visitors fully enjoy the beauty of the city. This will be an ideal stop for those seeking comfort and a distinct hospitality experience.',
+        desc: 'Tan Phuong Nam Galaxy Hotel features modern architectural style. The room system is equipped with premium furniture. The open space and airy view help visitors fully enjoy the beauty of the city. This will be an ideal stop for those seeking comfort and a distinct hospitality experience.',
         items: [
           { title: 'Superior King', size: '25 SqM', desc: '1 King Bed, 2 Pax, Wall View' },
           { title: 'Superior Twin', size: '28 SqM', desc: '2 Twin Beds, 2 Pax, City View' },
@@ -83,7 +83,7 @@ const resources = {
         title: 'Services and Amenities',
         items: [
           { title: 'Reception Lobby', size: '', desc: 'A sophisticated welcoming space providing our guests a majestic first impression. The spacious area is designed with a prime waiting lounge offering complimentary tea and coffee.', hours: '24/7', locationText: '1st Floor', capacityText: '', schedules: [], features: ["24/7 Guest Support","Express Check-in","Currency Exchange","Tour Information"] },
-          { title: 'The South Restaurant', size: '', desc: 'Located on the 3rd floor of the hotel, The South Restaurant features elegant design and views overlooking the Han River, allowing you to start your day with an energizing morning meal.', hours: '06:00 to 22:00', locationText: '3rd Floor', capacityText: '200 guests', schedules: ["Breakfast buffet: 06:00 - 10:00","Lunch and Dinner: 11:00 - 22:00"], features: [] },
+          { title: 'The South Restaurant', size: '', desc: 'Located on the 2nd floor of the hotel, The South Restaurant features elegant design and views overlooking the Han River, allowing you to start your day with an energizing morning meal.', hours: '06:00 to 22:00', locationText: '2nd Floor', capacityText: '200 guests', schedules: ["Breakfast buffet: 06:00 - 10:00","Lunch and Dinner: 11:00 - 22:00"], features: [] },
           { title: 'Spa & Wellness', size: '', desc: 'Situated on the 1st floor of Tan Phuong Nam Galaxy, the Spa is harmoniously designed with varied color tones, creating a sophisticated and relaxing sanctuary.', hours: '09:00 to 21:00', locationText: '1st Floor', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
           { title: 'Stellar Skybar', size: '', desc: 'Positioned on the 12th floor, Sky Bar Stellar is the ideal destination to indulge in an elevated relaxing space with panoramic views of the Han River and Da Nang city.', hours: '10:00 to 22:00', locationText: '12th Floor', capacityText: '', schedules: [], features: ["Signature Cocktails","Acoustic Music","Panoramic View","VIP Lounge"] },
           { title: 'Gym & Fitness Center', size: '', desc: 'Our Fitness Center is equipped with cutting-edge machinery, catering to all your workout demands from cardio to intensive strength training.', hours: '06:00 to 22:00', locationText: '2nd Floor', capacityText: '50 guests', schedules: [], features: ["Modern Treadmills","Free Weights Area","Personal Trainers","Complimentary Water & Towels"] },
@@ -152,7 +152,7 @@ const resources = {
       culinary: {
         label: 'FINE DINING',
         title: 'The South Restaurant',
-        description: 'Located on the 7th floor, The South Restaurant features a minimalist and elegant design, bringing a modern and classy feeling to diners. It is undoubtedly an unmissable destination for those who want to experience a luxurious dining space in Da Nang. With a romantic and cozy atmosphere, you can enjoy the exquisite flavors of our culinary offerings while immersing yourself in the shimmering city lights and the sparkling Han River.',
+        description: 'Located on the 2nd floor, The South Restaurant features a minimalist and elegant design, bringing a modern and classy feeling to diners. It is undoubtedly an unmissable destination for those who want to experience a luxurious dining space in Da Nang. With a romantic and cozy atmosphere, you can enjoy the exquisite flavors of our culinary offerings while immersing yourself in the shimmering city lights and the sparkling Han River.',
         exploreMenu: 'Explore Our Menu',
         mainMenu: 'Main Course Menu',
         beverageMenu: 'Beverage & Wine List',
@@ -201,7 +201,7 @@ const resources = {
       },
       intro: {
         aboutUs: 'VỀ CHÚNG TÔI',
-        highlight: "Khu nghỉ dưỡng sang trọng tiêu chuẩn 4 sao tọa lạc bên bờ sông Hàn thơ mộng.",
+        highlight: "",
         desc: "Tân Phương Nam Galaxy Hotel sở hữu 86 phòng nghỉ và Penhouse được thiết kế sang trọng và tinh tế. Hứa hẹn mang đến trải nghiệm lưu trú đẳng cấp và trọn vẹn cho mọi du khách.",
         knowMore: '',
         byTheNumber: 'NHỮNG CON SỐ',
@@ -268,7 +268,7 @@ const resources = {
         items: [
           { title: 'Sảnh Lễ Tân', size: '', desc: 'Không gian đón khách lộng lẫy mang lại trải nghiệm mãn nhãn ngay từ giây phút đầu tiên. Khu vực được thiết kế rộng rãi với khu vực chờ sang trọng, phục vụ trà và cà phê miễn phí.', hours: '24/7', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Hỗ trợ khách hàng 24/7","Check-in/Check-out nhanh chóng","Dịch vụ thu đổi ngoại tệ","Thông tin du lịch"] },
           { title: 'Nhà Hàng The South', size: '', desc: 'Nhà hàng The South tọa lạc tại tầng 2 của khách sạn, với thiết kế sang trọng và tầm nhìn hướng ra Sông Hàn để quý khách có thể bắt đầu ngày mới với một bữa sáng tràn đầy năng lượng.', hours: '06:00 đến 22:00', locationText: 'Tầng 2', capacityText: '200 khách', schedules: ["Breakfast buffet: 06:00 - 10:00","Lunch and Dinner: 11:00 - 22:00"], features: [] },
-          { title: 'Spa & wellness', size: '', desc: 'Nằm tại tầng 1 của Khách sạn Tân Phương Nam Galaxy, Spa được thiết kế với sự kết hợp hài hòa của nhiều gam màu khác nhau, tạo nên một không gian vừa tinh tế vừa thư giãn. Không gian yên bình, tách biệt khỏi nhịp sống ồn ào.', hours: '09:00 đến 21:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
+          { title: 'Spa & Wellness', size: '', desc: 'Nằm tại tầng 1 của Khách sạn Tân Phương Nam Galaxy, Spa được thiết kế với sự kết hợp hài hòa của nhiều gam màu khác nhau, tạo nên một không gian vừa tinh tế vừa thư giãn. Không gian yên bình, tách biệt khỏi nhịp sống ồn ào.', hours: '09:00 đến 21:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
           { title: 'Stellar Skybar', size: '', desc: 'Tọa lạc tại tầng 12, Sky Bar Stellar là điểm đến lý tưởng để tận hưởng không gian thư giãn trên cao với tầm nhìn toàn cảnh sông Hàn và thành phố Đà Nẵng.', hours: '10:00 đến 22:00', locationText: 'Tầng 12', capacityText: '', schedules: [], features: ["Signature Cocktails","Acoustic Music","Panoramic View","VIP Lounge"] },
           { title: 'Phòng Gym & Fitness', size: '', desc: 'Phòng Gym được trang bị hệ thống máy móc hiện đại, đáp ứng mọi nhu cầu tập luyện của quý khách từ cardio đến rèn luyện thể lực chuyên sâu.', hours: '06:00 đến 22:00', locationText: 'Tầng 2', capacityText: '50 khách', schedules: [], features: ["Máy chạy bộ hiện đại","Khu vực tạ tự do","Huấn luyện viên cá nhân","Nước & khăn miễn phí"] },
           { title: 'Hồ Bơi Vô Cực Rooftop', size: '', desc: 'Hòa mình vào làn nước mát lạnh tại Hồ bơi vô cực trên tầng thượng, nơi quý khách có thể vừa thư giãn vừa ngắm trọn vẹn cảnh sắc hoàng hôn tuyệt đẹp trên sông Hàn.', hours: '06:00 đến 18:00', locationText: 'Tầng thượng (Rooftop)', capacityText: '', schedules: [], features: ["Khu vực ghế tắm","Phục vụ đồ uống tại hồ","Khu vực trẻ em an toàn","Khăn tắm miễn phí"] },
@@ -356,14 +356,14 @@ const resources = {
           {
             id: 'stellar-happy-hour',
             validity: 'Thời gian áp dụng: 17:00 – 19:00 hằng ngày',
-            title: 'Chương trình khung giờ vàng – Stellar Top Bar',
-            description: 'Mua 1 tặng 1 đối với bia, cocktail và rượu vang bán ly.\nChương trình này không áp dụng đồng thời với các sự kiện khác.'
+            title: 'Stellar Top Bar Happy Hour Promotion',
+            description: 'Mua 1 tặng 1 đồ uống.\nKhông áp dụng đồng thời với các sự kiện khác.'
           },
           {
             id: 'south-restaurant-discount',
             validity: 'Thời gian áp dụng: 11:00 – 22:00 hằng ngày',
-            title: 'The South Restaurant Giảm giá F&B',
-            description: 'Giảm 20% trên tổng hóa đơn dịch vụ ẩm thực.\nChương trình này không áp dụng đồng thời với các sự kiện khác.'
+            title: 'The South Restaurant F&B discount',
+            description: 'Giảm 20% trên tổng bill.\nKhông áp dụng đồng thời với các sự kiện khác.'
           }
         ]
       }
@@ -450,7 +450,7 @@ const resources = {
         title: '서비스 및 편의 시설',
         items: [
           { title: '리셉션 로비', size: '', desc: '정교한 디자인으로 장엄한 첫인상을 선사하는 세련된 환영 공간입니다.', hours: '24/7', locationText: '1층', capacityText: '', schedules: [], features: ["24/7 고객 지원","빠른 체크인/체크아웃","환전 서비스","투어 정보"] },
-          { title: '더 사우스 레스토랑', size: '', desc: '호텔 3층에 위치한 레스토랑으로 우아한 디자인과 한강 전망을 자랑합니다.', hours: '06:00 - 22:00', locationText: '3층', capacityText: '200명', schedules: ["조식 뷔페: 06:00 - 10:00","점심 및 저녁: 11:00 - 22:00"], features: [] },
+          { title: '더 사우스 레스토랑', size: '', desc: '호텔 2층에 위치한 레스토랑으로 우아한 디자인과 한강 전망을 자랑합니다.', hours: '06:00 - 22:00', locationText: '2층', capacityText: '200명', schedules: ["조식 뷔페: 06:00 - 10:00","점심 및 저녁: 11:00 - 22:00"], features: [] },
           { title: '스파 및 웰니스', size: '', desc: '다양한 톤이 조화롭게 디자인되어 세련되고 편안한 휴식 공간을 선사합니다.', hours: '09:00 - 21:00', locationText: '1층', capacityText: '', schedules: [], features: ["바디 마사지","발 마사지","페이셜 스파","바디 스크럽","네일 관리"] },
           { title: '스텔라 스카이바', size: '', desc: '수제 칵테일을 음미하며 숨막히는 파노라마 도시 전경을 감상하세요.', hours: '10:00 - 22:00', locationText: '12층', capacityText: '', schedules: [], features: ["시그니처 칵테일","어쿠스틱 음악","파노라마 뷰","VIP 라운지"] },
           { title: '피트니스 센터', size: '', desc: '최신 장비가 완비된 피트니스 센터에서 운동의 모든 요구를 만족시켜 드립니다.', hours: '06:00 - 22:00', locationText: '2층', capacityText: '50명', schedules: [], features: ["현대식 러닝머신","프리웨이트 구역","개인 트레이너 제공","무료 생수 및 수건"] },
@@ -519,7 +519,7 @@ const resources = {
       culinary: {
         label: '파인 다이닝',
         title: '더 사우스 레스토랑',
-        description: '호텔 7층에 위치한 더 사우스 레스토랑은 미니멀하고 우아한 디자인으로 식사하는 고객에게 현대적이고 고급스러운 느낌을 선사합니다. 다낭에서 고급스러운 식사 공간을 경험하고자 하는 분들에게 놓칠 수 없는 곳입니다. 로맨틱하고 아늑한 분위기 속에서 반짝이는 도시의 불빛과 아름다운 한강에 흠뻑 빠져들어 절묘한 음식의 맛을 즐길 수 있습니다.',
+        description: '호텔 2층에 위치한 더 사우스 레스토랑은 미니멀하고 우아한 디자인으로 식사하는 고객에게 현대적이고 고급스러운 느낌을 선사합니다. 다낭에서 고급스러운 식사 공간을 경험하고자 하는 분들에게 놓칠 수 없는 곳입니다. 로맨틱하고 아늑한 분위기 속에서 반짝이는 도시의 불빛과 아름다운 한강에 흠뻑 빠져들어 절묘한 음식의 맛을 즐길 수 있습니다.',
         exploreMenu: '메뉴 둘러보기',
         mainMenu: '메인 코스 메뉴',
         beverageMenu: '음료 및 와인 리스트',
@@ -633,7 +633,7 @@ const resources = {
         title: '服务和设施',
         items: [
           { title: '接待大堂', size: '', desc: '精致的迎宾空间，为宾客提供庄严而奢华的第一印象。', hours: '24/7', locationText: '1楼', capacityText: '', schedules: [], features: ["24/7 客户支持","快速办理入住/退房","货币兑换","旅游资讯"] },
-          { title: 'The South 餐厅', size: '', desc: '位于酒店 3 楼，The South 餐厅享有优雅的设计和韩江美景。', hours: '06:00 至 22:00', locationText: '3楼', capacityText: '200人', schedules: ["自助早餐：06:00 - 10:00","午餐和晚餐：11:00 - 22:00"], features: [] },
+          { title: 'The South 餐厅', size: '', desc: '位于酒店 2 楼，The South 餐厅享有优雅的设计和韩江美景。', hours: '06:00 至 22:00', locationText: '2楼', capacityText: '200人', schedules: ["自助早餐：06:00 - 10:00","午餐和晚餐：11:00 - 22:00"], features: [] },
           { title: '水疗与康体', size: '', desc: '沉浸在宁静的避世圣地，这里旨在让您的身心全新焕发青春活力。', hours: '09:00 至 21:00', locationText: '1楼', capacityText: '', schedules: [], features: ["全身按摩","足部按摩","面部水疗","身体磨砂","美甲护理"] },
           { title: 'Stellar 空中酒吧', size: '', desc: '品尝现调招牌鸡尾酒，同时坐拥令人惊叹的繁华城市全景。', hours: '10:00 至 22:00', locationText: '12楼', capacityText: '', schedules: [], features: ["招牌鸡尾酒","原声音乐","全景","VIP休息室"] },
           { title: '健身中心', size: '', desc: '我们的健身中心配备了尖端器械，满足您所有的锻炼需求。', hours: '06:00 至 22:00', locationText: '2楼', capacityText: '50人', schedules: [], features: ["现代跑步机","自由重量区","私人教练","免费提供水和毛巾"] },
@@ -702,7 +702,7 @@ const resources = {
       culinary: {
         label: '高级餐饮',
         title: 'The South 餐厅',
-        description: 'The South 餐厅位于酒店 7 楼，采用极简优雅的设计，为就餐者带来现代而尊贵的感觉。对于想在岘港体验豪华就餐空间的人来说，这里绝对是不容错过的目的地。在浪漫温馨的氛围中，您可以尽情享受美食的绝妙风味，同时沉浸在城市闪烁的灯光和波光粼粼的韩江之中。',
+        description: 'The South 餐厅位于酒店 2 楼，采用极简优雅的设计，为就餐者带来现代而尊贵的感觉。对于想在岘港体验豪华就餐空间的人来说，这里绝对是不容错过的目的地。在浪漫温馨的氛围中，您可以尽情享受美食的绝妙风味，同时沉浸在城市闪烁的灯光和波光粼粼的韩江之中。',
         exploreMenu: '探索我们的菜单',
         mainMenu: '主菜菜单',
         beverageMenu: '饮料和酒水单',

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation, useParams, Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import logoUrl from '../assets/logo-finalll.png';
 
 const LANGUAGES = [
   { code: 'vi', short: 'VI', full: 'Tiếng Việt' },
@@ -62,7 +63,7 @@ const Navbar = () => {
       animate={{ y: isHidden ? '-100%' : 0 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled || isMobileMenuOpen ? 'bg-[#111] bg-opacity-95 py-4 shadow-lg backdrop-blur-sm' : 'bg-transparent py-6'
+        scrolled || isMobileMenuOpen ? 'bg-[#111] bg-opacity-95 py-3 lg:py-4 shadow-lg backdrop-blur-sm' : 'bg-transparent py-4 lg:py-6'
       }`}
     >
       <div className="container mx-auto px-4 lg:px-6 xl:px-12 flex justify-between items-center relative w-full">
@@ -72,17 +73,24 @@ const Navbar = () => {
           onClick={() => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
-          className="pointer-events-auto cursor-pointer shrink-0"
+          className="pointer-events-auto cursor-pointer flex items-center gap-3 lg:gap-4 shrink-0"
         >
-          <img 
-            src="/tpn-logo.png" 
-            alt="Tan Phuong Nam Logo" 
-            className="h-16 lg:h-24 w-auto object-contain" 
-          />
+          {/* Crop out the black text from the original wide image to just show the logo symbol */}
+          <div className="h-14 w-14 lg:h-16 lg:w-16 xl:h-20 xl:w-20 overflow-hidden rounded-full shrink-0 flex items-center justify-center">
+            <img 
+              src={logoUrl} 
+              alt="Tan Phuong Nam Logo" 
+              className="h-full max-w-none w-auto object-cover object-left" 
+            />
+          </div>
+          <div className="flex flex-col justify-center mt-1 whitespace-nowrap">
+            <span className="text-white text-base lg:text-lg xl:text-2xl font-serif tracking-widest leading-none font-bold text-center lg:text-left">TAN PHUONG NAM</span>
+            <span className="text-white text-[10px] lg:text-xs xl:text-sm font-serif tracking-[0.2em] leading-none mt-1 lg:mt-1.5 text-center lg:text-left">GALAXY HOTEL</span>
+          </div>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center justify-center space-x-4 xl:space-x-8 flex-1 px-4">
+        <div className="hidden lg:flex items-center justify-center space-x-4 lg:space-x-5 xl:space-x-8">
           {navAnchors.map((anchor, index) => {
             const isGallery = anchor === 'gallery';
             const isRooms = anchor === 'rooms';
@@ -125,7 +133,7 @@ const Navbar = () => {
                     }
                   }
                 }}
-                className="text-white text-[11px] lg:text-xs xl:text-sm font-semibold tracking-[0.1em] xl:tracking-widest hover:text-[var(--color-gold)] transition-colors duration-300 uppercase whitespace-nowrap"
+                className="text-white text-xs lg:text-[13px] xl:text-sm font-semibold tracking-wider xl:tracking-[0.1em] hover:text-[var(--color-gold)] transition-colors duration-300 uppercase whitespace-nowrap"
               >
                 {translatedLinks[index]}
               </Link>
