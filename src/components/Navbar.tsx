@@ -83,9 +83,9 @@ const Navbar = () => {
               className="h-full max-w-none w-auto object-cover object-left" 
             />
           </div>
-          <div className="flex flex-col justify-center mt-1 whitespace-nowrap">
-            <span className="text-white text-base lg:text-lg xl:text-2xl font-serif tracking-widest leading-none font-bold text-center lg:text-left">TAN PHUONG NAM</span>
-            <span className="text-white text-[10px] lg:text-xs xl:text-sm font-serif tracking-[0.2em] leading-none mt-1 lg:mt-1.5 text-center lg:text-left">GALAXY HOTEL</span>
+          <div className="flex flex-col justify-center items-center mt-1 whitespace-nowrap uppercase">
+            <span className="text-white text-base lg:text-lg xl:text-2xl font-serif tracking-widest leading-none font-bold text-center">TAN PHUONG NAM</span>
+            <span className="text-white text-xs lg:text-sm xl:text-base font-serif tracking-[0.2em] leading-none mt-1.5 text-center">GALAXY HOTEL</span>
           </div>
         </Link>
 
@@ -169,9 +169,11 @@ const Navbar = () => {
             </div>
           </div>
 
-          <button className="border border-white/50 text-white px-4 xl:px-7 py-2 xl:py-2.5 text-[11px] lg:text-xs xl:text-sm font-semibold tracking-widest hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300 uppercase whitespace-nowrap">
-            {t('nav.bookNow')}
-          </button>
+          <Link to={`/${locale}/book`}>
+            <button className="border border-white/50 text-white px-4 xl:px-7 py-2 xl:py-2.5 text-[11px] lg:text-xs xl:text-sm font-semibold tracking-widest hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-all duration-300 uppercase whitespace-nowrap">
+              {t('nav.bookNow')}
+            </button>
+          </Link>
         </div>
 
         {/* Hamburger Icon (Mobile) */}
@@ -261,12 +263,13 @@ const Navbar = () => {
                   </div>
                 </div>
                 
-                <button 
+                <Link 
+                  to={`/${locale}/book`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="border border-[var(--color-gold)] bg-[var(--color-gold)]/10 text-[var(--color-gold)] w-full py-3 text-sm font-semibold tracking-widest hover:bg-[var(--color-gold)] hover:text-[#111] transition-all duration-300 uppercase block text-center"
                 >
                   {t('nav.bookNow')}
-                </button>
+                </Link>
               </div>
             </div>
           </motion.div>

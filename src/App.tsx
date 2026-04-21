@@ -21,6 +21,7 @@ import RoomDetail from './components/RoomDetail';
 import ServiceDetail from './components/ServiceDetail';
 import Culinary from './components/Culinary';
 import Offers from './components/Offers';
+import BookingPage from './components/Booking/BookingPage';
 
 const Layout = () => {
   const { locale } = useParams();
@@ -151,7 +152,7 @@ const RoomsPage = () => {
       <div className="relative pt-40 pb-20 flex flex-col items-center justify-center px-4 overflow-hidden shadow-2xl">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transform scale-105"
-          style={{ backgroundImage: 'url("/assets/tn1.jpg")' }}
+          style={{ backgroundImage: 'url("/gallery/MẶT NGOÀI KHÁCH SẠN/tn1.jpg")' }}
         ></div>
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#111]/90 via-[#111]/80 to-[#111]"></div>
         <div className="absolute inset-0 z-0 bg-black/40 backdrop-blur-[4px]"></div>
@@ -323,6 +324,7 @@ function App() {
         <Route path="/:locale/culinary" element={<CulinaryPage />} />
         <Route path="/:locale/offer" element={<OffersPage />} />
         <Route path="/:locale/services" element={<ServicesPage />} />
+        <Route path="/:locale/book" element={<BookingPage />} />
         <Route path="/:locale/room/:roomId" element={<RoomDetailPage />} />
         <Route path="/:locale/service/:serviceId" element={<ServiceDetailPage />} />
         <Route path="*" element={<Navigate to="/vi" replace />} />

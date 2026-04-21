@@ -5,6 +5,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import logoUrl from '../assets/logo-finalll.png';
+import bctLogo from '../assets/logo-btc-final.png';
 
 // Create a custom marker icon containing the TPN Galaxy logo
 const customIcon = new L.DivIcon({
@@ -80,65 +81,61 @@ const Footer = () => {
     <footer className="bg-[#1A1A1A] relative text-gray-300 pt-12 pb-0 font-sans">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         
-        {/* Top Navbar */}
-        <div className="border-b border-[#333333] pb-8 mb-10">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium tracking-wide text-[#EAEAEA]">
-             {/* Using the nav translation items as our top bar */}
-             <a href="#" className="hover:text-[var(--color-gold)] transition-colors">Trang chủ</a>
-             <a href="#about" className="hover:text-[var(--color-gold)] transition-colors">Giới thiệu</a>
-             <a href="#rooms" className="hover:text-[var(--color-gold)] transition-colors">Hạng Phòng</a>
-             <a href="#suites" className="hover:text-[var(--color-gold)] transition-colors">Suites</a>
-             <a href="#services" className="hover:text-[var(--color-gold)] transition-colors">Dịch vụ & Tiện ích</a>
-             <a href="#testimonials" className="hover:text-[var(--color-gold)] transition-colors">Khách hàng Đánh giá</a>
-             <a href="#gallery" className="hover:text-[var(--color-gold)] transition-colors">Thư viện Ảnh</a>
-          </div>
-        </div>
+
 
         {/* 3 Columns Layout (LAMY HOUSE style) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           
           {/* Cột 1: Logo & Giới thiệu */}
-          <div className="flex flex-col">
-            <div className="flex items-center gap-4 mb-6">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left lg:items-center lg:text-center">
+            <div className="flex flex-col items-center gap-4 mb-6">
               {/* Crop out the black text from the original wide image to just show the logo symbol */}
-              <div className="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 overflow-hidden rounded-full shrink-0 flex items-center justify-center">
+              <div className="h-20 w-20 md:h-24 md:w-24 lg:h-32 lg:w-32 overflow-hidden rounded-full shrink-0 flex items-center justify-center">
                  <img src={logoUrl} alt="Tan Phuong Nam Logo" className="h-full max-w-none w-auto object-cover object-left" />
               </div>
               <h2 className="flex flex-col justify-center text-white uppercase mt-1 whitespace-nowrap">
-                <span className="text-lg md:text-xl lg:text-2xl font-serif tracking-[0.1em] lg:tracking-widest leading-none font-bold text-center lg:text-left">TAN PHUONG NAM</span>
-                <span className="text-xs md:text-sm lg:text-[15px] font-serif tracking-[0.2em] leading-none mt-1 lg:mt-1.5 text-center lg:text-left">GALAXY HOTEL</span>
+                <span className="text-lg md:text-xl lg:text-2xl font-serif tracking-[0.1em] lg:tracking-widest leading-none font-bold text-center">TAN PHUONG NAM</span>
+                <span className="text-xs md:text-sm lg:text-[15px] font-serif tracking-[0.2em] leading-none mt-1 lg:mt-1.5 text-center">GALAXY HOTEL</span>
               </h2>
             </div>
             <p className="text-sm leading-relaxed text-[#B0B0B0] mb-8">
               Hoạt động trong lĩnh vực lưu trú và dịch vụ du lịch cao cấp, TPN Galaxy đặt mục tiêu trở thành nhà cung cấp các trải nghiệm nghỉ dưỡng 4 sao hàng đầu tại trung tâm Đà Nẵng.
             </p>
-            <div className="flex flex-wrap items-center gap-4">
-               {/* Fixed badget imitating the red Bộ Công Thương badge - now blue */}
-               <div className="bg-blue-600 rounded text-white text-[10px] font-bold px-3 py-1 flex items-center shadow-lg">
-                 <span className="mr-1 inline-block bg-white rounded-full w-3 h-3 text-blue-600 text-[8px] flex items-center justify-center pl-[2.5px] pt-[0px]">✔</span> ĐÃ THÔNG BÁO BỘ CÔNG THƯƠNG
-               </div>
-               {/* Facebook & Zalo badges */}
-               <div className="bg-[#1877F2] text-white rounded flex items-center justify-center w-8 h-8 cursor-pointer hover:bg-white hover:text-[#1877F2] transition-colors">
-                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-[18px] h-[18px]">
+            <div className="flex flex-wrap items-center gap-6 mt-4 opacity-70">
+               {/* Facebook */}
+               <a href="https://www.facebook.com/share/1CR7rVXhSa/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">
+                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[20px] h-[20px]">
                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                  </svg>
-               </div>
-               <div className="bg-[#0068FF] text-white px-3 rounded flex items-center justify-center h-8 cursor-pointer hover:bg-white hover:text-[#0068FF] transition-colors">
-                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 -my-2 mr-0.5">
-                   <path d="M12.49 10.2722v-.4496h1.3467v6.3218h-.7704a.576.576 0 01-.5763-.5729l-.0006.0005a3.273 3.273 0 01-1.9372.6321c-1.8138 0-3.2844-1.4697-3.2844-3.2823 0-1.8125 1.4706-3.2822 3.2844-3.2822a3.273 3.273 0 011.9372.6321l.0006.0005zM6.9188 7.7896v.205c0 .3823-.051.6944-.2995 1.0605l-.03.0343c-.0542.0615-.1815.206-.2421.2843L2.024 14.8h4.8948v.7682a.5764.5764 0 01-.5767.5761H0v-.3622c0-.4436.1102-.6414.2495-.8476L4.8582 9.23H.1922V7.7896h6.7266zm8.5513 8.3548a.4805.4805 0 01-.4803-.4798v-7.875h1.4416v8.3548H15.47zM20.6934 9.6C22.52 9.6 24 11.0807 24 12.9044c0 1.8252-1.4801 3.306-3.3066 3.306-1.8264 0-3.3066-1.4808-3.3066-3.306 0-1.8237 1.4802-3.3044 3.3066-3.3044zm-10.1412 5.253c1.0675 0 1.9324-.8645 1.9324-1.9312 0-1.065-.865-1.9295-1.9324-1.9295s-1.9324.8644-1.9324 1.9295c0 1.0667.865 1.9312 1.9324 1.9312zm10.1412-.0033c1.0737 0 1.945-.8707 1.945-1.9453 0-1.073-.8713-1.9436-1.945-1.9436-1.0753 0-1.945.8706-1.945 1.9436 0 1.0746.8697 1.9453 1.945 1.9453z"/>
+               </a>
+               {/* Instagram */}
+               <a href="https://www.instagram.com/tanphuongnamgalaxyhoteldanang?igsh=c2N4bmUwaGE0YzV1" target="_blank" rel="noreferrer" className="hover:text-white transition-colors cursor-pointer">
+                 <svg fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" className="w-[20px] h-[20px]"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+               </a>
+               {/* Twitter */}
+               <a href="#" className="hover:text-white transition-colors cursor-pointer">
+                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-[20px] h-[20px]">
+                   <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path>
                  </svg>
-               </div>
-               {i18n.language !== 'vi' && (
-                 <div className="bg-green-500 text-white p-1.5 px-3 rounded flex items-center justify-center h-8 cursor-pointer hover:bg-white hover:text-green-500 transition-colors">
-                   <span className="text-xs font-bold">Line</span>
-                 </div>
-               )}
+               </a>
+               {/* TikTok */}
+               <a href="#" className="hover:text-white transition-colors cursor-pointer flex items-center">
+                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-[20px] h-[20px] mt-[1px]">
+                   <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                 </svg>
+               </a>
+               {/* Linkedin */}
+               <a href="#" className="hover:text-white transition-colors cursor-pointer">
+                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[20px] h-[20px]">
+                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+                 </svg>
+               </a>
             </div>
           </div>
 
           {/* Cột 2: Thông tin công ty */}
           <div className="flex flex-col pt-1 md:pl-8">
-            <h3 className="text-base font-bold text-white mb-6">Công ty TNHH Đầu tư và Tổng hợp Tân Phương Nam</h3>
+            <h3 className="text-base font-bold text-white mb-6">Công ty TNHH Đầu tư Tổng hợp Tân Phương Nam</h3>
             <div className="flex flex-col gap-5 text-sm text-[#B0B0B0]">
                <div className="flex items-start gap-4">
                  <MapPin className="text-[var(--color-gold)] shrink-0 mt-0.5" size={18} />
@@ -235,6 +232,13 @@ const Footer = () => {
             />
             <LocationMarker position={hotelPosition} icon={customIcon} />
           </MapContainer>
+        </div>
+
+        {/* BỘ CÔNG THƯƠNG BADGE BELOW MAP */}
+        <div className="flex justify-start mb-8 relative z-10 w-full px-2">
+           <a href="http://online.gov.vn/" target="_blank" rel="noreferrer" className="block hover:opacity-90 transition-opacity">
+            <img src={bctLogo} alt="Đã thông báo Bộ Công Thương" className="h-[70px] md:h-[140px] w-auto drop-shadow-md" />
+           </a>
         </div>
       </div>
       

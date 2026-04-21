@@ -10,6 +10,13 @@ import img4 from '../assets/pdf_images/img_p5_17.jpeg';
 
 const suitesImg = [
   {
+    id: 'executive-river-view',
+    image: '/gallery/EXECUTIVE RIVER VIEW/EXE 1.jpg',
+    price: 3500000,
+    bedCount: 1,
+    guestCount: 2
+  },
+  {
     id: 'premier-river-view',
     image: img2,
     price: 4200000,
@@ -66,7 +73,7 @@ const ExploreRooms = () => {
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {suitesImg.map((suite, index) => (
             <motion.div
               key={index}
@@ -74,11 +81,11 @@ const ExploreRooms = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: index * 0.15 }}
-              className="group cursor-pointer"
+              className={`group cursor-pointer ${index === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}
             >
               <Link to={`/${locale || 'vi'}/room/${suite.id}`} className="block w-full h-full">
                 <div className="relative overflow-hidden mb-6 rounded-2xl">
-                  <div className={`bg-gray-200 overflow-hidden ${index === 2 ? 'aspect-[16/10] md:aspect-[21/9]' : 'aspect-[16/11]'}`}>
+                  <div className={`bg-gray-200 overflow-hidden ${index === 2 ? 'aspect-[16/10] md:aspect-[21/9] lg:aspect-[16/10]' : 'aspect-[16/10]'}`}>
                     <img
                       src={suite.image}
                       alt={exploreItems[index]?.title}
@@ -88,7 +95,7 @@ const ExploreRooms = () => {
                   {/* Price Ribbon */}
                   <div className="absolute bottom-6 right-6 bg-white px-5 py-3 flex items-center shadow-lg transform group-hover:-translate-y-2 transition-transform duration-500">
                     <span className="text-gray-500 text-xs tracking-wider mr-2 uppercase">{t('explore.from')}</span>
-                    <span className="text-[var(--color-gold)] font-serif font-bold text-lg">${suite.price}</span>
+                    <span className="text-[var(--color-gold)] font-serif font-bold text-lg">${suite.price.toLocaleString('vi-VN')}</span>
                   </div>
                 </div>
 

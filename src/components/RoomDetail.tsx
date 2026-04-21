@@ -1,14 +1,87 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Maximize, Bed, Users, Bath, Star, ArrowLeft, Check, Coffee, Wifi, Monitor, X } from 'lucide-react';
+import { Maximize, Bed, Users, Bath, Star, ArrowLeft, Check, Coffee, Wifi, Monitor, X, Wind, Snowflake, Lock, Utensils, ChevronDown } from 'lucide-react';
 import roomsData from '../data/roomsData.json';
+
+const getAmenityIcon = (idx: number) => {
+  switch (idx) {
+    case 0: return <Monitor size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 1: return <Snowflake size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 2: return <Wifi size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 3: return <Wind size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 4: return <Lock size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 5: return <Coffee size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 6: return <Utensils size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 7: return <Bath size={24} className="text-[var(--color-gold)] shrink-0" />;
+    default: return <Check size={24} className="text-[var(--color-gold)] shrink-0" />;
+  }
+}
+
+const CustomSelect = ({ options, value, onChange }: { options: number[], value: number, onChange: (val: number) => void }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const selectRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div className="relative w-full" ref={selectRef}>
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center justify-between w-full p-3 border border-gray-200 rounded-sm focus:outline-none focus:border-[var(--color-gold)] transition-colors text-sm text-gray-700 bg-gray-50/50 cursor-pointer"
+      >
+        <span>{value}</span>
+        <ChevronDown size={16} className={`text-gray-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            transition={{ duration: 0.15 }}
+            className="absolute z-50 w-full mt-1 bg-white border border-gray-100 rounded-sm shadow-2xl max-h-60 overflow-y-auto left-0 premium-scrollbar"
+          >
+            {options.map((option) => (
+              <button
+                key={option}
+                type="button"
+                onClick={() => {
+                  onChange(option);
+                  setIsOpen(false);
+                }}
+                className={`w-full text-left px-4 py-2.5 text-sm transition-colors hover:bg-[var(--color-gold)]/10 hover:text-[var(--color-gold)] ${value === option ? 'bg-[var(--color-gold)]/10 text-[var(--color-gold)] font-medium' : 'text-gray-700'}`}
+              >
+                {option}
+              </button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 
 const RoomDetail = () => {
   const { locale, roomId } = useParams();
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const [roomsCount, setRoomsCount] = useState<number>(1);
+  const [adultsCount, setAdultsCount] = useState<number>(2);
+  const [childrenCount, setChildrenCount] = useState<number>(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -70,56 +143,88 @@ const RoomDetail = () => {
       </div>
 
       <div className="container mx-auto px-6 md:px-12 max-w-6xl -mt-12 relative z-10">
-        {/* Specs Bar */}
-        <div className="bg-white shadow-xl rounded-sm p-6 md:p-10 flex flex-wrap items-center justify-between gap-6 md:gap-10 border border-gray-100">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center">
-              <Maximize className="text-[var(--color-gold)]" size={20} />
-            </div>
-            <div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">{t('roomDetail.size')}</p>
-              <p className="text-sm md:text-base font-medium">{localizedInfo?.size}</p>
-            </div>
-          </div>
+        {/* OTA Booking Widget */}
+        <div className="bg-white shadow-2xl rounded-sm p-6 md:p-8 flex flex-col gap-6 border border-gray-100">
           
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center">
-              <Bed className="text-[var(--color-gold)]" size={20} />
+          {/* Room Specs Row */}
+          <div className="flex flex-wrap items-center gap-6 md:gap-10 pb-6 border-b border-gray-100">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
+                <Maximize className="text-[var(--color-gold)]" size={18} />
+              </div>
+              <div>
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold mb-0.5">{t('roomDetail.size')}</p>
+                <p className="text-sm font-medium">{localizedInfo?.size}</p>
+              </div>
             </div>
-            <div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">{t('roomDetail.beds')}</p>
-              <p className="text-sm md:text-base font-medium">{roomData.bedCount}</p>
+            
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
+                <Bed className="text-[var(--color-gold)]" size={18} />
+              </div>
+              <div>
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold mb-0.5">{t('roomDetail.beds')}</p>
+                <p className="text-sm font-medium">{roomData.bedCount}</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
+                <Users className="text-[var(--color-gold)]" size={18} />
+              </div>
+              <div>
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold mb-0.5">{t('roomDetail.guests')}</p>
+                <p className="text-sm font-medium">{t('roomDetail.upTo')} {roomData.guestCount}</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
+                <Bath className="text-[var(--color-gold)]" size={18} />
+              </div>
+              <div>
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold mb-0.5">{t('roomDetail.bathrooms')}</p>
+                <p className="text-sm font-medium">{bathroomCount}</p>
+              </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center">
-              <Users className="text-[var(--color-gold)]" size={20} />
+          {/* Booking Inputs */}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
+              <label className="text-xs text-gray-500 uppercase tracking-widest font-semibold">{t('roomDetail.checkIn')}</label>
+              <input type="date" className="p-3 border border-gray-200 rounded-sm w-full focus:outline-none focus:border-[var(--color-gold)] transition-colors text-sm text-gray-700 bg-gray-50/50" />
             </div>
-            <div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">{t('roomDetail.guests')}</p>
-              <p className="text-sm md:text-base font-medium">{t('roomDetail.upTo')} {roomData.guestCount}</p>
+            <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
+              <label className="text-xs text-gray-500 uppercase tracking-widest font-semibold">{t('roomDetail.checkOut')}</label>
+              <input type="date" className="p-3 border border-gray-200 rounded-sm w-full focus:outline-none focus:border-[var(--color-gold)] transition-colors text-sm text-gray-700 bg-gray-50/50" />
+            </div>
+            <div className="col-span-1 md:col-span-1 flex flex-col gap-1.5">
+              <label className="text-xs text-gray-500 uppercase tracking-widest font-semibold">{t('roomDetail.roomsCount')}</label>
+              <CustomSelect options={[1,2,3,4,5]} value={roomsCount} onChange={setRoomsCount} />
+            </div>
+            <div className="col-span-1 md:col-span-2 grid grid-cols-2 gap-4">
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs text-gray-500 uppercase tracking-widest font-semibold">{t('roomDetail.adults')}</label>
+                <CustomSelect options={[1,2,3,4,5,6]} value={adultsCount} onChange={setAdultsCount} />
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs text-gray-500 uppercase tracking-widest font-semibold">{t('roomDetail.children')}</label>
+                <CustomSelect options={[0,1,2,3,4]} value={childrenCount} onChange={setChildrenCount} />
+              </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center">
-              <Bath className="text-[var(--color-gold)]" size={20} />
-            </div>
-            <div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">{t('roomDetail.bathrooms')}</p>
-              <p className="text-sm md:text-base font-medium">{bathroomCount}</p>
-            </div>
-          </div>
-
-          <div className="w-full md:w-auto mt-4 md:mt-0 lg:ml-auto">
-            <div className="text-center md:text-right mb-3">
-              <span className="text-2xl md:text-3xl font-serif text-[#111] font-semibold">{roomData.price.toLocaleString('vi-VN')}</span>
-              <span className="text-sm text-gray-500 ml-1">VNĐ {t('rooms.perNight')}</span>
+          {/* Action Row */}
+          <div className="flex flex-col md:flex-row items-center justify-between mt-2 pt-6 border-t border-gray-100">
+            <div className="text-center md:text-left mb-4 md:mb-0">
+              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">{t('roomDetail.totalPrice')}</p>
+              <span className="text-3xl font-serif text-[#111] font-semibold">{roomData.price.toLocaleString('vi-VN')}</span>
+              <span className="text-sm text-gray-500 ml-1">VNĐ / {t('rooms.perNight').replace('/ ', '')}</span>
             </div>
             <button 
               onClick={handleBookNow}
-              className="w-full md:w-auto bg-[#111] hover:bg-[var(--color-gold)] text-white px-8 py-3.5 text-sm uppercase tracking-widest font-semibold transition-colors rounded-sm"
+              className="w-full md:w-auto bg-[#111] hover:bg-[var(--color-gold)] text-white px-10 py-4 text-sm uppercase tracking-widest font-semibold transition-colors rounded-sm"
             >
               {t('nav.bookNow', { defaultValue: 'Book Now' })}
             </button>
@@ -130,18 +235,19 @@ const RoomDetail = () => {
         <div className="max-w-4xl mx-auto mt-16 space-y-12">
           <section>
             <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.overview')}</h3>
-            <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              {localizedInfo?.desc}
-            </p>
+            <div 
+              className="text-gray-600 leading-relaxed text-lg mb-6 [&_strong]:font-semibold [&_strong]:text-[#111]"
+              dangerouslySetInnerHTML={{ __html: localizedInfo?.desc || '' }}
+            />
           </section>
 
           <section>
             <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.amenities')}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {(t('roomDetail.fixedAmenities', { returnObjects: true }) as string[]).map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3">
-                  <Check size={16} className="text-[var(--color-gold)]" />
-                  <span className="text-gray-700 font-medium text-sm">{item}</span>
+                <div key={idx} className="flex items-center gap-4 bg-gray-50 px-4 py-3 rounded-sm border border-gray-100 hover:border-[var(--color-gold)]/30 transition-colors">
+                  {getAmenityIcon(idx)}
+                  <span className="text-gray-800 font-medium text-sm">{item}</span>
                 </div>
               ))}
             </div>

@@ -55,6 +55,34 @@
     }
   },
   {
+    "id": "family-river-view",
+    "price": 2800000,
+    "bedCount": 2,
+    "guestCount": 4,
+    "galleries": [
+      "/gallery/FAMILY RIVER VIEW/FAM 1.jpg",
+      "/gallery/FAMILY RIVER VIEW/FAM 2.jpg",
+      "/gallery/FAMILY RIVER VIEW/FAM 3.jpg",
+      "/gallery/FAMILY RIVER VIEW/fam 4.jpg"
+    ],
+    "cover": "/gallery/FAMILY RIVER VIEW/FAM 1.jpg",
+    "amenities": ["Han River View", "Family Size", "Free Wi-Fi", "Bathtub"],
+    "reviews": {
+      "vi": [
+        { "name": "Hương Ly", "score": 9.9, "text": "Rộng rãi và thoáng mát. View hướng ra Sông Hàn cực kỳ lãng mạn." }
+      ],
+      "en": [
+        { "name": "Emma R.", "score": 9.9, "text": "Spacious and airy. The view overlooking the Han River is extremely romantic." }
+      ],
+      "ko": [
+        { "name": "강태현", "score": 9.9, "text": "넓고 쾌적합니다. 한강 뷰가 정말 로맨틱합니다." }
+      ],
+      "zh": [
+        { "name": "周健", "score": 9.9, "text": "宽敞明亮。俯瞰韩江的景色极其浪漫。" }
+      ]
+    }
+  },
+  {
     "id": "deluxe-king",
     "price": 1800000,
     "bedCount": 1,
@@ -105,34 +133,6 @@
       ],
       "zh": [
         { "name": "刘洋", "score": 9.5, "text": "非常适合小家庭。我的孩子非常喜欢。" }
-      ]
-    }
-  },
-  {
-    "id": "family-river-view",
-    "price": 2800000,
-    "bedCount": 2,
-    "guestCount": 4,
-    "galleries": [
-      "/gallery/FAMILY RIVER VIEW/FAM 1.jpg",
-      "/gallery/FAMILY RIVER VIEW/FAM 2.jpg",
-      "/gallery/FAMILY RIVER VIEW/FAM 3.jpg",
-      "/gallery/FAMILY RIVER VIEW/fam 4.jpg"
-    ],
-    "cover": "/gallery/FAMILY RIVER VIEW/FAM 1.jpg",
-    "amenities": ["Han River View", "Family Size", "Free Wi-Fi", "Bathtub"],
-    "reviews": {
-      "vi": [
-        { "name": "Hương Ly", "score": 9.9, "text": "Rộng rãi và thoáng mát. View hướng ra Sông Hàn cực kỳ lãng mạn." }
-      ],
-      "en": [
-        { "name": "Emma R.", "score": 9.9, "text": "Spacious and airy. The view overlooking the Han River is extremely romantic." }
-      ],
-      "ko": [
-        { "name": "강태현", "score": 9.9, "text": "넓고 쾌적합니다. 한강 뷰가 정말 로맨틱합니다." }
-      ],
-      "zh": [
-        { "name": "周健", "score": 9.9, "text": "宽敞明亮。俯瞰韩江的景色极其浪漫。" }
       ]
     }
   },

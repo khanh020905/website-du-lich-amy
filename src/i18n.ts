@@ -44,9 +44,9 @@ const resources = {
         items: [
           { title: 'Superior King', size: '25 SqM', desc: '1 King Bed, 2 Pax, Wall View' },
           { title: 'Superior Twin', size: '28 SqM', desc: '2 Twin Beds, 2 Pax, City View' },
+          { title: 'Family River View', size: '40 SqM', desc: '2 Queen Beds, 4 Pax, Han River View' },
           { title: 'Deluxe King', size: '28 SqM', desc: '1 King Bed, 2 Pax, City View' },
-          { title: 'Deluxe Triple', size: '30 SqM', desc: '1 King & 1 Single Bed, 3 Pax, City View' },
-          { title: 'Family River View', size: '40 SqM', desc: '2 Queen Beds, 4 Pax, Han River View' }
+          { title: 'Deluxe Triple', size: '30 SqM', desc: '1 King & 1 Single Bed, 3 Pax, City View' }
         ]
       },
       explore: {
@@ -64,6 +64,11 @@ const resources = {
         beds: 'Beds',
         guests: 'Guests',
         bathrooms: 'Bathrooms',
+        checkIn: 'Check In',
+        checkOut: 'Check Out',
+        roomsCount: 'Rooms',
+        adults: 'Adults',
+        children: 'Children',
         overview: 'Room Overview',
         overviewDesc: 'Step into an oasis of comfort and prestige. Our perfectly curated space perfectly blends modern luxury with elegant aesthetics, ensuring a profound hospitality experience tailored entirely to your desires. Welcome to Tan Phuong Nam Galaxy, where dreams meet reality.',
         fixedAmenities: ['Smart TV', 'Air Conditioning', 'Free Wi-Fi', 'Hair Dryer', 'Safe Box', 'Minibar', 'Buffet Breakfast', 'Standing Bathtub'],
@@ -182,6 +187,44 @@ const resources = {
             description: '20% discount on total F&B bill.\nNote: This promotion is not applicable in conjunction with other events.'
           }
         ]
+      },
+      booking: {
+        selectDates: "Select dates",
+        roomsGuests: "Select rooms and guests",
+        nights: "Nights",
+        promoCode: "Promo Code",
+        availableRooms: "Room Types Available",
+        currency: "Currency",
+        sleeps: "Sleeps",
+        beds: "beds",
+        bathroom: "Bathroom",
+        moreInfo: "More info",
+        seeMore: "See more",
+        unavailable: "are unavailable",
+        findAvailableDates: "Find available dates",
+        selectRate: "Select a rate to continue",
+        book: "Book",
+        secureTransactions: "Secure transactions",
+        dataEncrypted: "All data is encrypted",
+        description: "Description",
+        amenities: "Amenities & Features",
+        roomDetails: "Room Details",
+        size: "Size",
+        occupancy: "Occupancy",
+        bedding: "Bedding",
+        view: "View",
+        checkout: "Checkout",
+        adultsLabel: "Adults",
+        ages13OrMore: "Ages 13 or more",
+        room: "Room",
+        addRoom: "Add additional room",
+        done: "Done",
+        clear: "Clear",
+        apply: "Apply",
+        enterPromo: "Enter your promo code",
+        addPromo: "Add promo code",
+        closePromo: "Close promo code",
+        daysOfWeek: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
       }
     }
   },
@@ -218,29 +261,29 @@ const resources = {
         ]
       },
       rooms: {
-        label: 'PHÒNG CAO CẤP',
+        label: '',
         title: 'Các hạng phòng',
         perNight: '/ Đêm',
         bed: 'Giường',
         guests: 'Khách',
         desc: 'Khách sạn Tân Phương Nam Galaxy mang phong cách kiến trúc hiện đại. Hệ thống phòng nghỉ được trang bị nội thất cao cấp. Không gian mở cùng tầm nhìn thoáng đãng giúp du khách tận hưởng trọn vẹn vẻ đẹp của thành phố. Đây sẽ là điểm dừng chân lý tưởng cho những ai tìm kiếm sự thoải mái và trải nghiệm nghỉ dưỡng khác biệt.',
         items: [
-          { title: 'Superior King', size: '25 m2', desc: 'Superior King room được thiết kế với không gian nhỏ gọn nhưng vô cùng ấm cúng, mang lại cảm giác thư giãn. Giường King êm ái sẽ là lựa chọn lý tưởng cho du khách thích sự yên tĩnh.', highlights: ['Thêm buffet sáng', 'Bồn tắm đứng'] },
-          { title: 'Superior Twin', size: '25 m2', desc: 'Phòng Superior Twin với diện tích 25m2 mang đến không gian ấm cúng. Đây là lựa chọn lý tưởng cho những ai muốn tận hưởng sự tiện nghi và vẻ đẹp đặc trưng của thành phố Đà Nẵng.', highlights: ['Ngắm nhìn thành phố sôi động về đêm', 'Thêm buffet sáng', 'Bồn tắm đứng'] },
-          { title: 'Deluxe King', size: '28 m2', desc: 'Deluxe King room được thiết kế với không gian mở kết hợp với ánh sáng tự nhiên tạo cảm giác nhẹ nhàng và yên bình. Giường King size êm ái tạo giấc ngủ thoải mái cho du khách.', highlights: ['Ngắm nhìn khung cảnh thành phố', 'Thêm buffet sáng', 'Bồn tắm đứng'] },
-          { title: 'Deluxe Triple', size: '30 m2', desc: 'Deluxe Triple room được thiết kế với 1 giường lớn & 1 giường nhỏ mang đến không gian nghỉ ngơi thoải mái cho cả gia đình.', highlights: ['Hướng phố', 'Thêm buffet sáng', 'Bồn tắm đứng'] },
-          { title: 'Family River View', size: '40 m2', desc: 'Với diện tích 40m2 thoáng rộng, mang đến không gian ấm cúng cho cả gia đình nghỉ ngơi.', highlights: ['Hướng nhìn ra dòng sông Hàn thơ mộng', 'Thêm buffet sáng', 'Bồn tắm nằm'] },
-          { title: 'Executive River View', size: '30 m2', desc: 'Chạm vào vẻ đẹp sông Hàn. Thức dậy cùng ánh nắng nhẹ trên sông Hàn, tận hưởng không gian yên bình trong căn phòng Executive River View với giường 1m8 êm ái. Mỗi khoảnh khắc tại đây – từ bình minh dịu dàng đến ánh đèn đêm phản chiếu trên mặt nước – đều mang lại cảm giác thư giãn và tinh tế, dành riêng cho bạn.', highlights: ['View Sông Hàn tuyệt đẹp', 'Thêm buffet sáng', 'Bồn tắm nằm thư giãn'] }
+          { title: 'Superior King', size: '25 m2', desc: 'Superior King room với <strong>diện tích 25m2</strong>, <strong>cửa sổ thoáng đãng</strong>. Phòng được thiết kế với không gian nhỏ gọn nhưng vô cùng ấm cúng mang lại cảm giác thư giãn. <strong>Giường king 1m8</strong> sẽ là lựa chọn cho những cặp đôi thích sự yên tĩnh.', highlights: ['Thêm buffet sáng', 'Bồn tắm đứng'] },
+          { title: 'Superior Twin', size: '28 m2', desc: 'Phòng Superior Twin với <strong>diện tích 28m2</strong>, <strong>tầm nhìn hướng phố</strong> nhộn nhịp. Thiết kế phòng mang đến không gian ấm cúng, tối giản. <strong>Hai giường Twin 1m2</strong> êm ái sẽ là lựa chọn lý tưởng cho bạn bè hoặc đồng nghiệp trong kỳ nghỉ tại Đà Nẵng.', highlights: ['Ngắm nhìn thành phố sôi động về đêm', 'Thêm buffet sáng', 'Bồn tắm đứng'] },
+          { title: 'Family River View', size: '40 m2', desc: 'Phòng Family River View với <strong>diện tích 40m2</strong> thoáng rộng, mang đến <strong>tầm nhìn toàn cảnh sông Hàn</strong> thơ mộng. Không gian được thiết kế hoàn hảo cho lưu trú gia đình. <strong>Hai giường Queen 1m6</strong> rộng rãi sẽ đem lại giấc ngủ êm ái cho mọi thành viên sau một ngày dài.', highlights: ['Hướng nhìn ra dòng sông Hàn thơ mộng', 'Thêm buffet sáng', 'Bồn tắm nằm'] },
+          { title: 'Deluxe King', size: '28 m2', desc: 'Deluxe King room với <strong>diện tích 28m2</strong>, sở hữu <strong>cửa sổ đón ánh sáng tự nhiên</strong> cùng <strong>tầm nhìn khung cảnh thành phố</strong>. Không gian mở mang cảm giác nhẹ nhàng, yên bình. <strong>Giường King lớn 1m8</strong> êm ái tạo nên sự trọn vẹn thư thái cho du khách.', highlights: ['Ngắm nhìn khung cảnh thành phố', 'Thêm buffet sáng', 'Bồn tắm đứng'] },
+          { title: 'Deluxe Triple', size: '30 m2', desc: 'Phòng Deluxe Triple với <strong>diện tích 30m2</strong> đem đến không gian tiện nghi cùng <strong>tầm nhìn hướng phố</strong>. Thiết kế phòng chú trọng sự phân bổ thông minh, trang bị <strong>1 giường lớn 1m8</strong> và <strong>1 giường nhỏ 1m2</strong>, cực kỳ lý tưởng cho gia đình nhỏ hoặc nhóm bạn 3 người.', highlights: ['Hướng phố', 'Thêm buffet sáng', 'Bồn tắm đứng'] }
         ]
       },
       explore: {
-        label: 'HẠNG SUITE',
-        title: 'Khám phá hạng Suite',
+        label: '',
+        title: 'Khám phá',
         desc: 'Trải nghiệm không gian xa hoa và đẳng cấp bậc nhất tại các phòng Suite của Tân Phương Nam Galaxy. Tận hưởng đặc quyền thượng lưu cùng tầm nhìn tuyệt đẹp ôm trọn dòng sông Hàn thơ mộng.',
         from: 'Từ',
         items: [
-          { title: 'Premier River View', size: '35 m2', desc: 'Premier River View mang đến diện tích phòng rộng rãi và ban công thoải mái.', highlights: ['Ngắm toàn cảnh thành phố về đêm bên dòng sông Hàn', 'Thêm buffet sáng', 'Bồn tắm nằm', 'Sofa bed'] },
-          { title: 'TPN Penthouse', size: '100 m2', desc: 'TPN Penthouse rộng 100m2, riêng tư nằm trên tầng cao nhất của khách sạn. Quý khách sẽ có cảm giác như đang ở trong chính ngôi nhà của mình.', highlights: ['View trực diện Sông Hàn', '2 phòng ngủ lớn, 1 phòng khách sang trọng, 1 căn bếp ấm cúng', 'Thêm buffet sáng', 'Bồn tắm nằm', 'Kitchen room', 'Living room'] }
+          { title: 'Executive River View', size: '30 m2', desc: 'Phòng Executive River View với <strong>diện tích 30m2</strong> mang lại không gian sang trọng với <strong>tầm nhìn tuyệt đẹp ôm trọn dòng sông Hàn</strong>. Tận hưởng bình minh êm đềm hay ánh đèn đêm phản chiếu lấp lánh trên mặt nước ngay từ phòng ngủ. <strong>Giường King 1m8</strong> êm ái sẽ đem đến những phút giây thư giãn tinh tế nhất dành riêng cho bạn.', highlights: ['View Sông Hàn tuyệt đẹp', 'Thêm buffet sáng', 'Bồn tắm nằm thư giãn'] },
+          { title: 'Premier River View', size: '35 m2', desc: 'Phòng Premier River View nổi bật với <strong>diện tích 35m2</strong> rộng rãi cùng ban công lộng gió, đón trọn <strong>tầm nhìn toàn cảnh sông Hàn</strong> thơ mộng. Hệ thống nội thất hiện đại kết hợp <strong>chiếc giường King 1m8</strong> siêu lớn mang lại sự thoải mái và trải nghiệm lưu trú thượng lưu.', highlights: ['Ngắm toàn cảnh thành phố về đêm bên dòng sông Hàn', 'Thêm buffet sáng', 'Bồn tắm nằm', 'Sofa bed'] },
+          { title: 'TPN Penthouse', size: '100 m2', desc: 'TPN Penthouse mang đến đặc quyền duy nhất trên tầng trệt với <strong>diện tích cực khủng 100m2</strong>. Sở hữu <strong>tầm nhìn ngoạn mục bao trọn dòng sông Hàn</strong>, không gian bao gồm phòng khách xa hoa, phòng bếp tiện nghi và <strong>2 phòng ngủ lớn trang bị giường King 1m8</strong>, tái hiện chuẩn mực sống xa xỉ ngay giữa lòng Đà Nẵng.', highlights: ['View trực diện Sông Hàn', '2 phòng ngủ lớn, 1 phòng khách sang trọng, 1 căn bếp ấm cúng', 'Thêm buffet sáng', 'Bồn tắm nằm', 'Kitchen room', 'Living room'] }
         ]
       },
       roomDetail: {
@@ -248,6 +291,11 @@ const resources = {
         beds: 'Giường',
         guests: 'Khách',
         bathrooms: 'Phòng tắm',
+        checkIn: 'Nhận phòng',
+        checkOut: 'Trả phòng',
+        roomsCount: 'Số phòng',
+        adults: 'Người lớn',
+        children: 'Trẻ em',
         overview: 'Tổng Quan Phòng',
         overviewDesc: '',
         fixedAmenities: ['TV thông minh', 'Điều hòa', 'Wifi miễn phí', 'Sấy tóc', 'Két sắt', 'Minibar', 'Ăn sáng buffet', 'Bồn tắm đứng'],
@@ -366,6 +414,44 @@ const resources = {
             description: 'Giảm 20% trên tổng bill.\nKhông áp dụng đồng thời với các sự kiện khác.'
           }
         ]
+      },
+      booking: {
+        selectDates: "Chọn ngày",
+        roomsGuests: "Chọn phòng và khách",
+        nights: "Đêm",
+        promoCode: "Mã giảm giá",
+        availableRooms: "Các loại phòng còn trống",
+        currency: "Tiền tệ",
+        sleeps: "Sức chứa",
+        beds: "giường",
+        bathroom: "Phòng tắm",
+        moreInfo: "Xem chi tiết",
+        seeMore: "Xem thêm",
+        unavailable: "không còn trống",
+        findAvailableDates: "Tìm ngày còn trống",
+        selectRate: "Chọn giá để tiếp tục",
+        book: "Đặt phòng",
+        secureTransactions: "Giao dịch an toàn",
+        dataEncrypted: "Dữ liệu được mã hóa",
+        description: "Mô tả",
+        amenities: "Tiện nghi & Tính năng",
+        roomDetails: "Chi tiết phòng",
+        size: "Diện tích",
+        occupancy: "Sức chứa tối đa",
+        bedding: "Loại giường",
+        view: "Tầm nhìn",
+        checkout: "Ngày trả phòng",
+        adultsLabel: "Người lớn",
+        ages13OrMore: "Từ 13 tuổi trở lên",
+        room: "Phòng",
+        addRoom: "Thêm phòng",
+        done: "Xong",
+        clear: "Xóa",
+        apply: "Áp dụng",
+        enterPromo: "Nhập mã giảm giá",
+        addPromo: "Thêm mã giảm giá",
+        closePromo: "Đóng mã giảm giá",
+        daysOfWeek: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"]
       }
     }
   },
@@ -411,9 +497,9 @@ const resources = {
         items: [
           { title: '슈페리어 킹', size: '25 m2', desc: '킹 침대 1개, 2인, 벽 전망' },
           { title: '슈페리어 트윈', size: '28 m2', desc: '트윈 침대 2개, 2인, 시티 뷰' },
+          { title: '패밀리 리버 뷰', size: '40 m2', desc: '퀸 침대 2개, 4인, 한강 뷰' },
           { title: '디럭스 킹', size: '28 m2', desc: '킹 침대 1개, 2인, 시티 뷰' },
-          { title: '디럭스 트리플', size: '30 m2', desc: '킹 침대 1개 & 싱글 침대 1개, 3인, 시티 뷰' },
-          { title: '패밀리 리버 뷰', size: '40 m2', desc: '퀸 침대 2개, 4인, 한강 뷰' }
+          { title: '디럭스 트리플', size: '30 m2', desc: '킹 침대 1개 & 싱글 침대 1개, 3인, 시티 뷰' }
         ]
       },
       explore: {
@@ -431,6 +517,11 @@ const resources = {
         beds: '침대',
         guests: '투숙객',
         bathrooms: '욕실',
+        checkIn: '체크인',
+        checkOut: '체크아웃',
+        roomsCount: '객실',
+        adults: '성인',
+        children: '아동',
         overview: '객실 개요',
         overviewDesc: '편안함과 품격이 있는 오아시스로 들어가 보십시오. 완벽하게 큐레이팅된 저희 공간은 현대적인 럭셔리와 우아한 미학을 완벽하게 조화시켜 고객의 요구에 완벽하게 맞춘 깊은 경험을 보장합니다. 꿈이 현실이 되는 탄 프엉 남 갤럭시에 오신 것을 환영합니다.',
         fixedAmenities: ['스마트 TV', '에어컨', '무료 Wi-Fi', '헤어드라이어', '금고', '미니바', '조식 뷔페', '샤워 부스'],
@@ -549,6 +640,44 @@ const resources = {
             description: 'F&B 총 청구 금액의 20% 할인.\n참고: 본 프로모션은 다른 이벤트와 중복 적용되지 않습니다.'
           }
         ]
+      },
+      booking: {
+        selectDates: "날짜 선택",
+        roomsGuests: "객실 및 인원 선택",
+        nights: "박",
+        promoCode: "프로모션 코드",
+        availableRooms: "예약 가능한 객실 유형",
+        currency: "통화",
+        sleeps: "숙박 인원",
+        beds: "침대",
+        bathroom: "욕실",
+        moreInfo: "상세 보기",
+        seeMore: "자세히 보기",
+        unavailable: "이용 불가",
+        findAvailableDates: "가능한 날짜 찾기",
+        selectRate: "계속하려면 요금을 선택하세요",
+        book: "예약하기",
+        secureTransactions: "보안 거래",
+        dataEncrypted: "모든 데이터는 암호화됩니다",
+        description: "설명",
+        amenities: "편의 시설 및 특징",
+        roomDetails: "객실 세부 정보",
+        size: "크기",
+        occupancy: "숙박 정원",
+        bedding: "침대 구성",
+        view: "전망",
+        checkout: "체크아웃",
+        adultsLabel: "성인",
+        ages13OrMore: "13세 이상",
+        room: "객실",
+        addRoom: "객실 추가",
+        done: "완료",
+        clear: "지우기",
+        apply: "적용",
+        enterPromo: "프로모션 코드를 입력하세요",
+        addPromo: "프로모션 코드 추가",
+        closePromo: "프로모션 코드 닫기",
+        daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"]
       }
     }
   },
@@ -594,9 +723,9 @@ const resources = {
         items: [
           { title: '高级大床房', size: '25 平方米', desc: '1张大床，2人，面墙景观' },
           { title: '高级双床房', size: '28 平方米', desc: '2张单人床，2人，市景' },
+          { title: '家庭江景房', size: '40 平方米', desc: '2张大号双人床，4人，韩江景观' },
           { title: '豪华大床房', size: '28 平方米', desc: '1张大床，2人，市景' },
-          { title: '豪华三人房', size: '30 平方米', desc: '1张大床 & 1张单人床，3人，市景' },
-          { title: '家庭江景房', size: '40 平方米', desc: '2张大号双人床，4人，韩江景观' }
+          { title: '豪华三人房', size: '30 平方米', desc: '1张大床 & 1张单人床，3人，市景' }
         ]
       },
       explore: {
@@ -614,6 +743,11 @@ const resources = {
         beds: '床型',
         guests: '宾客',
         bathrooms: '浴室',
+        checkIn: '入住',
+        checkOut: '退房',
+        roomsCount: '客房',
+        adults: '成人',
+        children: '儿童',
         overview: '客房概述',
         overviewDesc: '步入这片兼具舒适与尊贵的绿洲。我们精心打造的空间完美融合了现代奢华与优雅美学，确保为您带来完全满足您愿望的深刻体验。欢迎来到新南方银河，这里是梦想成真的地方。',
         fixedAmenities: ['智能电视', '空调', '免费 Wi-Fi', '吹风机', '保险箱', '迷你吧', '自助早餐', '独立淋浴间'],
@@ -732,6 +866,44 @@ const resources = {
             description: '全单餐饮消费享 8 折（20% off）优惠。\n注：此优惠不可与其他活动同时使用。'
           }
         ]
+      },
+      booking: {
+        selectDates: "选择日期",
+        roomsGuests: "选择客房和人数",
+        nights: "晚",
+        promoCode: "优惠码",
+        availableRooms: "可用房型",
+        currency: "货币",
+        sleeps: "入住人数",
+        beds: "床",
+        bathroom: "浴室",
+        moreInfo: "更多信息",
+        seeMore: "了解更多",
+        unavailable: "不可用",
+        findAvailableDates: "查找可用日期",
+        selectRate: "选择房价以继续",
+        book: "预订",
+        secureTransactions: "安全交易",
+        dataEncrypted: "所有数据均已加密",
+        description: "说明",
+        amenities: "设施与特色",
+        roomDetails: "客房详情",
+        size: "面积",
+        occupancy: "入住限制",
+        bedding: "床型",
+        view: "景观",
+        checkout: "退房",
+        adultsLabel: "成人",
+        ages13OrMore: "13 岁及以上",
+        room: "客房",
+        addRoom: "添加客房",
+        done: "完成",
+        clear: "清除",
+        apply: "应用",
+        enterPromo: "输入您的优惠码",
+        addPromo: "添加优惠码",
+        closePromo: "关闭优惠码",
+        daysOfWeek: ["日", "一", "二", "三", "四", "五", "六"]
       }
     }
   }

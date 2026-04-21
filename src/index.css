@@ -57,5 +57,36 @@ html {
   .hidden-scrollbar::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
   }
+
+  .premium-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gold) transparent;
+  }
+
+  .premium-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .premium-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .premium-scrollbar::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+
+  .premium-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold);
+  }
+
+  /* Hide scrollbar buttons (arrows) */
+  .premium-scrollbar::-webkit-scrollbar-button {
+    display: none;
+  }
 }
+
+
 

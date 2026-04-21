@@ -1,205 +1,5 @@
 [
   {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_1.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_10.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_11.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_12.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_13.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_14.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_15.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_16.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_17.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_18.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_19.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_2.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_20.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_3.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_4.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_5.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_6.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_7.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_8.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_9.png",
-    "category": "Buffet"
-  },
-  {
-    "title": "DELUXE KING",
-    "image": "/gallery/DELUXE KING/DELUXE 1.jpg",
-    "category": "DELUXE KING"
-  },
-  {
-    "title": "DELUXE KING",
-    "image": "/gallery/DELUXE KING/DELUXE 2 nen.jpg",
-    "category": "DELUXE KING"
-  },
-  {
-    "title": "DELUXE KING",
-    "image": "/gallery/DELUXE KING/DELUXE 2.jpg",
-    "category": "DELUXE KING"
-  },
-  {
-    "title": "DELUXE TRIPLE",
-    "image": "/gallery/DELUXE TRIPLE/tripl 3.jpg",
-    "category": "DELUXE TRIPLE"
-  },
-  {
-    "title": "DELUXE TRIPLE",
-    "image": "/gallery/DELUXE TRIPLE/TRIPLE 1.jpg",
-    "category": "DELUXE TRIPLE"
-  },
-  {
-    "title": "DELUXE TRIPLE",
-    "image": "/gallery/DELUXE TRIPLE/TRIPLE 2.jpg",
-    "category": "DELUXE TRIPLE"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/bartender-bar.jpg",
-    "category": "DỊCH VỤ"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/hồ bơi.jpg",
-    "category": "DỊCH VỤ"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/hội nghị.jpg",
-    "category": "DỊCH VỤ"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/pool.jpg",
-    "category": "DỊCH VỤ"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/pool1.jpg",
-    "category": "DỊCH VỤ"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/pool2.jpg",
-    "category": "DỊCH VỤ"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/spa.jpg",
-    "category": "DỊCH VỤ"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/SPA2.jpg",
-    "category": "DỊCH VỤ"
-  },
-  {
-    "title": "EXECUTIVE RIVER VIEW",
-    "image": "/gallery/EXECUTIVE RIVER VIEW/EXE 1.jpg",
-    "category": "EXECUTIVE RIVER VIEW"
-  },
-  {
-    "title": "EXECUTIVE RIVER VIEW",
-    "image": "/gallery/EXECUTIVE RIVER VIEW/EXE 2.jpg",
-    "category": "EXECUTIVE RIVER VIEW"
-  },
-  {
-    "title": "FAMILY RIVER VIEW",
-    "image": "/gallery/FAMILY RIVER VIEW/FAM 1.jpg",
-    "category": "FAMILY RIVER VIEW"
-  },
-  {
-    "title": "FAMILY RIVER VIEW",
-    "image": "/gallery/FAMILY RIVER VIEW/FAM 2.jpg",
-    "category": "FAMILY RIVER VIEW"
-  },
-  {
-    "title": "FAMILY RIVER VIEW",
-    "image": "/gallery/FAMILY RIVER VIEW/FAM 3.jpg",
-    "category": "FAMILY RIVER VIEW"
-  },
-  {
-    "title": "FAMILY RIVER VIEW",
-    "image": "/gallery/FAMILY RIVER VIEW/fam 4.jpg",
-    "category": "FAMILY RIVER VIEW"
-  },
-  {
     "title": "Lobby",
     "image": "/gallery/Lobby/lobby_1.png",
     "category": "Lobby"
@@ -262,101 +62,306 @@
   {
     "title": "MẶT NGOÀI KHÁCH SẠN",
     "image": "/gallery/MẶT NGOÀI KHÁCH SẠN/tn1.jpg",
-    "category": "MẶT NGOÀI KHÁCH SẠN"
+    "category": "Lobby"
   },
   {
     "title": "MẶT NGOÀI KHÁCH SẠN",
     "image": "/gallery/MẶT NGOÀI KHÁCH SẠN/TN2.jpg",
-    "category": "MẶT NGOÀI KHÁCH SẠN"
+    "category": "Lobby"
   },
   {
     "title": "MẶT NGOÀI KHÁCH SẠN",
     "image": "/gallery/MẶT NGOÀI KHÁCH SẠN/tn3.jpg",
-    "category": "MẶT NGOÀI KHÁCH SẠN"
-  },
-  {
-    "title": "NHÀ HÀNG",
-    "image": "/gallery/NHÀ HÀNG/res1.jpg",
-    "category": "NHÀ HÀNG"
-  },
-  {
-    "title": "NHÀ HÀNG",
-    "image": "/gallery/NHÀ HÀNG/RES2.jpg",
-    "category": "NHÀ HÀNG"
-  },
-  {
-    "title": "NHÀ HÀNG",
-    "image": "/gallery/NHÀ HÀNG/restaurent.jpg",
-    "category": "NHÀ HÀNG"
-  },
-  {
-    "title": "PREMIER RIVER VIEW",
-    "image": "/gallery/PREMIER RIVER VIEW/PRE 1.jpg",
-    "category": "PREMIER RIVER VIEW"
-  },
-  {
-    "title": "PREMIER RIVER VIEW",
-    "image": "/gallery/PREMIER RIVER VIEW/PRE 2.jpg",
-    "category": "PREMIER RIVER VIEW"
-  },
-  {
-    "title": "PREMIER RIVER VIEW",
-    "image": "/gallery/PREMIER RIVER VIEW/PRE 3.jpg",
-    "category": "PREMIER RIVER VIEW"
+    "category": "Lobby"
   },
   {
     "title": "SẢNH LỄ TÂN",
     "image": "/gallery/SẢNH LỄ TÂN/reception.jpg",
-    "category": "SẢNH LỄ TÂN"
+    "category": "Lobby"
   },
   {
     "title": "SẢNH LỄ TÂN",
     "image": "/gallery/SẢNH LỄ TÂN/z7629521115519_2d94d4c8d1bfbf2af4ed95afb2515904.jpg",
-    "category": "SẢNH LỄ TÂN"
+    "category": "Lobby"
+  },
+  {
+    "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/bartender-bar.jpg",
+    "category": "Coffee lounge"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_1.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_10.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_11.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_12.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_13.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_14.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_15.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_16.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_17.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_18.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_19.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_2.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_20.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_3.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_4.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_5.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_6.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_7.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_8.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "Buffet",
+    "image": "/gallery/Buffet/buffet_9.png",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "NHÀ HÀNG",
+    "image": "/gallery/NHÀ HÀNG/res1.jpg",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "NHÀ HÀNG",
+    "image": "/gallery/NHÀ HÀNG/RES2.jpg",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "NHÀ HÀNG",
+    "image": "/gallery/NHÀ HÀNG/restaurent.jpg",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/spa.jpg",
+    "category": "Spa & Wellness"
+  },
+  {
+    "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/SPA2.jpg",
+    "category": "Spa & Wellness"
+  },
+  {
+    "title": "Gym & Fitness",
+    "image": "/gallery/Gym & Fitness/hotel_gym_mockup_1.png",
+    "category": "Gym & Fitness"
+  },
+  {
+    "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/hồ bơi.jpg",
+    "category": "Rooftop Swimming pool"
+  },
+  {
+    "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/pool.jpg",
+    "category": "Rooftop Swimming pool"
+  },
+  {
+    "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/pool1.jpg",
+    "category": "Rooftop Swimming pool"
+  },
+  {
+    "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/pool2.jpg",
+    "category": "Rooftop Swimming pool"
+  },
+  {
+    "title": "DỊCH VỤ",
+    "image": "/gallery/DỊCH VỤ/hội nghị.jpg",
+    "category": "Meeting room"
+  },
+  {
+    "title": "DELUXE KING",
+    "image": "/gallery/DELUXE KING/DELUXE 1.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "DELUXE KING",
+    "image": "/gallery/DELUXE KING/DELUXE 2 nen.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "DELUXE KING",
+    "image": "/gallery/DELUXE KING/DELUXE 2.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "DELUXE TRIPLE",
+    "image": "/gallery/DELUXE TRIPLE/tripl 3.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "DELUXE TRIPLE",
+    "image": "/gallery/DELUXE TRIPLE/TRIPLE 1.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "DELUXE TRIPLE",
+    "image": "/gallery/DELUXE TRIPLE/TRIPLE 2.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "EXECUTIVE RIVER VIEW",
+    "image": "/gallery/EXECUTIVE RIVER VIEW/EXE 1.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "EXECUTIVE RIVER VIEW",
+    "image": "/gallery/EXECUTIVE RIVER VIEW/EXE 2.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "FAMILY RIVER VIEW",
+    "image": "/gallery/FAMILY RIVER VIEW/FAM 1.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "FAMILY RIVER VIEW",
+    "image": "/gallery/FAMILY RIVER VIEW/FAM 2.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "FAMILY RIVER VIEW",
+    "image": "/gallery/FAMILY RIVER VIEW/FAM 3.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "FAMILY RIVER VIEW",
+    "image": "/gallery/FAMILY RIVER VIEW/fam 4.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "PREMIER RIVER VIEW",
+    "image": "/gallery/PREMIER RIVER VIEW/PRE 1.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "PREMIER RIVER VIEW",
+    "image": "/gallery/PREMIER RIVER VIEW/PRE 2.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "PREMIER RIVER VIEW",
+    "image": "/gallery/PREMIER RIVER VIEW/PRE 3.jpg",
+    "category": "Room"
   },
   {
     "title": "SUPERIOR KING",
     "image": "/gallery/SUPERIOR KING/sup 1 nen.jpg",
-    "category": "SUPERIOR KING"
+    "category": "Room"
   },
   {
     "title": "SUPERIOR TWIN",
     "image": "/gallery/SUPERIOR TWIN/TWIN 1.jpg",
-    "category": "SUPERIOR TWIN"
+    "category": "Room"
   },
   {
     "title": "SUPERIOR TWIN",
     "image": "/gallery/SUPERIOR TWIN/TWIN 2.jpg",
-    "category": "SUPERIOR TWIN"
+    "category": "Room"
   },
   {
     "title": "TPN PENTHOUSE",
     "image": "/gallery/TPN PENTHOUSE/TPN 1.jpg",
-    "category": "TPN PENTHOUSE"
+    "category": "Room"
   },
   {
     "title": "TPN PENTHOUSE",
     "image": "/gallery/TPN PENTHOUSE/TPN 2.jpg",
-    "category": "TPN PENTHOUSE"
+    "category": "Room"
   },
   {
     "title": "TPN PENTHOUSE",
     "image": "/gallery/TPN PENTHOUSE/TPN 3.jpg",
-    "category": "TPN PENTHOUSE"
+    "category": "Room"
   },
   {
     "title": "TPN PENTHOUSE",
     "image": "/gallery/TPN PENTHOUSE/TPN 4.jpg",
-    "category": "TPN PENTHOUSE"
+    "category": "Room"
   },
   {
     "title": "TPN PENTHOUSE",
     "image": "/gallery/TPN PENTHOUSE/TPN 5.jpg",
-    "category": "TPN PENTHOUSE"
+    "category": "Room"
   },
   {
     "title": "TPN PENTHOUSE",
     "image": "/gallery/TPN PENTHOUSE/TPN 6.jpg",
-    "category": "TPN PENTHOUSE"
+    "category": "Room"
   }
 ]

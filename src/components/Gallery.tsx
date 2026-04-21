@@ -10,24 +10,21 @@ const Gallery = () => {
   const { t } = useTranslation();
   const rawCategories = Array.from(new Set(galleryData.map(item => item.category)));
 
-  // Custom sort to ensure Lobby and Rooms appear before Buffet
+  // Custom sort according to specific business rules
+  // Custom sort according to specific business rules
   const categoryPriority = [
-    'SẢNH LỄ TÂN', 'Lobby', 'MẶT NGOÀI KHÁCH SẠN',
-    'TPN PENTHOUSE', 'PREMIER RIVER VIEW', 'EXECUTIVE RIVER VIEW', 
-    'DELUXE KING', 'DELUXE TRIPLE', 'SUPERIOR KING', 'SUPERIOR TWIN', 'FAMILY RIVER VIEW',
-    'NHÀ HÀNG', 'Buffet', 'DỊCH VỤ'
+    'Lobby',
+    'Coffee lounge',
+    'Nhà hàng The South',
+    'Spa & Wellness',
+    'Gym & Fitness',
+    'Rooftop Swimming pool',
+    'Meeting room',
+    'Room'
   ];
 
-  const categories = rawCategories.sort((a, b) => {
-    const minPriority = 999;
-    const indexA = categoryPriority.indexOf(a) !== -1 ? categoryPriority.indexOf(a) : minPriority;
-    const indexB = categoryPriority.indexOf(b) !== -1 ? categoryPriority.indexOf(b) : minPriority;
-    
-    if (indexA !== indexB) {
-      return indexA - indexB;
-    }
-    return a.localeCompare(b);
-  });
+  // Force the tabs to perfectly match the user's priority order
+  const categories = categoryPriority;
   
   const [viewMode, setViewMode] = useState<'normal' | 'dome'>('normal');
   const [activeCategory, setActiveCategory] = useState<string>(categories[0] || '');
@@ -156,7 +153,24 @@ const Gallery = () => {
           
           {categories.map((category) => {
             const rawCategoryImages = galleryData.filter(item => item.category === category);
-            if (rawCategoryImages.length === 0) return null;
+            if (rawCategoryImages.length === 0) {
+              return (
+                <div key={category} id={`gallery-section-${category}`} className="scroll-mt-32">
+                  <motion.h3 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="text-4xl md:text-5xl font-serif text-black mb-12 font-bold"
+                  >
+                    {translateCategory(category)}
+                  </motion.h3>
+                  <div className="w-full h-64 flex items-center justify-center bg-gray-50 border border-dashed border-gray-300 rounded-sm">
+                    <p className="text-gray-500 font-medium tracking-widest uppercase text-sm">Đang cập nhật hình ảnh...</p>
+                  </div>
+                </div>
+              );
+            }
 
             // Automatically hide the last image if the total count is odd (to prevent gap issues without stretching)
             // Exception: If there is ONLY 1 image, we keep it.
