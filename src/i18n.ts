@@ -202,7 +202,7 @@ const resources = {
       intro: {
         aboutUs: 'VỀ CHÚNG TÔI',
         highlight: "",
-        desc: "Tân Phương Nam Galaxy Hotel sở hữu 86 phòng nghỉ và Penhouse được thiết kế sang trọng và tinh tế. Hứa hẹn mang đến trải nghiệm lưu trú đẳng cấp và trọn vẹn cho mọi du khách.",
+        desc: "Tọa lạc trên cung đường Bạch Đằng đẹp bậc nhất thành phố Đà Nẵng, nơi ôm trọn vẻ đẹp của dòng sông Hàn huyền thoại. Tân Phương Nam Galaxy Hotel sở hữu 86 phòng nghỉ và Penhouse được thiết kế sang trọng và tinh tế. Hứa hẹn mang đến trải nghiệm lưu trú đẳng cấp và trọn vẹn cho mọi du khách.",
         knowMore: '',
         byTheNumber: 'NHỮNG CON SỐ',
         stats: [
