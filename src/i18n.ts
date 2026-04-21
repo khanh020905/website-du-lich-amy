@@ -219,7 +219,7 @@ const resources = {
       },
       rooms: {
         label: 'PHÒNG CAO CẤP',
-        title: 'Bộ Sưu Tập Phòng',
+        title: 'Các hạng phòng',
         perNight: '/ Đêm',
         bed: 'Giường',
         guests: 'Khách',
