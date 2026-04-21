@@ -238,7 +238,7 @@ const BookingSearchForm = () => {
             </label>
             <Users size={20} className="text-[#D4AF37]" />
             <span className="text-[16px] font-medium text-gray-800">
-              {totalRooms} {totalRooms === 1 ? t('booking.room', 'Room') : t('booking.room', 'Room') + 's'}, {totalAdults} {totalAdults === 1 ? t('roomDetail.guests', 'Guest') : t('roomDetail.guests', 'Guest') + 's'}
+              {totalRooms} {t('booking.room', 'Room')}{totalRooms > 1 && i18n.language === 'en' ? 's' : ''}, {totalAdults} {t('roomDetail.guests', 'Guest')}{totalAdults > 1 && i18n.language === 'en' ? 's' : ''}
             </span>
           </div>
           
