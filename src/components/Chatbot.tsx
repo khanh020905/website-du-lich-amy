@@ -19,12 +19,12 @@ Dưới đây là thông tin chi tiết về khách sạn mà bạn PHẢI tham 
 PHÒNG NGỦ
 Khách sạn Tân Phương Nam mang phong cách kiến trúc hiện đại...
 
-Superior Twin room ![Superior Twin](/gallery/SUPERIOR%20TWIN/TWIN%201.jpg): Phòng Superior với diện tích 25m2 mang đến không gian ấm cúng. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
-Superior King room ![Superior King](/gallery/SUPERIOR%20KING/sup%201%20nen.jpg): Không gian nhỏ gọn nhưng vô cùng ấm cúng. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
-Deluxe King room ![Deluxe King](/gallery/DELUXE%20KING/DELUXE%201.jpg): Không gian mở kết hợp ánh sáng tự nhiên. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
-Deluxe Triple room ![Deluxe Triple](/gallery/DELUXE%20TRIPLE/TRIPLE%201.jpg): 1 giường lớn & 1 giường nhỏ cho cả gia đình.
+Superior Twin room ![Superior Twin](/assets/real-images/PRIN0031-Edit.jpg/ROOM/711/PRIN0596-Edit.jpg): Phòng Superior với diện tích 25m2 mang đến không gian ấm cúng. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
+Superior King room ![Superior King](/assets/real-images/PRIN0031-Edit.jpg/ROOM/709/PRIN0663-HDR.jpg): Không gian nhỏ gọn nhưng vô cùng ấm cúng. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
+Deluxe King room ![Deluxe King](/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0215-Edit.jpg): Không gian mở kết hợp ánh sáng tự nhiên. Tiện nghi (thêm buffet sáng, bồn tắm đứng).
+Deluxe Triple room ![Deluxe Triple](/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0492-Edit.jpg): 1 giường lớn & 1 giường nhỏ cho cả gia đình.
 Executive River View ![Executive River View](/gallery/EXECUTIVE%20RIVER%20VIEW/EXE%201.jpg): 1 Giường 1m8, view sông Hàn tuyệt đẹp. Tiện nghi (thêm buffet sáng, bồn tắm nằm).
-Premier river view ![Premier River View](/gallery/PREMIER%20RIVER%20VIEW/PRE%201.jpg): Phòng cực rộng có ban công view toàn cảnh Sông Hàn. Tiện nghi (thêm buffet sáng, bồn tắm nằm, sofa bed).
+Premier river view ![Premier River View](/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0031-Edit.jpg): Phòng cực rộng có ban công view toàn cảnh Sông Hàn. Tiện nghi (thêm buffet sáng, bồn tắm nằm, sofa bed).
 TPT Penhouse ![TPT Penhouse](/gallery/TPN%20PENTHOUSE/TPN%201.jpg): Căn hộ 100m2 tuyệt đỉnh trên tầng cao nhất. Tiện nghi (buffet sáng, bồn tắm nằm, bếp, phòng khách).
 
 DỊCH VỤ KHÁC:

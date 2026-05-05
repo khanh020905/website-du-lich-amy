@@ -5,9 +5,12 @@
     "bedCount": 1,
     "guestCount": 2,
     "galleries": [
-      "/gallery/SUPERIOR KING/sup 1 nen.jpg"
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/709/PRIN0663-HDR.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/709/PRIN0689.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/709/PRIN0710.jpg",
+      "/assets/real-images/toilet.jpg"
     ],
-    "cover": "/gallery/SUPERIOR KING/sup 1 nen.jpg",
+    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/709/PRIN0663-HDR.jpg",
     "amenities": ["Wall View", "Free Wi-Fi", "Air Conditioning", "Minibar"],
     "reviews": {
       "vi": [
@@ -34,10 +37,12 @@
     "bedCount": 2,
     "guestCount": 2,
     "galleries": [
-      "/gallery/SUPERIOR TWIN/TWIN 1.jpg",
-      "/gallery/SUPERIOR TWIN/TWIN 2.jpg"
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/711/PRIN0596-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/711/PRIN0629.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/711/PRIN0653.jpg",
+      "/assets/real-images/toilet.jpg"
     ],
-    "cover": "/gallery/SUPERIOR TWIN/TWIN 1.jpg",
+    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/711/PRIN0596-Edit.jpg",
     "amenities": ["City View", "Free Wi-Fi", "Air Conditioning", "Minibar"],
     "reviews": {
       "vi": [
@@ -60,12 +65,13 @@
     "bedCount": 2,
     "guestCount": 4,
     "galleries": [
-      "/gallery/FAMILY RIVER VIEW/FAM 1.jpg",
-      "/gallery/FAMILY RIVER VIEW/FAM 2.jpg",
-      "/gallery/FAMILY RIVER VIEW/FAM 3.jpg",
-      "/gallery/FAMILY RIVER VIEW/fam 4.jpg"
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/706/PRIN0342-1.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/706/PRIN0385-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/706/PRIN0419-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/706/PRIN0441-Edit.jpg",
+      "/assets/real-images/toilet.jpg"
     ],
-    "cover": "/gallery/FAMILY RIVER VIEW/FAM 1.jpg",
+    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/706/PRIN0342-1.jpg",
     "amenities": ["Han River View", "Family Size", "Free Wi-Fi", "Bathtub"],
     "reviews": {
       "vi": [
@@ -88,11 +94,13 @@
     "bedCount": 1,
     "guestCount": 2,
     "galleries": [
-      "/gallery/DELUXE KING/DELUXE 1.jpg",
-      "/gallery/DELUXE KING/DELUXE 2 nen.jpg",
-      "/gallery/DELUXE KING/DELUXE 2.jpg"
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0215-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0271.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0301-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0310.jpg",
+      "/assets/real-images/toilet.jpg"
     ],
-    "cover": "/gallery/DELUXE KING/DELUXE 1.jpg",
+    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0215-Edit.jpg",
     "amenities": ["City View", "Free Wi-Fi", "Bathtub", "Minibar"],
     "reviews": {
       "vi": [
@@ -115,11 +123,13 @@
     "bedCount": 2,
     "guestCount": 3,
     "galleries": [
-      "/gallery/DELUXE TRIPLE/tripl 3.jpg",
-      "/gallery/DELUXE TRIPLE/TRIPLE 1.jpg",
-      "/gallery/DELUXE TRIPLE/TRIPLE 2.jpg"
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0492-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0525-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0553-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0567-Edit.jpg",
+      "/assets/real-images/toilet.jpg"
     ],
-    "cover": "/gallery/DELUXE TRIPLE/TRIPLE 1.jpg",
+    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0492-Edit.jpg",
     "amenities": ["City View", "Extra Bed", "Free Wi-Fi", "Bathtub"],
     "reviews": {
       "vi": [
@@ -168,11 +178,14 @@
     "bedCount": 1,
     "guestCount": 2,
     "galleries": [
-      "/gallery/PREMIER RIVER VIEW/PRE 1.jpg",
-      "/gallery/PREMIER RIVER VIEW/PRE 2.jpg",
-      "/gallery/PREMIER RIVER VIEW/PRE 3.jpg"
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0031-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0104-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0170-Edit.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0730.jpg",
+      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN9961-Edit.jpg",
+      "/assets/real-images/toilet.jpg"
     ],
-    "cover": "/gallery/PREMIER RIVER VIEW/PRE 1.jpg",
+    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0031-Edit.jpg",
     "amenities": ["Han River View", "Premium Lounge Access", "Free Wi-Fi", "Bathtub"],
     "reviews": {
       "vi": [
