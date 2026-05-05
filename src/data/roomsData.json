@@ -5,12 +5,12 @@
     "bedCount": 1,
     "guestCount": 2,
     "galleries": [
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/709/PRIN0663-HDR.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/709/PRIN0689.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/709/PRIN0710.jpg",
-      "/assets/real-images/toilet.jpg"
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970627/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/709/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/709/PRIN0663-HDR.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970631/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/709/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/709/PRIN0689.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970635/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/709/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/709/PRIN0710.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970651/website-du-lich-amy/website-du-lich-amy/toilet.jpg"
     ],
-    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/709/PRIN0663-HDR.jpg",
+    "cover": "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970627/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/709/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/709/PRIN0663-HDR.jpg",
     "amenities": ["Wall View", "Free Wi-Fi", "Air Conditioning", "Minibar"],
     "reviews": {
       "vi": [
@@ -37,12 +37,12 @@
     "bedCount": 2,
     "guestCount": 2,
     "galleries": [
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/711/PRIN0596-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/711/PRIN0629.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/711/PRIN0653.jpg",
-      "/assets/real-images/toilet.jpg"
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970639/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/711/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/711/PRIN0596-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970644/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/711/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/711/PRIN0629.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970648/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/711/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/711/PRIN0653.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970651/website-du-lich-amy/website-du-lich-amy/toilet.jpg"
     ],
-    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/711/PRIN0596-Edit.jpg",
+    "cover": "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970639/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/711/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/711/PRIN0596-Edit.jpg",
     "amenities": ["City View", "Free Wi-Fi", "Air Conditioning", "Minibar"],
     "reviews": {
       "vi": [
@@ -65,13 +65,13 @@
     "bedCount": 2,
     "guestCount": 4,
     "galleries": [
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/706/PRIN0342-1.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/706/PRIN0385-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/706/PRIN0419-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/706/PRIN0441-Edit.jpg",
-      "/assets/real-images/toilet.jpg"
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970588/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/706/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/706/PRIN0342-1.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970593/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/706/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/706/PRIN0385-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970598/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/706/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/706/PRIN0419-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970602/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/706/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/706/PRIN0441-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970651/website-du-lich-amy/website-du-lich-amy/toilet.jpg"
     ],
-    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/706/PRIN0342-1.jpg",
+    "cover": "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970588/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/706/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/706/PRIN0342-1.jpg",
     "amenities": ["Han River View", "Family Size", "Free Wi-Fi", "Bathtub"],
     "reviews": {
       "vi": [
@@ -94,13 +94,13 @@
     "bedCount": 1,
     "guestCount": 2,
     "galleries": [
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0215-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0271.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0301-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0310.jpg",
-      "/assets/real-images/toilet.jpg"
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970569/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0215-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970574/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0271.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970578/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0301-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970584/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0310.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970651/website-du-lich-amy/website-du-lich-amy/toilet.jpg"
     ],
-    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/703/PRIN0215-Edit.jpg",
+    "cover": "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970569/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0215-Edit.jpg",
     "amenities": ["City View", "Free Wi-Fi", "Bathtub", "Minibar"],
     "reviews": {
       "vi": [
@@ -123,13 +123,13 @@
     "bedCount": 2,
     "guestCount": 3,
     "galleries": [
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0492-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0525-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0553-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0567-Edit.jpg",
-      "/assets/real-images/toilet.jpg"
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970607/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/PRIN0492-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970613/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/PRIN0525-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970618/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/PRIN0553-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970623/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/PRIN0567-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970651/website-du-lich-amy/website-du-lich-amy/toilet.jpg"
     ],
-    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/707/PRIN0492-Edit.jpg",
+    "cover": "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970607/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/PRIN0492-Edit.jpg",
     "amenities": ["City View", "Extra Bed", "Free Wi-Fi", "Bathtub"],
     "reviews": {
       "vi": [
@@ -178,14 +178,14 @@
     "bedCount": 1,
     "guestCount": 2,
     "galleries": [
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0031-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0104-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0170-Edit.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0730.jpg",
-      "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN9961-Edit.jpg",
-      "/assets/real-images/toilet.jpg"
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970541/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0031-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970546/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0104-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970552/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0170-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970557/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0730.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970564/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/PRIN9961-Edit.jpg",
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970651/website-du-lich-amy/website-du-lich-amy/toilet.jpg"
     ],
-    "cover": "/assets/real-images/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0031-Edit.jpg",
+    "cover": "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970541/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0031-Edit.jpg",
     "amenities": ["Han River View", "Premium Lounge Access", "Free Wi-Fi", "Bathtub"],
     "reviews": {
       "vi": [
