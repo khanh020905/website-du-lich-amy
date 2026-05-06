@@ -143,7 +143,7 @@ const Footer = () => {
                </div>
                <div className="flex items-center gap-4">
                  <Phone className="text-[var(--color-gold)] shrink-0" size={18} />
-                 <span className="text-[var(--color-gold)] font-bold">0236 3 668 886 <span className="text-[#B0B0B0] font-normal mx-1">-</span> 0236 3 668 886</span>
+                 <span className="text-[var(--color-gold)] font-bold">(+84)02363 668 886 <span className="text-[#B0B0B0] font-normal mx-1">-</span> (+84)02363 668 886</span>
                </div>
                <div className="flex items-center gap-4">
                  <Mail className="text-[var(--color-gold)] shrink-0" size={18} />

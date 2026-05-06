@@ -186,7 +186,7 @@ const ServiceDetail = () => {
                 <p className="text-[10px] md:text-xs text-gray-500 uppercase tracking-[0.2em] font-semibold mb-1">
                   {locale === 'en' ? 'Contact' : locale === 'vi' ? 'Liên Hệ' : 'Contact'}
                 </p>
-                <p className="text-sm md:text-base font-medium text-gray-200">0236 3 668 886</p>
+                <p className="text-sm md:text-base font-medium text-gray-200">(+84)02363 668 886</p>
               </div>
             </div>
           </div>
