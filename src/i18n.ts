@@ -103,7 +103,7 @@ const resources = {
         label: 'FAQ',
         title: 'Everything you need to know right now',
         items: [
-          { q: 'Where is the hotel located?', a: 'We are located at 180 Bach Dang, Hai Chau Ward, Hai Chau District, Da Nang. Only 850m from Dragon Bridge, 190m to Han Market, and 3km to My Khe Beach.' },
+          { q: 'Where is the hotel located?', a: 'We are located at 180 Bach Dang, Hai Chau Ward, Da Nang. Only 850m from Dragon Bridge, 190m to Han Market, and 3km to My Khe Beach.' },
           { q: 'What are the operation hours for the pool and gym?', a: 'The Rooftop Pool is open from 06:00 to 18:00, and the Fitness Room is available from 06:00 to 22:00.' },
           { q: 'Is there a restaurant on-site?', a: 'Yes, our restaurant serves Asian, Western, and local dishes from 06:00 to 22:00 with a capacity of 200 guests.' },
           { q: 'What general amenities are included?', a: 'Rooms feature automated control units, high-speed Wi-Fi, air conditioning, minibar, flat-screen TV, safe box, desk, hair dryer, and kettle.' }
@@ -330,7 +330,7 @@ const resources = {
         label: 'Câu hỏi thường gặp',
         title: 'Những thông tin bạn cần biết',
         items: [
-          { q: 'Khách sạn ở vị trí nào?', a: 'Khách sạn tọa lạc tại 180 Bạch Đằng, phường Hải Châu, quận Hải Châu, Đà Nẵng. Chỉ cách Cầu Rồng 850m, chợ Hàn 190m và biển Mỹ Khê 3km.' },
+          { q: 'Khách sạn ở vị trí nào?', a: 'Khách sạn tọa lạc tại 180 Bạch Đằng, phường Hải Châu, Đà Nẵng. Chỉ cách Cầu Rồng 850m, chợ Hàn 190m và biển Mỹ Khê 3km.' },
           { q: 'Thời gian hoạt động của các tiện ích là lúc nào?', a: 'Hồ bơi tầng thượng hoạt động từ 06:00 – 18:00, phòng Gym mở cửa từ 06:00 – 22:00, Rooftop Bar và Spa từ từ 10:00 và 09:00 sáng.' },
           { q: 'Bên trong khách sạn có nhà hàng không?', a: 'Có. Nhà hàng phục vụ món Á, Âu và địa phương hoạt động từ 06:00 – 22:00 với sức chứa 200 khách.' },
           { q: 'Trong mỗi phòng có cung cấp những vật dụng cơ bản nào?', a: 'Khách sạn trang bị hệ thống điều khiển tự động, TV màn hình phẳng, máy lạnh, minibar, Wi-Fi tốc độ cao, máy sấy tóc, và két sắt.' }
@@ -556,7 +556,7 @@ const resources = {
         label: 'FAQ',
         title: '지금 알아야 할 모든 것',
         items: [
-          { q: '호텔은 어디에 위치해 있나요?', a: '저희 호텔은 다낭 하이쩌우 구, 하이쩌우 동, 바익당 180에 위치해 있습니다. 용다리에서 850m, 한시장에서 190m, 미케 해변에서 가까운 3km 거리에 있습니다.' },
+          { q: '호텔은 어디에 위치해 있나요?', a: '저희 호텔은 다낭 하이쩌우 동, 바익당 180에 위치해 있습니다. 용다리에서 850m, 한시장에서 190m, 미케 해변에서 가까운 3km 거리에 있습니다.' },
           { q: '수영장과 체육관 운영 시간은 어떻게 되나요?', a: '루프탑 수영장은 06:00부터 18:00까지, 피트니스 룸은 06:00부터 22:00까지 이용하실 수 있습니다.' },
           { q: '호텔 내 레스토랑이 있나요?', a: '예, 저희 조식 레스토랑은 06:00부터 22:00까지 200명의 손님을 수용하며 아시아, 서양 요리 및 현지 요리를 제공합니다.' },
           { q: '어떤 기본 편의 시설이 포함되어 있나요?', a: '객실에는 자동 제어 장치, 고속 Wi-Fi, 에어컨, 미니바, 평면 TV, 금고, 책상, 헤어드라이어 및 주전자가 구비되어 있습니다.' }
@@ -782,7 +782,7 @@ const resources = {
         label: '常见问题',
         title: '您现在需要了解的一切',
         items: [
-          { q: '酒店位置在哪里？', a: '我们位于岘港市海洲郡海洲坊白藤街 180 号。距离龙桥仅 850 米，距离汉市场 190 米，距离美溪海滩 3 公里。' },
+          { q: '酒店位置在哪里？', a: '我们位于岘港市海洲坊白藤街 180 号。距离龙桥仅 850 米，距离汉市场 190 米，距离美溪海滩 3 公里。' },
           { q: '游泳池和健身房的营业时间是什么时候？', a: '屋顶泳池的开放时间为 06:00 至 18:00，健身房的开放时间为 06:00 至 22:00。' },
           { q: '酒店内有餐厅吗？', a: '是的，我们的餐厅供应亚洲菜、西餐和当地美食，营业时间为 06:00 至 22:00，可容纳 200 位客人。' },
           { q: '包含哪些基本设施？', a: '客房配备自动控制单元、高速 Wi-Fi、空调、迷你吧、平板电视、保险箱、办公桌、吹风机和热水壶。' }

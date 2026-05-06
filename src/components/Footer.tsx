@@ -139,7 +139,7 @@ const Footer = () => {
             <div className="flex flex-col gap-5 text-sm text-[#B0B0B0]">
                <div className="flex items-start gap-4">
                  <MapPin className="text-[var(--color-gold)] shrink-0 mt-0.5" size={18} />
-                 <span>180 Bạch Đằng, phường Hải Châu, quận Hải Châu, Đà Nẵng, Vietnam</span>
+                 <span>180 Bạch Đằng, phường Hải Châu, Đà Nẵng, Vietnam</span>
                </div>
                <div className="flex items-center gap-4">
                  <Phone className="text-[var(--color-gold)] shrink-0" size={18} />
