@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-import heroImg from '../assets/pdf_images/img_p2_5.jpeg';
+const heroImg = 'https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/OUTSIDE/Outside_01';
 
 const Hero = () => {
   const { t } = useTranslation();

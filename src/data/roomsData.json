@@ -153,7 +153,9 @@
     "guestCount": 2,
     "galleries": [
       "/gallery/EXECUTIVE RIVER VIEW/EXE 1.jpg",
-      "/gallery/EXECUTIVE RIVER VIEW/EXE 2.jpg"
+      "/gallery/EXECUTIVE RIVER VIEW/EXE 2.jpg",
+      "/gallery/EXECUTIVE RIVER VIEW/EXE 3.jpg",
+      "/gallery/EXECUTIVE RIVER VIEW/EXE 4.jpg"
     ],
     "cover": "/gallery/EXECUTIVE RIVER VIEW/EXE 1.jpg",
     "amenities": ["Han River View", "Premium Amenities", "Free Wi-Fi", "Bathtub"],
@@ -213,7 +215,8 @@
       "/gallery/TPN PENTHOUSE/TPN 3.jpg",
       "/gallery/TPN PENTHOUSE/TPN 4.jpg",
       "/gallery/TPN PENTHOUSE/TPN 5.jpg",
-      "/gallery/TPN PENTHOUSE/TPN 6.jpg"
+      "/gallery/TPN PENTHOUSE/TPN 6.jpg",
+      "/gallery/TPN PENTHOUSE/TPN 7.jpg"
     ],
     "cover": "/gallery/TPN PENTHOUSE/TPN 1.jpg",
     "amenities": ["Han River Panoramic", "Private Butler", "Living Room", "Full Kitchen", "Luxury Bathtub"],

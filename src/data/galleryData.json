@@ -1,208 +1,103 @@
 [
   {
     "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_1.png",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/LOBBY/Reception_Lobby_2",
     "category": "Lobby"
   },
   {
     "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_10.png",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/LOBBY/Reception_Lobby_3",
     "category": "Lobby"
   },
   {
     "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_11.png",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/LOBBY/Reception_Lobby_4",
     "category": "Lobby"
   },
   {
     "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_12.png",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/LOBBY/Reception_Lobby_5",
     "category": "Lobby"
   },
   {
     "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_2.png",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/LOBBY/Reception_Lobby",
     "category": "Lobby"
   },
   {
     "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_3.png",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/OUTSIDE/Outside",
     "category": "Lobby"
   },
   {
     "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_4.png",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/OUTSIDE/Outside_01",
     "category": "Lobby"
   },
   {
     "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_5.png",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/OUTSIDE/Outside_3",
     "category": "Lobby"
   },
   {
     "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_6.png",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/OUTSIDE/Outside_4",
     "category": "Lobby"
   },
   {
     "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_7.png",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/OUTSIDE/Outside_6",
     "category": "Lobby"
   },
   {
-    "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_8.png",
-    "category": "Lobby"
+    "title": "Gym & Fitness",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/POOL-GYM/Gym",
+    "category": "Gym & Fitness"
   },
   {
-    "title": "Lobby",
-    "image": "/gallery/Lobby/lobby_9.png",
-    "category": "Lobby"
+    "title": "Rooftop Swimming pool",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/POOL-GYM/Swiming_Pool_03",
+    "category": "Rooftop Swimming pool"
   },
   {
-    "title": "MẶT NGOÀI KHÁCH SẠN",
-    "image": "/gallery/MẶT NGOÀI KHÁCH SẠN/tn1.jpg",
-    "category": "Lobby"
+    "title": "Rooftop Swimming pool",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/POOL-GYM/Swingming_Pool_02",
+    "category": "Rooftop Swimming pool"
   },
   {
-    "title": "MẶT NGOÀI KHÁCH SẠN",
-    "image": "/gallery/MẶT NGOÀI KHÁCH SẠN/TN2.jpg",
-    "category": "Lobby"
+    "title": "Rooftop Swimming pool",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/POOL-GYM/Swingming_Pool_04",
+    "category": "Rooftop Swimming pool"
   },
   {
-    "title": "MẶT NGOÀI KHÁCH SẠN",
-    "image": "/gallery/MẶT NGOÀI KHÁCH SẠN/tn3.jpg",
-    "category": "Lobby"
+    "title": "Rooftop Swimming pool",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/POOL-GYM/Swinming_Pool",
+    "category": "Rooftop Swimming pool"
   },
   {
-    "title": "SẢNH LỄ TÂN",
-    "image": "/gallery/SẢNH LỄ TÂN/reception.jpg",
-    "category": "Lobby"
+    "title": "The South Restaurant",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/RESTAURANT/The_South_01",
+    "category": "Nhà hàng The South"
   },
   {
-    "title": "SẢNH LỄ TÂN",
-    "image": "/gallery/SẢNH LỄ TÂN/z7629521115519_2d94d4c8d1bfbf2af4ed95afb2515904.jpg",
-    "category": "Lobby"
+    "title": "The South Restaurant",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/RESTAURANT/The_South_02",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "The South Restaurant",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/RESTAURANT/The_South_03",
+    "category": "Nhà hàng The South"
+  },
+  {
+    "title": "The South Restaurant",
+    "image": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/RESTAURANT/The_South_05",
+    "category": "Nhà hàng The South"
   },
   {
     "title": "DỊCH VỤ",
     "image": "/gallery/DỊCH VỤ/bartender-bar.jpg",
     "category": "Coffee lounge"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_1.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_10.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_11.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_12.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_13.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_14.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_15.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_16.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_17.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_18.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_19.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_2.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_20.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_3.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_4.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_5.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_6.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_7.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_8.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "Buffet",
-    "image": "/gallery/Buffet/buffet_9.png",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "NHÀ HÀNG",
-    "image": "/gallery/NHÀ HÀNG/res1.jpg",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "NHÀ HÀNG",
-    "image": "/gallery/NHÀ HÀNG/RES2.jpg",
-    "category": "Nhà hàng The South"
-  },
-  {
-    "title": "NHÀ HÀNG",
-    "image": "/gallery/NHÀ HÀNG/restaurent.jpg",
-    "category": "Nhà hàng The South"
   },
   {
     "title": "DỊCH VỤ",
@@ -213,31 +108,6 @@
     "title": "DỊCH VỤ",
     "image": "/gallery/DỊCH VỤ/SPA2.jpg",
     "category": "Spa & Wellness"
-  },
-  {
-    "title": "Gym & Fitness",
-    "image": "/gallery/Gym & Fitness/hotel_gym_mockup_1.png",
-    "category": "Gym & Fitness"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/hồ bơi.jpg",
-    "category": "Rooftop Swimming pool"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/pool.jpg",
-    "category": "Rooftop Swimming pool"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/pool1.jpg",
-    "category": "Rooftop Swimming pool"
-  },
-  {
-    "title": "DỊCH VỤ",
-    "image": "/gallery/DỊCH VỤ/pool2.jpg",
-    "category": "Rooftop Swimming pool"
   },
   {
     "title": "DỊCH VỤ",
@@ -302,6 +172,16 @@
   {
     "title": "EXECUTIVE RIVER VIEW",
     "image": "/gallery/EXECUTIVE RIVER VIEW/EXE 2.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "EXECUTIVE RIVER VIEW",
+    "image": "/gallery/EXECUTIVE RIVER VIEW/EXE 3.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "EXECUTIVE RIVER VIEW",
+    "image": "/gallery/EXECUTIVE RIVER VIEW/EXE 4.jpg",
     "category": "Room"
   },
   {
@@ -427,6 +307,11 @@
   {
     "title": "TPN PENTHOUSE",
     "image": "/gallery/TPN PENTHOUSE/TPN 6.jpg",
+    "category": "Room"
+  },
+  {
+    "title": "TPN PENTHOUSE",
+    "image": "/gallery/TPN PENTHOUSE/TPN 7.jpg",
     "category": "Room"
   }
 ]

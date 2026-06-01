@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 // Vite requires importing assets so they are properly hashed and included in production builds
 import logoImg from '../assets/logo-finalll.png';
 import spaImg from '../assets/spa.jpg';
-import restImg from '../assets/restaurent.jpg';
 import barImg from '../assets/bartender-bar.jpg';
+const restImg = 'https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/RESTAURANT/The_South_01';
 
 const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY || "";
 

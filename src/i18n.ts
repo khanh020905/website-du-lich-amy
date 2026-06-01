@@ -323,7 +323,7 @@ const resources = {
           { title: 'Phòng Hội Nghị & Sự Kiện', size: '', desc: 'Nơi lý tưởng để tổ chức các sự kiện doanh nghiệp, hội thảo chuyên đề hay những buổi tiệc xa hoa chuyên nghiệp.', hours: 'Theo yêu cầu (Booking)', locationText: 'Tầng 12', capacityText: '100 khách', schedules: [], features: ["Màn hình LED 200 inch","Hệ thống âm thanh đa chiều","Teabreak giữa giờ","Wi-Fi tốc độ cực cao"] },
           { title: 'Coffee Lounge', size: '', desc: 'Tọa lạc tại sảnh đón tiếp tầng 1, Coffee Lounge mang đến không gian thư giãn lý tưởng với thiết kế sang trọng, phục vụ các loại cà phê thượng hạng và trà chiều tinh tế.', hours: '07:00 đến 22:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Cà phê đặc sản", "Trà chiều kiểu Anh", "Bánh ngọt tươi mỗi ngày", "Không gian gặp gỡ đối tác"] }
         ],
-        desc: "Khách sạn Tân Phương Nam cung cấp những dịch vụ đỉnh cao chuẩn mực. Từ không gian ẩm thực sang trọng đến khu nghỉ dưỡng và giải trí đầy phong cách.",
+        desc: "Khách sạn Tân Phương Nam sở hữu đa dạng tiện ích, từ không gian ẩm thực sang trọng đến khu giải trí hiện đại và tiện nghi. Hồ bơi thư giãn cùng các dịch vụ cao cấp mang đến trải nghiệm nghỉ dưỡng thoải mái cho du khách.",
         cta: 'KHÁM PHÁ THÊM DỊCH VỤ'
       },
       faq: {
@@ -384,7 +384,7 @@ const resources = {
       culinary: {
         label: 'ẨM THỰC ĐỈNH CAO',
         title: 'Nhà hàng The South',
-        description: 'Nằm tại tầng 2 của khách sạn, nhà hàng The South được thiết kế tối giản và tinh tế, mang đến cảm giác hiện đại và đẳng cấp cho các thực khách dùng bữa tại nơi đây. Nơi đây chắc chắn là điểm đến không thể bỏ lỡ dành cho những thực khách muốn trải nghiệm không gian nhà hàng sang trọng ở Đà Nẵng. Với không gian lãng mạn và ấm cúng, từ đây bạn có thể thưởng thức phong vị đầy tinh tế của ẩm thực, đắm chìm trong ánh đèn lung linh của thành phố về đêm cùng dòng sông Hàn lấp lánh.',
+        description: 'Tọa lạc tại tầng 2 Khách sạn Tân Phương Nam Galaxy Hotel, The South restaurant sở hữu không gian trực diện Sông Hàn. Nhà hàng với sức chứa gần 200 khách được thiết kế theo phong cách ấm cúng và sang trọng mang đến cảm giác thoải mái cho mọi thực khách dùng bữa tại The South restaurant. The South phục vụ đa dạng các món ăn Âu – Á được chế biến bởi đội ngũ nhân viên giàu kinh nghiệm. Đây sẽ là điểm hẹn lý tưởng cho các buổi gặp gỡ, nghỉ dưỡng hay đón tiếp đối tác tại trung tâm thành phố Đà Nẵng.',
         exploreMenu: 'Khám phá thực đơn',
         mainMenu: 'Thực đơn chính',
         beverageMenu: 'Danh sách đồ uống và rượu',

@@ -8,15 +8,15 @@ const Culinary = () => {
   const [activeMenuModal, setActiveMenuModal] = useState<string | null>(null);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
-  // High-quality placeholder images for fine dining
+  const CLD = 'https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto';
   const galleryImages = [
-    'https://neworienthoteldanang.com/wp-content/uploads/2023/09/Bistecca-1.jpg',
-    'https://neworienthoteldanang.com/wp-content/uploads/2023/09/Bistecca8.jpg',
-    'https://neworienthoteldanang.com/wp-content/uploads/2023/09/Bistecca4.jpg',
-    'https://neworienthoteldanang.com/wp-content/uploads/2023/09/dining7-1.jpg',
-    'https://neworienthoteldanang.com/wp-content/uploads/2023/12/DLT_0101-scaled.jpg',
-    'https://neworienthoteldanang.com/wp-content/uploads/2023/12/Bistecca-5-scaled.jpg',
-    '/assets/luxury_gourmet.png'
+    `${CLD}/website-du-lich-amy/RESTAURANT/The_South_01`,
+    `${CLD}/website-du-lich-amy/RESTAURANT/The_South_02`,
+    `${CLD}/website-du-lich-amy/RESTAURANT/The_South_03`,
+    `${CLD}/website-du-lich-amy/RESTAURANT/The_South_05`,
+    `${CLD}/website-du-lich-amy/LOBBY/Reception_Lobby_2`,
+    `${CLD}/website-du-lich-amy/OUTSIDE/Outside_01`,
+    `${CLD}/website-du-lich-amy/POOL-GYM/Swiming_Pool_03`,
   ];
 
   return (
@@ -25,7 +25,7 @@ const Culinary = () => {
       <div className="relative pt-40 pb-32 flex flex-col items-center justify-center px-4 overflow-hidden shadow-2xl min-h-[60vh]">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transform scale-105"
-          style={{ backgroundImage: 'url("https://neworienthoteldanang.com/wp-content/uploads/2023/09/Bistecca-1.jpg")' }}
+          style={{ backgroundImage: 'url("https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/RESTAURANT/The_South_01")' }}
         ></div>
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#111]/90 via-[#111]/70 to-[#111]"></div>
         <div className="absolute inset-0 z-0 bg-black/40 backdrop-blur-[2px]"></div>
@@ -114,7 +114,7 @@ const Culinary = () => {
           >
             <div className="aspect-[4/5] overflow-hidden rounded-sm relative">
               <img 
-                src="https://neworienthoteldanang.com/wp-content/uploads/2023/09/Bistecca-1.jpg" 
+                src="https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/RESTAURANT/The_South_02"
                 alt="Fine Dining" 
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000"
               />
@@ -216,7 +216,7 @@ const Culinary = () => {
               className="relative w-full max-w-2xl bg-[#111] border border-[var(--color-gold)]/30 shadow-2xl overflow-hidden flex flex-col"
             >
               {/* Background Texture/Image for Modal */}
-              <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+              <div className="absolute inset-0 opacity-20 bg-[url('https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/v1780321616/website-du-lich-amy/RESTAURANT/The_South_01.jpg')] bg-cover bg-center mix-blend-overlay"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-[#111]/90 to-transparent"></div>
 
               {/* Close Button */}

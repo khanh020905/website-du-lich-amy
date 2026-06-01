@@ -4,24 +4,20 @@ import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-import img1 from '../assets/reception.jpg';
-import img2 from '../assets/restaurent.jpg';
 import img3 from '../assets/spa.jpg';
 import img4 from '../assets/bartender-bar.jpg';
-import img5 from '../assets/gym_mock.png';
-import img6 from '../assets/pool.jpg';
-import img7 from '../assets/conference_mock.png';
-import img8 from '../assets/coffee_lounge.jpg';
+
+const CLD = 'https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto';
 
 const accommodationsImages = [
-  { image: img1 }, // 0: Reception
-  { image: img2 }, // 1: Restaurant
-  { image: img3 }, // 2: Spa
-  { image: img4 }, // 3: Skybar
-  { image: img5 }, // 4: Gym
-  { image: img6 }, // 5: Pool
-  { image: img7 }, // 6: Conference
-  { image: img8 }  // 7: Coffee Lounge
+  { image: `${CLD}/website-du-lich-amy/LOBBY/Reception_Lobby_2` },
+  { image: `${CLD}/website-du-lich-amy/RESTAURANT/The_South_01` },
+  { image: img3 },
+  { image: img4 },
+  { image: `${CLD}/website-du-lich-amy/POOL-GYM/Gym` },
+  { image: `${CLD}/website-du-lich-amy/POOL-GYM/Swinming_Pool` },
+  { image: '/gallery/DỊCH VỤ/hội nghị.jpg' },
+  { image: img4 }
 ];
 
 const ServicesOverview = () => {

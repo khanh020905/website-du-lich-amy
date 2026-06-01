@@ -152,7 +152,7 @@ const RoomsPage = () => {
       <div className="relative pt-40 pb-20 flex flex-col items-center justify-center px-4 overflow-hidden shadow-2xl">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transform scale-105"
-          style={{ backgroundImage: 'url("/gallery/MẶT NGOÀI KHÁCH SẠN/tn1.jpg")' }}
+          style={{ backgroundImage: 'url("https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/OUTSIDE/Outside_01")' }}
         ></div>
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#111]/90 via-[#111]/80 to-[#111]"></div>
         <div className="absolute inset-0 z-0 bg-black/40 backdrop-blur-[4px]"></div>

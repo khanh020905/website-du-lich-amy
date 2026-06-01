@@ -11,8 +11,8 @@ interface OfferItem {
 }
 
 const offerImages: Record<string, string> = {
-  "stellar-happy-hour": "/gallery/Buffet/buffet_1.png",
-  "south-restaurant-discount": "/gallery/Buffet/buffet_3.png",
+  "stellar-happy-hour": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/v1780321616/website-du-lich-amy/RESTAURANT/The_South_01.jpg",
+  "south-restaurant-discount": "https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/v1780321617/website-du-lich-amy/RESTAURANT/The_South_02.jpg",
 };
 
 // Component for an individual full-screen offer section

@@ -32,7 +32,7 @@ const BookingPage = () => {
       <div className="relative h-[300px] md:h-[400px] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url("/gallery/SẢNH LỄ TÂN/reception.jpg")' }}
+          style={{ backgroundImage: 'url("https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/LOBBY/Reception_Lobby")' }}
         ></div>
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
         

@@ -34,8 +34,8 @@ type ItemDef = {
 
 const DEFAULT_IMAGES: ImageItem[] = [
   {
-    src: 'https://images.unsplash.com/photo-1755331039789-7e5680e26e8f?q=80&w=774&auto=format&fit=crop',
-    alt: 'Abstract art'
+    src: 'https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/v1780321589/website-du-lich-amy/LOBBY/Reception_Lobby_2.jpg',
+    alt: 'Lobby'
   }
 ];
 
