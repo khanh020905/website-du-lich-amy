@@ -16,7 +16,6 @@ const Culinary = () => {
     `${CLD}/website-du-lich-amy/RESTAURANT/The_South_05`,
     `${CLD}/website-du-lich-amy/LOBBY/Reception_Lobby_2`,
     `${CLD}/website-du-lich-amy/OUTSIDE/Outside_01`,
-    `${CLD}/website-du-lich-amy/POOL-GYM/Swiming_Pool_03`,
   ];
 
   return (
