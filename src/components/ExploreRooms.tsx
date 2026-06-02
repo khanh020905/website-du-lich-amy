@@ -4,10 +4,6 @@ import { Maximize, Bed, Users } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 
-import img2 from '../assets/pdf_images/img_p4_13.jpeg';
-import img3 from '../assets/pdf_images/img_p4_14.jpeg';
-import img4 from '../assets/pdf_images/img_p5_17.jpeg';
-
 const suitesImg = [
   {
     id: 'executive-river-view',
@@ -18,14 +14,14 @@ const suitesImg = [
   },
   {
     id: 'premier-river-view',
-    image: img2,
+    image: 'https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970541/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/701-702/PRIN0031-Edit.jpg',
     price: 4200000,
     bedCount: 1,
     guestCount: 2
   },
   {
     id: 'tpn-penthouse',
-    image: img3,
+    image: '/gallery/TPN PENTHOUSE/TPN 1.jpg',
     price: 12000000,
     bedCount: 2,
     guestCount: 4
