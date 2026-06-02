@@ -9,10 +9,10 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="home" className="relative h-screen min-h-[600px] w-full flex items-center justify-center">
+    <section id="home" className="relative h-screen min-h-[600px] w-full flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center"
+        className="absolute inset-0 z-0 bg-cover bg-center scale-125 md:scale-150 transform origin-bottom md:origin-center"
         style={{ backgroundImage: `url(${heroImg})` }}
       ></div>
       {/* Dark Overlay */}
