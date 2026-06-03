@@ -35,6 +35,15 @@ Stellar Sky bar ![Stellar Sky bar](${barImg}): Tầng 12, ngắm toàn cảnh th
 KHÔNG BAO GIỜ bịa ra đường dẫn ảnh. Chỉ dùng các đường dẫn đã được cung cấp ở trên.
 `;
 
+const SUGGESTED_QUESTIONS = [
+  'Các loại phòng và giá phòng hiện có?',
+  'Dịch vụ Spa có những gì?',
+  'Nhà hàng The South phục vụ gì?',
+  'Sky Bar ở tầng mấy, mở cửa giờ nào?',
+  'Cách đặt phòng như thế nào?',
+  'Khách sạn có gần biển không?',
+];
+
 interface Message {
   id: string;
   role: 'user' | 'assistant';
@@ -67,13 +76,14 @@ const Chatbot: React.FC = () => {
     }
   }, [isOpen]);
 
-  const handleSend = async () => {
-    if (!input.trim() || isLoading) return;
+  const handleSend = async (overrideText?: any) => {
+    const textToSend = typeof overrideText === 'string' ? overrideText : input;
+    if (!textToSend.trim() || isLoading) return;
 
     const userMsg: Message = {
       id: Date.now().toString(),
       role: 'user',
-      content: input.trim(),
+      content: textToSend.trim(),
     };
 
     setMessages((prev) => [...prev, userMsg]);
@@ -128,6 +138,10 @@ const Chatbot: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleSuggestedQuestion = (question: string) => {
+    handleSend(question);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -265,6 +279,26 @@ const Chatbot: React.FC = () => {
                   </div>
                 </motion.div>
               ))}
+
+              {/* Suggested Questions */}
+              {messages.length === 1 && !isLoading && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex flex-wrap gap-2 mt-2"
+                >
+                  {SUGGESTED_QUESTIONS.map((question, qIdx) => (
+                    <button
+                      key={qIdx}
+                      onClick={() => handleSuggestedQuestion(question)}
+                      className="bg-[#1a1a1a] border border-[#d4af37]/40 text-[#d4af37] text-xs rounded-full px-3 py-1.5 hover:bg-[#d4af37]/10 transition-colors text-left"
+                    >
+                      {question}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+
               {isLoading && (
                 <div className="flex justify-start">
                   <div className="max-w-[80%] bg-[#222] text-gray-200 border border-white/5 rounded-2xl rounded-tl-sm px-4 py-3 flex items-center gap-2">

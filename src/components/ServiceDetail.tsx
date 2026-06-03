@@ -13,20 +13,11 @@ const accommodationsImages = [
   {
     image: `${CLD}/website-du-lich-amy/LOBBY/Reception_Lobby_2`,
     galleries: [
-      '/gallery/Lobby/lobby_1.png',
-      '/gallery/Lobby/lobby_2.png',
-      '/gallery/Lobby/lobby_3.png',
-      '/gallery/Lobby/lobby_4.png',
-      '/gallery/Lobby/lobby_5.png',
-      '/gallery/Lobby/lobby_6.png',
-      '/gallery/Lobby/lobby_7.png',
-      '/gallery/Lobby/lobby_8.png',
-      '/gallery/Lobby/lobby_9.png',
-      '/gallery/Lobby/lobby_10.png',
-      '/gallery/Lobby/lobby_11.png',
-      '/gallery/Lobby/lobby_12.png',
-      '/gallery/SẢNH LỄ TÂN/reception.jpg',
-      '/gallery/SẢNH LỄ TÂN/z7629521115519_2d94d4c8d1bfbf2af4ed95afb2515904.jpg',
+      '/gallery/Lobby/Reception Lobby 2.jpg',
+      '/gallery/Lobby/Reception Lobby 3.jpg',
+      '/gallery/Lobby/Reception Lobby 5.jpg',
+      '/gallery/Lobby/Reception Lobby.jpg',
+      '/gallery/Lobby/Reception Lobby 4 .jpg'
     ]
   },
   { image: `${CLD}/website-du-lich-amy/RESTAURANT/The_South_01` },
