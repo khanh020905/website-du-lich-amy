@@ -24,7 +24,7 @@ const suitesImg = [
     image: '/gallery/TPN PENTHOUSE/TPN 1.jpg',
     price: 12000000,
     bedCount: 2,
-    guestCount: 4
+    guestCount: 5
   }
 ];
 

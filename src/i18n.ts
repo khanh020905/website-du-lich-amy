@@ -56,7 +56,7 @@ const resources = {
         items: [
           { title: 'Executive River View', size: '30 SqM', desc: '1 King Bed, 2 Pax, Han River View' },
           { title: 'Premier River View', size: '35 SqM', desc: '1 King Bed, 2 Pax, Han River View' },
-          { title: 'TPN Penthouse', size: '100 SqM', desc: '2 Bedrooms, 2 King Beds, Living Room, Kitchen, Bathtub, 4 Pax' }
+          { title: 'TPN T Penthouse', size: '150 SqM', desc: '2 Bedrooms, 2 King Beds, Living Room, Kitchen, Bathtub, 5 Pax' }
         ]
       },
       roomDetail: {
@@ -87,7 +87,7 @@ const resources = {
         label: 'HOTEL SERVICES',
         title: 'Services and Amenities',
         items: [
-          { title: 'Reception Lobby', size: '', desc: 'A sophisticated welcoming space providing our guests a majestic first impression. The spacious area is designed with a prime waiting lounge offering complimentary tea and coffee.', hours: '24/7', locationText: '1st Floor', capacityText: '', schedules: [], features: ["24/7 Guest Support","Express Check-in","Currency Exchange","Tour Information"] },
+          { title: 'Reception Lobby', size: '', desc: 'A sophisticated welcoming space providing our guests a majestic first impression. The spacious area is designed with a prime waiting lounge offering complimentary tea and coffee.', hours: '24/7', locationText: '1st Floor', capacityText: '', schedules: [], features: ["24/7 Guest Support","Express Check-in","Tour Information"] },
           { title: 'The South Restaurant', size: '', desc: 'Located on the 2nd floor of the hotel, The South Restaurant features elegant design and views overlooking the Han River, allowing you to start your day with an energizing morning meal.', hours: '06:00 to 22:00', locationText: '2nd Floor', capacityText: '200 guests', schedules: ["Breakfast buffet: 06:00 - 10:00","Lunch and Dinner: 11:00 - 22:00"], features: [] },
           { title: 'Spa & Wellness', size: '', desc: 'Situated on the 1st floor of Tan Phuong Nam Galaxy, the Spa is harmoniously designed with varied color tones, creating a sophisticated and relaxing sanctuary.', hours: '09:00 to 21:00', locationText: '1st Floor', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
           { title: 'Stellar Skybar', size: '', desc: 'Positioned on the 12th floor, Sky Bar Stellar is the ideal destination to indulge in an elevated relaxing space with panoramic views of the Han River and Da Nang city.', hours: '10:00 to 22:00', locationText: '12th Floor', capacityText: '', schedules: [], features: ["Signature Cocktails","Acoustic Music","Panoramic View","VIP Lounge"] },
@@ -283,7 +283,7 @@ const resources = {
         items: [
           { title: 'Executive River View', size: '30 m2', desc: 'Phòng Executive River View với <strong>diện tích 30m2</strong> mang lại không gian sang trọng với <strong>tầm nhìn tuyệt đẹp ôm trọn dòng sông Hàn</strong>. Tận hưởng bình minh êm đềm hay ánh đèn đêm phản chiếu lấp lánh trên mặt nước ngay từ phòng ngủ. <strong>Giường King 1m8</strong> êm ái sẽ đem đến những phút giây thư giãn tinh tế nhất dành riêng cho bạn.', highlights: ['View Sông Hàn tuyệt đẹp', 'Thêm buffet sáng', 'Bồn tắm nằm thư giãn'] },
           { title: 'Premier River View', size: '35 m2', desc: 'Phòng Premier River View nổi bật với <strong>diện tích 35m2</strong> rộng rãi cùng ban công lộng gió, đón trọn <strong>tầm nhìn toàn cảnh sông Hàn</strong> thơ mộng. Hệ thống nội thất hiện đại kết hợp <strong>chiếc giường King 1m8</strong> siêu lớn mang lại sự thoải mái và trải nghiệm lưu trú thượng lưu.', highlights: ['Ngắm toàn cảnh thành phố về đêm bên dòng sông Hàn', 'Thêm buffet sáng', 'Bồn tắm nằm', 'Sofa bed'] },
-          { title: 'TPN Penthouse', size: '100 m2', desc: 'TPN Penthouse mang đến đặc quyền duy nhất trên tầng trệt với <strong>diện tích cực khủng 100m2</strong>. Sở hữu <strong>tầm nhìn ngoạn mục bao trọn dòng sông Hàn</strong>, không gian bao gồm phòng khách xa hoa, phòng bếp tiện nghi và <strong>2 phòng ngủ lớn trang bị giường King 1m8</strong>, tái hiện chuẩn mực sống xa xỉ ngay giữa lòng Đà Nẵng.', highlights: ['View trực diện Sông Hàn', '2 phòng ngủ lớn, 1 phòng khách sang trọng, 1 căn bếp ấm cúng', 'Thêm buffet sáng', 'Bồn tắm nằm', 'Kitchen room', 'Living room'] }
+          { title: 'TPN T Penthouse', size: '150 m2', desc: 'TPN T Penthouse mang đến đặc quyền duy nhất trên tầng trệt với <strong>diện tích cực khủng 150m2</strong>. Sở hữu <strong>tầm nhìn ngoạn mục bao trọn dòng sông Hàn</strong>, không gian bao gồm phòng khách xa hoa, phòng bếp tiện nghi và <strong>2 phòng ngủ lớn trang bị giường King 1m8</strong>, tái hiện chuẩn mực sống xa xỉ ngay giữa lòng Đà Nẵng.', highlights: ['View trực diện Sông Hàn', '2 phòng ngủ lớn, 1 phòng khách sang trọng, 1 căn bếp ấm cúng', 'Thêm buffet sáng', 'Bồn tắm nằm', 'Kitchen room', 'Living room'] }
         ]
       },
       roomDetail: {
@@ -314,7 +314,7 @@ const resources = {
         label: 'TIỆN ÍCH',
         title: 'Dịch vụ và tiện nghi Khách sạn',
         items: [
-          { title: 'Sảnh Lễ Tân', size: '', desc: 'Không gian đón khách lộng lẫy mang lại trải nghiệm mãn nhãn ngay từ giây phút đầu tiên. Khu vực được thiết kế rộng rãi với khu vực chờ sang trọng, phục vụ trà và cà phê miễn phí.', hours: '24/7', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Hỗ trợ khách hàng 24/7","Check-in/Check-out nhanh chóng","Dịch vụ thu đổi ngoại tệ","Thông tin du lịch"] },
+          { title: 'Sảnh Lễ Tân', size: '', desc: 'Không gian đón khách lộng lẫy mang lại trải nghiệm mãn nhãn ngay từ giây phút đầu tiên. Khu vực được thiết kế rộng rãi với khu vực chờ sang trọng, phục vụ trà và cà phê miễn phí.', hours: '24/7', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Hỗ trợ khách hàng 24/7","Check-in/Check-out nhanh chóng","Thông tin du lịch"] },
           { title: 'Nhà Hàng The South', size: '', desc: 'Nhà hàng The South tọa lạc tại tầng 2 của khách sạn, với thiết kế sang trọng và tầm nhìn hướng ra Sông Hàn để quý khách có thể bắt đầu ngày mới với một bữa sáng tràn đầy năng lượng.', hours: '06:00 đến 22:00', locationText: 'Tầng 2', capacityText: '200 khách', schedules: ["Breakfast buffet: 06:00 - 10:00","Lunch and Dinner: 11:00 - 22:00"], features: [] },
           { title: 'Spa & Wellness', size: '', desc: 'Nằm tại tầng 1 của Khách sạn Tân Phương Nam Galaxy, Spa được thiết kế với sự kết hợp hài hòa của nhiều gam màu khác nhau, tạo nên một không gian vừa tinh tế vừa thư giãn. Không gian yên bình, tách biệt khỏi nhịp sống ồn ào.', hours: '09:00 đến 21:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
           { title: 'Stellar Skybar', size: '', desc: 'Tọa lạc tại tầng 12, Sky Bar Stellar là điểm đến lý tưởng để tận hưởng không gian thư giãn trên cao với tầm nhìn toàn cảnh sông Hàn và thành phố Đà Nẵng.', hours: '10:00 đến 22:00', locationText: 'Tầng 12', capacityText: '', schedules: [], features: ["Signature Cocktails","Acoustic Music","Panoramic View","VIP Lounge"] },
@@ -509,7 +509,7 @@ const resources = {
         items: [
           { title: '이그제큐티브 리버 뷰', size: '30 m2', desc: '킹 침대 1개, 2인, 한강 뷰' },
           { title: '프리미어 리버 뷰', size: '35 m2', desc: '킹 침대 1개, 2인, 한강 뷰' },
-          { title: 'TPN 펜트하우스', size: '100 m2', desc: '침실 2개, 킹 침대 2개, 거실, 주방, 욕조, 4인' }
+          { title: 'TPN T 펜트하우스', size: '150 m2', desc: '침실 2개, 킹 침대 2개, 거실, 주방, 욕조, 5인' }
         ]
       },
       roomDetail: {
@@ -540,7 +540,7 @@ const resources = {
         label: '호텔 서비스',
         title: '서비스 및 편의 시설',
         items: [
-          { title: '리셉션 로비', size: '', desc: '정교한 디자인으로 장엄한 첫인상을 선사하는 세련된 환영 공간입니다.', hours: '24/7', locationText: '1층', capacityText: '', schedules: [], features: ["24/7 고객 지원","빠른 체크인/체크아웃","환전 서비스","투어 정보"] },
+          { title: '리셉션 로비', size: '', desc: '정교한 디자인으로 장엄한 첫인상을 선사하는 세련된 환영 공간입니다.', hours: '24/7', locationText: '1층', capacityText: '', schedules: [], features: ["24/7 고객 지원","빠른 체크인/체크아웃","투어 정보"] },
           { title: '더 사우스 레스토랑', size: '', desc: '호텔 2층에 위치한 레스토랑으로 우아한 디자인과 한강 전망을 자랑합니다.', hours: '06:00 - 22:00', locationText: '2층', capacityText: '200명', schedules: ["조식 뷔페: 06:00 - 10:00","점심 및 저녁: 11:00 - 22:00"], features: [] },
           { title: '스파 및 웰니스', size: '', desc: '다양한 톤이 조화롭게 디자인되어 세련되고 편안한 휴식 공간을 선사합니다.', hours: '09:00 - 21:00', locationText: '1층', capacityText: '', schedules: [], features: ["바디 마사지","발 마사지","페이셜 스파","바디 스크럽","네일 관리"] },
           { title: '스텔라 스카이바', size: '', desc: '수제 칵테일을 음미하며 숨막히는 파노라마 도시 전경을 감상하세요.', hours: '10:00 - 22:00', locationText: '12층', capacityText: '', schedules: [], features: ["시그니처 칵테일","어쿠스틱 음악","파노라마 뷰","VIP 라운지"] },
@@ -735,7 +735,7 @@ const resources = {
         items: [
           { title: '行政江景房', size: '30 平方米', desc: '1张大床，2人，韩江景观' },
           { title: '尊贵江景房', size: '35 平方米', desc: '1张大床，2人，韩江景观' },
-          { title: 'TPN 顶层公寓', size: '100 平方米', desc: '2间卧室，2张大床，客厅，厨房，浴缸，4人' }
+          { title: 'TPN T 顶层公寓', size: '150 平方米', desc: '2间卧室，2张大床，客厅，厨房，浴缸，5人' }
         ]
       },
       roomDetail: {
@@ -766,7 +766,7 @@ const resources = {
         label: '酒店服务',
         title: '服务和设施',
         items: [
-          { title: '接待大堂', size: '', desc: '精致的迎宾空间，为宾客提供庄严而奢华的第一印象。', hours: '24/7', locationText: '1楼', capacityText: '', schedules: [], features: ["24/7 客户支持","快速办理入住/退房","货币兑换","旅游资讯"] },
+          { title: '接待大堂', size: '', desc: '精致的迎宾空间，为宾客提供庄严而奢华的第一印象。', hours: '24/7', locationText: '1楼', capacityText: '', schedules: [], features: ["24/7 客户支持","快速办理入住/退房","旅游资讯"] },
           { title: 'The South 餐厅', size: '', desc: '位于酒店 2 楼，The South 餐厅享有优雅的设计和韩江美景。', hours: '06:00 至 22:00', locationText: '2楼', capacityText: '200人', schedules: ["自助早餐：06:00 - 10:00","午餐和晚餐：11:00 - 22:00"], features: [] },
           { title: '水疗与康体', size: '', desc: '沉浸在宁静的避世圣地，这里旨在让您的身心全新焕发青春活力。', hours: '09:00 至 21:00', locationText: '1楼', capacityText: '', schedules: [], features: ["全身按摩","足部按摩","面部水疗","身体磨砂","美甲护理"] },
           { title: 'Stellar 空中酒吧', size: '', desc: '品尝现调招牌鸡尾酒，同时坐拥令人惊叹的繁华城市全景。', hours: '10:00 至 22:00', locationText: '12楼', capacityText: '', schedules: [], features: ["招牌鸡尾酒","原声音乐","全景","VIP休息室"] },

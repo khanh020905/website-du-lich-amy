@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, Clock, MapPin, Phone, Check, Users } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, Phone, Check, Users, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 import img3 from '../assets/spa.jpg';
 import img4 from '../assets/bartender-bar.jpg';
@@ -10,7 +10,25 @@ import img4 from '../assets/bartender-bar.jpg';
 const CLD = 'https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto';
 
 const accommodationsImages = [
-  { image: `${CLD}/website-du-lich-amy/LOBBY/Reception_Lobby_2` },
+  {
+    image: `${CLD}/website-du-lich-amy/LOBBY/Reception_Lobby_2`,
+    galleries: [
+      '/gallery/Lobby/lobby_1.png',
+      '/gallery/Lobby/lobby_2.png',
+      '/gallery/Lobby/lobby_3.png',
+      '/gallery/Lobby/lobby_4.png',
+      '/gallery/Lobby/lobby_5.png',
+      '/gallery/Lobby/lobby_6.png',
+      '/gallery/Lobby/lobby_7.png',
+      '/gallery/Lobby/lobby_8.png',
+      '/gallery/Lobby/lobby_9.png',
+      '/gallery/Lobby/lobby_10.png',
+      '/gallery/Lobby/lobby_11.png',
+      '/gallery/Lobby/lobby_12.png',
+      '/gallery/SẢNH LỄ TÂN/reception.jpg',
+      '/gallery/SẢNH LỄ TÂN/z7629521115519_2d94d4c8d1bfbf2af4ed95afb2515904.jpg',
+    ]
+  },
   { image: `${CLD}/website-du-lich-amy/RESTAURANT/The_South_01` },
   { image: img3 },
   { image: img4 },
@@ -41,9 +59,22 @@ const ServiceDetail = () => {
   const capacityText = localizedInfo?.capacityText;
 
   const bgImage = accommodationsImages[id].image;
-  
+  const galleries = accommodationsImages[id].galleries || [];
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (lightboxIndex === null) return;
+      if (e.key === 'Escape') setLightboxIndex(null);
+      if (e.key === 'ArrowRight') setLightboxIndex(i => i !== null ? (i + 1) % galleries.length : null);
+      if (e.key === 'ArrowLeft') setLightboxIndex(i => i !== null ? (i - 1 + galleries.length) % galleries.length : null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightboxIndex, galleries.length]);
 
   return (
     <div className="bg-[#111] min-h-screen pb-24 font-sans overflow-hidden">
@@ -135,7 +166,7 @@ const ServiceDetail = () => {
              )}
           </div>
           
-          <div className="flex flex-col gap-6 md:gap-8 border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-10 min-w-[280px]">
+          <div className="flex flex-col gap-3 md:gap-4 border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-10 min-w-[280px]">
             <div className="flex items-center gap-4 group">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[var(--color-gold)]/20 transition-colors">
                 <Clock className="text-[var(--color-gold)]" size={18} />
@@ -188,6 +219,89 @@ const ServiceDetail = () => {
           </div>
         </motion.div>
       </div>
+
+      {galleries.length > 0 && (
+        <div className="container mx-auto px-4 md:px-12 max-w-6xl mt-16">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-xs uppercase tracking-[0.3em] font-semibold text-[var(--color-gold)] mb-8"
+          >
+            {locale === 'vi' ? 'Thư Viện Ảnh' : locale === 'en' ? 'Photo Gallery' : locale === 'ko' ? '사진 갤러리' : '图片画廊'}
+          </motion.h3>
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
+            {galleries.map((src, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                className="break-inside-avoid overflow-hidden rounded-sm cursor-pointer"
+                onClick={() => setLightboxIndex(idx)}
+              >
+                <img
+                  src={src}
+                  alt={`${localizedInfo?.title} ${idx + 1}`}
+                  className="w-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+            onClick={() => setLightboxIndex(null)}
+          >
+            <button
+              className="absolute top-4 right-4 text-white/70 hover:text-white z-10 bg-white/10 rounded-full p-2"
+              onClick={() => setLightboxIndex(null)}
+            >
+              <X size={24} />
+            </button>
+
+            <button
+              className="absolute left-4 text-white/70 hover:text-white z-10 bg-white/10 rounded-full p-3"
+              onClick={(e) => { e.stopPropagation(); setLightboxIndex(i => i !== null ? (i - 1 + galleries.length) % galleries.length : null); }}
+            >
+              <ChevronLeft size={28} />
+            </button>
+
+            <motion.img
+              key={lightboxIndex}
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.92 }}
+              transition={{ duration: 0.3 }}
+              src={galleries[lightboxIndex]}
+              alt={`${localizedInfo?.title} ${lightboxIndex + 1}`}
+              className="max-h-[90vh] max-w-[90vw] object-contain rounded-sm shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            <button
+              className="absolute right-4 text-white/70 hover:text-white z-10 bg-white/10 rounded-full p-3"
+              onClick={(e) => { e.stopPropagation(); setLightboxIndex(i => i !== null ? (i + 1) % galleries.length : null); }}
+            >
+              <ChevronRight size={28} />
+            </button>
+
+            <div className="absolute bottom-4 text-white/50 text-sm">
+              {lightboxIndex + 1} / {galleries.length}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
