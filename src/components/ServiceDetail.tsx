@@ -20,11 +20,32 @@ const accommodationsImages = [
       '/gallery/Lobby/Reception Lobby 4 .jpg'
     ]
   },
-  { image: `${CLD}/website-du-lich-amy/RESTAURANT/The_South_01` },
+  {
+    image: '/gallery/NHÀ HÀNG/The South 01.jpg',
+    galleries: [
+      '/gallery/NHÀ HÀNG/The South 01.jpg',
+      '/gallery/NHÀ HÀNG/The South 02.jpg',
+      '/gallery/NHÀ HÀNG/The South 03.jpg',
+      '/gallery/NHÀ HÀNG/The South 05.jpg'
+    ]
+  },
   { image: img3 },
   { image: img4 },
-  { image: `${CLD}/website-du-lich-amy/POOL-GYM/Gym` },
-  { image: `${CLD}/website-du-lich-amy/POOL-GYM/Swinming_Pool` },
+  {
+    image: '/gallery/Gym & Fitness/Gym.jpg',
+    galleries: [
+      '/gallery/Gym & Fitness/Gym.jpg'
+    ]
+  },
+  {
+    image: '/gallery/Hồ Bơi/Swinming Pool.jpg',
+    galleries: [
+      '/gallery/Hồ Bơi/Swinming Pool.jpg',
+      '/gallery/Hồ Bơi/Swingming Pool 02.jpg',
+      '/gallery/Hồ Bơi/Swiming Pool 03.jpg',
+      '/gallery/Hồ Bơi/Swingming Pool 04.jpg'
+    ]
+  },
   { image: '/gallery/DỊCH VỤ/hội nghị.jpg' },
   { image: img4 }
 ];
