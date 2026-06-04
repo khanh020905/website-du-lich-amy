@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Maximize, Bed, Users, Bath, Star, ArrowLeft, Check, Coffee, Wifi, Monitor, X, Wind, Snowflake, Lock, Utensils, ChevronDown } from 'lucide-react';
+import { Maximize, Bed, Users, Bath, Star, ArrowLeft, Check, Coffee, Wifi, Monitor, X, Wind, Snowflake, Lock, Utensils, ChevronDown, Vault, Refrigerator, ShowerHead } from 'lucide-react';
 import roomsData from '../data/roomsData.json';
 
 const getAmenityIcon = (idx: number) => {
@@ -11,10 +11,10 @@ const getAmenityIcon = (idx: number) => {
     case 1: return <Snowflake size={24} className="text-[var(--color-gold)] shrink-0" />;
     case 2: return <Wifi size={24} className="text-[var(--color-gold)] shrink-0" />;
     case 3: return <Wind size={24} className="text-[var(--color-gold)] shrink-0" />;
-    case 4: return <Lock size={24} className="text-[var(--color-gold)] shrink-0" />;
-    case 5: return <Coffee size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 4: return <Vault size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 5: return <Refrigerator size={24} className="text-[var(--color-gold)] shrink-0" />;
     case 6: return <Utensils size={24} className="text-[var(--color-gold)] shrink-0" />;
-    case 7: return <Bath size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 7: return <ShowerHead size={24} className="text-[var(--color-gold)] shrink-0" />;
     default: return <Check size={24} className="text-[var(--color-gold)] shrink-0" />;
   }
 }
@@ -163,7 +163,9 @@ const RoomDetail = () => {
                 <Bed className="text-[var(--color-gold)]" size={18} />
               </div>
               <div>
-                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold mb-0.5">{t('roomDetail.beds')}</p>
+                <p className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold mb-0.5">
+                  {roomData.id === 'tpn-penthouse' ? (locale === 'en' ? 'Bedrooms' : locale === 'ko' ? '침실' : 'Phòng ngủ') : t('roomDetail.beds')}
+                </p>
                 <p className="text-sm font-medium">{roomData.bedCount}</p>
               </div>
             </div>

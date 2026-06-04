@@ -143,12 +143,18 @@ const Footer = () => {
                </div>
                <div className="flex items-center gap-4">
                  <Phone className="text-[var(--color-gold)] shrink-0" size={18} />
-                 <span className="text-[var(--color-gold)] font-bold">(+84)02363 668 886 <span className="text-[#B0B0B0] font-normal mx-1">-</span> (+84)02363 668 886</span>
+                 <span className="text-[var(--color-gold)] font-bold">(+84) 2363 668 886 - 0935 292 898</span>
                </div>
                <div className="flex items-center gap-4">
                  <Mail className="text-[var(--color-gold)] shrink-0" size={18} />
                  <span>info@tanphuongnamgalaxy.com.vn</span>
                </div>
+            </div>
+            {/* BỘ CÔNG THƯƠNG BADGE */}
+            <div className="flex justify-start mt-8">
+               <a href="http://online.gov.vn/" target="_blank" rel="noreferrer" className="block hover:opacity-90 transition-opacity">
+                <img src={bctLogo} alt="Đã thông báo Bộ Công Thương" className="h-[105px] md:h-[145px] w-auto drop-shadow-md" />
+               </a>
             </div>
           </div>
 
@@ -234,15 +240,7 @@ const Footer = () => {
           </MapContainer>
         </div>
 
-        {/* BỘ CÔNG THƯƠNG BADGE BELOW MAP */}
-        <div className="flex justify-start mb-8 relative z-10 w-full px-2">
-           <a href="http://online.gov.vn/" target="_blank" rel="noreferrer" className="block hover:opacity-90 transition-opacity">
-            <img src={bctLogo} alt="Đã thông báo Bộ Công Thương" className="h-[70px] md:h-[140px] w-auto drop-shadow-md" />
-           </a>
-        </div>
       </div>
-      
-      {/* Bottom Copy Right bar */}
       <div className="bg-[#111111] py-5 border-t border-[#333333]/50">
          <div className="container mx-auto px-6 lg:px-12 max-w-7xl flex flex-col justify-center items-center md:items-start text-xs text-[#808080]">
             <p>© Bản quyền thuộc về <span className="font-bold text-[var(--color-gold)]">Duo Tech Company</span> | Cung cấp bởi Duo Tech</p>

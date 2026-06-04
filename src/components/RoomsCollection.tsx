@@ -129,7 +129,9 @@ const RoomsCollection = ({ hideTitle = false }: { hideTitle?: boolean }) => {
                       </div>
                       <div className="flex items-center gap-1.5">
                         <Bed size={16} className="text-gray-400 stroke-[1.5px]" />
-                        <span className="font-medium">{roomData.bedCount} {t('rooms.bed')}</span>
+                        <span className="font-medium">
+                          {roomData.id === 'tpn-penthouse' ? '2 ' + (locale === 'en' ? 'Bedrooms' : locale === 'ko' ? '침실' : 'Phòng ngủ') : `${roomData.bedCount} ${t('rooms.bed')}`}
+                        </span>
                       </div>
                       <div className="flex items-center gap-1.5">
                         <Users size={16} className="text-gray-400 stroke-[1.5px]" />

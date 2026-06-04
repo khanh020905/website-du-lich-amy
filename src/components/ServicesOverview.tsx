@@ -11,12 +11,11 @@ const CLD = 'https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto';
 
 const accommodationsImages = [
   { image: `${CLD}/website-du-lich-amy/LOBBY/Reception_Lobby_2` },
-  { image: `${CLD}/website-du-lich-amy/RESTAURANT/The_South_01` },
-  { image: img3 },
   { image: img4 },
+  { image: img3 },
+  { image: '/gallery/DỊCH VỤ/hội nghị.jpg' },
   { image: `${CLD}/website-du-lich-amy/POOL-GYM/Gym` },
   { image: `${CLD}/website-du-lich-amy/POOL-GYM/Swinming_Pool` },
-  { image: '/gallery/DỊCH VỤ/hội nghị.jpg' },
   { image: img4 }
 ];
 

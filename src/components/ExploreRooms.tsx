@@ -107,7 +107,9 @@ const ExploreRooms = () => {
                     </div>
                     <div className="flex items-center gap-1.5">
                       <Bed size={15} className="text-gray-400 stroke-[1.5px]" />
-                      <span className="text-xs font-medium">{suite.bedCount} {t('rooms.bed')}</span>
+                      <span className="text-xs font-medium">
+                        {suite.id === 'tpn-penthouse' ? '2 ' + (locale === 'en' ? 'Bedrooms' : locale === 'ko' ? '침실' : 'Phòng ngủ') : `${suite.bedCount} ${t('rooms.bed')}`}
+                      </span>
                     </div>
                     <div className="flex items-center gap-1.5">
                       <Users size={15} className="text-gray-400 stroke-[1.5px]" />

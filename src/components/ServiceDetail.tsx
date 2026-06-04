@@ -20,17 +20,9 @@ const accommodationsImages = [
       '/gallery/Lobby/Reception Lobby 4 .jpg'
     ]
   },
-  {
-    image: '/gallery/NHÀ HÀNG/The South 01.jpg',
-    galleries: [
-      '/gallery/NHÀ HÀNG/The South 01.jpg',
-      '/gallery/NHÀ HÀNG/The South 02.jpg',
-      '/gallery/NHÀ HÀNG/The South 03.jpg',
-      '/gallery/NHÀ HÀNG/The South 05.jpg'
-    ]
-  },
-  { image: img3 },
   { image: img4 },
+  { image: img3 },
+  { image: '/gallery/DỊCH VỤ/hội nghị.jpg' },
   {
     image: '/gallery/Gym & Fitness/Gym.jpg',
     galleries: [
@@ -46,7 +38,6 @@ const accommodationsImages = [
       '/gallery/Hồ Bơi/Swingming Pool 04.jpg'
     ]
   },
-  { image: '/gallery/DỊCH VỤ/hội nghị.jpg' },
   { image: img4 }
 ];
 
@@ -225,7 +216,7 @@ const ServiceDetail = () => {
                 <p className="text-[10px] md:text-xs text-gray-500 uppercase tracking-[0.2em] font-semibold mb-1">
                   {locale === 'en' ? 'Contact' : locale === 'vi' ? 'Liên Hệ' : 'Contact'}
                 </p>
-                <p className="text-sm md:text-base font-medium text-gray-200">(+84)02363 668 886</p>
+                <p className="text-sm md:text-base font-medium text-gray-200">(+84) 2363 668 886 - 0935 292 898</p>
               </div>
             </div>
           </div>

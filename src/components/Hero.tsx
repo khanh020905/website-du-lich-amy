@@ -2,11 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const heroImg = 'https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto/website-du-lich-amy/OUTSIDE/Outside_01';
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <section id="home" className="relative h-screen min-h-[600px] w-full flex items-center justify-center overflow-hidden">
@@ -53,6 +55,7 @@ const Hero = () => {
         </div>
 
         <motion.button
+          onClick={() => navigate(`/${i18n.language || 'vi'}/book`)}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
