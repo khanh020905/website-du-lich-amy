@@ -87,11 +87,11 @@ const resources = {
         label: 'HOTEL SERVICES',
         title: 'Services and Amenities',
         items: [
-          { title: 'Reception Lobby', size: '', desc: 'A sophisticated welcoming space providing our guests a majestic first impression. The spacious area is designed with a prime waiting lounge offering complimentary tea and coffee.', hours: '24/7', locationText: '1st Floor', capacityText: '', schedules: [], features: ["24/7 Guest Support","Express Check-in","Tour Information"] },
-          { title: 'Coffee Lounge', size: '', desc: 'Located in the 1st floor reception lobby, the Coffee Lounge offers an ideal space for relaxation with an elegant design, serving premium coffees and exquisite afternoon teas.', hours: '07:00 to 22:00', locationText: '1st Floor', capacityText: '', schedules: [], features: ["Specialty coffee", "English afternoon tea", "Fresh daily pastries", "Partner meeting space"] },
+          { title: 'Reception Lobby', size: '', desc: 'The starting point for memorable experiences for every guest.\nFrom the very first steps, guests will feel the open and airy space. Every interior detail is carefully crafted, creating a harmony between modern aesthetics and a cozy, friendly atmosphere. This is not just a reception area but the starting point for a perfect vacation.', hours: '24/7', locationText: '1st Floor', capacityText: '', schedules: [], features: ["24/7 Guest Support","Express Check-in","Tour Information"] },
+          { title: 'Coffee Lounge', size: '', desc: 'Located on the 1st floor, right next to the reception lobby, the Coffee Lounge is an ideal space to relax while waiting for check-in or check-out.\nEnjoy a delicious cup of coffee and appealing beverages in a luxurious setting.\nThe Coffee Lounge is the perfect rendezvous for meetings, conversations, or moments of gentle relaxation.', hours: '07:00 to 22:00', locationText: '1st Floor', capacityText: '', schedules: [], features: ["Serves a variety of coffee, tea, juices, and refreshments", "Spacious and quiet seating area", "Friendly service staff"] },
           { title: 'Spa & Wellness', size: '', desc: 'Situated on the 1st floor of Tan Phuong Nam Galaxy, the Spa is harmoniously designed with varied color tones, creating a sophisticated and relaxing sanctuary.', hours: '09:00 to 21:00', locationText: '1st Floor', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
           { title: 'Conference Room', size: '', desc: 'An ideal venue for organizing corporate events, thematic seminars, or professional and lavish banquets.', hours: 'Upon booking', locationText: '12th Floor', capacityText: 'Up to 100 guests', schedules: [], features: ["200-inch LED Screen","Surround Sound System","Teabreak Pastries & Tea","Ultra High-Speed Wi-Fi"] },
-          { title: 'Gym & Fitness Center', size: '', desc: 'Our Fitness Center is equipped with cutting-edge machinery, catering to all your workout demands from cardio to intensive strength training.', hours: '06:00 to 22:00', locationText: '2nd Floor', capacityText: '50 guests', schedules: [], features: ["Modern Treadmills","Free Weights Area","Personal Trainers","Complimentary Water & Towels"] },
+          { title: 'Gym & Fitness Center', size: '', desc: 'Our Fitness Center is equipped with cutting-edge machinery, catering to all your workout demands from cardio to intensive strength training.', hours: '06:00 to 22:00', locationText: '2nd Floor', capacityText: '50 guests', schedules: [], features: ["Modern Treadmills","Free Weights Area"] },
           { title: 'Rooftop Infinity Pool', size: '', desc: 'Immerse yourself in the cool, refreshing water at the rooftop infinity swimming pool, where you can unwind while taking in the magnificent sunset.', hours: '06:00 to 18:00', locationText: 'Rooftop Floor', capacityText: '', schedules: [], features: ["Lounging Sunbeds","Poolside Beverage Service","Safe Kids Area","Complimentary Fresh Towels"] },
           { title: 'Stellar Skybar', size: '', desc: 'Positioned on the 12th floor, Sky Bar Stellar is the ideal destination to indulge in an elevated relaxing space with panoramic views of the Han River and Da Nang city.', hours: '10:00 to 22:00', locationText: '12th Floor', capacityText: '', schedules: [], features: ["Signature Cocktails","Acoustic Music","Panoramic View","VIP Lounge"] }
         ],
@@ -178,12 +178,6 @@ const resources = {
             validity: 'Application time: 17:00 – 19:00 daily',
             title: 'Stellar Top Bar Happy Hour Promotion',
             description: 'Buy 1 get 1 free on beer, cocktail and wine by the glass.\nNote: This promotion is not applicable in conjunction with other events.'
-          },
-          {
-            id: 'south-restaurant-discount',
-            validity: 'Application time: 11:00 – 22:00 daily',
-            title: 'The South Restaurant F&B discount',
-            description: '20% discount on total F&B bill.\nNote: This promotion is not applicable in conjunction with other events.'
           }
         ]
       },
@@ -313,12 +307,12 @@ const resources = {
         label: 'TIỆN ÍCH',
         title: 'Dịch vụ và tiện nghi Khách sạn',
         items: [
-          { title: 'Sảnh Lễ Tân', size: '', desc: 'Không gian đón khách lộng lẫy mang lại trải nghiệm mãn nhãn ngay từ giây phút đầu tiên. Khu vực được thiết kế rộng rãi với khu vực chờ sang trọng, phục vụ trà và cà phê miễn phí.', hours: '24/7', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Hỗ trợ khách hàng 24/7","Check-in/Check-out nhanh chóng","Thông tin du lịch"] },
-          { title: 'Coffee Lounge', size: '', desc: 'Tọa lạc tại sảnh đón tiếp tầng 1, Coffee Lounge mang đến không gian thư giãn lý tưởng với thiết kế sang trọng, phục vụ các loại cà phê thượng hạng và trà chiều tinh tế.', hours: '07:00 đến 22:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Cà phê đặc sản", "Trà chiều kiểu Anh", "Bánh ngọt tươi mỗi ngày", "Không gian gặp gỡ đối tác"] },
+          { title: 'Sảnh Lễ Tân', size: '', desc: 'nơi khởi nguồn cho những trải nghiệm đáng nhớ của mỗi du khách.\nNgay từ những bước chân đầu tiên, du khách sẽ cảm nhận được không gian rộng mở, thoáng đãng. Từng chi tiết nội thất được chăm chút kỹ lưỡng, tạo nên sự hài hòa giữa nét hiện đại và cảm giác ấm cúng, thân thiện. Đây không chỉ là nơi đón tiếp mà còn là điểm khởi đầu cho hành trình nghỉ dưỡng trọn vẹn.', hours: '24/7', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Hỗ trợ khách hàng 24/7","Check-in/Check-out nhanh chóng","Thông tin du lịch"] },
+          { title: 'Coffee Lounge', size: '', desc: 'Coffee Lounge tọa lạc tại tầng 1, ngay khu vực sảnh lễ tân, là không gian lý tưởng để thư giãn trong lúc chờ làm thủ tục check-in hoặc check-out.\nThưởng thức một tách cà phê thơm ngon, thức uống hấp dẫn trong không gian sang trọng\nCoffee Lounge là điểm hẹn hoàn hảo cho những cuộc gặp gỡ, trò chuyện hoặc những phút giây nghỉ ngơi nhẹ nhàng.', hours: '07:00 đến 22:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Phục vụ đa dạng các loại cà phê, trà, nước ép và thức uống giải khát", "Sảnh ngồi rộng rãi, yên tĩnh", "Nhân viên phục vụ thân thiện"] },
           { title: 'Spa & Wellness', size: '', desc: 'Nằm tại tầng 1 của Khách sạn Tân Phương Nam Galaxy, Spa được thiết kế với sự kết hợp hài hòa của nhiều gam màu khác nhau, tạo nên một không gian vừa tinh tế vừa thư giãn. Không gian yên bình, tách biệt khỏi nhịp sống ồn ào.', hours: '09:00 đến 21:00', locationText: 'Tầng 1', capacityText: '', schedules: [], features: ["Body Massage","Foot Massage","Facial Spa","Body Scrub","Nail Care"] },
           { title: 'Phòng Hội Nghị & Sự Kiện', size: '', desc: 'Nơi lý tưởng để tổ chức các sự kiện doanh nghiệp, hội thảo chuyên đề hay những buổi tiệc xa hoa chuyên nghiệp.', hours: 'Theo yêu cầu (Booking)', locationText: 'Tầng 12', capacityText: '100 khách', schedules: [], features: ["Màn hình LED 200 inch","Hệ thống âm thanh đa chiều","Teabreak giữa giờ","Wi-Fi tốc độ cực cao"] },
-          { title: 'Phòng Gym & Fitness', size: '', desc: 'Phòng Gym được trang bị hệ thống máy móc hiện đại, đáp ứng mọi nhu cầu tập luyện của quý khách từ cardio đến rèn luyện thể lực chuyên sâu.', hours: '06:00 đến 22:00', locationText: 'Tầng 2', capacityText: '50 khách', schedules: [], features: ["Máy chạy bộ hiện đại","Khu vực tạ tự do","Huấn luyện viên cá nhân","Nước & khăn miễn phí"] },
-          { title: 'Hồ Bơi Vô Cực Rooftop', size: '', desc: 'Hòa mình vào làn nước mát lạnh tại Hồ bơi vô cực trên tầng thượng, nơi quý khách có thể vừa thư giãn vừa ngắm trọn vẹn cảnh sắc hoàng hôn tuyệt đẹp trên sông Hàn.', hours: '06:00 đến 18:00', locationText: 'Tầng thượng (Rooftop)', capacityText: '', schedules: [], features: ["Khu vực ghế tắm","Phục vụ đồ uống tại hồ","Khu vực trẻ em an toàn","Khăn tắm miễn phí"] },
+          { title: 'Phòng Gym & Fitness', size: '', desc: 'Phòng Gym được trang bị hệ thống máy móc hiện đại, đáp ứng mọi nhu cầu tập luyện của quý khách từ cardio đến rèn luyện thể lực chuyên sâu.', hours: '06:00 đến 22:00', locationText: 'Tầng 2', capacityText: '50 khách', schedules: [], features: ["Máy chạy bộ hiện đại","Khu vực tạ tự do"] },
+          { title: 'Hồ Bơi Vô Cực Rooftop', size: '', desc: 'Hòa mình vào làn nước mát lạnh tại Hồ bơi vô cực trên tầng thượng, nơi quý khách có thể vừa thư giãn vừa ngắm trọn vẹn cảnh sắc hoàng hôn tuyệt đẹp trên sông Hàn.', hours: '06:00 đến 18:00', locationText: 'Tầng thượng (Rooftop)', capacityText: '', schedules: [], features: ["Khu vực ghế tắm","Phục vụ đồ uống tại hồ","Hồ bơi cho trẻ em","Khăn tắm miễn phí"] },
           { title: 'Stellar Skybar', size: '', desc: 'Tọa lạc tại tầng 12, Sky Bar Stellar là điểm đến lý tưởng để tận hưởng không gian thư giãn trên cao với tầm nhìn toàn cảnh sông Hàn và thành phố Đà Nẵng.', hours: '10:00 đến 22:00', locationText: 'Tầng 12', capacityText: '', schedules: [], features: ["Signature Cocktails","Acoustic Music","Panoramic View","VIP Lounge"] }
         ],
         desc: "Khách sạn Tân Phương Nam sở hữu đa dạng tiện ích, từ không gian ẩm thực sang trọng đến khu giải trí hiện đại và tiện nghi. Hồ bơi vô cực cùng các dịch vụ cao cấp mang đến trải nghiệm nghỉ dưỡng thoải mái cho du khách.",
@@ -404,12 +398,6 @@ const resources = {
             validity: 'Thời gian áp dụng: 17:00 – 19:00 hằng ngày',
             title: 'Stellar Top Bar Happy Hour Promotion',
             description: 'Mua 1 tặng 1 đồ uống.\nKhông áp dụng đồng thời với các sự kiện khác.'
-          },
-          {
-            id: 'south-restaurant-discount',
-            validity: 'Thời gian áp dụng: 11:00 – 22:00 hằng ngày',
-            title: 'The South Restaurant F&B discount',
-            description: 'Giảm 20% trên tổng bill.\nKhông áp dụng đồng thời với các sự kiện khác.'
           }
         ]
       },
@@ -538,11 +526,11 @@ const resources = {
         label: '호텔 서비스',
         title: '서비스 및 편의 시설',
         items: [
-          { title: '리셉션 로비', size: '', desc: '정교한 디자인으로 장엄한 첫인상을 선사하는 세련된 환영 공간입니다.', hours: '24/7', locationText: '1층', capacityText: '', schedules: [], features: ["24/7 고객 지원","빠른 체크인/체크아웃","투어 정보"] },
-          { title: '커피 라운지', size: '', desc: '1층 공간에 위치한 커피 라운지는 우아한 디자인으로 휴식을 위한 이상적인 공간을 제공하며, 최고급 커피와 정교한 애프터눈 티를 제공합니다.', hours: '07:00 - 22:00', locationText: '1층', capacityText: '', schedules: [], features: ["스페셜티 커피", "잉글리시 애프터눈 티", "매일 굽는 신선한 페이스트리", "비즈니스 미팅 공간"] },
+          { title: '리셉션 로비', size: '', desc: '모든 고객의 잊지 못할 경험이 시작되는 곳입니다.\n첫발을 내딛는 순간부터 넓고 쾌적한 공간을 느끼실 수 있습니다. 모든 인테리어 디테일은 세심하게 제작되어 현대적인 미학과 아늑하고 친근한 분위기가 조화를 이룹니다. 이곳은 단순한 리셉션 공간이 아니라 완벽한 휴가의 출발점입니다.', hours: '24/7', locationText: '1층', capacityText: '', schedules: [], features: ["24/7 고객 지원","빠른 체크인/체크아웃","투어 정보"] },
+          { title: '커피 라운지', size: '', desc: '1층 리셉션 로비 바로 옆에 위치한 커피 라운지는 체크인 또는 체크아웃을 기다리는 동안 휴식을 취하기에 이상적인 공간입니다.\n고급스러운 분위기에서 맛있는 커피와 매력적인 음료를 즐겨보세요.\n커피 라운지는 모임, 대화 또는 가벼운 휴식을 위한 완벽한 만남의 장소입니다.', hours: '07:00 - 22:00', locationText: '1층', capacityText: '', schedules: [], features: ["다양한 커피, 차, 주스 및 다과 제공", "넓고 조용한 좌석 공간", "친절한 서비스 직원"] },
           { title: '스파 및 웰니스', size: '', desc: '다양한 톤이 조화롭게 디자인되어 세련되고 편안한 휴식 공간을 선사합니다.', hours: '09:00 - 21:00', locationText: '1층', capacityText: '', schedules: [], features: ["바디 마사지","발 마사지","페이셜 스파","바디 스크럽","네일 관리"] },
           { title: '컨퍼런스 및 이벤트 룸', size: '', desc: '기업 행사나 세미나를 조직하기 위한 완벽한 장소입니다. 방음 설비가 완비되어 있습니다.', hours: '예약 문의', locationText: '12층', capacityText: '최대 100명', schedules: [], features: ["200인치 LED 스크린","서라운드 사운드 시스템","티 브레이크 제공","초고속 와이파이"] },
-          { title: '피트니스 센터', size: '', desc: '최신 장비가 완비된 피트니스 센터에서 운동의 모든 요구를 만족시켜 드립니다.', hours: '06:00 - 22:00', locationText: '2층', capacityText: '50명', schedules: [], features: ["현대식 러닝머신","프리웨이트 구역","개인 트레이너 제공","무료 생수 및 수건"] },
+          { title: '피트니스 센터', size: '', desc: '최신 장비가 완비된 피트니스 센터에서 운동의 모든 요구를 만족시켜 드립니다.', hours: '06:00 - 22:00', locationText: '2층', capacityText: '50명', schedules: [], features: ["현대식 러닝머신","프리웨이트 구역"] },
           { title: '루프탑 수영장', size: '', desc: '전설적인 한강의 아름다운 일몰을 감상하며 옥상 인피니티 풀에서 휴식을 취하세요.', hours: '06:00 - 18:00', locationText: '루프탑 층', capacityText: '', schedules: [], features: ["선베드","풀사이드 음료 서비스","안전한 어린이 구역","무료 수건"] },
           { title: '스텔라 스카이바', size: '', desc: '수제 칵테일을 음미하며 숨막히는 파노라마 도시 전경을 감상하세요.', hours: '10:00 - 22:00', locationText: '12층', capacityText: '', schedules: [], features: ["시그니처 칵테일","어쿠스틱 음악","파노라마 뷰","VIP 라운지"] }
         ],
@@ -629,12 +617,6 @@ const resources = {
             validity: '적용 시간: 매일 17:00 - 19:00',
             title: '스텔라 탑 바 해피 아워',
             description: '맥주, 칵테일, 글래스 와인 1+1 이벤트.\n참고: 본 프로모션은 다른 이벤트와 중복 적용되지 않습니다.'
-          },
-          {
-            id: 'south-restaurant-discount',
-            validity: '적용 시간: 매일 11:00 - 22:00',
-            title: '더 사우스 레스토랑 F&B 할인',
-            description: 'F&B 총 청구 금액의 20% 할인.\n참고: 본 프로모션은 다른 이벤트와 중복 적용되지 않습니다.'
           }
         ]
       },
@@ -763,11 +745,11 @@ const resources = {
         label: '酒店服务',
         title: '服务和设施',
         items: [
-          { title: '接待大堂', size: '', desc: '精致的迎宾空间，为宾客提供庄严而奢华的第一印象。', hours: '24/7', locationText: '1楼', capacityText: '', schedules: [], features: ["24/7 客户支持","快速办理入住/退房","旅游资讯"] },
-          { title: 'The South 餐厅', size: '', desc: '位于酒店 2 楼，The South 餐厅享有优雅的设计和韩江美景。', hours: '06:00 至 22:00', locationText: '2楼', capacityText: '200人', schedules: ["自助早餐：06:00 - 10:00","午餐和晚餐：11:00 - 22:00"], features: [] },
+          { title: '接待大堂', size: '', desc: '每一位宾客难忘体验的起点。\n从踏入的第一步起，宾客就能感受到宽敞明亮的空间。每一处室内细节都经过精心雕琢，将现代美学与温馨友好的氛围完美融合。这不仅是一个接待区，更是完美假期的起点。', hours: '24/7', locationText: '1楼', capacityText: '', schedules: [], features: ["24/7 客户支持","快速办理入住/退房","旅游资讯"] },
+          { title: 'Coffee Lounge', size: '', desc: 'Coffee Lounge 位于一楼接待大堂旁，是您在等候办理入住或退房手续时放松身心的理想场所。\n在奢华的环境中享用美味的咖啡和诱人的饮品。\nCoffee Lounge 是聚会、交谈或轻松休息的完美相聚之地。', hours: '07:00 至 22:00', locationText: '1楼', capacityText: '', schedules: [], features: ["供应各种咖啡、茶、果汁和茶点", "宽敞安静的休息区", "友好的服务人员"] },
           { title: '水疗与康体', size: '', desc: '沉浸在宁静的避世圣地，这里旨在让您的身心全新焕发青春活力。', hours: '09:00 至 21:00', locationText: '1楼', capacityText: '', schedules: [], features: ["全身按摩","足部按摩","面部水疗","身体磨砂","美甲护理"] },
           { title: 'Stellar 空中酒吧', size: '', desc: '品尝现调招牌鸡尾酒，同时坐拥令人惊叹的繁华城市全景。', hours: '10:00 至 22:00', locationText: '12楼', capacityText: '', schedules: [], features: ["招牌鸡尾酒","原声音乐","全景","VIP休息室"] },
-          { title: '健身中心', size: '', desc: '我们的健身中心配备了尖端器械，满足您所有的锻炼需求。', hours: '06:00 至 22:00', locationText: '2楼', capacityText: '50人', schedules: [], features: ["现代跑步机","自由重量区","私人教练","免费提供水和毛巾"] },
+          { title: '健身中心', size: '', desc: '我们的健身中心配备了尖端器械，满足您所有的锻炼需求。', hours: '06:00 至 22:00', locationText: '2楼', capacityText: '50人', schedules: [], features: ["现代跑步机","自由重量区"] },
           { title: '屋顶无边泳池', size: '', desc: '在屋顶无边泳池的凉爽海水中沉浸，欣赏美丽的日落。', hours: '06:00 至 18:00', locationText: '屋顶', capacityText: '', schedules: [], features: ["日光浴躺椅","池畔饮料服务","安全儿童区","免费提供毛巾"] },
           { title: '会议与活动室', size: '', desc: '举办企业活动、主题研讨会或专业豪华宴会的理想场所。', hours: '需预订', locationText: '12楼', capacityText: '做多100人', schedules: [], features: ["200英寸LED屏幕","环绕声系统","茶歇糕点和茶水","超高速 Wi-Fi"] },
           { title: '咖啡厅', size: '', desc: '咖啡厅位于1楼接待大堂，设计优雅，是您放松身心的理想场所。这里供应高级咖啡和精致的下午茶。', hours: '07:00 至 22:00', locationText: '1楼', capacityText: '', schedules: [], features: ["特色咖啡", "英式下午茶", "每日新鲜糕点", "商务会议空间"] }
@@ -855,12 +837,6 @@ const resources = {
             validity: '适用时间：每天 17:00 – 19:00',
             title: 'Stellar 空中酒吧 欢乐时光',
             description: '杯装啤酒、鸡尾酒及葡萄酒买一送一。\n注：此优惠不可与其他活动同时使用。'
-          },
-          {
-            id: 'south-restaurant-discount',
-            validity: '适用时间：每天 11:00 – 22:00',
-            title: 'The South 餐厅餐饮折扣',
-            description: '全单餐饮消费享 8 折（20% off）优惠。\n注：此优惠不可与其他活动同时使用。'
           }
         ]
       },
