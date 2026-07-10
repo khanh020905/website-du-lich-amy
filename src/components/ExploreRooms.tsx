@@ -35,7 +35,7 @@ const ExploreRooms = () => {
   const exploreItems = t('explore.items', { returnObjects: true }) as Array<{ title: string, size: string }>;
 
   return (
-    <section className="py-24 bg-gray-50 bg-opacity-50" id="suites">
+    <section className="pt-12 pb-12 bg-gray-50 bg-opacity-50" id="suites">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl">
         <div className="text-center mb-16">
           <motion.h3

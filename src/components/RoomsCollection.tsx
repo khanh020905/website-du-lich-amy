@@ -30,7 +30,7 @@ const RoomsCollection = ({ hideTitle = false }: { hideTitle?: boolean }) => {
   const isGrid = hideTitle; // True for the RoomsPage
 
   return (
-    <section className={`bg-white ${hideTitle ? 'pt-8 pb-24' : 'pt-8 pb-24 relative overflow-hidden'}`} id="rooms">
+    <section className={`bg-white ${hideTitle ? 'pt-8 pb-24' : 'pt-8 pb-12 relative overflow-hidden'}`} id="rooms">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative">
         {!hideTitle && (
           <div className="text-center mb-16 relative">

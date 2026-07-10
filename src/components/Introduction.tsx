@@ -46,7 +46,7 @@ const Introduction = () => {
   }>;
 
   return (
-    <section className="py-24 bg-white" id="about">
+    <section className="pt-24 pb-12 bg-white" id="about">
       <div className="container mx-auto px-6 md:px-12 max-w-6xl">
         {/* About Us Top Section */}
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 mb-24">

@@ -72,17 +72,17 @@ const Testimonials = () => {
   }, [reviews.length]);
 
   return (
-    <section className="py-24 bg-white" id="testimonials">
+    <section className="pt-12 pb-24 bg-white" id="testimonials">
       <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-[1200px]">
         {/* Drastically reduced the gap between the two main columns, and aligned to top */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-8 lg:pt-10">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-8">
           
           {/* Left Column (Stats) - Reduced right padding */}
           <div className="w-full lg:w-[40%] flex flex-col items-center lg:items-end text-center lg:text-right border-r-0 lg:border-r border-gray-100 lg:pr-8">
             <span className="text-gray-400 text-xs font-semibold uppercase tracking-widest mb-10">
               {t('testimonials.header.title')}
             </span>
-            <h2 className="text-3xl md:text-[40px] font-serif text-[#C4A052] mb-3 font-normal leading-tight">
+            <h2 className="text-3xl md:text-[40px] font-serif text-[#C4A052] mb-3 font-semibold leading-tight">
               {t('testimonials.statsLabel')}
             </h2>
             <div className="text-3xl md:text-[38px] font-serif text-[#C4A052] mb-8 tracking-wide">

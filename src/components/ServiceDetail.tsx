@@ -132,7 +132,7 @@ const ServiceDetail = () => {
              <h2 className="text-2xl md:text-3xl font-serif text-[var(--color-gold)] font-semibold mb-4 md:mb-6 hidden md:block">
                {localizedInfo?.title}
              </h2>
-             <p className="text-gray-300 leading-relaxed text-justify mb-8 md:pr-10 text-sm md:text-base font-light">
+             <p className="text-gray-300 leading-relaxed text-justify mb-8 md:pr-10 text-sm md:text-base font-light whitespace-pre-line">
                {localizedInfo?.desc}
              </p>
              

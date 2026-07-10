@@ -10,13 +10,12 @@ const CLD = 'https://res.cloudinary.com/dmnptpl6i/image/upload/f_auto,q_auto';
 
 const accommodationsImages = [
   { image: `${CLD}/website-du-lich-amy/LOBBY/Reception_Lobby_2` },
-  { image: `${CLD}/website-du-lich-amy/RESTAURANT/The_South_01` },
-  { image: img3 },
-  { image: img4 },
+  { image: `${CLD}/website-du-lich-amy/LOBBY/Reception_Lobby_4` }, // Coffee Lounge (using lobby image)
+  { image: img3 }, // Spa
+  { image: '/gallery/DỊCH VỤ/hội nghị.jpg' }, // Conference
   { image: `${CLD}/website-du-lich-amy/POOL-GYM/Gym` },
   { image: `${CLD}/website-du-lich-amy/POOL-GYM/Swinming_Pool` },
-  { image: '/gallery/DỊCH VỤ/hội nghị.jpg' },
-  { image: img4 }
+  { image: img4 } // Skybar
 ];
 
 interface AccommodationsProps {
@@ -42,7 +41,7 @@ const Accommodations: React.FC<AccommodationsProps> = ({ hideHeader = false }) =
   const btnText = btnTextMap[currentLang] || btnTextMap.vi;
 
   return (
-    <section className={`pb-12 scroll-mt-20 ${hideHeader ? 'bg-transparent pt-12' : 'bg-white pt-24'}`} id="services">
+    <section className={`pb-12 scroll-mt-20 ${hideHeader ? 'bg-transparent pt-12' : 'bg-white pt-12'}`} id="services">
       {/* Header */}
       {!hideHeader && (
         <div className="text-center mb-10 px-4 md:px-6">
@@ -51,7 +50,7 @@ const Accommodations: React.FC<AccommodationsProps> = ({ hideHeader = false }) =
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-serif text-[#111] mb-4"
+            className="text-4xl md:text-5xl font-serif text-[#111] font-semibold mb-4"
           >
             {t('accommodations.title')}
           </motion.h2>
