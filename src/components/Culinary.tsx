@@ -14,8 +14,6 @@ const Culinary = () => {
     `${CLD}/website-du-lich-amy/RESTAURANT/The_South_02`,
     `${CLD}/website-du-lich-amy/RESTAURANT/The_South_03`,
     `${CLD}/website-du-lich-amy/RESTAURANT/The_South_05`,
-    `${CLD}/website-du-lich-amy/LOBBY/Reception_Lobby_2`,
-    `${CLD}/website-du-lich-amy/OUTSIDE/Outside_01`,
   ];
 
   return (
@@ -133,7 +131,7 @@ const Culinary = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4"
+            className="columns-1 md:columns-2 gap-4 space-y-4"
           >
             {galleryImages.map((src, index) => (
               <motion.div 
