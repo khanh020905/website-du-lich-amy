@@ -97,8 +97,7 @@
       "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970569/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0215-Edit.jpg",
       "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970574/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0271.jpg",
       "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970578/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0301-Edit.jpg",
-      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970584/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0310.jpg",
-      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970651/website-du-lich-amy/website-du-lich-amy/toilet.jpg"
+      "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970584/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0310.jpg"
     ],
     "cover": "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970569/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/703/PRIN0215-Edit.jpg",
     "amenities": ["City View", "Free Wi-Fi", "Bathtub", "Minibar"],
@@ -121,6 +120,7 @@
     "id": "deluxe-triple",
     "price": 2200000,
     "bedCount": 2,
+    "bathroomCount": 1,
     "guestCount": 3,
     "galleries": [
       "https://res.cloudinary.com/ddlbatpul/image/upload/f_auto,q_auto/v1777970607/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/website-du-lich-amy/PRIN0031-Edit.jpg/ROOM/707/PRIN0492-Edit.jpg",

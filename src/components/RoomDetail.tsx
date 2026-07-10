@@ -2,10 +2,21 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Maximize, Bed, Users, Bath, Star, ArrowLeft, Check, Coffee, Wifi, Monitor, X, Wind, Snowflake, Lock, Utensils, ChevronDown, Vault, Refrigerator, ShowerHead } from 'lucide-react';
+import { Maximize, Bed, Users, Bath, Star, ArrowLeft, Check, Coffee, Wifi, Monitor, X, Wind, Snowflake, Lock, Utensils, ChevronDown, Vault, Refrigerator, ShowerHead, Sofa, CookingPot, Sunset } from 'lucide-react';
 import roomsData from '../data/roomsData.json';
 
-const getAmenityIcon = (idx: number) => {
+const getAmenityIcon = (idx: number, isBathtub: boolean = false, roomId: string = '') => {
+  if (roomId === 'premier-river-view') {
+    if (idx === 8) return <Sunset size={24} className="text-[var(--color-gold)] shrink-0" />;
+  }
+  if (roomId === 'tpn-penthouse') {
+    if (idx === 8) return <Sofa size={24} className="text-[var(--color-gold)] shrink-0" />;
+    if (idx === 9) return <CookingPot size={24} className="text-[var(--color-gold)] shrink-0" />;
+    if (idx === 10) return <Coffee size={24} className="text-[var(--color-gold)] shrink-0" />;
+    if (idx === 11) return <Bed size={24} className="text-[var(--color-gold)] shrink-0" />;
+    if (idx === 12) return <Sunset size={24} className="text-[var(--color-gold)] shrink-0" />;
+  }
+
   switch (idx) {
     case 0: return <Monitor size={24} className="text-[var(--color-gold)] shrink-0" />;
     case 1: return <Snowflake size={24} className="text-[var(--color-gold)] shrink-0" />;
@@ -14,7 +25,7 @@ const getAmenityIcon = (idx: number) => {
     case 4: return <Vault size={24} className="text-[var(--color-gold)] shrink-0" />;
     case 5: return <Refrigerator size={24} className="text-[var(--color-gold)] shrink-0" />;
     case 6: return <Utensils size={24} className="text-[var(--color-gold)] shrink-0" />;
-    case 7: return <ShowerHead size={24} className="text-[var(--color-gold)] shrink-0" />;
+    case 7: return isBathtub ? <Bath size={24} className="text-[var(--color-gold)] shrink-0" /> : <ShowerHead size={24} className="text-[var(--color-gold)] shrink-0" />;
     default: return <Check size={24} className="text-[var(--color-gold)] shrink-0" />;
   }
 }
@@ -100,8 +111,29 @@ const RoomDetail = () => {
   const allLocalizedItems = [...roomItems, ...exploreItems];
   
   const localizedInfo = allLocalizedItems[roomIndex];
+  
   // Determine if it's a penthouse/superior to assign bathroom count gracefully (just simulate for now based on capacity)
-  const bathroomCount = roomData.guestCount > 2 ? 2 : 1;
+  const bathroomCount = 'bathroomCount' in roomData ? (roomData as any).bathroomCount : (roomData.guestCount > 2 ? 2 : 1);
+
+  // Dynamic Amenities
+  let amenitiesList = [...(t('roomDetail.fixedAmenities', { returnObjects: true }) as string[])];
+  const isBathtubRoom = roomData.id === 'executive-river-view' || roomData.id === 'premier-river-view' || roomData.id === 'tpn-penthouse';
+  
+  if (isBathtubRoom) {
+    amenitiesList[7] = locale === 'en' ? 'Bathtub' : locale === 'ko' ? '욕조' : locale === 'zh' ? '浴缸' : 'Bồn tắm nằm';
+  }
+  
+  if (roomData.id === 'premier-river-view') {
+    amenitiesList.push(locale === 'en' ? 'River View Balcony' : locale === 'ko' ? '리버 뷰 발코니' : locale === 'zh' ? '江景阳台' : 'Ban công view sông');
+  }
+  
+  if (roomData.id === 'tpn-penthouse') {
+    amenitiesList.push(locale === 'en' ? 'Living Room' : locale === 'ko' ? '거실' : locale === 'zh' ? '客厅' : 'Phòng khách');
+    amenitiesList.push(locale === 'en' ? 'Kitchen' : locale === 'ko' ? '주방' : locale === 'zh' ? '厨房' : 'Phòng bếp');
+    amenitiesList.push(locale === 'en' ? 'Dining Table' : locale === 'ko' ? '식탁' : locale === 'zh' ? '餐桌' : 'Bàn ăn');
+    amenitiesList.push(locale === 'en' ? 'Sofa Bed' : locale === 'ko' ? '소파 베드' : locale === 'zh' ? '沙发床' : 'Sofa bed');
+    amenitiesList.push(locale === 'en' ? 'River View Balcony' : locale === 'ko' ? '리버 뷰 발코니' : locale === 'zh' ? '江景阳台' : 'Ban công view sông');
+  }
 
 
   const handleBookNow = () => {
@@ -246,9 +278,9 @@ const RoomDetail = () => {
           <section>
             <h3 className="text-2xl font-serif text-[#111] font-semibold mb-6">{t('roomDetail.amenities')}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {(t('roomDetail.fixedAmenities', { returnObjects: true }) as string[]).map((item, idx) => (
+              {amenitiesList.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-4 bg-gray-50 px-4 py-3 rounded-sm border border-gray-100 hover:border-[var(--color-gold)]/30 transition-colors">
-                  {getAmenityIcon(idx)}
+                  {getAmenityIcon(idx, isBathtubRoom, roomData.id)}
                   <span className="text-gray-800 font-medium text-sm">{item}</span>
                 </div>
               ))}
